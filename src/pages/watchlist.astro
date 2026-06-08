@@ -1,0 +1,265 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import MovieCard from "../components/MovieCard.astro";
+import lakornsData from "../data/lakorns.json";
+---
+
+<MainLayout title="Мої списки — VolyaCore">
+  <div class="watchlist-container">
+    <h1>🍿 Мої списки перегляду</h1>
+
+    <div class="watchlist-tabs">
+      <button class="w-tab-btn active" data-watchlist-filter="favorite">
+        ❤️ Сподобалось
+      </button>
+      <button class="w-tab-btn" data-watchlist-filter="later">
+        📌 На потім
+      </button>
+      <button class="w-tab-btn" data-watchlist-filter="watching">
+        🍿 Дивлюсь
+      </button>
+    </div>
+
+    <div class="watchlist-grid" id="watchlist-grid">
+      {
+        lakornsData.map((lakorn) => (
+          <div class="watchlist-item-wrapper hidden" data-lakorn-id={lakorn.id}>
+            {/* 🌟 Розгортаємо весь об'єкт лакорну через три крапки, щоб пропси зайшли напряму! */}
+            <MovieCard {...lakorn} />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="empty-state hidden" id="empty-state">
+      <p>
+        У цьому списку поки що немає лакорнів. Додай щось під час перегляду! ✨
+      </p>
+      <a href="/" class="go-catalog-btn">Перейти до каталогу</a>
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+  function renderWatchlist() {
+    const tabs = document.querySelectorAll(".w-tab-btn");
+    const grid = document.getElementById("watchlist-grid");
+    const emptyState = document.getElementById("empty-state");
+    const cardWrappers = document.querySelectorAll(".watchlist-item-wrapper");
+
+    if (!grid || !emptyState || cardWrappers.length === 0) return;
+
+    function filterItems(statusType: string) {
+      let visibleCount = 0;
+
+      cardWrappers.forEach((wrapper) => {
+        const lakornId = wrapper.getAttribute("data-lakorn-id");
+        const savedStatus = localStorage.getItem(`lakorn_status_${lakornId}`);
+
+        if (savedStatus === statusType) {
+          wrapper.classList.remove("hidden");
+          visibleCount++;
+        } else {
+          wrapper.classList.add("hidden");
+        }
+      });
+
+      if (visibleCount === 0) {
+        grid?.classList.add("hidden");
+        emptyState?.classList.remove("hidden");
+      } else {
+        grid?.classList.remove("hidden");
+        emptyState?.classList.add("hidden");
+      }
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const filter = tab.getAttribute("data-watchlist-filter");
+        if (filter) filterItems(filter);
+      });
+    });
+
+    const activeTab = document.querySelector(".w-tab-btn.active");
+    const defaultFilter =
+      activeTab?.getAttribute("data-watchlist-filter") || "favorite";
+    filterItems(defaultFilter);
+  }
+
+  document.addEventListener("DOMContentLoaded", renderWatchlist);
+  document.addEventListener("astro:after-swap", renderWatchlist);
+</script>
+
+<style>
+  .watchlist-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .watchlist-container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .watchlist-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .w-tab-btn {
+    background-color: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .w-tab-btn:hover {
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  .w-tab-btn[data-watchlist-filter="favorite"].active {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: white;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  }
+
+  .w-tab-btn[data-watchlist-filter="later"].active {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  }
+
+  .w-tab-btn[data-watchlist-filter="watching"].active {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  }
+
+  /* Повторюємо стилі твоєї адаптивної сітки з головного каталогу */
+  .watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .watchlist-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+    }
+  }
+
+  .watchlist-item-wrapper.hidden,
+  .watchlist-grid.hidden,
+  .empty-state.hidden {
+    display: none !important;
+  }
+
+  /* 🌟 ХАК: ХОВАЄМО КІЛЬКІСТЬ СЕРІЙ ТІЛЬКИ НА ЦІЙ СТОРІНЦІ */
+  /* Оскільки в твоїй картці (судячи з попереднього кроку) текст серій лежить в окремому тегу, */
+  /* ми ховаємо будь-який p чи додатковий текст під назвою за допомогою пробиття ізоляції :global */
+  .watchlist-grid :global(.movie-card div:last-child p),
+  .watchlist-grid :global(.episodes-count) {
+    display: none !important;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 40px auto 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .empty-state p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    display: block !important; /* Щоб текст заглушки не потрапив під приховування серій */
+  }
+
+  .go-catalog-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+
+  .go-catalog-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+  }
+
+  .watchlist-grid,
+  .catalog-grid {
+    display: grid;
+    /* На комп'ютерах картка буде мінімум 220px. Якщо є місце — вони стануть ширшими */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px; /* Великі відступи між картками на ПК */
+  }
+
+  /* 📱 Для планшетів (екрани менше 768px) */
+  @media (max-width: 768px) {
+    .watchlist-grid,
+    .catalog-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+  }
+
+  /* 📱 Для мобільних телефонів (екрани менше 480px) */
+  @media (max-width: 480px) {
+    .watchlist-grid,
+    .catalog-grid {
+      /* Робимо картки меншими (мінімум 140px), щоб на екрані 320px-375px гарантовано ставало 2 картки в ряд */
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px; /* Зменшуємо відступи, щоб зекономити місце */
+    }
+  }
+  .watchlist-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* 🌟 ДОЗВОЛЯЄ кнопкам переноситися на наступний рядок, якщо екран 320px */
+  }
+
+  @media (max-width: 480px) {
+    .w-tab-btn {
+      padding: 8px 16px; /* Зменшуємо внутрішні відступи кнопок на телефонах */
+      font-size: 14px; /* Трохи зменшуємо шрифт */
+      flex: 1; /* За бажанням: кнопки розтягнуться на всю ширину екрана */
+      text-align: center;
+      min-width: 120px; /* Щоб вони акуратно розбили плитку 2х2 або встали в ряд */
+    }
+  }
+</style>

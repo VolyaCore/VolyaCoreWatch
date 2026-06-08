@@ -1,0 +1,768 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import lakornsData from "../../data/lakorns.json";
+
+export function getStaticPaths() {
+  return lakornsData.map((lakorn) => ({
+    params: { id: lakorn.id },
+  }));
+}
+
+const { id } = Astro.params;
+const lakorn = lakornsData.find((l) => l.id === id);
+
+if (!lakorn) {
+  throw new Error(`Лакорн з ID ${id} не знайдено`);
+}
+---
+
+<MainLayout title={`${lakorn.title} — VolyaCore`}>
+  <div class="lakorn-container" data-lakorn-id={lakorn.id}>
+    <section class="info-section">
+      <div class="cover-box">
+        <img 
+          src={lakorn.cover} 
+          alt={lakorn.title} 
+          id="movie-poster" 
+          class="clickable-poster" 
+          title="Натисніть, щоб збільшити постер"
+        />
+      </div>
+
+      <div class="details-box">
+        <h1>{lakorn.title}</h1>
+
+        <div class="tags-row">
+          <span class={`status-tag ${lakorn.status}`}>
+            {lakorn.status === "ongoing" ? "Онгоінг" : "Завершено"}
+          </span>
+          <span class="country-tag">
+            📍 {
+              (() => {
+                switch (lakorn.country) {
+                  case "thailand":
+                    return "Тайланд";
+                  case "south-korea":
+                    return "Південна Корея";
+                  case "japan":
+                    return "Японія";
+                  case "china":
+                    return "Китай";
+                  case "taiwan":
+                    return "Тайвань";
+                  default:
+                    return lakorn.country;
+                }
+              })()
+            }
+          </span>
+          {
+            lakorn.imdbRating && (
+              <span class="meta-tag imdb">⭐ IMDb: {lakorn.imdbRating}</span>
+            )
+          }
+          {
+            lakorn.duration && (
+              <span class="meta-tag duration">
+                ⏱️ {lakorn.duration} / серія
+              </span>
+            )
+          }
+          {
+            lakorn.network && (
+              <span class="meta-tag network">📺 {lakorn.network}</span>
+            )
+          }
+        </div>
+
+        <div class="user-status-panel">
+          <button class="status-btn btn-favorite" data-status="favorite">
+            <span class="icon">❤️</span> <span class="lbl">Сподобалось</span>
+          </button>
+          <button class="status-btn btn-later" data-status="later">
+            <span class="icon">📌</span> <span class="lbl">На потім</span>
+          </button>
+          <button class="status-btn btn-watching" data-status="watching">
+            <span class="icon">🍿</span> <span class="lbl">Дивлюсь</span>
+          </button>
+        </div>
+
+        <p class="description-text">{lakorn.description}</p>
+
+        <div class="extra-info-grid">
+          {
+            lakorn.director && (
+              <div class="info-item">
+                <span class="info-label">Режисер:</span>
+                <span class="info-value">{lakorn.director}</span>
+              </div>
+            )
+          }
+          {
+            lakorn.cast && (
+              <div class="info-item">
+                <span class="info-label">У головних ролях:</span>
+                <span class="info-value">{lakorn.cast.join(", ")}</span>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="player-section">
+      {
+        lakorn.relatedSeasons && lakorn.relatedSeasons.length > 0 && (
+          <div class="seasons-nav-container">
+            <span class="nav-label">Сезони лакорну:</span>
+            <div class="seasons-links">
+              {lakorn.relatedSeasons.map((rel) => (
+                <a
+                  href={`/lakorn/${rel.id}`}
+                  class={`season-nav-link ${rel.id === lakorn.id ? "active" : ""}`}
+                >
+                  {rel.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+      <h2>Перегляд серій</h2>
+
+      <div class="tabs-container">
+        {
+          lakorn.blocks &&
+            lakorn.blocks.map((block, index) => (
+              <button
+                class={`tab-btn ${index === 0 ? "active" : ""}`}
+                data-tab-target={`block-${index}`}
+              >
+                {block.blockTitle}
+              </button>
+            ))
+        }
+      </div>
+
+      <div class="seasons-content">
+        {
+          lakorn.blocks &&
+            lakorn.blocks.map((block, index) => (
+              <div
+                class={`episodes-wrapper ${index === 0 ? "active" : ""}`}
+                id={`block-${index}`}
+              >
+                <div class="episodes-grid">
+                  {block.episodes &&
+                    block.episodes.map((episode) => (
+                      <button class="episode-btn" data-tg-id={episode.tg_id}>
+                        Серія {episode.number}
+                      </button>
+                    ))}
+                </div>
+              </div>
+            ))
+        }
+      </div>
+
+      <div class="action-box" id="action-box">
+        <p class="placeholder-text">
+          🍿 Оберіть сезон та натисніть на потрібну серію, щоб розпочати
+          перегляд
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div id="poster-lightbox" class="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Збільшений постер" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</MainLayout>
+
+<script>
+  function setupPageLogic() {
+    const container = document.querySelector(".lakorn-container");
+    const lakornId = container?.getAttribute("data-lakorn-id");
+
+    // --- 🌟 ЛОГІКА ДЛЯ КНОПОК ПОЗНАЧОК (LOCALSTORAGE) ---
+    if (lakornId) {
+      const statusButtons = document.querySelectorAll(".status-btn");
+      
+      // Ключ у localStorage для цього конкретного лакорну (наприклад: "lakorn_status_my-id")
+      const storageKey = `lakorn_status_${lakornId}`;
+      
+      // Зчитуємо поточний збережений статус девайсу
+      const savedStatus = localStorage.getItem(storageKey);
+      if (savedStatus) {
+        const activeBtn = document.querySelector(`.status-btn[data-status="${savedStatus}"]`);
+        activeBtn?.classList.add("active");
+      }
+
+      statusButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const currentStatus = btn.getAttribute("data-status");
+
+          // Якщо користувач натиснув на вже активну кнопку — знімаємо виділення та видаляємо запис
+          if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+            localStorage.removeItem(storageKey);
+          } else {
+            // Знімаємо активний клас з усіх інших кнопок цієї панелі
+            statusButtons.forEach((b) => b.classList.remove("active"));
+            // Робимо активною поточну
+            btn.classList.add("active");
+            // Зберігаємо вибір у браузері девайсу
+            if (currentStatus) {
+              localStorage.setItem(storageKey, currentStatus);
+            }
+          }
+        });
+      });
+    }
+
+    // --- Логіка перемикання серій та табів ---
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const episodeWrappers = document.querySelectorAll(".episodes-wrapper");
+    const episodeButtons = document.querySelectorAll(".episode-btn");
+    const actionBox = document.getElementById("action-box");
+
+    const defaultPlaceholder = `
+      <p class="placeholder-text">
+        🍿 Оберіть сезон та натисніть на потрібну серію, щоб розпочати перегляд
+      </p>
+    `;
+
+    tabButtons.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        episodeWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+
+        tab.classList.add("active");
+        const targetId = tab.getAttribute("data-tab-target") || "";
+        if (targetId) {
+          document.getElementById(targetId)?.classList.add("active");
+        }
+
+        if (actionBox) actionBox.innerHTML = defaultPlaceholder;
+        episodeButtons.forEach((b) => b.classList.remove("active"));
+      });
+    });
+
+    episodeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("active")) {
+          btn.classList.remove("active");
+          if (actionBox) actionBox.innerHTML = defaultPlaceholder;
+          return;
+        }
+
+        episodeButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const tgId = btn.getAttribute("data-tg-id");
+
+        if (actionBox && tgId) {
+          actionBox.innerHTML = `
+            <div class="link-ready-box">
+              <p>Серію знайдено!</p>
+              <a href="https://t.me/${tgId}" target="_blank" class="tg-go-btn pulse-btn">
+                <span>🚀</span> ПЕРЕЙТИ ДО ПЕРЕГЛЯДУ
+              </a>
+              <span class="hint">Відео миттєво відкриється у твоєму додатку Telegram</span>
+            </div>
+          `;
+        }
+      });
+    });
+
+    // --- Логіка збільшення постера (Lightbox) ---
+    const poster = document.getElementById('movie-poster') as HTMLImageElement;
+    const lightbox = document.getElementById('poster-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    if (poster && lightbox && lightboxImg) {
+      poster.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = poster.src;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = poster.alt || 'Постер серіалу';
+        }
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setupPageLogic);
+  document.addEventListener("astro:after-swap", setupPageLogic);
+</script>
+
+<style>
+  .lakorn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 20px;
+  }
+  .info-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 16px;
+  }
+  @media (max-width: 768px) {
+    .info-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .cover-box {
+    width: 240px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  .clickable-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .clickable-poster:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+  }
+
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    .details-box {
+      align-items: center;
+    }
+  }
+  .details-box h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .tags-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .status-tag {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .status-tag.ongoing {
+    background-color: #ff9800;
+    color: #000;
+  }
+  .status-tag.completed {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  .country-tag,
+  .meta-tag {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+  .meta-tag.imdb {
+    border-color: #f59e0b;
+    color: #f59e0b;
+    font-weight: 700;
+  }
+
+  /* 🌟 СТИЛІ ДЛЯ ПАНЕЛІ ПОЗНАЧОК (СВІТЛА ТА ТЕМНА ТЕМИ АДАПТИВНІ) */
+  .user-status-panel {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .status-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+  }
+  .status-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+  }
+  
+  /* Активні стани кнопок із брендовими підсвітками */
+  .status-btn[data-status="favorite"].active {
+    background-color: #ef4444 !important; /* Червоний */
+    border-color: #ef4444 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  }
+  .status-btn[data-status="later"].active {
+    background-color: #3b82f6 !important; /* Синій */
+    border-color: #3b82f6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+  .status-btn[data-status="watching"].active {
+    background-color: #10b981 !important; /* Зелений */
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  }
+  
+  @media (max-width: 480px) {
+    .user-status-panel {
+      justify-content: center;
+    }
+    .status-btn .lbl {
+      display: none; /* на дуже дрібних екранах ховаємо текст, лишаємо тільки емодзі */
+    }
+    .status-btn {
+      padding: 8px 14px;
+    }
+  }
+
+  .description-text {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  .extra-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+  }
+  .info-item {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .info-label {
+    color: #64748b;
+    font-weight: 700;
+    min-width: 130px;
+  }
+  .info-value {
+    color: #cbd5e1;
+  }
+  .player-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 16px;
+  }
+  .player-section h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    text-align: center;
+  }
+
+  .seasons-nav-container {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 600px) {
+    .seasons-nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  .nav-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+  }
+  .seasons-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .season-nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
+    padding: 6px 14px;
+    background-color: #0f172a;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  .season-nav-link:hover {
+    color: #f8fafc;
+    border-color: #3b82f6;
+  }
+  .season-nav-link.active {
+    color: #fff;
+    background-color: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #020617;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  .tab-btn {
+    background-color: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 6px;
+  }
+  .tab-btn:hover {
+    color: #f8fafc;
+    background-color: rgba(99, 102, 241, 0.05);
+  }
+  .tab-btn.active {
+    color: white;
+    background-color: #1e3a8a;
+    border: 1px solid #3b82f6;
+  }
+
+  .episodes-wrapper {
+    display: none;
+  }
+  .episodes-wrapper.active {
+    display: block;
+  }
+  .episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .episode-btn {
+    background-color: var(--bg-button);
+    color: var(--text-primary);
+    border: 1px solid #1e3a8a;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  .episode-btn:hover {
+    border-color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+  }
+  .episode-btn.active {
+    background-color: #6366f1;
+    border-color: #6366f1;
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  }
+  .action-box {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    min-height: 180px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .placeholder-text {
+    color: #94a3b8;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  :global(.tg-go-btn.pulse-btn) {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white !important;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 9px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+    transition: all 0.3s ease;
+    animation: pulse-blue 2s infinite;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  :global(.tg-go-btn.pulse-btn:hover) {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  }
+  :global(.tg-go-btn.pulse-btn span) {
+    font-size: 22px;
+  }
+  :global(.link-ready-box) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  :global(.link-ready-box p) {
+    color: #60a5fa !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+  }
+  :global(.link-ready-box .hint) {
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @keyframes pulse-blue {
+    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  }
+
+  .lightbox {
+    display: flex;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  :global([data-theme="light"]) .lightbox {
+    background-color: rgba(241, 245, 249, 0.97);
+  }
+
+  .lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lightbox-content {
+    max-width: 95%;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    border: 2px solid var(--border-color);
+  }
+
+  .lightbox.active .lightbox-content {
+    transform: scale(1);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #94a3b8;
+    font-size: 44px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    user-select: none;
+  }
+  .lightbox-close:hover {
+    color: #ef4444;
+    transform: scale(1.1);
+  }
+
+  .lightbox-caption {
+    margin-top: 15px;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+</style>

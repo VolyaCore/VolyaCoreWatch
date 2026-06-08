@@ -1,0 +1,100 @@
+---
+// Імпортуємо майбутні компоненти шапки та підвалу
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// Підключаємо твій SASS-файл (зверни увагу на правильний шлях до папки)
+import "../sass/style.scss";
+
+// Приймаємо заголовок сторінки як параметр (пропс)
+const {
+  title = "VolyaCore — Переклад з субтитрами азійських BL, GL, гет к-драм/пісень та інше",
+} = Astro.props;
+---
+
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/logo-bird.png" />
+    <title>{title}</title>
+
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+  </head>
+  <body>
+    <!-- Вставляємо шапку сайту -->
+    <Header />
+
+    <!-- Головний контейнер для контенту сторінок -->
+    <main class="main-content">
+      <slot />
+      <!-- Сюди Astro автоматично підставить код з index.astro або [id].astro -->
+    </main>
+
+    <!-- Вставляємо підвал сайту -->
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  .container {
+    width: 100%;
+    max-width: 1440px; /* Обмежуємо максимальну ширину для великих ПК */
+    margin: 0 auto; /* Центруємо сайт по центру екрана */
+    padding: 0 16px; /* Безпечні відступи по боках для мобільних (щоб текст не лип до країв) */
+  }
+
+  /* Для екранів менше 375px (найменші телефони) */
+  @media (max-width: 360px) {
+    .container {
+      padding: 0 10px; /* Трохи зменшуємо відступи, щоб зберегти корисний простір */
+    }
+  }
+  .main-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 60px auto 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Палітра для обох тем */
+  :root {
+    --bg-main: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1d4ed8 100%);
+    --bg-card: #0f172a;
+    --bg-select: #020617;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(99, 102, 241, 0.2);
+  }
+
+  [data-theme="light"] {
+    --bg-main: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    --bg-card: #ffffff;
+    --bg-select: #f8fafc;
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --border-color: rgba(99, 102, 241, 0.15);
+  }
+
+  body {
+    background: var(--bg-select) !important;
+    background-attachment: fixed !important;
+    color: var(--text-primary);
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+    margin: 0;
+    font-family: sans-serif;
+  }
+</style>

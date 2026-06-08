@@ -1,0 +1,57 @@
+[
+  {
+    "id": "between-us-s1",
+    "title": "Між нами",
+    "description": "Історія про команду плавців, їхні внутрішні переживання, міцну дружбу та глибокі почуття.",
+    "cover": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2022,
+    "genres": ["romance", "drama", "sports"],
+    "episodesCount": 12,
+    "imdbRating": "7.6",
+    "duration": "49 хв",
+    "cast": ["Бун Ноппанут", "Прем Варут"],
+    "director": "Нью Сівей Тхаватбуль",
+    "network": "Studio Wabi Sabi",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "between-us-s1" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/208" },
+          { "number": 2, "tg_id": "volyacore/214" },
+          { "number": 3, "tg_id": "volyacore/215" },
+          { "number": 4, "tg_id": "volyacore/219" },
+          { "number": 5, "tg_id": "volyacore/253" },
+          { "number": 6, "tg_id": "volyacore/260" },
+          { "number": 7, "tg_id": "volyacore/265" },
+          { "number": 8, "tg_id": "volyacore/277" },
+          { "number": 9, "tg_id": "volyacore/289" },
+          { "number": 10, "tg_id": "volyacore/294" },
+          { "number": 11, "tg_id": "volyacore/299" },
+          { "number": 12, "tg_id": "volyacore/303" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск", 
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/323" },
+          { "number": 2, "tg_id": "volyacore/330" },
+          { "number": 3, "tg_id": "volyacore/331" },
+          { "number": 4, "tg_id": "volyacore/334" },
+          { "number": 5, "tg_id": "volyacore/347" },
+          { "number": 6, "tg_id": "volyacore/350" }
+        ]
+      }
+    ]
+  }
+]
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import MovieCard from "../components/MovieCard.astro";
+import lakornsData from "../data/lakorns.json";
+---
+
+<MainLayout title="VolyaCore">
+  <section class="filters-section">
+    <div class="filter-group">
+      <label for="filter-country">Країна</label>
+      <select id="filter-country">
+        <option value="all">Усі країни</option>
+        <option value="thailand">Тайланд</option>
+        <option value="korea">Південна Корея</option>
+        <option value="japan">Японія</option>
+        <option value="china">Китай</option>
+        <option value="taiwan">Тайвань</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-genre">Жанр</label>
+      <select id="filter-genre">
+        <option value="all">Усі жанри</option>
+        <option value="romance">Романтика</option>
+        <option value="drama">Драма</option>
+        <option value="comedy">Комедія</option>
+        <option value="sports">Спорт</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-year">Рік</label>
+      <select id="filter-year">
+        <option value="all">Усі роки</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="catalog-section">
+    <h2>Усі релізи</h2>
+
+    <div class="movies-grid" id="catalog-grid">
+      {
+        lakornsData.map((lakorn) => (
+          <MovieCard
+            id={lakorn.id}
+            title={lakorn.title}
+            cover={lakorn.cover}
+            status={lakorn.status}
+            episodesCount={lakorn.episodesCount}
+            country={lakorn.country}
+            year={lakorn.year}
+            genres={lakorn.genres}
+          />
+        ))
+      }
+    </div>
+    <div id="no-results" class="no-results-msg" style="display: none;">
+      <p>🔍 На жаль, нічого не знайдено за такими критеріями фільтрації.</p>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById(
+      "global-search"
+    ) as HTMLInputElement;
+    const countrySelect = document.getElementById(
+      "filter-country"
+    ) as HTMLSelectElement;
+    const genreSelect = document.getElementById(
+      "filter-genre"
+    ) as HTMLSelectElement;
+    const yearSelect = document.getElementById(
+      "filter-year"
+    ) as HTMLSelectElement;
+    const cards = document.querySelectorAll(".movie-card");
+    const noResults = document.getElementById("no-results");
+
+    function filterCatalog() {
+      const searchQuery = searchInput
+        ? searchInput.value.toLowerCase().trim()
+        : "";
+      const selectedCountry = countrySelect.value;
+      const selectedGenre = genreSelect.value;
+      const selectedYear = yearSelect.value;
+
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const title = card.getAttribute("data-title") || "";
+        const country = card.getAttribute("data-country") || "";
+        const year = card.getAttribute("data-year") || "";
+        const genres = (card.getAttribute("data-genres") || "").split(",");
+
+        // Перевіряємо збіг за всіма фільтрами одночасно
+        const matchesSearch = title.includes(searchQuery);
+        const matchesCountry =
+          selectedCountry === "all" || country === selectedCountry;
+        const matchesYear = selectedYear === "all" || year === selectedYear;
+        const matchesGenre =
+          selectedGenre === "all" || genres.includes(selectedGenre);
+
+        if (matchesSearch && matchesCountry && matchesYear && matchesGenre) {
+          (card as HTMLElement).style.display = "flex";
+          visibleCount++;
+        } else {
+          (card as HTMLElement).style.display = "none";
+        }
+      });
+
+      // Показуємо плашку "Нічого не знайдено", якщо всі картки приховані
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+    }
+
+    // Додаємо слухачів подій на всі елементи вибору
+    searchInput?.addEventListener("input", filterCatalog);
+    countrySelect?.addEventListener("change", filterCatalog);
+    genreSelect?.addEventListener("change", filterCatalog);
+    yearSelect?.addEventListener("change", filterCatalog);
+  });
+</script>
+
+<style is:global>
+  .filters-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .filter-item {
+    flex: 1; /* Фільтри рівномірно ділять простір на ПК */
+  }
+
+  /* 📱 Перебудова для мобільних пристроїв */
+  @media (max-width: 768px) {
+    .filters-container {
+      flex-direction: column; /* Вишиковуємо фільтри один під одним */
+      gap: 12px;
+    }
+  }
+  /* Робимо стилі глобальними, щоб пробити ізоляцію всередині MovieCard */
+
+  /* Панель фільтрів */
+  .filters-section {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg-card) !important;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 50px;
+    flex-wrap: wrap;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  /* Написи над фільтрами (КРАЇНА, ЖАНР, РІК) */
+  .filter-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+
+  /* Випадаючі списки (Селекти) */
+  .filter-group select {
+    background-color: var(--bg-select) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .filter-group select:focus {
+    border-color: #6366f1 !important;
+  }
+
+  /* Заголовок "Усі релізи" */
+  .catalog-section {
+    margin-top: 40px;
+  }
+  .catalog-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border-left: 4px solid #6366f1;
+    padding-left: 12px;
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+  }
+
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .no-results-msg {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 16px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  /* --- ФІКС ДЛЯ КАРТОК (ПРОБИВАЄМО КОМПОНЕНТ MOVIECARD) --- */
+  .movie-card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    transition:
+      background-color 1s ease,
+      border-color 1s ease !important;
+  }
+
+  /* Текст назви лакорну на картці */
+  .movie-card h3,
+  .movie-card .movie-title,
+  .movie-card a {
+    color: var(--text-primary) !important;
+    transition: color 1s ease !important;
+  }
+
+  /* Текст кількості серій на картці */
+  .movie-card p,
+  .movie-card .movie-episodes {
+    color: var(--text-muted) !important;
+    transition: color 1s ease !important;
+  }
+</style>
