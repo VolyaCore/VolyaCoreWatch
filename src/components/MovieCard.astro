@@ -6,9 +6,9 @@ const genresString = genres ? genres.join(',') : '';
 <a 
   href={`/lakorn/${id}`} 
   class="movie-card" 
-  data-title={title.toLowerCase()}
-  data-country={country}
-  data-year={year}
+  data-title={title ? title.toLowerCase() : ''}
+  data-country={country || ''}
+  data-year={year || ''}
   data-genres={genresString}
 >
   <div class="cover-wrapper">
