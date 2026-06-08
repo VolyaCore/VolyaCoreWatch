@@ -8,7 +8,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // Заміни на своє ім'я користувача GitHub та назву репозиторію:
-  site: 'https://VolyaCore.github.io',
-  base: '/VolyaCoreWatch',
+  site: 'https://volyacore.github.io',
+  base: '/VolyaCoreWatch', 
 });
