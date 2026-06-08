@@ -3,9 +3,9 @@ const { id, title, cover, status, episodesCount, country, year, genres, imdbRati
 const genresString = genres ? genres.join(',') : '';
 ---
 
-<a 
-  href={`/lakorn/${id}`} 
-  class="movie-card" 
+<a
+  href={`/lakorn/${id}`}
+  class="movie-card"
   data-title={title ? title.toLowerCase() : ''}
   data-country={country || ''}
   data-year={year || ''}
