@@ -5,9 +5,14 @@
 // export default defineConfig({});
 
 
+// import { defineConfig } from 'astro/config';
+
+// export default defineConfig({
+//   site: 'https://volyacore.github.io',
+//   base: '/VolyaCoreWatch', 
+// });
+
 import { defineConfig } from 'astro/config';
 
-export default defineConfig({
-  site: 'https://volyacore.github.io',
-  base: '/VolyaCoreWatch', 
-});
+// Чистий конфіг для Vercel / Netlify
+export default defineConfig({});
