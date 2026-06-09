@@ -1,9 +1,9 @@
 [
   {
-    "id": "between-us-s1",
+    "id": "between-us",
     "title": "Між нами",
     "description": "Історія про команду плавців, їхні внутрішні переживання, міцну дружбу та глибокі почуття.",
-    "cover": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400",
+    "cover": "between_us.jpg",
     "status": "completed",
     "country": "thailand",
     "year": 2022,

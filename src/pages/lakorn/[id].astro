@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import lakornsData from "../../data/lakorns.json";
+import { Image } from 'astro:assets'; // Імпортуємо компонент оптимізації
 
 export function getStaticPaths() {
   return lakornsData.map((lakorn) => ({
@@ -14,19 +15,31 @@ const lakorn = lakornsData.find((l) => l.id === id);
 if (!lakorn) {
   throw new Error(`Лакорн з ID ${id} не знайдено`);
 }
+
+// Автоматично шукаємо всі зображення в папці src/assets/
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpeg,jpg,png,gif,webp,JPEG,JPG}');
+
+// Формуємо чистий шлях до картинки
+const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
 ---
 
 <MainLayout title={`${lakorn.title} — VolyaCore`}>
   <div class="lakorn-container" data-lakorn-id={lakorn.id}>
     <section class="info-section">
       <div class="cover-box">
-        <img 
-          src={lakorn.cover} 
-          alt={lakorn.title} 
-          id="movie-poster" 
-          class="clickable-poster" 
-          title="Натисніть, щоб збільшити постер"
-        />
+        {images[imagePath] ? (
+          <Image 
+            src={images[imagePath]()} 
+            alt={lakorn.title} 
+            width={400} 
+            height={600} 
+            id="movie-poster" 
+            class="clickable-poster" 
+            title="Натисніть, щоб збільшити постер"
+          />
+        ) : (
+          <div class="no-cover-placeholder-detail">Немає обкладинки</div>
+        )}
       </div>
 
       <div class="details-box">
@@ -182,6 +195,21 @@ if (!lakorn) {
   </div>
 </MainLayout>
 
+<style>
+  .no-cover-placeholder-detail {
+    width: 100%;
+    height: 450px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 16px;
+    border: 1px dashed rgba(99, 102, 241, 0.3);
+  }
+</style>
+
 <script>
   function setupPageLogic() {
     const container = document.querySelector(".lakorn-container");
@@ -191,10 +219,8 @@ if (!lakorn) {
     if (lakornId) {
       const statusButtons = document.querySelectorAll(".status-btn");
       
-      // Ключ у localStorage для цього конкретного лакорну (наприклад: "lakorn_status_my-id")
       const storageKey = `lakorn_status_${lakornId}`;
       
-      // Зчитуємо поточний збережений статус девайсу
       const savedStatus = localStorage.getItem(storageKey);
       if (savedStatus) {
         const activeBtn = document.querySelector(`.status-btn[data-status="${savedStatus}"]`);
@@ -205,16 +231,12 @@ if (!lakorn) {
         btn.addEventListener("click", () => {
           const currentStatus = btn.getAttribute("data-status");
 
-          // Якщо користувач натиснув на вже активну кнопку — знімаємо виділення та видаляємо запис
           if (btn.classList.contains("active")) {
             btn.classList.remove("active");
             localStorage.removeItem(storageKey);
           } else {
-            // Знімаємо активний клас з усіх інших кнопок цієї панелі
             statusButtons.forEach((b) => b.classList.remove("active"));
-            // Робимо активною поточну
             btn.classList.add("active");
-            // Зберігаємо вибір у браузері девайсу
             if (currentStatus) {
               localStorage.setItem(storageKey, currentStatus);
             }

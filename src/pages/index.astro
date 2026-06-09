@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
+const latestLakorns = lakornsData.slice(0, 24);
 ---
 
 <MainLayout title="VolyaCore">
@@ -47,7 +48,7 @@ import lakornsData from "../data/lakorns.json";
 
     <div class="movies-grid" id="catalog-grid">
       {
-        lakornsData.map((lakorn) => (
+        latestLakorns.map((lakorn) => (
           <MovieCard
             id={lakorn.id}
             title={lakorn.title}

@@ -1,5 +1,15 @@
-  ---
+---
+import { Image } from 'astro:assets';
+
 const { id, title, cover, status, episodesCount, country, year, genres, imdbRating } = Astro.props;
+
+// Автоматично шукаємо всі картинки в папці src/assets/covers/
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpeg,jpg,png,gif,webp}');
+
+// Будуємо повний шлях до картинки
+const imagePath = `/src/assets/covers/${cover}`;
+
+// Перетворюємо жанри в рядок для дата-атрибуту фільтрів
 const genresString = genres ? genres.join(',') : '';
 ---
 
@@ -12,7 +22,12 @@ const genresString = genres ? genres.join(',') : '';
   data-genres={genresString}
 >
   <div class="cover-wrapper">
-    <img src={cover} alt={title} loading="lazy" />
+    {images[imagePath] ? (
+      <Image src={images[imagePath]()} alt={title} width={300} height={400} loading="lazy" />
+    ) : (
+      <div class="no-cover-placeholder">Немає обкладинки</div>
+    )}
+    
     <span class={`status-badge ${status}`}>
       {status === 'ongoing' ? 'Онгоінг' : 'Завершено'}
     </span>
@@ -51,12 +66,23 @@ const genresString = genres ? genres.join(',') : '';
     width: 100%;
     height: 300px;
     position: relative;
+    background-color: #1e293b;
   }
 
   .cover-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .no-cover-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 14px;
   }
 
   .status-badge {
@@ -74,14 +100,13 @@ const genresString = genres ? genres.join(',') : '';
   .status-badge.ongoing { background-color: #ff9800; color: #000; }
   .status-badge.completed { background-color: #4caf50; color: #fff; }
 
-  /* Стилі для зірочки оцінки */
   .rating-badge {
     position: absolute;
     top: 12px;
     right: 12px;
     background-color: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(4px);
-    color: #f59e0b; /* Золотий колір */
+    color: #f59e0b;
     padding: 6px 10px;
     border-radius: 6px;
     font-size: 12px;
