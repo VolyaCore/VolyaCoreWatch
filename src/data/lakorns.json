@@ -71,7 +71,7 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/1493" },
-          { "number": 2, "tg_id": "volyacore/214" },
+          { "number": 2, "tg_id": "" },
           { "number": 3, "tg_id": "volyacore/215" },
           { "number": 4, "tg_id": "volyacore/219" },
           { "number": 5, "tg_id": "volyacore/253" },
