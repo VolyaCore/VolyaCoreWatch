@@ -3,7 +3,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
-const latestLakorns = lakornsData.slice(0, 24);
+// 1. Розділяємо проєкти за статусом
+const ongoingLakorns = lakornsData.filter(lakorn => lakorn.status === "ОНГОІНГ");
+const completedLakorns = lakornsData.filter(lakorn => lakorn.status !== "ОНГОІНГ");
+
+// 2. Рандомізуємо масив ЗАВЕРШЕНИХ проєктів
+const shuffledCompleted = [...completedLakorns].sort(() => 0.5 - Math.random());
+
+// 3. Об'єднуємо: спочатку ОНГОІНГИ, потім випадкові ЗАВЕРШЕНІ
+const sortedCatalogLakorns = [...ongoingLakorns, ...shuffledCompleted];
+
+// 4. Беремо перші 24 штуки для сітки каталогу
+const latestLakorns = sortedCatalogLakorns.slice(0, 24);
 ---
 
 <MainLayout title="VolyaCore">
@@ -159,7 +170,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     track.innerHTML = '';
     if (dotsContainer) dotsContainer.innerHTML = '';
 
-    // Беремо 8 випадкових проєктів, щоб заповнити рядок стрічки слайдера
     const shuffled = [...allSlides].sort(() => 0.5 - Math.random());
     const selectedSlides = shuffled.slice(0, 8);
 
@@ -168,7 +178,6 @@ const latestLakorns = lakornsData.slice(0, 24);
       track.appendChild(slide);
     });
 
-    // Динамічний розрахунок кроку гортання залежно від кількості елементів на екрані
     function getSlidesPerPage() {
       const width = window.innerWidth;
       if (width >= 1200) return 4;
@@ -202,7 +211,6 @@ const latestLakorns = lakornsData.slice(0, 24);
       else if (index < 0) currentIndex = maxIndex - 1;
       else currentIndex = index;
 
-      // Гортаємо з урахуванням ширини однієї картки (%)
       const slideWidthPercentage = 100 / slidesPerPage;
       track!.style.transform = `translateX(-${currentIndex * slideWidthPercentage}%)`;
 
@@ -244,7 +252,6 @@ const latestLakorns = lakornsData.slice(0, 24);
       }
     });
 
-    // Ініціалізація точок при завантаженні та ресайзі вікна
     buildDots();
     updateSlider(currentIndex);
     startAutoSlide();
@@ -260,7 +267,6 @@ const latestLakorns = lakornsData.slice(0, 24);
 </script>
 
 <style is:global>
-  /* СТИЛІ ФІЛЬТРІВ ТА КАТАЛОГУ */
   .filters-container { display: flex; gap: 20px; width: 100%; }
   .filter-item { flex: 1; }
   @media (max-width: 768px) { .filters-container { flex-direction: column; gap: 12px; } }
@@ -285,9 +291,6 @@ const latestLakorns = lakornsData.slice(0, 24);
   .movie-card h3, .movie-card .movie-title, .movie-card a { color: var(--text-primary) !important; }
   .movie-card p, .movie-card .movie-episodes { color: var(--text-muted) !important; }
 
-  /* ========================================================================= */
-  /* 🎬 ОНОВЛЕНІ СТИЛІ КАРУСЕЛІ ДЛЯ ВІДОБРАЖЕННЯ ДЕКІЛЬКОХ ШТУК В РЯДКУ 🎬 */
-  /* ========================================================================= */
   .hero-carousel-section {
     width: 100%;
     margin: 1.5rem auto;
@@ -305,7 +308,7 @@ const latestLakorns = lakornsData.slice(0, 24);
 
   .carousel-track {
     display: flex;
-    gap: 20px; /* Відступ між картками в каруселі */
+    gap: 20px;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
   }
@@ -313,7 +316,6 @@ const latestLakorns = lakornsData.slice(0, 24);
   .carousel-slide-wrapper {
     box-sizing: border-box;
     display: none;
-    /* Гнучка ширина карток: 4 в ряд на ПК, менше — на мобілках */
     flex: 0 0 calc(25% - 15px); 
   }
 
@@ -336,7 +338,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     margin: 0 !important;
   }
 
-  /* Навігаційні кнопки стрілок */
   .carousel-nav-btn {
     position: absolute;
     top: 50%;
@@ -360,7 +361,6 @@ const latestLakorns = lakornsData.slice(0, 24);
   .prev-btn { left: 5px; }
   .next-btn { right: 5px; }
 
-  /* Точки пагінації (під каруселлб) */
   .carousel-dots {
     display: flex;
     justify-content: center;
