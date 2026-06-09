@@ -2,10 +2,39 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
+
 const latestLakorns = lakornsData.slice(0, 24);
 ---
 
 <MainLayout title="VolyaCore">
+  
+  <section class="hero-carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="carousel-track">
+        {
+          lakornsData.map((lakorn) => (
+            <div class="carousel-slide-wrapper" data-id={lakorn.id}>
+              <MovieCard
+                id={lakorn.id}
+                title={lakorn.title}
+                cover={lakorn.cover}
+                status={lakorn.status}
+                episodesCount={lakorn.episodesCount}
+                country={lakorn.country}
+                year={lakorn.year}
+                genres={lakorn.genres}
+              />
+            </div>
+          ))
+        }
+      </div>
+      
+      <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Попередній">❮</button>
+      <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Наступний">❯</button>
+      
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
   <section class="filters-section">
     <div class="filter-group">
       <label for="filter-country">Країна</label>
@@ -69,45 +98,34 @@ const latestLakorns = lakornsData.slice(0, 24);
 </MainLayout>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById(
-      "global-search"
-    ) as HTMLInputElement;
-    const countrySelect = document.getElementById(
-      "filter-country"
-    ) as HTMLSelectElement;
-    const genreSelect = document.getElementById(
-      "filter-genre"
-    ) as HTMLSelectElement;
-    const yearSelect = document.getElementById(
-      "filter-year"
-    ) as HTMLSelectElement;
-    const cards = document.querySelectorAll(".movie-card");
+  function initPageFeatures() {
+    // 1. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ
+    const searchInput = document.getElementById("global-search") as HTMLInputElement;
+    const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
+    const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
+    const yearSelect = document.getElementById("filter-year") as HTMLSelectElement;
+    
+    const catalogCards = document.querySelectorAll("#catalog-grid .movie-card");
     const noResults = document.getElementById("no-results");
 
     function filterCatalog() {
-      const searchQuery = searchInput
-        ? searchInput.value.toLowerCase().trim()
-        : "";
-      const selectedCountry = countrySelect.value;
-      const selectedGenre = genreSelect.value;
-      const selectedYear = yearSelect.value;
+      const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      const selectedCountry = countrySelect ? countrySelect.value : "all";
+      const selectedGenre = genreSelect ? genreSelect.value : "all";
+      const selectedYear = yearSelect ? yearSelect.value : "all";
 
       let visibleCount = 0;
 
-      cards.forEach((card) => {
+      catalogCards.forEach((card) => {
         const title = card.getAttribute("data-title") || "";
         const country = card.getAttribute("data-country") || "";
         const year = card.getAttribute("data-year") || "";
         const genres = (card.getAttribute("data-genres") || "").split(",");
 
-        // Перевіряємо збіг за всіма фільтрами одночасно
         const matchesSearch = title.includes(searchQuery);
-        const matchesCountry =
-          selectedCountry === "all" || country === selectedCountry;
+        const matchesCountry = selectedCountry === "all" || country === selectedCountry;
         const matchesYear = selectedYear === "all" || year === selectedYear;
-        const matchesGenre =
-          selectedGenre === "all" || genres.includes(selectedGenre);
+        const matchesGenre = selectedGenre === "all" || genres.includes(selectedGenre);
 
         if (matchesSearch && matchesCountry && matchesYear && matchesGenre) {
           (card as HTMLElement).style.display = "flex";
@@ -117,145 +135,251 @@ const latestLakorns = lakornsData.slice(0, 24);
         }
       });
 
-      // Показуємо плашку "Нічого не знайдено", якщо всі картки приховані
       if (noResults) {
         noResults.style.display = visibleCount === 0 ? "block" : "none";
       }
     }
 
-    // Додаємо слухачів подій на всі елементи вибору
     searchInput?.addEventListener("input", filterCatalog);
     countrySelect?.addEventListener("change", filterCatalog);
     genreSelect?.addEventListener("change", filterCatalog);
     yearSelect?.addEventListener("change", filterCatalog);
-  });
+
+    // 2. КЛІЄНТСЬКА РАНДОМІЗАЦІЯ ТА РОБОТА КАРУСЕЛІ
+    const track = document.getElementById('carousel-track');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    
+    if (!track) return;
+
+    const allSlides = Array.from(document.querySelectorAll('.carousel-slide-wrapper'));
+    if (allSlides.length === 0) return;
+
+    track.innerHTML = '';
+    if (dotsContainer) dotsContainer.innerHTML = '';
+
+    // Беремо 8 випадкових проєктів, щоб заповнити рядок стрічки слайдера
+    const shuffled = [...allSlides].sort(() => 0.5 - Math.random());
+    const selectedSlides = shuffled.slice(0, 8);
+
+    selectedSlides.forEach((slide, index) => {
+      slide.classList.add('carousel-active');
+      track.appendChild(slide);
+    });
+
+    // Динамічний розрахунок кроку гортання залежно від кількості елементів на екрані
+    function getSlidesPerPage() {
+      const width = window.innerWidth;
+      if (width >= 1200) return 4;
+      if (width >= 900) return 3;
+      if (width >= 600) return 2;
+      return 1;
+    }
+
+    let currentIndex = 0;
+    let autoSlideInterval: number;
+
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const slidesPerPage = getSlidesPerPage();
+      const maxIndex = Math.max(1, selectedSlides.length - slidesPerPage + 1);
+
+      for (let i = 0; i < maxIndex; i++) {
+        const dot = document.createElement('div');
+        dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
+        dot.dataset.index = i.toString();
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateSlider(index: number) {
+      const slidesPerPage = getSlidesPerPage();
+      const maxIndex = Math.max(1, selectedSlides.length - slidesPerPage + 1);
+
+      if (index >= maxIndex) currentIndex = 0;
+      else if (index < 0) currentIndex = maxIndex - 1;
+      else currentIndex = index;
+
+      // Гортаємо з урахуванням ширини однієї картки (%)
+      const slideWidthPercentage = 100 / slidesPerPage;
+      track!.style.transform = `translateX(-${currentIndex * slideWidthPercentage}%)`;
+
+      const dots = document.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideInterval = window.setInterval(() => {
+        updateSlider(currentIndex + 1);
+      }, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+    }
+
+    nextBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlider(currentIndex + 1);
+      startAutoSlide();
+    });
+
+    prevBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateSlider(currentIndex - 1);
+      startAutoSlide();
+    });
+
+    dotsContainer?.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target && target.classList.contains('carousel-dot')) {
+        const idx = parseInt(target.getAttribute('data-index') || '0', 10);
+        updateSlider(idx);
+        startAutoSlide();
+      }
+    });
+
+    // Ініціалізація точок при завантаженні та ресайзі вікна
+    buildDots();
+    updateSlider(currentIndex);
+    startAutoSlide();
+
+    window.addEventListener('resize', () => {
+      buildDots();
+      updateSlider(currentIndex);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initPageFeatures);
+  document.addEventListener("astro:after-swap", initPageFeatures);
 </script>
 
 <style is:global>
-  .filters-container {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-  }
+  /* СТИЛІ ФІЛЬТРІВ ТА КАТАЛОГУ */
+  .filters-container { display: flex; gap: 20px; width: 100%; }
+  .filter-item { flex: 1; }
+  @media (max-width: 768px) { .filters-container { flex-direction: column; gap: 12px; } }
 
-  .filter-item {
-    flex: 1; /* Фільтри рівномірно ділять простір на ПК */
-  }
-
-  /* 📱 Перебудова для мобільних пристроїв */
-  @media (max-width: 768px) {
-    .filters-container {
-      flex-direction: column; /* Вишиковуємо фільтри один під одним */
-      gap: 12px;
-    }
-  }
-  /* Робимо стилі глобальними, щоб пробити ізоляцію всередині MovieCard */
-
-  /* Панель фільтрів */
   .filters-section {
+    display: flex; gap: 20px; background-color: #7C9BCC !important;
+    padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);
+    margin-top: 30px; flex-wrap: wrap; transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 180px; }
+  .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; letter-spacing: 0.5px; }
+  .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; }
+  .filter-group select:focus { border-color: #6366f1 !important; }
+
+  .catalog-section { margin-top: 40px; }
+  .catalog-section h2 { font-size: 22px; font-weight: 600; margin-bottom: 25px; border-left: 4px solid #6366f1; padding-left: 12px; color: var(--text-primary) !important; }
+  .movies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+  .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); font-size: 16px; background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
+  
+  .movie-card { background-color: var(--bg-card) !important; border: 1px solid var(--border-color) !important; transition: background-color 1s ease, border-color 1s ease !important; }
+  .movie-card h3, .movie-card .movie-title, .movie-card a { color: var(--text-primary) !important; }
+  .movie-card p, .movie-card .movie-episodes { color: var(--text-muted) !important; }
+
+  /* ========================================================================= */
+  /* 🎬 ОНОВЛЕНІ СТИЛІ КАРУСЕЛІ ДЛЯ ВІДОБРАЖЕННЯ ДЕКІЛЬКОХ ШТУК В РЯДКУ 🎬 */
+  /* ========================================================================= */
+  .hero-carousel-section {
+    width: 100%;
+    margin: 1.5rem auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .carousel-track {
     display: flex;
-    gap: 20px;
-    background-color: var(--bg-card) !important;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    margin-top: 50px;
-    flex-wrap: wrap;
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+    gap: 20px; /* Відступ між картками в каруселі */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
   }
 
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-    min-width: 180px;
+  .carousel-slide-wrapper {
+    box-sizing: border-box;
+    display: none;
+    /* Гнучка ширина карток: 4 в ряд на ПК, менше — на мобілках */
+    flex: 0 0 calc(25% - 15px); 
   }
 
-  /* Написи над фільтрами (КРАЇНА, ЖАНР, РІК) */
-  .filter-group label {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-muted) !important;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+  @media (max-width: 1200px) {
+    .carousel-slide-wrapper { flex: 0 0 calc(33.333% - 14px); }
+  }
+  @media (max-width: 900px) {
+    .carousel-slide-wrapper { flex: 0 0 calc(50% - 10px); }
+  }
+  @media (max-width: 600px) {
+    .carousel-slide-wrapper { flex: 0 0 100%; }
+  }
+  
+  .carousel-slide-wrapper.carousel-active {
+    display: block;
   }
 
-  /* Випадаючі списки (Селекти) */
-  .filter-group select {
-    background-color: var(--bg-select) !important;
-    border: 1px solid var(--border-color) !important;
-    color: var(--text-primary) !important;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
+  .carousel-slide-wrapper .movie-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Навігаційні кнопки стрілок */
+  .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.1rem;
     cursor: pointer;
-    outline: none;
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease,
-      color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(6px);
+    z-index: 10;
   }
+  .carousel-nav-btn:hover { background-color: #6366f1; border-color: #6366f1; transform: translateY(-50%) scale(1.05); }
+  .prev-btn { left: 5px; }
+  .next-btn { right: 5px; }
 
-  .filter-group select:focus {
-    border-color: #6366f1 !important;
+  /* Точки пагінації (під каруселлб) */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
   }
-
-  /* Заголовок "Усі релізи" */
-  .catalog-section {
-    margin-top: 40px;
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-  .catalog-section h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    border-left: 4px solid #6366f1;
-    padding-left: 12px;
-    color: var(--text-primary) !important;
-    transition: color 0.3s ease;
-  }
-
-  .movies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 25px;
-  }
-
-  .no-results-msg {
-    text-align: center;
-    padding: 40px;
-    color: var(--text-muted);
-    font-size: 16px;
-    background-color: var(--bg-card);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-  }
-
-  /* --- ФІКС ДЛЯ КАРТОК (ПРОБИВАЄМО КОМПОНЕНТ MOVIECARD) --- */
-  .movie-card {
-    background-color: var(--bg-card) !important;
-    border: 1px solid var(--border-color) !important;
-    transition:
-      background-color 1s ease,
-      border-color 1s ease !important;
-  }
-
-  /* Текст назви лакорну на картці */
-  .movie-card h3,
-  .movie-card .movie-title,
-  .movie-card a {
-    color: var(--text-primary) !important;
-    transition: color 1s ease !important;
-  }
-
-  /* Текст кількості серій на картці */
-  .movie-card p,
-  .movie-card .movie-episodes {
-    color: var(--text-muted) !important;
-    transition: color 1s ease !important;
+  [data-theme="light"] .carousel-dot { background: rgba(0, 0, 0, 0.15); }
+  
+  .carousel-dot.active {
+    background: #6366f1;
+    width: 20px;
+    border-radius: 4px;
   }
 </style>

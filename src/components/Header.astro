@@ -1,215 +1,3 @@
-<!-- ---
-// Шапка — це внутрішній компонент, тому props та повна HTML-структура сторінки тут більше не потрібні!
----
-
-<header class="site-header">
-  <div class="header-container">
-    <a href="/" class="logo">Volya<span>Core</span></a>
-
-    <div class="search-container">
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input
-          type="text"
-          id="global-search"
-          placeholder="Знайти улюблений проєкт..."
-          autocomplete="off"
-        />
-      </div>
-    </div>
-
-    <button
-      id="theme-toggle"
-      class="theme-toggle-btn"
-      aria-label="Переключити тему"
-    >
-      <span class="sun-icon">☀️</span>
-      <span class="moon-icon">🌙</span>
-    </button>
-
-    <nav class="navigation">
-      <a href="/">Каталог</a>
-      <a href="/watchlist" class="nav-link">Мої списки</a>
-      <a href="https://t.me/volyacore" target="_blank" class="tg-channel-btn"
-        >Телеграм</a
-      >
-    </nav>
-  </div>
-</header>
-
-<script>
-  // Функція для налаштування логіки кнопки
-  function setupThemeToggle() {
-    const toggleBtn = document.getElementById("theme-toggle");
-
-    toggleBtn?.addEventListener("click", () => {
-      // Перевіряємо поточну тему на рівні тегу <html>
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "dark";
-      const newTheme = currentTheme === "light" ? "dark" : "light";
-
-      // Змінюємо тему на сайті та зберігаємо у пам'ять браузера
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-    });
-  }
-
-  // Запускаємо логіку відразу при завантаженні
-  setupThemeToggle();
-
-  // Якщо ти використовуєш або плануєш використовувати Astro View Transitions,
-  // цей рядок дозволить кнопці працювати навіть після переходу між сторінками:
-  document.addEventListener("astro:after-swap", setupThemeToggle);
-</script>
-
-<style lang="scss">
-  // Використовуємо змінні теми для адаптивності кольорів
-  .site-header {
-    background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition:
-      background 0.3s ease,
-      border-color 0.3s ease;
-  }
-
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .logo {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    span {
-      color: #3b82f6;
-      text-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-    }
-  }
-
-  .search-container {
-    flex: 1;
-    max-width: 450px;
-    width: 100%;
-  }
-
-  .search-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: var(--bg-main);
-    border: 2px solid #2563eb;
-    border-radius: 50px;
-    padding: 2px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
-
-    .search-icon {
-      position: absolute;
-      left: 16px;
-      font-size: 14px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px 16px 10px 44px;
-      background: transparent;
-      border: none;
-      color: var(--text-primary);
-      font-size: 14px;
-      outline: none;
-      transition: color 0.3s ease;
-      &::placeholder {
-        color: var(--text-muted);
-      }
-    }
-
-    &:focus-within {
-      border-color: #60a5fa;
-      box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
-    }
-  }
-
-  /* Оформлення кнопки перемикача */
-  .theme-toggle-btn {
-    background: var(--bg-button);
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    font-size: 16px;
-
-    &:hover {
-      transform: scale(1.1);
-      border-color: #2563eb;
-    }
-  }
-
-  .navigation {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      &:hover {
-        color: var(--text-primary);
-      }
-    }
-    .tg-channel-btn {
-      background: #2563eb;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 8px;
-      &:hover {
-        background: #1d4ed8;
-      }
-    }
-  }
-
-  /* Керування видимістю іконок залежно від теми */
-  .sun-icon {
-    display: none;
-  }
-  .moon-icon {
-    display: inline;
-  }
-
-  :global([data-theme="light"]) {
-    .sun-icon {
-      display: inline;
-    }
-    .moon-icon {
-      display: none;
-    }
-  }
-</style> -->
-
-
-
-
-
-
 ---
 // Шапка — це внутрішній компонент, тому props та повна HTML-структура сторінки тут більше не потрібні!
 ---
@@ -298,7 +86,7 @@
 
 <style lang="scss">
   .site-header {
-    background: var(--bg-card);
+    background: #7C9BCC;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
@@ -328,7 +116,7 @@
     flex-shrink: 0; /* Щоб логотип не стискався */
     
     span {
-      color: #3b82f6;
+      color: #2563eb;
       text-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
     }
   }
@@ -383,7 +171,7 @@
 
   .theme-toggle-btn {
     background: var(--bg-button);
-    border: 1px solid var(--border-color);
+    border: 1px solid #2563eb;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
@@ -487,7 +275,7 @@
       right: auto;
       width: 100%;
       height: 100vh;
-      background: var(--bg-card);
+      background: #D9E6FF;
       flex-direction: column;
       justify-content: center;
       align-items: center;
