@@ -266,10 +266,11 @@ const latestLakorns = lakornsData.slice(0, 24);
   @media (max-width: 768px) { .filters-container { flex-direction: column; gap: 12px; } }
 
   .filters-section {
-    display: flex; gap: 20px; background-color: #7C9BCC !important;
+    display: flex; gap: 20px; background-color: var(--bg-card) !important;
     padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);
     margin-top: 30px; flex-wrap: wrap; transition: background-color 0.3s ease, border-color 0.3s ease;
   }
+  [data-theme="light"] .filters-section{ display: flex; gap: 20px; background-color: #7C9BCC !important; }
   .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 180px; }
   .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; letter-spacing: 0.5px; }
   .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; }

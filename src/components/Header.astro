@@ -1,7 +1,3 @@
----
-// Шапка — це внутрішній компонент, тому props та повна HTML-структура сторінки тут більше не потрібні!
----
-
 <header class="site-header">
   <div class="header-container">
     <a href="/" class="logo">Volya<span>Core</span></a>
@@ -62,13 +58,12 @@
       document.body.classList.remove("lock-scroll");
 
       burgerBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Зупиняємо спливання, щоб клік по бургеру не закривав його ж
+        e.stopPropagation();
         burgerBtn.classList.toggle("active");
         headerMenu.classList.toggle("open");
         document.body.classList.toggle("lock-scroll");
       });
 
-      // Закриваємо меню при кліку на будь-яке посилання всередині
       const navLinks = headerMenu.querySelectorAll("a");
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
@@ -86,14 +81,20 @@
 
 <style lang="scss">
   .site-header {
-    background: #7C9BCC;
+    --bg-header: var(--bg-card);
+    
+    background: var(--bg-header) !important;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
     transition: background 0.3s ease, border-color 0.3s ease;
-    overflow: hidden; /* 🌟 ЗАБОРОНЯЄМО виходити контенту за межі шапки на ПК */
+    overflow: hidden;
+  }
+
+  :global([data-theme="light"]) .site-header { 
+    --bg-header: #7C9BCC;
   }
 
   .header-container {
@@ -103,7 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px; /* 🌟 СКОРОТИЛИ ВІДСТАНЬ ВДВІЧІ для десктопів */
+    gap: 80px;
   }
 
   .logo {
@@ -113,7 +114,7 @@
     color: var(--text-primary);
     text-decoration: none;
     z-index: 102;
-    flex-shrink: 0; /* Щоб логотип не стискався */
+    flex-shrink: 0;
     
     span {
       color: #2563eb;
@@ -121,17 +122,14 @@
     }
   }
 
-  /* Обгортка для пошуку та навігації */
   .header-nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1;
-    gap: 10px; /* 🌟 СКОРОТИЛИ ВІДСТАНЬ ВДВІЧІ між пошуком та навігацією */
+    gap: 10px;
   }
 
   .search-container {
-    flex: 1;
     max-width: 450px;
     width: 100%;
   }
@@ -151,6 +149,7 @@
       position: absolute;
       left: 16px;
       font-size: 14px;
+      color: var(--text-primary);
     }
 
     input {
@@ -158,9 +157,14 @@
       padding: 10px 16px 10px 44px;
       background: transparent;
       border: none;
-      color: var(--text-primary);
+      color: var(--text-primary) !important;
       font-size: 14px;
       outline: none;
+
+      &::placeholder {
+        color: var(--text-muted);
+        opacity: 0.8;
+      }
     }
 
     &:focus-within {
@@ -191,7 +195,7 @@
 
   .navigation {
     display: flex;
-    gap: 25px; /* 🌟 Зменшили проміжок між самими посиланнями */
+    gap: 25px;
     align-items: center;
     flex-shrink: 0;
 
@@ -206,7 +210,7 @@
     }
     .tg-channel-btn {
       background: #2563eb;
-      color: white;
+      color: white !important;
       padding: 8px 16px;
       border-radius: 8px;
       &:hover {
@@ -251,12 +255,11 @@
   }
 
   /* ==========================================================================
-     📱 АДАПТИВНІ СТИЛІ (ПОВНЕ ПРИХОВУВАННЯ МЕНЮ)
+     📱 АДАПТИВНІ СТИЛІ (ВИПРАВЛЕННЯ ТЕМНОЇ ТЕМИ ДЛЯ МОБІЛЬНОГО МЕНЮ)
      ========================================================================== */
-  
   @media (max-width: 820px) {
     .site-header {
-      overflow: visible; /* 🌟 Дозволяємо випадання меню на мобільних */
+      overflow: visible;
     }
 
     .header-container {
@@ -267,33 +270,45 @@
       display: flex;
     }
 
-    /* 🌟 Виправляємо шторку: тепер вона ПОВНІСТЮ схована і не стирчить */
     .header-nav-wrapper {
       position: fixed;
       top: 0;
-      left: -100%; /* 🌟 Ховаємо повністю вліво за межі екрана */
+      left: -100%;
       right: auto;
       width: 100%;
       height: 100vh;
-      background: #D9E6FF;
+      
+      /* Изменение: используем глобальные переменные темы вместо статического светлого цвета */
+      background: var(--bg-main); 
+      
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 35px;
       padding: 80px 24px 40px;
-      transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Плавний виїзд */
+      transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
       z-index: 101;
-      visibility: hidden; /* 🌟 Повністю вимикаємо видимість елементів, щоб вони не клікались на фоні */
+      visibility: hidden;
 
       &.open {
-        left: 0; /* Виїжджає на екран */
-        visibility: visible; /* Стає видимим */
+        left: 0;
+        visibility: visible;
       }
+    }
+
+    /* Изменение: для светлой темы оставляем приятный светлый оттенок подложки хедера */
+    :global([data-theme="light"]) .header-nav-wrapper {
+      background: #D9E6FF; 
     }
 
     .search-container {
       max-width: 100%;
       width: 100%;
+    }
+    
+    /* Дополнительная фиксация цвета текста инпута на мобилках */
+    .search-wrapper input {
+      color: var(--text-primary) !important;
     }
 
     .navigation {
@@ -307,6 +322,11 @@
         width: 100%;
         text-align: center;
         padding: 6px 0;
+        color: var(--text-primary) !important; /* Гарантирует читаемость в обеих темах */
+        
+        &:hover {
+          color: #2563eb !important;
+        }
       }
 
       .tg-channel-btn {
@@ -314,6 +334,7 @@
         max-width: 280px;
         padding: 12px;
         border-radius: 50px;
+        color: white !important;
       }
     }
   }
