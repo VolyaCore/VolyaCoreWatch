@@ -1,41 +1,65 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-const { id, title, cover, status, episodesCount, country, year, genres, imdbRating } = Astro.props;
+const {
+  id,
+  title,
+  cover,
+  status,
+  episodesCount,
+  country,
+  year,
+  genres,
+  imdbRating,
+} = Astro.props;
 
 // Автоматично шукаємо всі картинки в папці src/assets/covers/
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/covers/*.{jpeg,jpg,png,gif,webp}"
+);
 
 // Будуємо повний шлях до картинки
 const imagePath = `/src/assets/covers/${cover}`;
 
 // Перетворюємо жанри в рядок для дата-атрибуту фільтрів
-const genresString = genres ? genres.join(',') : '';
+const genresString = genres ? genres.join(",") : "";
+
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpg,jpeg,png,webp,gif,JPG,JPEG,PNG,WEBP}');
+let cleanCover = cover.split("/").pop() || "";
+if (cleanCover && !cleanCover.includes(".")) {
+  cleanCover += ".jpg";
+}
+// const imagePath = `/src/assets/covers/${cleanCover}`;
 ---
 
 <a
   href={`/lakorn/${id}`}
   class="movie-card"
-  data-title={title ? title.toLowerCase() : ''}
-  data-country={country || ''}
-  data-year={year || ''}
+  data-title={title ? title.toLowerCase() : ""}
+  data-country={country || ""}
+  data-year={year || ""}
   data-genres={genresString}
 >
   <div class="cover-wrapper">
-    {images[imagePath] ? (
-      <Image src={images[imagePath]()} alt={title} width={300} height={400} loading="lazy" />
-    ) : (
-      <div class="no-cover-placeholder">Немає обкладинки</div>
-    )}
-    
+    {
+      images[imagePath] ? (
+        <Image
+          src={images[imagePath]()}
+          alt={title}
+          width={600}
+          height={800}
+          quality="max"
+          loading="lazy"
+        />
+      ) : (
+        <div class="no-cover-placeholder">Немає обкладинки</div>
+      )
+    }
+
     <span class={`status-badge ${status}`}>
-      {status === 'ongoing' ? 'Онгоінг' : 'Завершено'}
+      {status === "ongoing" ? "Онгоінг" : "Завершено"}
     </span>
-    {imdbRating && (
-      <span class="rating-badge">
-        ⭐ {imdbRating}
-      </span>
-    )}
+    {imdbRating && <span class="rating-badge">⭐ {imdbRating}</span>}
   </div>
   <div class="card-info">
     <h3>{title}</h3>
@@ -51,9 +75,11 @@ const genresString = genres ? genres.join(',') : '';
     border-radius: 12px;
     overflow: hidden;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     border: 1px solid rgba(99, 102, 241, 0.1);
-    position: relative; 
+    position: relative;
   }
 
   .movie-card:hover {
@@ -97,8 +123,14 @@ const genresString = genres ? genres.join(',') : '';
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
-  .status-badge.ongoing { background-color: #ff9800; color: #000; }
-  .status-badge.completed { background-color: #4caf50; color: #fff; }
+  .status-badge.ongoing {
+    background-color: #ff9800;
+    color: #000;
+  }
+  .status-badge.completed {
+    background-color: #4caf50;
+    color: #fff;
+  }
 
   .rating-badge {
     position: absolute;

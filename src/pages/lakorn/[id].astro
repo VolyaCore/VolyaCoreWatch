@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import lakornsData from "../../data/lakorns.json";
-import { Image } from 'astro:assets'; // Імпортуємо компонент оптимізації
+import { Image } from "astro:assets"; // Імпортуємо компонент оптимізації
 
 export function getStaticPaths() {
   return lakornsData.map((lakorn) => ({
@@ -16,30 +16,43 @@ if (!lakorn) {
   throw new Error(`Лакорн з ID ${id} не знайдено`);
 }
 
-// Автоматично шукаємо всі зображення в папці src/assets/
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpeg,jpg,png,gif,webp,JPEG,JPG}');
+// Автоматично шукаємо всі зображення в папці src/assets/covers/ з урахуванням будь-якого регістру розширень
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/covers/*.{jpeg,jpg,png,gif,webp,JPEG,JPG,PNG,WEBP}"
+);
 
-// Формуємо чистий шлях до картинки
-const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
+// Розумне очищення: якщо у JSON написано "./public/between_us" або "/between_us.jpg", ми дістаємо суто ім'я файлу
+let cleanCover = lakorn.cover.split("/").pop() || "";
+
+// Якщо у JSON забули вказати розширення .jpg, автоматично додаємо його
+if (cleanCover && !cleanCover.includes(".")) {
+  cleanCover += ".jpg";
+}
+
+// Формуємо точний шлях до картинки всередині твоєї папки covers
+const imagePath = `/src/assets/covers/${cleanCover}`;
 ---
 
 <MainLayout title={`${lakorn.title} — VolyaCore`}>
   <div class="lakorn-container" data-lakorn-id={lakorn.id}>
     <section class="info-section">
       <div class="cover-box">
-        {images[imagePath] ? (
-          <Image 
-            src={images[imagePath]()} 
-            alt={lakorn.title} 
-            width={400} 
-            height={600} 
-            id="movie-poster" 
-            class="clickable-poster" 
-            title="Натисніть, щоб збільшити постер"
-          />
-        ) : (
-          <div class="no-cover-placeholder-detail">Немає обкладинки</div>
-        )}
+        {
+          images[imagePath] ? (
+            <Image
+              src={images[imagePath]()}
+              alt={lakorn.title}
+              width={800}
+              height={1200}
+              quality="max"
+              id="movie-poster"
+              class="clickable-poster"
+              title="Натисніть, щоб збільшити постер"
+            />
+          ) : (
+            <div class="no-cover-placeholder-detail">Немає обкладинки</div>
+          )
+        }
       </div>
 
       <div class="details-box">
@@ -90,13 +103,16 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
 
         <div class="user-status-panel">
           <button class="status-btn btn-favorite" data-status="favorite">
-            <span class="icon">❤️</span> <span class="lbl">Сподобалось</span>
+            <span class="icon">❤️</span>
+            <span class="lbl">Сподобалось</span>
           </button>
           <button class="status-btn btn-later" data-status="later">
-            <span class="icon">📌</span> <span class="lbl">На потім</span>
+            <span class="icon">📌</span>
+            <span class="lbl">На потім</span>
           </button>
           <button class="status-btn btn-watching" data-status="watching">
-            <span class="icon">🍿</span> <span class="lbl">Дивлюсь</span>
+            <span class="icon">🍿</span>
+            <span class="lbl">Дивлюсь</span>
           </button>
         </div>
 
@@ -218,12 +234,14 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     // --- 🌟 ЛОГІКА ДЛЯ КНОПОК ПОЗНАЧОК (LOCALSTORAGE) ---
     if (lakornId) {
       const statusButtons = document.querySelectorAll(".status-btn");
-      
+
       const storageKey = `lakorn_status_${lakornId}`;
-      
+
       const savedStatus = localStorage.getItem(storageKey);
       if (savedStatus) {
-        const activeBtn = document.querySelector(`.status-btn[data-status="${savedStatus}"]`);
+        const activeBtn = document.querySelector(
+          `.status-btn[data-status="${savedStatus}"]`
+        );
         activeBtn?.classList.add("active");
       }
 
@@ -260,7 +278,9 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     tabButtons.forEach((tab) => {
       tab.addEventListener("click", () => {
         tabButtons.forEach((btn) => btn.classList.remove("active"));
-        episodeWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+        episodeWrappers.forEach((wrapper) =>
+          wrapper.classList.remove("active")
+        );
 
         tab.classList.add("active");
         const targetId = tab.getAttribute("data-tab-target") || "";
@@ -301,38 +321,40 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     });
 
     // --- Логіка збільшення постера (Lightbox) ---
-    const poster = document.getElementById('movie-poster') as HTMLImageElement;
-    const lightbox = document.getElementById('poster-lightbox');
-    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const closeBtn = document.getElementById('lightbox-close');
+    const poster = document.getElementById("movie-poster") as HTMLImageElement;
+    const lightbox = document.getElementById("poster-lightbox");
+    const lightboxImg = document.getElementById(
+      "lightbox-img"
+    ) as HTMLImageElement;
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.getElementById("lightbox-close");
 
     if (poster && lightbox && lightboxImg) {
-      poster.addEventListener('click', () => {
-        lightbox.classList.add('active');
+      poster.addEventListener("click", () => {
+        lightbox.classList.add("active");
         lightboxImg.src = poster.src;
         if (lightboxCaption) {
-          lightboxCaption.textContent = poster.alt || 'Постер серіалу';
+          lightboxCaption.textContent = poster.alt || "Постер серіалу";
         }
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = "hidden";
       });
 
-      closeBtn?.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
+      closeBtn?.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
       });
 
-      lightbox.addEventListener('click', (e) => {
+      lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "";
         }
       });
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "";
         }
       });
     }
@@ -364,7 +386,7 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
       text-align: center;
     }
   }
-  
+
   .cover-box {
     width: 240px;
     flex-shrink: 0;
@@ -377,7 +399,9 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     height: 100%;
     object-fit: cover;
     cursor: zoom-in;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
   }
   .clickable-poster:hover {
     transform: scale(1.03);
@@ -465,7 +489,7 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
   }
-  
+
   /* Активні стани кнопок із брендовими підсвітками */
   .status-btn[data-status="favorite"].active {
     background-color: #ef4444 !important; /* Червоний */
@@ -485,7 +509,7 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
   }
-  
+
   @media (max-width: 480px) {
     .user-status-panel {
       justify-content: center;
@@ -716,9 +740,15 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
   }
 
   @keyframes pulse-blue {
-    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
   }
 
   .lightbox {
@@ -771,7 +801,9 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     font-size: 44px;
     font-weight: 300;
     cursor: pointer;
-    transition: color 0.2s, transform 0.2s;
+    transition:
+      color 0.2s,
+      transform 0.2s;
     user-select: none;
   }
   .lightbox-close:hover {
@@ -785,6 +817,6 @@ const imagePath = `/src/assets/covers/${lakorn.cover.replace(/^\//, '')}`;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 </style>
