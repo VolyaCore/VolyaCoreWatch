@@ -129,7 +129,9 @@ if (!lakorn) {
             lakorn.director && (
               <div class="info-item">
                 <span class="info-label">Режисер:</span>
-                <span class="info-value">{lakorn.director}</span>
+                <span class="info-value">
+                  {Array.isArray(lakorn.director) ? lakorn.director.join(", ") : lakorn.director}
+                </span>
               </div>
             )
           }
