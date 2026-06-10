@@ -1,0 +1,50 @@
+{
+    "id": "",
+    "title": "",
+    "description": "",
+    "cover": ".jpg",
+    "status": "",
+    "country": "",
+    "year": 2,
+    "genres": ["", ""],
+    "episodesCount": 2,
+    "imdbRating": "",
+    "duration": "",
+    "cast": ["", ""],
+    "director": "",
+    "network": " ",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "" },
+          { "number": 2, "tg_id": "" },
+          { "number": 3, "tg_id": "" },
+          { "number": 4, "tg_id": "" },
+          { "number": 5, "tg_id": "" },
+          { "number": 6, "tg_id": "" },
+          { "number": 7, "tg_id": "" },
+          { "number": 8, "tg_id": "" },
+          { "number": 9, "tg_id": "" },
+          { "number": 10, "tg_id": "" },
+          { "number": 11, "tg_id": "" },
+          { "number": 12, "tg_id": "" },
+          { "number": 13, "tg_id": "" },
+          { "number": 14, "tg_id": "" },
+          { "number": 15, "tg_id": "" },
+          { "number": 16, "tg_id": "" },
+          { "number": 17, "tg_id": "" },
+          { "number": 18, "tg_id": "" },
+          { "number": 19, "tg_id": "" },
+          { "number": 20, "tg_id": "" },
+          { "number": 21, "tg_id": "" },
+          { "number": 22, "tg_id": "" },
+          { "number": 23, "tg_id": "" },
+          { "number": 24, "tg_id": "" }
+        ]
+      }
+    ]
+  }

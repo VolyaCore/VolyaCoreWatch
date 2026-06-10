@@ -3,18 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
-// 1. Розділяємо проєкти за статусом
-const ongoingLakorns = lakornsData.filter(lakorn => lakorn.status === "ОНГОІНГ");
-const completedLakorns = lakornsData.filter(lakorn => lakorn.status !== "ОНГОІНГ");
-
-// 2. Рандомізуємо масив ЗАВЕРШЕНИХ проєктів
-const shuffledCompleted = [...completedLakorns].sort(() => 0.5 - Math.random());
-
-// 3. Об'єднуємо: спочатку ОНГОІНГИ, потім випадкові ЗАВЕРШЕНІ
-const sortedCatalogLakorns = [...ongoingLakorns, ...shuffledCompleted];
-
-// 4. Беремо перші 24 штуки для сітки каталогу
-const latestLakorns = sortedCatalogLakorns.slice(0, 24);
+// Для початкового статичного рендерингу передаємо перші 24 штуки.
+// Клієнтський скрипт сам перегрупує їх, щоб онгоінги були попереду, а завершені перемішалися.
+const latestLakorns = lakornsData.slice(0, 24);
 ---
 
 <MainLayout title="VolyaCore">
@@ -46,6 +37,7 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
       <div class="carousel-dots" id="carousel-dots"></div>
     </div>
   </section>
+
   <section class="filters-section">
     <div class="filter-group">
       <label for="filter-country">Країна</label>
@@ -66,7 +58,14 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
         <option value="romance">Романтика</option>
         <option value="drama">Драма</option>
         <option value="comedy">Комедія</option>
+        <option value="crime">Кримінал</option>
         <option value="sports">Спорт</option>
+        <option value="music">Музика</option>
+        <option value="routine">Буденність</option>
+        <option value="fantasy">Фентезі</option>
+        <option value="action">Бойовик</option>
+        <option value="horrors">Жахи</option>
+        <option value="supernatural">Надприродне</option>
       </select>
     </div>
 
@@ -89,16 +88,18 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     <div class="movies-grid" id="catalog-grid">
       {
         latestLakorns.map((lakorn) => (
-          <MovieCard
-            id={lakorn.id}
-            title={lakorn.title}
-            cover={lakorn.cover}
-            status={lakorn.status}
-            episodesCount={lakorn.episodesCount}
-            country={lakorn.country}
-            year={lakorn.year}
-            genres={lakorn.genres}
-          />
+          <div class="catalog-card-wrapper" data-status={lakorn.status.toUpperCase()}>
+            <MovieCard
+              id={lakorn.id}
+              title={lakorn.title}
+              cover={lakorn.cover}
+              status={lakorn.status}
+              episodesCount={lakorn.episodesCount}
+              country={lakorn.country}
+              year={lakorn.year}
+              genres={lakorn.genres}
+            />
+          </div>
         ))
       }
     </div>
@@ -110,13 +111,28 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
 
 <script>
   function initPageFeatures() {
-    // 1. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ
+    // 1. СОРТУВАННЯ КАТАЛОГУ (ОНГОІНГИ ПОПЕРЕДУ + РАНДОМ ЗАВЕРШЕНИХ) НА КЛІЄНТІ
+    const catalogGrid = document.getElementById("catalog-grid");
+    if (catalogGrid) {
+      const cards = Array.from(catalogGrid.querySelectorAll(".catalog-card-wrapper"));
+      const ongoingCards = cards.filter(card => card.getAttribute("data-status") === "ОНГОІНГ");
+      const completedCards = cards.filter(card => card.getAttribute("data-status") !== "ОНГОІНГ");
+      
+      const shuffledCompleted = [...completedCards].sort(() => 0.5 - Math.random());
+      
+      catalogGrid.innerHTML = "";
+      [...ongoingCards, ...shuffledCompleted].forEach(card => {
+        catalogGrid.appendChild(card);
+      });
+    }
+
+    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ
     const searchInput = document.getElementById("global-search") as HTMLInputElement;
     const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
     const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
     const yearSelect = document.getElementById("filter-year") as HTMLSelectElement;
     
-    const catalogCards = document.querySelectorAll("#catalog-grid .movie-card");
+    const catalogCards = document.querySelectorAll("#catalog-grid .catalog-card-wrapper");
     const noResults = document.getElementById("no-results");
 
     function filterCatalog() {
@@ -127,7 +143,10 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
 
       let visibleCount = 0;
 
-      catalogCards.forEach((card) => {
+      catalogCards.forEach((wrapper) => {
+        const card = wrapper.querySelector(".movie-card");
+        if (!card) return;
+
         const title = card.getAttribute("data-title") || "";
         const country = card.getAttribute("data-country") || "";
         const year = card.getAttribute("data-year") || "";
@@ -139,10 +158,10 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
         const matchesGenre = selectedGenre === "all" || genres.includes(selectedGenre);
 
         if (matchesSearch && matchesCountry && matchesYear && matchesGenre) {
-          (card as HTMLElement).style.display = "flex";
+          (wrapper as HTMLElement).style.display = "flex";
           visibleCount++;
         } else {
-          (card as HTMLElement).style.display = "none";
+          (wrapper as HTMLElement).style.display = "none";
         }
       });
 
@@ -156,7 +175,7 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     genreSelect?.addEventListener("change", filterCatalog);
     yearSelect?.addEventListener("change", filterCatalog);
 
-    // 2. КЛІЄНТСЬКА РАНДОМІЗАЦІЯ ТА РОБОТА КАРУСЕЛІ
+    // 3. РОБОТА КАРУСЕЛІ (СУВОРЕ ОБМЕЖЕННЯ ДО 7 ПРОЄКТІВ)
     const track = document.getElementById('carousel-track');
     const dotsContainer = document.getElementById('carousel-dots');
     const prevBtn = document.getElementById('carousel-prev');
@@ -171,9 +190,11 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     if (dotsContainer) dotsContainer.innerHTML = '';
 
     const shuffled = [...allSlides].sort(() => 0.5 - Math.random());
-    const selectedSlides = shuffled.slice(0, 8);
+    
+    // Змінено з 8 на 7 проєктів
+    const selectedSlides = shuffled.slice(0, 7);
 
-    selectedSlides.forEach((slide, index) => {
+    selectedSlides.forEach((slide) => {
       slide.classList.add('carousel-active');
       track.appendChild(slide);
     });
@@ -182,8 +203,8 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
       const width = window.innerWidth;
       if (width >= 1200) return 4;
       if (width >= 900) return 3;
-      if (width >= 600) return 2;
-      return 1;
+      if (width >= 480) return 2; // 2 картки поруч на стандартних смартфонах
+      return 1; // 1 картка лише для дуже малих екранів (<480px)
     }
 
     let currentIndex = 0;
@@ -277,19 +298,65 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     margin-top: 30px; flex-wrap: wrap; transition: background-color 0.3s ease, border-color 0.3s ease;
   }
   [data-theme="light"] .filters-section{ display: flex; gap: 20px; background-color: #7C9BCC !important; }
-  .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 180px; }
+  .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 140px; }
   .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; letter-spacing: 0.5px; }
-  .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; }
+  .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; width: 100%; }
   .filter-group select:focus { border-color: #6366f1 !important; }
 
   .catalog-section { margin-top: 40px; }
   .catalog-section h2 { font-size: 22px; font-weight: 600; margin-bottom: 25px; border-left: 4px solid #6366f1; padding-left: 12px; color: var(--text-primary) !important; }
-  .movies-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+  
+  /* Обгортка для кожної картки каталогу */
+  .catalog-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* АДАПТИВНА СІТКА КАТАЛОГУ (По 2 штуки на мобільних) */
+  .movies-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 25px; 
+  }
+  
+  @media (max-width: 600px) {
+    .movies-grid { 
+      grid-template-columns: repeat(2, 1fr) !important; 
+      gap: 12px; 
+    }
+  }
+
   .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); font-size: 16px; background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
   
-  .movie-card { background-color: var(--bg-card) !important; border: 1px solid var(--border-color) !important; transition: background-color 1s ease, border-color 1s ease !important; }
-  .movie-card h3, .movie-card .movie-title, .movie-card a { color: var(--text-primary) !important; }
-  .movie-card p, .movie-card .movie-episodes { color: var(--text-muted) !important; }
+  /* ГЛОБАЛЬНЕ ВИРІВНЮВАННЯ СТИЛІВ ДЛЯ MOVIE-CARD ТА ПОСТЕРІВ */
+  .movie-card { 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card) !important; 
+    border: 1px solid var(--border-color) !important; 
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: background-color 1s ease, border-color 1s ease !important; 
+  }
+  
+  /* Постери зберігають ідеальні кінематографічні пропорції 2:3 і не розмиваються */
+  .movie-card img, 
+  .movie-card .card-cover img, 
+  .carousel-slide-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 2 / 3 !important;
+    object-fit: cover !important;
+    display: block;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .movie-card h3, .movie-card .movie-title, .movie-card a { color: var(--text-primary) !important; font-size: 14px; margin: 8px 0 4px 0; line-height: 1.3; }
+  .movie-card p, .movie-card .movie-episodes { color: var(--text-muted) !important; font-size: 12px; }
 
   .hero-carousel-section {
     width: 100%;
@@ -308,25 +375,27 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
 
   .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
   }
 
+  /* Налаштування слайдів для великих моніторів та телефонів */
   .carousel-slide-wrapper {
     box-sizing: border-box;
     display: none;
-    flex: 0 0 calc(25% - 15px); 
+    flex: 0 0 calc(25% - 12px); 
   }
 
   @media (max-width: 1200px) {
-    .carousel-slide-wrapper { flex: 0 0 calc(33.333% - 14px); }
+    .carousel-slide-wrapper { flex: 0 0 calc(33.333% - 11px); }
   }
   @media (max-width: 900px) {
-    .carousel-slide-wrapper { flex: 0 0 calc(50% - 10px); }
+    .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
   }
-  @media (max-width: 600px) {
-    .carousel-slide-wrapper { flex: 0 0 100%; }
+  @media (max-width: 480px) {
+    /* 2 акуратні картки у каруселі на екранах смартфонів */
+    .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
   }
   
   .carousel-slide-wrapper.carousel-active {
@@ -345,10 +414,10 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     background: rgba(15, 23, 42, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -356,6 +425,9 @@ const latestLakorns = sortedCatalogLakorns.slice(0, 24);
     transition: all 0.2s ease;
     backdrop-filter: blur(6px);
     z-index: 10;
+  }
+  @media (max-width: 600px) {
+    .carousel-nav-btn { width: 32px; height: 32px; font-size: 0.8rem; }
   }
   .carousel-nav-btn:hover { background-color: #6366f1; border-color: #6366f1; transform: translateY(-50%) scale(1.05); }
   .prev-btn { left: 5px; }

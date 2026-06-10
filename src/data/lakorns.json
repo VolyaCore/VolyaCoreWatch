@@ -1,5 +1,322 @@
 [
   {
+    "id": "perfect10liners",
+    "title": "Бездоганна десятка",
+    "description": "Першокурсники тягнуть жереб, щоб визначити своїх наставників, і волею долі Арм потрапляє до ексклюзивного кола Бездоганної Десятки — групи, що складається з неординарних студентів різного віку, де Іпун — його наставниця з другого курсу. Вона доручає йому важливе завдання — вести сторінку «Милий хлопчик-інженер» на популярній онлайн-платформі. Незважаючи на своє небажання, Арм чудово справляється з обов'язками адміністратора сторінки. У відповідь на численні прохання шанувальників він завантажує фотографію Ака, студента третього курсу будівельного факультету і наставника на третьому курсі, не знаючи про заборону цього робити. У перший день навчання в університеті Ґана спіткало нещастя. На свою біду, він примудряється зламати кран у вбиральній. На щастя, йому на допомогу приходить одногрупник. Однак серед хаосу Ґан не встиг розгледіти обличчя свого рятівника — лише мигцем побачив його взуття. Вайн стає останнім членом Ідеальної 10-ки завдяки жеребкуванню. Його наставник на другому курсі зайнятий своїм хлопцем, тому в нього залишається мало часу для свого підопічного. Доброзичливий Фай бере на себе цю роль і піклується про підопічного свого старшого брата.",
+    "cover": "perfect10liners.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "comedy"],
+    "episodesCount": 24,
+    "imdbRating": "8.2",
+    "duration": "45 хв",
+    "cast": ["Бук Касідет", "Форс Джіратчапон", "Перт Танапон", "Санта Понсапак", "Джуніор Паначай", "Марк Джерунтанін"],
+    "director": "Н‘ю Сівай Саватманікул",
+    "network": " GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "perfect10liners" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1493" },
+          { "number": 2, "tg_id": "volyacore/1512" },
+          { "number": 3, "tg_id": "volyacore/1542" },
+          { "number": 4, "tg_id": "volyacore/1560" },
+          { "number": 5, "tg_id": "volyacore/1587" },
+          { "number": 6, "tg_id": "volyacore/1595" },
+          { "number": 7, "tg_id": "volyacore/1615" },
+          { "number": 8, "tg_id": "volyacore/1637" },
+          { "number": 9, "tg_id": "volyacore/1663" },
+          { "number": 10, "tg_id": "volyacore/1694" },
+          { "number": 11, "tg_id": "volyacore/1699" },
+          { "number": 12, "tg_id": "volyacore/1707" },
+          { "number": 13, "tg_id": "volyacore/1711" },
+          { "number": 14, "tg_id": "volyacore/1729" },
+          { "number": 15, "tg_id": "volyacore/1742" },
+          { "number": 16, "tg_id": "volyacore/1763" },
+          { "number": 17, "tg_id": "volyacore/1778" },
+          { "number": 18, "tg_id": "volyacore/1794" },
+          { "number": 19, "tg_id": "volyacore/1818" },
+          { "number": 20, "tg_id": "volyacore/1834" },
+          { "number": 21, "tg_id": "volyacore/1846" },
+          { "number": 22, "tg_id": "volyacore/1865" },
+          { "number": 23, "tg_id": "volyacore/1877" },
+          { "number": 24, "tg_id": "volyacore/1897" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "battle_of_the_writers",
+    "title": "Битва письменників",
+    "description": "Письменника Об-Уна звинувачують у плагіаті іншого письменника на ім'я Шань. Однак перший заперечує звинувачення, що призводить до несподіваної зустрічі пари. Невдовзі Об-Ун і Шань знову зустрічаються, коли приєднуються до команди письменників різних жанрів для роботи над новим романом.",
+    "cover": "battle_of_the_writers.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.5",
+    "duration": "49 хв",
+    "cast": ["Тьютор Корапат", "Їм Пхаріньякорн", "Джемс Джасада", "Марк Сорнтаст"],
+    "director": "Кла Натават",
+    "network": "iQIYI",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "battle_of_the_writers" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1687" },
+          { "number": 2, "tg_id": "volyacore/1690" },
+          { "number": 3, "tg_id": "volyacore/1696" },
+          { "number": 4, "tg_id": "volyacore/1697" },
+          { "number": 5, "tg_id": "volyacore/1703" },
+          { "number": 6, "tg_id": "volyacore/1710" },
+          { "number": 7, "tg_id": "volyacore/1718" },
+          { "number": 8, "tg_id": "volyacore/1721" },
+          { "number": 9, "tg_id": "volyacore/1726" },
+          { "number": 10, "tg_id": "volyacore/1731" },
+          { "number": 11, "tg_id": "volyacore/1735" },
+          { "number": 12, "tg_id": "volyacore/1737" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kidnap",
+    "title": "Викрадення",
+    "description": "Щоб допомогти своєму хворому братові, Мін погоджується на місію викрадення багатія. Але все йде не так, і тепер він повинен вбити його, тільки він не може це зробити, тому забирає хлопця до себе. К'ю пропонує допомогти йому та його братові, вони об'єднуються, щоб обдурити тата-багатія.",
+    "cover": "kidnap.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "drama", "crime"],
+    "episodesCount": 12,
+    "imdbRating": "8.4",
+    "duration": "41 хв",
+    "cast": ["Ом Пават", "Лен Танапон", "Ом ТІіпакон", "Папан Фромфірія"],
+    "director": "Нум Аттапон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "kidnap" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1306" },
+          { "number": 2, "tg_id": "volyacore/1338" },
+          { "number": 3, "tg_id": "volyacore/1367" },
+          { "number": 4, "tg_id": "volyacore/1381" },
+          { "number": 5, "tg_id": "volyacore/1401" },
+          { "number": 6, "tg_id": "volyacore/1424" },
+          { "number": 7, "tg_id": "volyacore/1444" },
+          { "number": 8, "tg_id": "volyacore/1487" },
+          { "number": 9, "tg_id": "volyacore/1500" },
+          { "number": 10, "tg_id": "volyacore/1532" },
+          { "number": 11, "tg_id": "volyacore/1551" },
+          { "number": 12, "tg_id": "volyacore/1567" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "still_2gether",
+    "title": "Все ще разом",
+    "description": "Чи потрібно чекати 10 років, щоб побачити, чи триватиме кохання між Сараватом і Тайном? У цих спец. епізодах ми побачимо розвиток їхніх стосунків. Ми подивимося на їх майбутнє життя після того, як вони обоє розпочнуть свої перші тривалі стосунки. Нарешті ми побачимо життя інших пар, які продовжують любити та піклуватися одне про одного. Мен і Тайп, Пхуконг і Міл, Грін і Дім. Як розвиватимуться їхні стосунки після такого часу?",
+    "cover": "still_2gether.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2020,
+    "genres": ["music", "romance", "routine"],
+    "episodesCount": 5,
+    "imdbRating": "7.9",
+    "duration": "55 хв",
+    "cast": ["Брайт Вачіравіт Чіварі", "Він Метавін Опатємкатчон"],
+    "director": "Ноппарнах Чайваймол",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "still_2gether" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/315" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/357" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/375" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/432" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/446" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "two_worlds",
+    "title": "Два світи, одне серце",
+    "description": "Після вбивства коханого Крама – Пупха – щось стається і Крам потрапляє в паралельний світ, де 20 років тому Крам і Тай були закохані. Однак Крама з іншого всесвіту вбив тато Тая. Одного разу Тай проїжджає дорогою і знаходить когось посеред дороги. Обличчя цієї людини приголомшує, тому що він виглядає точно так само, як його коханий 20 років тому.",
+    "cover": "two_worlds.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "fantasy"],
+    "episodesCount": 10,
+    "imdbRating": "7.5",
+    "duration": "48 хв",
+    "cast": ["Макс Корнтхас", "Нат Натасіт", "Ґан Тапанават"],
+    "director": ["Кхетс Тунтхуп", "Петч Вараю Рукскул"],
+    "network": "iQiyi",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "two_worlds" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/930" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/933" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/936" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/951" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/967" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/990" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1007" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1025" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1046" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1064" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jack_and_joker",
+    "title": "Джек і Джокер: Ти вкрав моє серце",
+    "description": "Доля зводить двох зовсім не пов’язаних між собою хлопців, коли вони працюють над грандіозним пограбуванням. Джокер веде подвійне життя. Хвалькуватий та впевнений у собі, він, не розкриваючи себе, водночас, є відомим злодієм, якого розшукує поліція. Використовуючи свої виняткові навички маскування, Джокер грабує багатих гнобителів і перерозподіляє їх багатства, щоб допомогти бідним селянам. З іншого боку — Джек, 18-річний тхеквондист у минулому, стає колектором. Своєю спокійною і тихою поведінкою Джек вселяє страх в тих, кого він зустрічає. Незважаючи на свою моторошну оболонку, він розсудливий і вірить у вирішення проблем без застосування сили, дотримуючись переконання, що «сила, якою ти володієш, повинна використовуватись лише для захисту слабких».",
+    "cover": "jack_and_joker.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "crime", "drama", "action"],
+    "episodesCount": 12,
+    "imdbRating": "6.7",
+    "duration": "50 хв",
+    "cast": ["Вар Ванарат", "Їнь Анан", "Пром Ратачапат", "Бонз Надол"],
+    "director": "Ті Бундіт Синтанапараді",
+    "network": "iQiyi",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "jack_and_joker" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1322" },
+          { "number": 2, "tg_id": "volyacore/1341" },
+          { "number": 3, "tg_id": "volyacore/1366" },
+          { "number": 4, "tg_id": "volyacore/1389" },
+          { "number": 5, "tg_id": "volyacore/1406" },
+          { "number": 6, "tg_id": "volyacore/1429" },
+          { "number": 7, "tg_id": "volyacore/1456" },
+          { "number": 8, "tg_id": "volyacore/1482" },
+          { "number": 9, "tg_id": "volyacore/1510" },
+          { "number": 10, "tg_id": "volyacore/1534" },
+          { "number": 11, "tg_id": "volyacore/1549" },
+          { "number": 12, "tg_id": "volyacore/1569" }
+        ]
+      },
+      {
+        "blockTitle": "Спешл",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1810" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "peaceful_property",
+    "title": "Дім з привидами на продаж",
+    "description": "Хоум, спадкоємець багатої та відомої тайської родини, живе безтурботним життям, поки його дідусь не помирає, і йому доводиться повернутися до Таїланду, щоб отримати спадок. Спадщина, яку він залишив, не є звичайною, вся власність переслідувана, тому її неможливо продати. Також є маленька проблема: мисливці за привидами поширили чутки, що там водяться привиди. Тому він разом зі своїми друзями вирушають на місію з вигнання нечистої сили, паралельно вивчаючи історію своєї сім'ї.",
+    "cover": "peaceful_property.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["horrors", "comedy", "supernatural"],
+    "episodesCount": 12,
+    "imdbRating": "8.2",
+    "duration": "48 хв",
+    "cast": ["Тей Таван", "Н'ю Тітіпум", "Мук Вораніт", "Джен Плойчомпу"],
+    "director": "Дом Джарупат Каннула",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "peaceful_property" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1295" },
+          { "number": 2, "tg_id": "volyacore/1309" },
+          { "number": 3, "tg_id": "volyacore/1343" },
+          { "number": 4, "tg_id": "volyacore/1357" },
+          { "number": 5, "tg_id": "volyacore/1391" },
+          { "number": 6, "tg_id": "volyacore/1397" },
+          { "number": 7, "tg_id": "volyacore/1421" },
+          { "number": 8, "tg_id": "volyacore/1440" },
+          { "number": 9, "tg_id": "volyacore/1497" },
+          { "number": 10, "tg_id": "volyacore/1520" },
+          { "number": 11, "tg_id": "volyacore/1521" },
+          { "number": 12, "tg_id": "volyacore/1566" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wandee_goodday",
+    "title": "Добрий день, пане Ванді",
+    "description": "Через розбите серце та пияцтво лікар Ванді переходить від коханого до сміливого, зв’язуючись із тайським бійцем Йояком Пхадетсик. Стосунки на одну ніч чомусь перетворюються на «хлопців з привілеями». Хоча це лише фальшиві стосунки, між ними зароджуються почуття, які вони не наважуються прийняти, коли в їхніх серцях є хтось інший.",
+    "cover": "wandee_goodday.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "8.2",
+    "duration": "49 хв",
+    "cast": ["Ґрейт Сапол", "Iнн Сарiн", "Под Суфакорн", "Тор Тіннафан"],
+    "director": "Гольф Танварін Сукхапісіт",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "wandee_goodday" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1033" },
+          { "number": 2, "tg_id": "volyacore/1051" },
+          { "number": 3, "tg_id": "volyacore/1070" },
+          { "number": 4, "tg_id": "volyacore/1081" },
+          { "number": 5, "tg_id": "volyacore/1102" },
+          { "number": 6, "tg_id": "volyacore/1113" },
+          { "number": 7, "tg_id": "volyacore/1131" },
+          { "number": 8, "tg_id": "volyacore/1154" },
+          { "number": 9, "tg_id": "volyacore/1168" },
+          { "number": 10, "tg_id": "volyacore/1187" },
+          { "number": 11, "tg_id": "volyacore/1208" },
+          { "number": 12, "tg_id": "volyacore/1220" }
+        ]
+      }
+    ]
+  },
+
+
+  
+
+  {
     "id": "between-us",
     "title": "Між нами",
     "description": "Історія про команду плавців, їхні внутрішні переживання, міцну дружбу та глибокі почуття.",
@@ -44,44 +361,6 @@
           { "number": 4, "tg_id": "volyacore/334" },
           { "number": 5, "tg_id": "volyacore/347" },
           { "number": 6, "tg_id": "volyacore/350" }
-        ]
-      }
-    ]
-  },
-   {
-    "id": "perfect10liners",
-    "title": "Бездоганна десятка",
-    "description": "Першокурсники тягнуть жереб, щоб визначити своїх наставників, і волею долі Арм потрапляє до ексклюзивного кола Бездоганної Десятки — групи, що складається з неординарних студентів різного віку, де Іпун — його наставниця з другого курсу. Вона доручає йому важливе завдання — вести сторінку «Милий хлопчик-інженер» на популярній онлайн-платформі. Незважаючи на своє небажання, Арм чудово справляється з обов'язками адміністратора сторінки. У відповідь на численні прохання шанувальників він завантажує фотографію Ака, студента третього курсу будівельного факультету і наставника на третьому курсі, не знаючи про заборону цього робити. У перший день навчання в університеті Ґана спіткало нещастя. На свою біду, він примудряється зламати кран у вбиральній. На щастя, йому на допомогу приходить одногрупник. Однак серед хаосу Ґан не встиг розгледіти обличчя свого рятівника — лише мигцем побачив його взуття. Вайн стає останнім членом Ідеальної 10-ки завдяки жеребкуванню. Його наставник на другому курсі зайнятий своїм хлопцем, тому в нього залишається мало часу для свого підопічного. Доброзичливий Фай бере на себе цю роль і піклується про підопічного свого старшого брата.",
-    "cover": "lonely_girls.jpg",
-    "status": "completed",
-    "country": "thailand",
-    "year": 2024,
-    "genres": ["romance", "comedy"],
-    "episodesCount": 24,
-    "imdbRating": "8.2",
-    "duration": "45 хв",
-    "cast": ["Бук Касідет", "Форс Джіратчапон", "Перт Танапон", "Санта Понсапак", "Джуніор Паначай", "Марк Джерунтанін"],
-    "director": "Н‘ю Сівай Саватманікул",
-    "network": " GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "perfect10liners" }
-    ],
-    "blocks": [
-      {
-        "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1493" },
-          { "number": 2, "tg_id": "" },
-          { "number": 3, "tg_id": "volyacore/215" },
-          { "number": 4, "tg_id": "volyacore/219" },
-          { "number": 5, "tg_id": "volyacore/253" },
-          { "number": 6, "tg_id": "volyacore/260" },
-          { "number": 7, "tg_id": "volyacore/265" },
-          { "number": 8, "tg_id": "volyacore/277" },
-          { "number": 9, "tg_id": "volyacore/289" },
-          { "number": 10, "tg_id": "volyacore/294" },
-          { "number": 11, "tg_id": "volyacore/299" },
-          { "number": 12, "tg_id": "volyacore/303" }
         ]
       }
     ]

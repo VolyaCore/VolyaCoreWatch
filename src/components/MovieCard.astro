@@ -18,18 +18,21 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/covers/*.{jpeg,jpg,png,gif,webp}"
 );
 
-// Будуємо повний шлях до картинки
-const imagePath = `/src/assets/covers/${cover}`;
+// Очищаємо назву файлу від зайвих шляхів (якщо вони випадково прийшли з JSON)
+let cleanCover = cover ? cover.split("/").pop() || "" : "";
+if (cleanCover && !cleanCover.includes(".")) {
+  cleanCover += ".jpg";
+}
+
+// Будуємо фінальний правильний шлях до картинки
+const imagePath = `/src/assets/covers/${cleanCover}`;
 
 // Перетворюємо жанри в рядок для дата-атрибуту фільтрів
 const genresString = genres ? genres.join(",") : "";
 
-// const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/covers/*.{jpg,jpeg,png,webp,gif,JPG,JPEG,PNG,WEBP}');
-let cleanCover = cover.split("/").pop() || "";
-if (cleanCover && !cleanCover.includes(".")) {
-  cleanCover += ".jpg";
-}
-// const imagePath = `/src/assets/covers/${cleanCover}`;
+// Перевіряємо статус для правильного класу плашки (валідуємо будь-який регістр)
+const statusNormalized = status ? status.toLowerCase() : "";
+const isOngoing = statusNormalized.includes("онгоінг") || statusNormalized === "ongoing";
 ---
 
 <a
@@ -46,9 +49,9 @@ if (cleanCover && !cleanCover.includes(".")) {
         <Image
           src={images[imagePath]()}
           alt={title}
-          width={600}
-          height={800}
-          quality="max"
+          width={400}
+          height={600}
+          quality="high"
           loading="lazy"
         />
       ) : (
@@ -56,11 +59,13 @@ if (cleanCover && !cleanCover.includes(".")) {
       )
     }
 
-    <span class={`status-badge ${status}`}>
-      {status === "ongoing" ? "Онгоінг" : "Завершено"}
+    <span class={`status-badge ${isOngoing ? "ongoing" : "completed"}`}>
+      {isOngoing ? "Онгоінг" : "Завершено"}
     </span>
+    
     {imdbRating && <span class="rating-badge">⭐ {imdbRating}</span>}
   </div>
+  
   <div class="card-info">
     <h3>{title}</h3>
     <p>{episodesCount} серій</p>
@@ -75,11 +80,12 @@ if (cleanCover && !cleanCover.includes(".")) {
     border-radius: 12px;
     overflow: hidden;
     text-decoration: none;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 1px solid rgba(99, 102, 241, 0.1);
     position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .movie-card:hover {
@@ -88,17 +94,21 @@ if (cleanCover && !cleanCover.includes(".")) {
     border-color: #6366f1;
   }
 
+  /* ФІКС МОБІЛЬНОЇ ВЕРСІЇ ТА ПРОПОРЦІЙ ПОСТЕРУ */
   .cover-wrapper {
     width: 100%;
-    height: 300px;
+    /* Замість фіксованих 300px робимо адаптивне співвідношення сторін 2:3 */
+    aspect-ratio: 2 / 3; 
     position: relative;
     background-color: #1e293b;
+    overflow: hidden;
   }
 
   .cover-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
   }
 
   .no-cover-placeholder {
@@ -108,21 +118,24 @@ if (cleanCover && !cleanCover.includes(".")) {
     align-items: center;
     justify-content: center;
     color: #64748b;
-    font-size: 14px;
+    font-size: 13px;
+    background-color: #1e293b;
   }
 
   .status-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 6px 10px;
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
+  
+  /* Класи тепер точно збігаються з умовою в Astro-скрипті */
   .status-badge.ongoing {
     background-color: #ff9800;
     color: #000;
@@ -134,14 +147,14 @@ if (cleanCover && !cleanCover.includes(".")) {
 
   .rating-badge {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 10px;
+    right: 10px;
     background-color: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(4px);
     color: #f59e0b;
-    padding: 6px 10px;
+    padding: 4px 8px;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -149,26 +162,30 @@ if (cleanCover && !cleanCover.includes(".")) {
   }
 
   .card-info {
-    padding: 15px;
+    padding: 12px 10px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
+    flex-grow: 1;
+    background-color: #0f172a;
   }
 
   .card-info h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #f8fafc;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    /* Гарантує однакову висоту текстового блоку для вирівнювання сітки */
+    height: 36px; 
   }
 
   .card-info p {
-    font-size: 13px;
+    font-size: 12px;
     color: #94a3b8;
     margin: 0;
   }
