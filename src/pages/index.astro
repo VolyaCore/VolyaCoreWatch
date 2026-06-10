@@ -4,7 +4,6 @@ import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
 // Для початкового статичного рендерингу передаємо перші 24 штуки.
-// Клієнтський скрипт сам перегрупує їх, щоб онгоінги були попереду, а завершені перемішалися.
 const latestLakorns = lakornsData.slice(0, 24);
 ---
 
@@ -19,12 +18,14 @@ const latestLakorns = lakornsData.slice(0, 24);
               <MovieCard
                 id={lakorn.id}
                 title={lakorn.title}
+                enTitle={lakorn.enTitle}
                 cover={lakorn.cover}
                 status={lakorn.status}
                 episodesCount={lakorn.episodesCount}
                 country={lakorn.country}
                 year={lakorn.year}
                 genres={lakorn.genres}
+                imdbRating={lakorn.imdbRating}
               />
             </div>
           ))
@@ -88,16 +89,23 @@ const latestLakorns = lakornsData.slice(0, 24);
     <div class="movies-grid" id="catalog-grid">
       {
         latestLakorns.map((lakorn) => (
-          <div class="catalog-card-wrapper" data-status={lakorn.status.toUpperCase()}>
+          /* Додаємо data-en-title для того, щоб JS бачив англійську назву */
+          <div 
+            class="catalog-card-wrapper" 
+            data-status={lakorn.status.toUpperCase()}
+            data-en-title={lakorn.enTitle ? lakorn.enTitle.toLowerCase() : ""}
+          >
             <MovieCard
               id={lakorn.id}
               title={lakorn.title}
+              enTitle={lakorn.enTitle}
               cover={lakorn.cover}
               status={lakorn.status}
               episodesCount={lakorn.episodesCount}
               country={lakorn.country}
               year={lakorn.year}
               genres={lakorn.genres}
+              imdbRating={lakorn.imdbRating}
             />
           </div>
         ))
@@ -111,7 +119,7 @@ const latestLakorns = lakornsData.slice(0, 24);
 
 <script>
   function initPageFeatures() {
-    // 1. СОРТУВАННЯ КАТАЛОГУ (ОНГОІНГИ ПОПЕРЕДУ + РАНДОМ ЗАВЕРШЕНИХ) НА КЛІЄНТІ
+    // 1. СОРТУВАННЯ КАТАЛОГУ НА КЛІЄНТІ
     const catalogGrid = document.getElementById("catalog-grid");
     if (catalogGrid) {
       const cards = Array.from(catalogGrid.querySelectorAll(".catalog-card-wrapper"));
@@ -126,7 +134,7 @@ const latestLakorns = lakornsData.slice(0, 24);
       });
     }
 
-    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ
+    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ ТА ПОШУКУ
     const searchInput = document.getElementById("global-search") as HTMLInputElement;
     const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
     const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
@@ -147,12 +155,17 @@ const latestLakorns = lakornsData.slice(0, 24);
         const card = wrapper.querySelector(".movie-card");
         if (!card) return;
 
-        const title = card.getAttribute("data-title") || "";
+        // Отримуємо укр назву з самої картки, а англійську — з нашої обгортки wrapper
+        const titleUa = card.getAttribute("data-title") || "";
+        const titleEn = wrapper.getAttribute("data-en-title") || "";
+        
         const country = card.getAttribute("data-country") || "";
         const year = card.getAttribute("data-year") || "";
         const genres = (card.getAttribute("data-genres") || "").split(",");
 
-        const matchesSearch = title.includes(searchQuery);
+        // ОНОВЛЕНО: Тепер шукає і в українській, і в англійській назві
+        const matchesSearch = titleUa.includes(searchQuery) || titleEn.includes(searchQuery);
+        
         const matchesCountry = selectedCountry === "all" || country === selectedCountry;
         const matchesYear = selectedYear === "all" || year === selectedYear;
         const matchesGenre = selectedGenre === "all" || genres.includes(selectedGenre);
@@ -175,7 +188,7 @@ const latestLakorns = lakornsData.slice(0, 24);
     genreSelect?.addEventListener("change", filterCatalog);
     yearSelect?.addEventListener("change", filterCatalog);
 
-    // 3. РОБОТА КАРУСЕЛІ (СУВОРЕ ОБМЕЖЕННЯ ДО 7 ПРОЄКТІВ)
+    // 3. РОБОТА КАРУСЕЛІ
     const track = document.getElementById('carousel-track');
     const dotsContainer = document.getElementById('carousel-dots');
     const prevBtn = document.getElementById('carousel-prev');
@@ -190,8 +203,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     if (dotsContainer) dotsContainer.innerHTML = '';
 
     const shuffled = [...allSlides].sort(() => 0.5 - Math.random());
-    
-    // Змінено з 8 на 7 проєктів
     const selectedSlides = shuffled.slice(0, 7);
 
     selectedSlides.forEach((slide) => {
@@ -203,8 +214,8 @@ const latestLakorns = lakornsData.slice(0, 24);
       const width = window.innerWidth;
       if (width >= 1200) return 4;
       if (width >= 900) return 3;
-      if (width >= 480) return 2; // 2 картки поруч на стандартних смартфонах
-      return 1; // 1 картка лише для дуже малих екранів (<480px)
+      if (width >= 480) return 2;
+      return 1;
     }
 
     let currentIndex = 0;
@@ -306,14 +317,12 @@ const latestLakorns = lakornsData.slice(0, 24);
   .catalog-section { margin-top: 40px; }
   .catalog-section h2 { font-size: 22px; font-weight: 600; margin-bottom: 25px; border-left: 4px solid #6366f1; padding-left: 12px; color: var(--text-primary) !important; }
   
-  /* Обгортка для кожної картки каталогу */
   .catalog-card-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
   
-  /* АДАПТИВНА СІТКА КАТАЛОГУ (По 2 штуки на мобільних) */
   .movies-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -329,7 +338,6 @@ const latestLakorns = lakornsData.slice(0, 24);
 
   .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); font-size: 16px; background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
   
-  /* ГЛОБАЛЬНЕ ВИРІВНЮВАННЯ СТИЛІВ ДЛЯ MOVIE-CARD ТА ПОСТЕРІВ */
   .movie-card { 
     width: 100%; 
     height: 100%;
@@ -343,7 +351,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     transition: background-color 1s ease, border-color 1s ease !important; 
   }
   
-  /* Постери зберігають ідеальні кінематографічні пропорції 2:3 і не розмиваються */
   .movie-card img, 
   .movie-card .card-cover img, 
   .carousel-slide-wrapper img {
@@ -380,7 +387,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     will-change: transform;
   }
 
-  /* Налаштування слайдів для великих моніторів та телефонів */
   .carousel-slide-wrapper {
     box-sizing: border-box;
     display: none;
@@ -394,7 +400,6 @@ const latestLakorns = lakornsData.slice(0, 24);
     .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
   }
   @media (max-width: 480px) {
-    /* 2 акуратні картки у каруселі на екранах смартфонів */
     .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
   }
   
