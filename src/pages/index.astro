@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
-// Для початкового статичного рендерингу передаємо перші 24 штуки.
+// Повертаємо ліміт у 24 штуки для початкового відображення (під пагінацію)
 const latestLakorns = lakornsData.slice(0, 24);
 ---
 
@@ -86,13 +86,12 @@ const latestLakorns = lakornsData.slice(0, 24);
     </div>
   </section>
 
-  <section class="catalog-section">
+  <section class="catalog-section" data-all-lakorns={JSON.stringify(lakornsData)}>
     <h2>Усі релізи</h2>
 
     <div class="movies-grid" id="catalog-grid">
       {
         latestLakorns.map((lakorn) => (
-          /* Додаємо data-en-title для того, щоб JS бачив англійську назву */
           <div 
             class="catalog-card-wrapper" 
             data-status={lakorn.status.toUpperCase()}
@@ -122,62 +121,109 @@ const latestLakorns = lakornsData.slice(0, 24);
 
 <script>
   function initPageFeatures() {
-    // 1. СОРТУВАННЯ КАТАЛОГУ НА КЛІЄНТІ
     const catalogGrid = document.getElementById("catalog-grid");
-    if (catalogGrid) {
+    const catalogSection = document.querySelector(".catalog-section");
+    
+    // Зберігаємо початковий стан сітки (24 картки), який був згенерований Astro
+    let originalStaticHTML = catalogGrid ? catalogGrid.innerHTML : "";
+
+    // Отримуємо ПОВНИЙ масив даних із JSON для всеїдного пошуку
+    let allLakorns: any[] = [];
+    if (catalogSection) {
+      const rawData = catalogSection.getAttribute("data-all-lakorns");
+      if (rawData) {
+        try { allLakorns = JSON.parse(rawData); } catch(e) {}
+      }
+    }
+
+    // 1. СОРТУВАННЯ ПОЧАТКОВОГО КАТАЛОГУ (24 картки) НА КЛІЄНТІ
+    function shuffleInitialCatalog() {
+      if (!catalogGrid) return;
       const cards = Array.from(catalogGrid.querySelectorAll(".catalog-card-wrapper"));
       const ongoingCards = cards.filter(card => card.getAttribute("data-status") === "ОНГОІНГ");
       const completedCards = cards.filter(card => card.getAttribute("data-status") !== "ОНГОІНГ");
-      
       const shuffledCompleted = [...completedCards].sort(() => 0.5 - Math.random());
       
       catalogGrid.innerHTML = "";
-      [...ongoingCards, ...shuffledCompleted].forEach(card => {
-        catalogGrid.appendChild(card);
-      });
+      [...ongoingCards, ...shuffledCompleted].forEach(card => catalogGrid.appendChild(card));
+      originalStaticHTML = catalogGrid.innerHTML; // Оновлюємо кеш відсортованого стану
     }
+    shuffleInitialCatalog();
 
-    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ ТА ПОШУКУ
+    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ ТА ГЛОБАЛЬНОГО ПОШУКУ
     const searchInput = document.getElementById("global-search") as HTMLInputElement;
     const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
     const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
     const yearSelect = document.getElementById("filter-year") as HTMLSelectElement;
-    
-    const catalogCards = document.querySelectorAll("#catalog-grid .catalog-card-wrapper");
     const noResults = document.getElementById("no-results");
 
     function filterCatalog() {
+      if (!catalogGrid) return;
+
       const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
       const selectedCountry = countrySelect ? countrySelect.value : "all";
       const selectedGenre = genreSelect ? genreSelect.value : "all";
       const selectedYear = yearSelect ? yearSelect.value : "all";
 
+      // Якщо пошук та фільтри пусті — повертаємо стандартні 24 картки
+      if (!searchQuery && selectedCountry === "all" && selectedGenre === "all" && selectedYear === "all") {
+        catalogGrid.innerHTML = originalStaticHTML;
+        if (noResults) noResults.style.display = "none";
+        return;
+      }
+
+      // Якщо користувач шукає, виконуємо пошук по ВСІЙ базі даних (усі релізи й сезони)
       let visibleCount = 0;
+      catalogGrid.innerHTML = ""; // Очищаємо сітку для результатів пошуку
 
-      catalogCards.forEach((wrapper) => {
-        const card = wrapper.querySelector(".movie-card");
-        if (!card) return;
+      allLakorns.forEach((lakorn) => {
+        const titleUa = (lakorn.title || "").toLowerCase();
+        const titleEn = (lakorn.enTitle || "").toLowerCase();
+        const country = lakorn.country || "";
+        const year = (lakorn.year || "").toString();
+        const genres = lakorn.genres || [];
 
-        // Отримуємо укр назву з самої картки, а англійську — з нашої обгортки wrapper
-        const titleUa = card.getAttribute("data-title") || "";
-        const titleEn = wrapper.getAttribute("data-en-title") || "";
-        
-        const country = card.getAttribute("data-country") || "";
-        const year = card.getAttribute("data-year") || "";
-        const genres = (card.getAttribute("data-genres") || "").split(",");
-
-        // ОНОВЛЕНО: Тепер шукає і в українській, і в англійській назві
-        const matchesSearch = titleUa.includes(searchQuery) || titleEn.includes(searchQuery);
-        
+        const matchesSearch = searchQuery === "" || titleUa.includes(searchQuery) || titleEn.includes(searchQuery);
         const matchesCountry = selectedCountry === "all" || country === selectedCountry;
         const matchesYear = selectedYear === "all" || year === selectedYear;
         const matchesGenre = selectedGenre === "all" || genres.includes(selectedGenre);
 
         if (matchesSearch && matchesCountry && matchesYear && matchesGenre) {
-          (wrapper as HTMLElement).style.display = "flex";
           visibleCount++;
-        } else {
-          (wrapper as HTMLElement).style.display = "none";
+          
+          // Динамічно створюємо HTML-картку для результату (включаючи 2-гі сезони)
+          const wrapper = document.createElement("div");
+          wrapper.className = "catalog-card-wrapper";
+          wrapper.setAttribute("data-status", lakorn.status ? lakorn.status.toUpperCase() : "");
+          wrapper.setAttribute("data-en-title", titleEn);
+
+          const genresAttr = genres.join(",");
+          const isOngoing = lakorn.status?.toLowerCase().includes("онгоінг") || lakorn.status?.toLowerCase() === "ongoing";
+          const badgeClass = isOngoing ? "ongoing" : "completed";
+          const badgeText = isOngoing ? "Онгоінг" : "Завершено";
+          const ratingMarkup = lakorn.imdbRating ? `<span class="rating-badge">⭐ ${lakorn.imdbRating}</span>` : '';
+
+          // Розумне очищення обкладинки для генерації шляху
+          let cleanCover = lakorn.cover ? lakorn.cover.split("/").pop() : "";
+          if (cleanCover && !cleanCover.includes(".")) cleanCover += ".jpg";
+
+          wrapper.innerHTML = `
+            <a href="/lakorn/${lakorn.id}" class="movie-card" data-title="${titleUa}" data-country="${country}" data-year="${year}" data-genres="${genresAttr}">
+              <div class="cover-wrapper">
+                <img src="/src/assets/covers/${cleanCover}" alt="${lakorn.title}" loading="lazy" quality="high" width="400" height="600" />
+                <span class="status-badge ${badgeClass}">${badgeText}</span>
+                ${ratingMarkup}
+              </div>
+              <div class="card-info">
+                <div class="titles-stack">
+                  <h3 class="movie-title">${lakorn.title}</h3>
+                  ${lakorn.enTitle ? `<span class="movie-en-title">${lakorn.enTitle}</span>` : ''}
+                </div>
+                <p class="episodes-count">${lakorn.episodesCount} серій</p>
+              </div>
+            </a>
+          `;
+          catalogGrid.appendChild(wrapper);
         }
       });
 
@@ -191,7 +237,7 @@ const latestLakorns = lakornsData.slice(0, 24);
     genreSelect?.addEventListener("change", filterCatalog);
     yearSelect?.addEventListener("change", filterCatalog);
 
-    // 3. РОБОТА КАРУСЕЛІ
+    // 3. РОБОТА КАРУСЕЛІ (без змін)
     const track = document.getElementById('carousel-track');
     const dotsContainer = document.getElementById('carousel-dots');
     const prevBtn = document.getElementById('carousel-prev');

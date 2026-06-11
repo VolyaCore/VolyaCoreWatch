@@ -643,12 +643,317 @@
           { "number": 7, "tg_id": "volyacore/2202" },
           { "number": 8, "tg_id": "volyacore/2222" },
           { "number": 9, "tg_id": "volyacore/2234" },
-          { "number": 10, "tg_id": " volyacore/2270" }
+          { "number": 10, "tg_id": "volyacore/2270" }
         ]
       }
     ]
   },
-
+  {
+    "id": "clairebell",
+    "title": "КлеБел: Шалені, закохані, ув'язнені",
+    "enTitle": "ClaireBell",
+    "description": "Кле і Бел зустрічаються в місці, куди ніхто не потрапляє за власним бажанням: у в'язниці. Бел починає відбувати 15-ти місячний термін за сфальсифіковану справу про зберігання наркотиків, але стає мішенню для впливової у в'язниці групи. Навіть наглядач заплющує очі на їхнє свавілля. Єдиний спосіб вижити – звернутися до Кле, жорстокої ув'язненої, з якою ніхто не наважується зв'язуватися. Та все не так просто, як їй хотілося б. Стосунки дівчат поглиблюються, але на їхньому шляху з'являється роздоріжжя, тому вони мусять обрати між життям і коханням.",
+    "cover": "clairebell.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["romance", "crime", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.5",
+    "duration": "1 год. 5 хв.",
+    "cast": ["Сірівалі Сірівібул", "Папхаварін Савасдівеч"],
+    "director": "Джин Прач",
+    "network": "Mine Media Production",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "clairebell" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2582" },
+          { "number": 2, "tg_id": "volyacore/2641" },
+          { "number": 3, "tg_id": "volyacore/2669" },
+          { "number": 4, "tg_id": "volyacore/2681" },
+          { "number": 5, "tg_id": "volyacore/2706" },
+          { "number": 6, "tg_id": "volyacore/2739" },
+          { "number": 7, "tg_id": "volyacore/2778" },
+          { "number": 8, "tg_id": "volyacore/2796" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cat_for_cash",
+    "title": "Коти замість готівки: Оплата кохання приймається в котах",
+    "enTitle": "Cat for Cash",
+    "description": "Лінкс – перекладач, який не любить свою матір та її котів. Однак змушений дбати про її котяче кафе, а також працювати з чарівним кредитором Тайґером, який розуміє котячу мову. Усе це для того, щоб позбутися боргу, який накопичила його мати.",
+    "cover": "cat_for_cash.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["comedy", "romance", "fantasy"],
+    "episodesCount": 10,
+    "imdbRating": "8.2",
+    "duration": "50 хв.",
+    "cast": ["Фьорст Канафан", "Кхаотун Танават", "Сатан Кіттіпхон", "Ґрейт Сапол"],
+    "director": "У Корнпром",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "cat_for_cash" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2562" },
+          { "number": 2, "tg_id": "volyacore/2566" },
+          { "number": 3, "tg_id": "volyacore/2586" },
+          { "number": 4, "tg_id": "volyacore/2634" },
+          { "number": 5, "tg_id": "volyacore/2651" },
+          { "number": 6, "tg_id": "volyacore/2668" },
+          { "number": 7, "tg_id": "volyacore/2684" },
+          { "number": 8, "tg_id": "volyacore/2715" },
+          { "number": 9, "tg_id": "volyacore/2725" },
+          { "number": 10, "tg_id": "volyacore/2747" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_enemy",
+    "title": "Кохайний ворог",
+    "enTitle": "Love enemy",
+    "description": "Що станеться, коли Чалам — хлопець, що змушує серця битися швидше — зустріне Тана, бешкетливого сусіда, який завжди дратує його й не припиняє боротися з його почуттями? Розберімося з цим разом.",
+    "cover": "love_enemy.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 2,
+    "imdbRating": "6.8",
+    "duration": "20 хв",
+    "cast": ["Бой Наттапон", "Фіат Наттакон"],
+    "director": "",
+    "network": "Influduction",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_enemy" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1930" },
+          { "number": 2, "tg_id": "volyacore/1931" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ossans_love",
+    "title": "Кохання Осана",
+    "enTitle": "Ossan’s Love",
+    "description": "Нещасливий у коханні консультант з нерухомості Генґ раптом відчуває, що його світ перевертається з ніг на голову, коли він заплутується в хаотичному любовному трикутнику. Його бос і його колега та сусід Мо відчувають до нього щось таке, що перетворює його життя на безлад. Усе ще більше ускладнюється тим, що його подруга дитинства Чіча несподівано зізнається ему в коханні. Хто ж у цьому вихорі емоцій та заплутаних стосунків врешті-решт завоює серце Генґа?",
+    "cover": "ossans_love.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["business", "comedy", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.0",
+    "duration": "45 хв",
+    "cast": ["Ерт Пірапат", "Мікс Сахапхап", "Кріт Шакріт", "Рю Пхудтріпарт", "Капук Плойніра"],
+    "director": "Ау Корнпром Ніомсіл",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ossans_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1678" },
+          { "number": 2, "tg_id": "volyacore/1695" },
+          { "number": 3, "tg_id": "volyacore/1730" },
+          { "number": 4, "tg_id": "volyacore/1748" },
+          { "number": 5, "tg_id": "volyacore/1773" },
+          { "number": 6, "tg_id": "volyacore/1894" },
+          { "number": 7, "tg_id": "volyacore/2265" },
+          { "number": 8, "tg_id": "volyacore/2286" },
+          { "number": 9, "tg_id": "volyacore/2304" },
+          { "number": 10, "tg_id": "volyacore/2328" },
+          { "number": 11, "tg_id": "volyacore/2347" },
+          { "number": 12, "tg_id": "volyacore/2367" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2417" },
+          { "number": 2, "tg_id": "volyacore/2424" },
+          { "number": 3, "tg_id": "volyacore/2426" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cooking_crush",
+    "title": "Кулінарне захоплення",
+    "enTitle": "Cooking Crush",
+    "description": "Прем, Дайнамайт і Самсі керують не надто популярним рестораном. Зазнаючи великих збитків, трійця дізнається про кулінарний конкурс з величезною винагородою, який може допомогти їхньому бізнесу. Однак підготовка йде шкереберть, і саме тоді, коли Прем вирішив відмовитися від участі, він знайомиться з Теном, студентом-медиком, який перебуває під важким тягарем стресу. Тен звертається до Према з проханням навчити його готувати, а Прем використовує це як можливість заробити. Однак під час уроків гарячою стає не лише їжа, а й їхні обличчя, і вони повільно закохуються один в одного.",
+    "cover": "cooking_crush.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["food", "comedy", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.7",
+    "duration": "48 хв.",
+    "cast": ["Офф Джампол", "Ґан Аттапан"],
+    "director": "Ґолф Сакон Вонґсінвісет",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "cooking_crush" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/677" },
+          { "number": 2, "tg_id": "volyacore/687" },
+          { "number": 3, "tg_id": "volyacore/689" },
+          { "number": 4, "tg_id": "volyacore/712" },
+          { "number": 5, "tg_id": "volyacore/734" },
+          { "number": 6, "tg_id": "volyacore/750" },
+          { "number": 7, "tg_id": "volyacore/752" },
+          { "number": 8, "tg_id": "volyacore/767" },
+          { "number": 9, "tg_id": "volyacore/789" },
+          { "number": 10, "tg_id": "volyacore/806" },
+          { "number": 11, "tg_id": "volyacore/813" },
+          { "number": 12, "tg_id": "volyacore/831" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "khemjira",
+    "title": "Кхемджира",
+    "enTitle": "Khemjira",
+    "description": "Кхем народився в проклятій родині. Вважалося, що дочка, яка народиться в цій родині, буде в безпеці — однак син помре, не досягнувши двадцятиріччя. Його мати обачно дала йому дівоче ім'я Кхемджира, що означає «вічно в безпеці». Кхем вірив у це до свого дев'ятнадцятиріччя.",
+    "cover": "khemjira.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["horror", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.9",
+    "duration": "1 год. 5 хв.",
+    "cast": ["Кен Гаріт", "Нампін Напатсакорн", "Грін Аусадапорн", "Тле Матімун"],
+    "director": "Рон Патарапон, Аофтіон Кіттіпат, Ден Пануват",
+    "network": "Mandee Channel",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "khemjira" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2211" },
+          { "number": 2, "tg_id": "volyacore/2245" },
+          { "number": 3, "tg_id": "volyacore/2260" },
+          { "number": 4, "tg_id": "volyacore/2283" },
+          { "number": 5, "tg_id": "volyacore/2305" },
+          { "number": 6, "tg_id": "volyacore/2321" },
+          { "number": 7, "tg_id": "volyacore/2350" },
+          { "number": 8, "tg_id": "volyacore/2365" },
+          { "number": 9, "tg_id": "volyacore/2388" },
+          { "number": 10, "tg_id": "volyacore/2409" },
+          { "number": 11, "tg_id": "volyacore/2425" },
+          { "number": 12, "tg_id": "volyacore/2434" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "only_friends",
+    "title": "Лише друзі",
+    "enTitle": "Only friends",
+    "description": "М‘ю, Рей, Бостон і Намчіам – група студентів-бізнесменів, які разом керують гуртожитком, – стирають межі між дружбою і романтикою. М‘ю зосереджений на навчанні, не залишаючи часу на секс і стосунки. Щоб допомогти їм з дизайном їхнього бізнесу, Бостон знайомить групу з Топом. Бостон не очікував, що Топ зацікавиться М‘ю, і він незадоволений таким поворотом подій. Студент економічного факультету Сенд хоче ексклюзивних стосунків з Реєм, але Рей має почуття до М‘ю і не зацікавлений у дружбі. ІТ-шник Нік знаходить секс-запис у телефоні Бостона і вступає з ним у стосунки «дружба з вигодою». Однак Нік хоче чогось більшого.",
+    "cover": "only_friends.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["drama", "romance", "youth"],
+    "episodesCount": 12,
+    "imdbRating": "8.3",
+    "duration": "46 хв.",
+    "cast": ["Фьорст Канафан", "Кхаотун Танават"],
+    "director": "Джоджо Тічакорн",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "only_friends" },
+      { "title": "2 Сезон", "id": "only_friends_dream_on" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/550" },
+          { "number": 2, "tg_id": "volyacore/568" },
+          { "number": 3, "tg_id": "volyacore/581" },
+          { "number": 4, "tg_id": "volyacore/591" },
+          { "number": 5, "tg_id": "volyacore/594" },
+          { "number": 6, "tg_id": "volyacore/602" },
+          { "number": 7, "tg_id": "volyacore/611" },
+          { "number": 8, "tg_id": "volyacore/618" },
+          { "number": 9, "tg_id": "volyacore/621" },
+          { "number": 10, "tg_id": "volyacore/625" },
+          { "number": 11, "tg_id": "volyacore/629" },
+          { "number": 12, "tg_id": "volyacore/633" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "only_friends_dream_on",
+    "title": "Лише друзі: Час мрій",
+    "enTitle": "Only Friends: Dream On / โอนลีเฟรนด์ : ดรีมออน",
+    "description": "Студенти факультетів драматичного мистецтва, режисури, образотворчого мистецтва, музики та танцю опиняються в заплутаній павутині конкуренції, випадкового сексу та беззахисності. Дін та Раффі борються за головну роль у виставі Джека. Дін намагається переконати молодшого брата Джека, Рома, усунути Раффі зі свого життя. У постановці вистави «Ромео й Ромео» також бере участь Туа, який таємно закоханий у головного актора та танцюриста Арнольда.",
+    "cover": "only_friends_dream_on.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance", "drama"],
+    "episodesCount": 12,
+    "imdbRating": "",
+    "duration": "51 хв.",
+    "cast": ["Ерт Пірапат", "Мікс Сахапхап", "Джос Вай-ар", "Ґавін Кескі", "У Танабон", "Бум Тарантон"],
+    "director": "Нінью Пінья",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "only_friends" },
+      { "title": "2 Сезон", "id": "only_friends_dream_on" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2673" },
+          { "number": 2, "tg_id": "volyacore/2686" },
+          { "number": 3, "tg_id": "volyacore/2707" },
+          { "number": 4, "tg_id": "volyacore/2724" },
+          { "number": 5, "tg_id": "volyacore/2741" },
+          { "number": 6, "tg_id": "volyacore/2758" },
+          { "number": 7, "tg_id": "volyacore/2770" },
+          { "number": 8, "tg_id": "volyacore/2781" },
+          { "number": 9, "tg_id": "volyacore/2792" },
+          { "number": 10, "tg_id": "volyacore/2799" },
+          { "number": 11, "tg_id": "volyacore/2800" },
+          { "number": 12, "tg_id": "volyacore/2803" }
+        ]
+      }
+    ]
+  },
 
   
 
