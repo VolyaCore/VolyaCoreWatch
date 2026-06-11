@@ -385,39 +385,72 @@ if (!lakorn) {
   document.addEventListener("astro:after-swap", setupPageLogic);
 </script>
 
-<style>
+<style is:global>
+/* 🎯 НЕПРОБИВНИЙ ФІКС ДЛЯ СТОРІНКИ ПРОЄКТУ */
+html body .info-section .cover-box {
+    width: 300px !important;
+    min-width: 300px !important;
+    max-width: 300px !important;
+    height: auto !important;          /* Контейнер БУДЕ рости вниз за картинкою */
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;     /* Дозволяємо контенту не ховатися */
+    display: block !important;
+  }
+
+  html body .info-section .cover-box img.clickable-poster {
+    width: 100% !important;
+    height: auto !important;         /* Висота стає природною! */
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;   /* Жодних пропорцій 2:3 */
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Адаптивність для мобільних екранів */
+  @media (max-width: 768px) {
+    html body .info-section .cover-box {
+      width: 260px !important;
+      min-width: 260px !important;
+      max-width: 260px !important;
+      height: auto !important;
+    }
+  }
+
   .info-section {
     display: flex;
     gap: 2rem;
-    align-items: flex-start; /* Текст не розтягує постер */
+    align-items: flex-start;
   }
 
-  /* Фіксований бокс для обкладинки */
+  /* 🎯 ФІКС КОНТЕНЕРА: Прибираємо фіксовану висоту, залишаємо лише ширину */
   .cover-box {
-    width: 300px; /* Чітка фіксована ширина */
-    min-width: 300px; /* Забороняємо стискатися, якщо тексту поруч багато */
-    height: 450px; /* Чітка фіксована висота (співвідношення 2:3) */
+    width: 300px;
+    min-width: 300px;
+    height: auto !important; /* Дозволяємо контейнеру рости вниз разом з постером */
     border-radius: 12px;
-    overflow: hidden; /* Усе, що виходить за межі, ховаємо */
+    overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background-color: #1e293b;
+    flex-shrink: 0;
   }
 
-  /* Стилі для самої картинки всередині боксу */
+  /* 🎯 ФІКС КАРТИНКИ: Висота автоматична, оригінальні пропорції зберігаються */
   .clickable-poster {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover; /* Картинка ідеально заповнює 300x450 без деформацій */
-    object-position: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    height: auto !important; /* Висота адаптується під оригінальну картинку */
+    object-fit: contain !important; 
+    cursor: zoom-in;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
   }
 
   .clickable-poster:hover {
-    transform: scale(1.03); /* Легкий ефект при наведенні */
+    transform: scale(1.03);
+    filter: brightness(1.1);
   }
 
-  /* Заглушка, якщо картинки немає — тепер вона точно такого ж розміру */
   .no-cover-placeholder-detail {
     width: 100%;
     height: 100%;
@@ -430,25 +463,27 @@ if (!lakorn) {
     border-radius: 12px;
   }
 
-  /* Адаптивність для мобільних пристроїв */
   @media (max-width: 768px) {
     .info-section {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding: 20px;
     }
     .cover-box {
       width: 260px;
       min-width: 260px;
-      height: 390px;
+      height: auto !important;
     }
   }
+
   .lakorn-container {
     display: flex;
     flex-direction: column;
     gap: 35px;
     padding-top: 20px;
   }
+
   .info-section {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -456,34 +491,6 @@ if (!lakorn) {
     gap: 30px;
     padding: 30px;
     border-radius: 16px;
-  }
-  @media (max-width: 768px) {
-    .info-section {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  }
-
-  .cover-box {
-    width: 240px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  }
-  .clickable-poster {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: zoom-in;
-    transition:
-      transform 0.3s ease,
-      filter 0.3s ease;
-  }
-  .clickable-poster:hover {
-    transform: scale(1.03);
-    filter: brightness(1.1);
   }
 
   .details-box {
@@ -539,7 +546,6 @@ if (!lakorn) {
     font-weight: 700;
   }
 
-  /* 🌟 СТИЛІ ДЛЯ ПАНЕЛІ ПОЗНАЧОК (СВІТЛА ТА ТЕМНА ТЕМИ АДАПТИВНІ) */
   .user-status-panel {
     display: flex;
     gap: 12px;
@@ -567,21 +573,20 @@ if (!lakorn) {
     box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
   }
 
-  /* Активні стани кнопок із брендовими підсвітками */
   .status-btn[data-status="favorite"].active {
-    background-color: #ef4444 !important; /* Червоний */
+    background-color: #ef4444 !important;
     border-color: #ef4444 !important;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
   }
   .status-btn[data-status="later"].active {
-    background-color: #3b82f6 !important; /* Синій */
+    background-color: #3b82f6 !important;
     border-color: #3b82f6 !important;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
   }
   .status-btn[data-status="watching"].active {
-    background-color: #10b981 !important; /* Зелений */
+    background-color: #10b981 !important;
     border-color: #10b981 !important;
     color: #ffffff !important;
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
@@ -592,7 +597,7 @@ if (!lakorn) {
       justify-content: center;
     }
     .status-btn .lbl {
-      display: none; /* на дуже дрібних екранах ховаємо текст, лишаємо тільки емодзі */
+      display: none;
     }
     .status-btn {
       padding: 8px 14px;
@@ -817,15 +822,9 @@ if (!lakorn) {
   }
 
   @keyframes pulse-blue {
-    0% {
-      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
   }
 
   .lightbox {
@@ -878,9 +877,7 @@ if (!lakorn) {
     font-size: 44px;
     font-weight: 300;
     cursor: pointer;
-    transition:
-      color 0.2s,
-      transform 0.2s;
+    transition: color 0.2s, transform 0.2s;
     user-select: none;
   }
   .lightbox-close:hover {

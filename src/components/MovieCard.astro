@@ -38,13 +38,14 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
 
 <a
   href={`/lakorn/${id}`}
-  class="movie-card"
+  class="movie-card custom-lakorn-card"
   data-title={title ? title.toLowerCase() : ""}
   data-country={country || ""}
   data-year={year || ""}
   data-genres={genresString}
+  style="display: flex !important; flex-direction: column !important; justify-content: space-between !important; height: 100% !important; background-color: #0f172a; border-radius: 12px; overflow: hidden; text-decoration: none;"
 >
-  <div class="cover-wrapper">
+  <div class="cover-wrapper custom-cover-wrapper" style="width: 100% !important; aspect-ratio: 2 / 3 !important; position: relative !important; overflow: hidden !important; background-color: #1e293b;">
     {
       images[imagePath] ? (
         <Image
@@ -54,6 +55,7 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
           height={600}
           quality="high"
           loading="lazy"
+          style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;"
         />
       ) : (
         <div class="no-cover-placeholder">Немає обкладинки</div>
@@ -67,53 +69,26 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
     {imdbRating && <span class="rating-badge">⭐ {imdbRating}</span>}
   </div>
   
-  <div class="card-info">
-    <div class="titles-stack">
-      <h3 class="movie-title">{title}</h3>
-      {enTitle && <span class="movie-en-title">{enTitle}</span>}
+  <div class="card-info" style="padding: 14px 12px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; gap: 10px !important; flex-grow: 1 !important;">
+    <div class="titles-stack" style="display: flex !important; flex-direction: column !important; gap: 4px !important;">
+      <h3 class="movie-title" style="font-size: 14px; font-weight: 600; margin: 0; line-height: 1.3;">{title}</h3>
+      {enTitle && <span class="movie-en-title" style="font-size: 11px; color: #64748b; line-height: 1.2;">{enTitle}</span>}
     </div>
-    <p class="episodes-count">{episodesCount} серій</p>
+    <p class="episodes-count" style="font-size: 12px; color: #94a3b8; margin: 0; margin-top: auto !important;">{episodesCount} серій</p>
   </div>
 </a>
 
 <style>
-  /* ==========================================================================
-     ТЕМНА ТЕМА (ЗА ЗАМОВЧУВАННЯМ)
-     ========================================================================== */
+  /* Залишаємо базові інтерактивні стилі для ховерів та тем оформлення */
   .movie-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #0f172a;
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     border: 1px solid rgba(99, 102, 241, 0.1);
-    position: relative;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
   }
 
   .movie-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(99, 102, 241, 0.15);
     border-color: #6366f1;
-  }
-
-  .cover-wrapper {
-    width: 100%;
-    aspect-ratio: 2 / 3; 
-    position: relative;
-    background-color: #1e293b;
-    overflow: hidden;
-  }
-
-  .cover-wrapper img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block;
   }
 
   .no-cover-placeholder {
@@ -139,14 +114,8 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  .status-badge.ongoing {
-    background-color: #ff9800;
-    color: #000;
-  }
-  .status-badge.completed {
-    background-color: #4caf50;
-    color: #fff;
-  }
+  .status-badge.ongoing { background-color: #ff9800; color: #000; }
+  .status-badge.completed { background-color: #4caf50; color: #fff; }
 
   .rating-badge {
     position: absolute;
@@ -160,89 +129,22 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
     font-size: 11px;
     font-weight: 700;
     z-index: 10;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(245, 158, 11, 0.3);
   }
 
-  .card-info {
-    padding: 12px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
-    flex-grow: 1;
-    background-color: #0f172a;
-    transition: background-color 0.3s ease;
-  }
-
-  .titles-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    height: 54px; 
-    overflow: hidden;
-  }
-
   .movie-title {
-    font-size: 14px;
-    font-weight: 600;
     color: #f8fafc;
-    margin: 0;
-    line-height: 1.2;
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .movie-en-title {
-    font-size: 11px;           
-    font-weight: 400;           
-    color: #64748b;             
-    line-height: 1.2;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;       
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .episodes-count {
-    font-size: 12px;
-    color: #94a3b8;
-    margin: 0;
-  }
-
-  /* ==========================================================================
-     СВІТЛЯ ТЕМА (:global дозволяє перехопити атрибут з тегу body/html)
-     ========================================================================== */
-  :global([data-theme="light"]) .movie-card {
-    background-color: #7C9BCC;      /* Твій колір для фону картки */
-    border-color: rgba(15, 23, 42, 0.15); /* Темніша тонка рамка */
-  }
-
-  :global([data-theme="light"]) .movie-card:hover {
-    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
-    border-color: #0f172a;          /* Колір рамки при наведенні */
-  }
-
-  :global([data-theme="light"]) .card-info {
-    background-color: #7C9BCC;      /* Змінюємо колір текстового блоку нижче фото */
-  }
-
-  :global([data-theme="light"]) .movie-title {
-    color: #0f172a;                 /* Робимо головний заголовок темно-синім */
-  }
-
-  :global([data-theme="light"]) .movie-en-title {
-    color: #334155;                 /* Англійський заголовок трохи світліший за головний (slate-700) */
-  }
-
-  :global([data-theme="light"]) .episodes-count {
-    color: #1e293b;                 /* Кількість серій стає чітко видною (slate-800) */
-  }
-
-  :global([data-theme="light"]) .no-cover-placeholder {
-    background-color: #94a3b8;
-    color: #334155;
-  }
+  /* СВІТЛА ТЕМА */
+  :global([data-theme="light"]) .movie-card { background-color: #7C9BCC !important; border-color: rgba(15, 23, 42, 0.15); }
+  :global([data-theme="light"]) .movie-card:hover { border-color: #0f172a; }
+  :global([data-theme="light"]) .card-info { background-color: #7C9BCC !important; }
+  :global([data-theme="light"]) .movie-title { color: #0f172a !important; }
+  :global([data-theme="light"]) .movie-en-title { color: #334155 !important; }
+  :global([data-theme="light"]) .episodes-count { color: #1e293b !important; }
 </style>

@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
-// Повертаємо ліміт у 24 штуки для початкового відображення (під пагінацію)
+// Відображаємо перші 24 штуки для пагінації
 const latestLakorns = lakornsData.slice(0, 24);
 ---
 
@@ -86,16 +86,21 @@ const latestLakorns = lakornsData.slice(0, 24);
     </div>
   </section>
 
-  <section class="catalog-section" data-all-lakorns={JSON.stringify(lakornsData)}>
+  <section class="catalog-section">
     <h2>Усі релізи</h2>
 
-    <div class="movies-grid" id="catalog-grid">
+    <div class="movies-grid catalog-fixed-grid" id="catalog-grid">
       {
         latestLakorns.map((lakorn) => (
           <div 
             class="catalog-card-wrapper" 
-            data-status={lakorn.status.toUpperCase()}
+            data-id={lakorn.id}
+            data-title={lakorn.title.toLowerCase()}
             data-en-title={lakorn.enTitle ? lakorn.enTitle.toLowerCase() : ""}
+            data-status={lakorn.status.toUpperCase()}
+            data-country={lakorn.country}
+            data-year={lakorn.year}
+            data-genres={lakorn.genres.join(",")}
           >
             <MovieCard
               id={lakorn.id}
@@ -113,6 +118,37 @@ const latestLakorns = lakornsData.slice(0, 24);
         ))
       }
     </div>
+
+    <div id="hidden-full-database" style="display: none;">
+      {
+        lakornsData.map((lakorn) => (
+          <div 
+            class="database-card-source" 
+            data-id={lakorn.id}
+            data-title={lakorn.title.toLowerCase()}
+            data-en-title={lakorn.enTitle ? lakorn.enTitle.toLowerCase() : ""}
+            data-status={lakorn.status.toUpperCase()}
+            data-country={lakorn.country}
+            data-year={lakorn.year}
+            data-genres={lakorn.genres.join(",")}
+          >
+            <MovieCard
+              id={lakorn.id}
+              title={lakorn.title}
+              enTitle={lakorn.enTitle}
+              cover={lakorn.cover}
+              status={lakorn.status}
+              episodesCount={lakorn.episodesCount}
+              country={lakorn.country}
+              year={lakorn.year}
+              genres={lakorn.genres}
+              imdbRating={lakorn.imdbRating}
+            />
+          </div>
+        ))
+      }
+    </div>
+
     <div id="no-results" class="no-results-msg" style="display: none;">
       <p>🔍 На жаль, нічого не знайдено за такими критеріями фільтрації.</p>
     </div>
@@ -122,35 +158,43 @@ const latestLakorns = lakornsData.slice(0, 24);
 <script>
   function initPageFeatures() {
     const catalogGrid = document.getElementById("catalog-grid");
-    const catalogSection = document.querySelector(".catalog-section");
+    const dbSourceContainer = document.getElementById("hidden-full-database");
     
-    // Зберігаємо початковий стан сітки (24 картки), який був згенерований Astro
-    let originalStaticHTML = catalogGrid ? catalogGrid.innerHTML : "";
+    if (!catalogGrid || !dbSourceContainer) return;
 
-    // Отримуємо ПОВНИЙ масив даних із JSON для всеїдного пошуку
-    let allLakorns: any[] = [];
-    if (catalogSection) {
-      const rawData = catalogSection.getAttribute("data-all-lakorns");
-      if (rawData) {
-        try { allLakorns = JSON.parse(rawData); } catch(e) {}
-      }
+    // ФУНКЦІЯ ФОРСОВАНОГО ПРАВИЛА ДЛЯ КАРТИНКИ (Рятує пропорції 2/3)
+    function applyImageFix(container: HTMLElement) {
+      const images = container.querySelectorAll('img');
+      images.forEach(img => {
+        img.style.setProperty('width', '100%', 'important');
+        img.style.setProperty('height', 'auto', 'important');
+        img.style.setProperty('aspect-ratio', '2 / 3', 'important');
+        img.style.setProperty('object-fit', 'cover', 'important');
+        img.style.setProperty('display', 'block', 'important');
+      });
     }
 
-    // 1. СОРТУВАННЯ ПОЧАТКОВОГО КАТАЛОГУ (24 картки) НА КЛІЄНТІ
+    // Застосовуємо до початкового стану
+    applyImageFix(catalogGrid);
+    applyImageFix(dbSourceContainer);
+
+    let originalStaticHTML = catalogGrid.innerHTML;
+    const allSourceCards = Array.from(dbSourceContainer.querySelectorAll(".database-card-source"));
+
     function shuffleInitialCatalog() {
-      if (!catalogGrid) return;
-      const cards = Array.from(catalogGrid.querySelectorAll(".catalog-card-wrapper"));
+      const cards = Array.from(catalogGrid!.querySelectorAll(".catalog-card-wrapper"));
       const ongoingCards = cards.filter(card => card.getAttribute("data-status") === "ОНГОІНГ");
       const completedCards = cards.filter(card => card.getAttribute("data-status") !== "ОНГОІНГ");
       const shuffledCompleted = [...completedCards].sort(() => 0.5 - Math.random());
       
-      catalogGrid.innerHTML = "";
-      [...ongoingCards, ...shuffledCompleted].forEach(card => catalogGrid.appendChild(card));
-      originalStaticHTML = catalogGrid.innerHTML; // Оновлюємо кеш відсортованого стану
+      catalogGrid!.innerHTML = "";
+      [...ongoingCards, ...shuffledCompleted].forEach(card => catalogGrid!.appendChild(card));
+      
+      applyImageFix(catalogGrid!); // Фіксуємо картинки після сортування
+      originalStaticHTML = catalogGrid!.innerHTML; 
     }
     shuffleInitialCatalog();
 
-    // 2. КОНТРОЛЬ ФІЛЬТРІВ КАТАЛОГУ ТА ГЛОБАЛЬНОГО ПОШУКУ
     const searchInput = document.getElementById("global-search") as HTMLInputElement;
     const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
     const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
@@ -165,23 +209,21 @@ const latestLakorns = lakornsData.slice(0, 24);
       const selectedGenre = genreSelect ? genreSelect.value : "all";
       const selectedYear = yearSelect ? yearSelect.value : "all";
 
-      // Якщо пошук та фільтри пусті — повертаємо стандартні 24 картки
       if (!searchQuery && selectedCountry === "all" && selectedGenre === "all" && selectedYear === "all") {
         catalogGrid.innerHTML = originalStaticHTML;
         if (noResults) noResults.style.display = "none";
         return;
       }
 
-      // Якщо користувач шукає, виконуємо пошук по ВСІЙ базі даних (усі релізи й сезони)
       let visibleCount = 0;
-      catalogGrid.innerHTML = ""; // Очищаємо сітку для результатів пошуку
+      catalogGrid.innerHTML = "";
 
-      allLakorns.forEach((lakorn) => {
-        const titleUa = (lakorn.title || "").toLowerCase();
-        const titleEn = (lakorn.enTitle || "").toLowerCase();
-        const country = lakorn.country || "";
-        const year = (lakorn.year || "").toString();
-        const genres = lakorn.genres || [];
+      allSourceCards.forEach((sourceCard) => {
+        const titleUa = sourceCard.getAttribute("data-title") || "";
+        const titleEn = sourceCard.getAttribute("data-en-title") || "";
+        const country = sourceCard.getAttribute("data-country") || "";
+        const year = sourceCard.getAttribute("data-year") || "";
+        const genres = (sourceCard.getAttribute("data-genres") || "").split(",");
 
         const matchesSearch = searchQuery === "" || titleUa.includes(searchQuery) || titleEn.includes(searchQuery);
         const matchesCountry = selectedCountry === "all" || country === selectedCountry;
@@ -190,42 +232,14 @@ const latestLakorns = lakornsData.slice(0, 24);
 
         if (matchesSearch && matchesCountry && matchesYear && matchesGenre) {
           visibleCount++;
-          
-          // Динамічно створюємо HTML-картку для результату (включаючи 2-гі сезони)
-          const wrapper = document.createElement("div");
-          wrapper.className = "catalog-card-wrapper";
-          wrapper.setAttribute("data-status", lakorn.status ? lakorn.status.toUpperCase() : "");
-          wrapper.setAttribute("data-en-title", titleEn);
-
-          const genresAttr = genres.join(",");
-          const isOngoing = lakorn.status?.toLowerCase().includes("онгоінг") || lakorn.status?.toLowerCase() === "ongoing";
-          const badgeClass = isOngoing ? "ongoing" : "completed";
-          const badgeText = isOngoing ? "Онгоінг" : "Завершено";
-          const ratingMarkup = lakorn.imdbRating ? `<span class="rating-badge">⭐ ${lakorn.imdbRating}</span>` : '';
-
-          // Розумне очищення обкладинки для генерації шляху
-          let cleanCover = lakorn.cover ? lakorn.cover.split("/").pop() : "";
-          if (cleanCover && !cleanCover.includes(".")) cleanCover += ".jpg";
-
-          wrapper.innerHTML = `
-            <a href="/lakorn/${lakorn.id}" class="movie-card" data-title="${titleUa}" data-country="${country}" data-year="${year}" data-genres="${genresAttr}">
-              <div class="cover-wrapper">
-                <img src="/src/assets/covers/${cleanCover}" alt="${lakorn.title}" loading="lazy" quality="high" width="400" height="600" />
-                <span class="status-badge ${badgeClass}">${badgeText}</span>
-                ${ratingMarkup}
-              </div>
-              <div class="card-info">
-                <div class="titles-stack">
-                  <h3 class="movie-title">${lakorn.title}</h3>
-                  ${lakorn.enTitle ? `<span class="movie-en-title">${lakorn.enTitle}</span>` : ''}
-                </div>
-                <p class="episodes-count">${lakorn.episodesCount} серій</p>
-              </div>
-            </a>
-          `;
-          catalogGrid.appendChild(wrapper);
+          const clonedCard = sourceCard.cloneNode(true) as HTMLElement;
+          clonedCard.className = "catalog-card-wrapper";
+          catalogGrid.appendChild(clonedCard);
         }
       });
+
+      // Застосовуємо фікс до нових знайдених/відфільтрованих карток
+      applyImageFix(catalogGrid);
 
       if (noResults) {
         noResults.style.display = visibleCount === 0 ? "block" : "none";
@@ -237,7 +251,7 @@ const latestLakorns = lakornsData.slice(0, 24);
     genreSelect?.addEventListener("change", filterCatalog);
     yearSelect?.addEventListener("change", filterCatalog);
 
-    // 3. РОБОТА КАРУСЕЛІ (без змін)
+    // Код каруселі
     const track = document.getElementById('carousel-track');
     const dotsContainer = document.getElementById('carousel-dots');
     const prevBtn = document.getElementById('carousel-prev');
@@ -258,6 +272,8 @@ const latestLakorns = lakornsData.slice(0, 24);
       slide.classList.add('carousel-active');
       track.appendChild(slide);
     });
+
+    applyImageFix(track); // Фікс картинок для каруселі
 
     function getSlidesPerPage() {
       const width = window.innerWidth;
@@ -348,6 +364,27 @@ const latestLakorns = lakornsData.slice(0, 24);
 </script>
 
 <style is:global>
+  /* 🏛️ ЖОРСТКИЙ СЕЛЕКТОР НА 4 КАРТКИ В РЯД ДЛЯ КАТАЛОГУ */
+  .catalog-fixed-grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(4, 1fr) !important; /* Рівно 4 колонки */
+    gap: 25px !important; 
+  }
+  
+  @media (max-width: 1024px) {
+    .catalog-fixed-grid { 
+      grid-template-columns: repeat(3, 1fr) !important; 
+    }
+  }
+
+  @media (max-width: 600px) {
+    .catalog-fixed-grid { 
+      grid-template-columns: repeat(2, 1fr) !important; 
+      gap: 12px !important; 
+    }
+  }
+
+  /* Решта базових стилів сторінки */
   .filters-container { display: flex; gap: 20px; width: 100%; }
   .filter-item { flex: 1; }
   @media (max-width: 768px) { .filters-container { flex-direction: column; gap: 12px; } }
@@ -357,7 +394,7 @@ const latestLakorns = lakornsData.slice(0, 24);
     padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);
     margin-top: 30px; flex-wrap: wrap; transition: background-color 0.3s ease, border-color 0.3s ease;
   }
-  [data-theme="light"] .filters-section{ display: flex; gap: 20px; background-color: #7C9BCC !important; }
+  [data-theme="light"] .filters-section { display: flex; gap: 20px; background-color: #7C9BCC !important; }
   .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 140px; }
   .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; letter-spacing: 0.5px; }
   .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; width: 100%; }
@@ -371,49 +408,9 @@ const latestLakorns = lakornsData.slice(0, 24);
     flex-direction: column;
     width: 100%;
   }
-  
-  .movies-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 25px; 
-  }
-  
-  @media (max-width: 600px) {
-    .movies-grid { 
-      grid-template-columns: repeat(2, 1fr) !important; 
-      gap: 12px; 
-    }
-  }
 
   .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); font-size: 16px; background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
   
-  .movie-card { 
-    width: 100%; 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-card) !important; 
-    border: 1px solid var(--border-color) !important; 
-    border-radius: 12px;
-    overflow: hidden;
-    box-sizing: border-box;
-    transition: background-color 1s ease, border-color 1s ease !important; 
-  }
-  
-  .movie-card img, 
-  .movie-card .card-cover img, 
-  .carousel-slide-wrapper img {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 2 / 3 !important;
-    object-fit: cover !important;
-    display: block;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .movie-card h3, .movie-card .movie-title, .movie-card a { color: var(--text-primary) !important; font-size: 14px; margin: 8px 0 4px 0; line-height: 1.3; }
-  .movie-card p, .movie-card .movie-episodes { color: var(--text-muted) !important; font-size: 12px; }
-
   .hero-carousel-section {
     width: 100%;
     margin: 1.5rem auto;
@@ -509,4 +506,43 @@ const latestLakorns = lakornsData.slice(0, 24);
     width: 20px;
     border-radius: 4px;
   }
+
+  /* 🏛️ СІТКА КАТАЛОГУ — ЧІТКО 4 КАРТКИ В РЯД НА ДЕСКТОПІ */
+  #catalog-grid,
+  .movies-grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(4, 1fr) !important; /* Фіксовано 4 в ряд */
+    gap: 24px !important; 
+    width: 100% !important;
+  }
+  
+  /* Планшети: 3 картки в ряд */
+  @media (max-width: 1024px) {
+    #catalog-grid, .movies-grid { 
+      grid-template-columns: repeat(3, 1fr) !important; 
+    }
+  }
+
+  /* Мобільні телефони: 2 картки в ряд */
+  @media (max-width: 600px) {
+    #catalog-grid, .movies-grid { 
+      grid-template-columns: repeat(2, 1fr) !important; 
+      gap: 12px !important; 
+    }
+  }
+
+  /* Решта стандартного оформлення */
+  .filters-section {
+    display: flex; gap: 20px; background-color: var(--bg-card) !important;
+    padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);
+    margin-top: 30px; flex-wrap: wrap;
+  }
+  [data-theme="light"] .filters-section { display: flex; gap: 20px; background-color: #7C9BCC !important; }
+  .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 140px; }
+  .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; }
+  .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; width: 100%; cursor: pointer; }
+
+  .catalog-section h2 { font-size: 22px; font-weight: 600; margin-bottom: 25px; border-left: 4px solid #6366f1; padding-left: 12px; color: var(--text-primary) !important; }
+  .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
+
 </style>
