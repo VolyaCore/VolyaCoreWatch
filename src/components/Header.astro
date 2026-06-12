@@ -2,40 +2,42 @@
   <div class="header-container">
     <a href="/" class="logo">Volya<span>Core</span></a>
 
-    <button class="burger-menu-btn" id="burger-btn" aria-label="Відкрити меню">
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-    </button>
-
-    <div class="header-nav-wrapper" id="header-menu">
-      <div class="search-container">
-        <div class="search-wrapper">
-          <span class="search-icon">🔍</span>
-          <input
-            type="text"
-            id="global-search"
-            placeholder="Знайти улюблений проєкт..."
-            autocomplete="off"
-          />
-        </div>
+    <div class="search-container">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="global-search"
+          placeholder="Знайти улюблений проєкт..."
+          autocomplete="off"
+        />
       </div>
-
-      <nav class="navigation">
-        <a href="/">Каталог</a>
-        <a href="/watchlist" class="nav-link">Мої списки</a>
-        <a href="https://t.me/volyacore" target="_blank" class="tg-channel-btn">Телеграм</a>
-      </nav>
     </div>
 
-    <button
-      id="theme-toggle"
-      class="theme-toggle-btn"
-      aria-label="Переключити тему"
-    >
-      <span class="sun-icon">☀️</span>
-      <span class="moon-icon">🌙</span>
-    </button>
+    <div class="header-actions-wrapper">
+      <div class="header-nav-wrapper" id="header-menu">
+        <nav class="navigation">
+          <a href="/">Каталог</a>
+          <a href="/watchlist" class="nav-link">Мої списки</a>
+          <a href="https://t.me/volyacore" target="_blank" class="tg-channel-btn">Телеграм</a>
+        </nav>
+      </div>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle-btn"
+        aria-label="Переключити тему"
+      >
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+
+      <button class="burger-menu-btn" id="burger-btn" aria-label="Відкрити меню">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -90,7 +92,6 @@
     top: 0;
     z-index: 100;
     transition: background 0.3s ease, border-color 0.3s ease;
-    overflow: hidden;
   }
 
   :global([data-theme="light"]) .site-header { 
@@ -104,7 +105,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 40px; /* Трохи зменшили стандартний зазор для гнучкості */
   }
 
   .logo {
@@ -122,16 +123,23 @@
     }
   }
 
+  /* Правий блок дій: об'єднує меню, перемикач теми та бургер */
+  .header-actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
   .header-nav-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
   }
 
   .search-container {
     max-width: 450px;
     width: 100%;
+    flex-grow: 1;
+    z-index: 102; /* Щоб пошук не перекривався підкладками */
   }
 
   .search-wrapper {
@@ -255,38 +263,47 @@
   }
 
   /* ==========================================================================
-     📱 АДАПТИВНІ СТИЛІ (ВИПРАВЛЕННЯ ТЕМНОЇ ТЕМИ ДЛЯ МОБІЛЬНОГО МЕНЮ)
+     📱 АДАПТИВНІ СТИЛІ (ПЕРЕМІЩЕННЯ ПОШУКУ НА МОБІЛЬНИХ)
      ========================================================================== */
   @media (max-width: 820px) {
-    .site-header {
-      overflow: visible;
-    }
-
     .header-container {
       padding: 12px 16px;
+      gap: 15px; /* Стискаємо відстань між елементами шапки */
     }
 
     .burger-menu-btn {
       display: flex;
     }
 
+    /* 🔍 Пошукова панель на мобільних стискається та стає ліворуч від кнопок дій */
+    .search-container {
+      max-width: 280px; 
+      order: 0; /* Тримає позицію у центрі між лого та кнопками */
+    }
+
+    .search-wrapper input {
+      padding: 8px 12px 8px 36px;
+      font-size: 13px;
+    }
+
+    .search-wrapper .search-icon {
+      left: 12px;
+      font-size: 12px;
+    }
+
+    /* 🪐 Навігаційне меню (тепер ТІЛЬКИ для посилань каталогу та списків) */
     .header-nav-wrapper {
       position: fixed;
       top: 0;
       left: -100%;
-      right: auto;
       width: 100%;
       height: 100vh;
-      
-      /* Изменение: используем глобальные переменные темы вместо статического светлого цвета */
       background: var(--bg-main); 
-      
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 35px;
       padding: 80px 24px 40px;
-      transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+      transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 101;
       visibility: hidden;
 
@@ -296,33 +313,22 @@
       }
     }
 
-    /* Изменение: для светлой темы оставляем приятный светлый оттенок подложки хедера */
     :global([data-theme="light"]) .header-nav-wrapper {
       background: #D9E6FF; 
-    }
-
-    .search-container {
-      max-width: 100%;
-      width: 100%;
-    }
-    
-    /* Дополнительная фиксация цвета текста инпута на мобилках */
-    .search-wrapper input {
-      color: var(--text-primary) !important;
     }
 
     .navigation {
       flex-direction: column;
       width: 100%;
-      gap: 20px;
+      gap: 25px;
 
       a {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 700;
         width: 100%;
         text-align: center;
-        padding: 6px 0;
-        color: var(--text-primary) !important; /* Гарантирует читаемость в обеих темах */
+        padding: 8px 0;
+        color: var(--text-primary) !important;
         
         &:hover {
           color: #2563eb !important;
@@ -332,16 +338,30 @@
       .tg-channel-btn {
         width: 100%;
         max-width: 280px;
-        padding: 12px;
+        padding: 14px;
         border-radius: 50px;
         color: white !important;
+        margin-top: 15px;
       }
+    }
+  }
+
+  /* Для зовсім маленьких екранів звужуємо поле пошуку, щоб усе влізло */
+  @media (max-width: 480px) {
+    .search-container {
+      max-width: 160px; /* Зменшуємо ширину, щоб помістився логотип і кнопки */
+    }
+    .search-wrapper input::placeholder {
+      color: transparent; /* Ховаємо плейсхолдер на крихітних екранах, залишаючи лише лупу */
     }
   }
 
   @media (max-width: 360px) {
     .logo {
-      font-size: 20px;
+      font-size: 18px;
+    }
+    .search-container {
+      max-width: 110px;
     }
   }
 </style>
