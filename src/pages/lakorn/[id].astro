@@ -23,17 +23,19 @@ if (cleanCover && !cleanCover.includes(".")) {
   cleanCover += ".jpg";
 }
 
-// Формуємо точний шлях до картинки всередині твоєї папки covers
+// Формуємо точний шлях до картинки всередині папки covers
 const imagePath = `/src/assets/covers/${cleanCover}`;
+
+// Отримуємо функцію імпорту для конкретного постера заздалегідь (до рендерингу HTML)
+const imageGetter = images[imagePath];
+
+// Викликаємо функцію імпорту, щоб отримати чистий об'єкт метаданих зображення для Astro
+const resolvedImage = imageGetter ? (await imageGetter()).default : null;
 
 export function getStaticPaths() {
   return lakornsData.map((lakorn) => ({
     params: { id: lakorn.id },
   }));
-}
-
-if (!lakorn) {
-  throw new Error(`Лакорн з ID ${id} не знайдено`);
 }
 ---
 
@@ -42,13 +44,13 @@ if (!lakorn) {
     <section class="info-section">
       <div class="cover-box">
         {
-          images[imagePath] ? (
+          resolvedImage ? (
             <Image
-              src={images[imagePath]()}
+              src={resolvedImage}
               alt={lakorn.title}
-              width={800}
-              height={1200}
-              quality="max"
+              width={300} 
+              quality="high" 
+              loading="eager" 
               id="movie-poster"
               class="clickable-poster"
               title="Натисніть, щоб збільшити постер"
@@ -222,14 +224,13 @@ if (!lakorn) {
 <style>
   .project-en-title {
     display: block;
-    font-size: 18px; /* Менша за основну */
+    font-size: 18px;
     font-weight: 500;
-    color: #64748b; /* Тьмяніший колір для темної теми */
-    margin-top: 4px; /* Невеликий відступ від укр назви */
-    margin-bottom: 15px; /* Відступ перед тегами */
+    color: #64748b;
+    margin-top: 4px;
+    margin-bottom: 15px;
   }
 
-  /* Для світлої теми, щоб колір був чітким та приглушеним */
   [data-theme="light"] .project-en-title {
     color: #475569;
   }
@@ -252,13 +253,11 @@ if (!lakorn) {
     const container = document.querySelector(".lakorn-container");
     const lakornId = container?.getAttribute("data-lakorn-id");
 
-    // --- 🌟 ЛОГІКА ДЛЯ КНОПОК ПОЗНАЧОК (LOCALSTORAGE) ---
     if (lakornId) {
       const statusButtons = document.querySelectorAll(".status-btn");
-
       const storageKey = `lakorn_status_${lakornId}`;
-
       const savedStatus = localStorage.getItem(storageKey);
+      
       if (savedStatus) {
         const activeBtn = document.querySelector(
           `.status-btn[data-status="${savedStatus}"]`
@@ -284,7 +283,6 @@ if (!lakorn) {
       });
     }
 
-    // --- Логіка перемикання серій та табів ---
     const tabButtons = document.querySelectorAll(".tab-btn");
     const episodeWrappers = document.querySelectorAll(".episodes-wrapper");
     const episodeButtons = document.querySelectorAll(".episode-btn");
@@ -341,7 +339,6 @@ if (!lakorn) {
       });
     });
 
-    // --- Логіка збільшення постера (Lightbox) ---
     const poster = document.getElementById("movie-poster") as HTMLImageElement;
     const lightbox = document.getElementById("poster-lightbox");
     const lightboxImg = document.getElementById(
@@ -386,29 +383,27 @@ if (!lakorn) {
 </script>
 
 <style is:global>
-/* 🎯 НЕПРОБИВНИЙ ФІКС ДЛЯ СТОРІНКИ ПРОЄКТУ */
-html body .info-section .cover-box {
+  html body .info-section .cover-box {
     width: 300px !important;
     min-width: 300px !important;
     max-width: 300px !important;
-    height: auto !important;          /* Контейнер БУДЕ рости вниз за картинкою */
+    height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    overflow: visible !important;     /* Дозволяємо контенту не ховатися */
+    overflow: visible !important;
     display: block !important;
   }
 
   html body .info-section .cover-box img.clickable-poster {
     width: 100% !important;
-    height: auto !important;         /* Висота стає природною! */
+    height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    aspect-ratio: auto !important;   /* Жодних пропорцій 2:3 */
+    aspect-ratio: auto !important;
     object-fit: contain !important;
     display: block !important;
   }
 
-  /* Адаптивність для мобільних екранів */
   @media (max-width: 768px) {
     html body .info-section .cover-box {
       width: 260px !important;
@@ -424,11 +419,10 @@ html body .info-section .cover-box {
     align-items: flex-start;
   }
 
-  /* 🎯 ФІКС КОНТЕНЕРА: Прибираємо фіксовану висоту, залишаємо лише ширину */
   .cover-box {
     width: 300px;
     min-width: 300px;
-    height: auto !important; /* Дозволяємо контейнеру рости вниз разом з постером */
+    height: auto !important;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -436,11 +430,10 @@ html body .info-section .cover-box {
     flex-shrink: 0;
   }
 
-  /* 🎯 ФІКС КАРТИНКИ: Висота автоматична, оригінальні пропорції зберігаються */
   .clickable-poster {
     width: 100% !important;
-    height: auto !important; /* Висота адаптується під оригінальну картинку */
-    object-fit: contain !important; 
+    height: auto !important;
+    object-fit: contain !important;
     cursor: zoom-in;
     transition: transform 0.3s ease, filter 0.3s ease;
     display: block;
