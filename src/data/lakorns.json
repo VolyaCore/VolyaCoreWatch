@@ -151,11 +151,11 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/315" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/357" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/375" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/432" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/446" }
+          { "number": 1, "tg_id": "volyacore/315" },
+          { "number": 2, "tg_id": "volyacore/357" },
+          { "number": 3, "tg_id": "volyacore/375" },
+          { "number": 4, "tg_id": "volyacore/432" },
+          { "number": 5, "tg_id": "volyacore/446" }
         ]
       }
     ]
@@ -183,16 +183,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/930" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/933" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/936" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/951" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/967" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/990" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1007" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1025" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1046" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1064" }
+          { "number": 1, "tg_id": "volyacore/930" },
+          { "number": 2, "tg_id": "volyacore/933" },
+          { "number": 3, "tg_id": "volyacore/936" },
+          { "number": 4, "tg_id": "volyacore/951" },
+          { "number": 5, "tg_id": "volyacore/967" },
+          { "number": 6, "tg_id": "volyacore/990" },
+          { "number": 7, "tg_id": "volyacore/1007" },
+          { "number": 8, "tg_id": "volyacore/1025" },
+          { "number": 9, "tg_id": "volyacore/1046" },
+          { "number": 10, "tg_id": "volyacore/1064" }
         ]
       }
     ]
@@ -1183,14 +1183,82 @@
       }
     ]
   },
-
-
-  
-
+  {
+    "id": "cutie_pie",
+    "title": "Милий пиріжечок",
+    "enTitle": "Cutie Pie / นิ่งเฮียก็หาว่าซื่อ",
+    "description": "Ліан Кілен Ван і Киа Кірати зв’язані між собою обіцянкою одружитися, яку Ліан дав родині Кірати. Музикальна душа Киа сподівається на романтичні стосунки, але серйозний бізнесмен Ліан нізащо не погодиться на таке. Ліан холодно відмовляє Киа й заперечує будь-які почуття до нього. У результаті Киа вирішує розірвати заручини. Але Ліан, не збираючись порушувати обіцянку, намагається повернути Киа. І в процесі він починає замислюватися: чи його почуття тільки почали зароджуватися, чи він завжди кохав Киа.",
+    "cover": "cutie_pie.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2022,
+    "genres": ["business", "comedy", "romance", "drama"],
+    "episodesCount": 12,
+    "imdbRating": "7.6",
+    "duration": "60 хв.",
+    "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
+    "director": "Аофтіон Кіттіпат",
+    "network": "Mandee Channel",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "cutie_pie" },
+      { "title": "2 Сезон", "id": "cutie_pie2you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2205" },
+          { "number": 2, "tg_id": "volyacore/2213" },
+          { "number": 3, "tg_id": "volyacore/2218" },
+          { "number": 4, "tg_id": "volyacore/2224" },
+          { "number": 5, "tg_id": "volyacore/2236" },
+          { "number": 6, "tg_id": "volyacore/2268" },
+          { "number": 7, "tg_id": "volyacore/2329" },
+          { "number": 8, "tg_id": "volyacore/2352" },
+          { "number": 9, "tg_id": "volyacore/2368" },
+          { "number": 10, "tg_id": "volyacore/2524" },
+          { "number": 11, "tg_id": "volyacore/2530" },
+          { "number": 12, "tg_id": "volyacore/2534" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cutie_pie2you",
+    "title": "Милий пиріжечок 2",
+    "enTitle": "Cutie Pie 2 You / นิ่งเฮีย 2 You",
+    "description": "Киа щойно закінчив університет, і Ліан із задоволенням починає планувати їхнє весілля, але є одна мрія, що стримує Киа. Чи вплине вона на їхні стосунки? Хоча І знадобився певний час, аби відкритися й зізнатися в коханні Діо, з якими новими труднощами вони зіткнуться тепер? Чи Ниа та Сін нарешті з'ясують, що між ними відбувається?",
+    "cover": "cutie_pie2you.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["romance", "drama"],
+    "episodesCount": 4,
+    "imdbRating": "7.3",
+    "duration": "52 хв.",
+    "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
+    "director": "Аофтіон Кіттіпат",
+    "network": "Mandee Channel",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "cutie_pie" },
+      { "title": "2 Сезон", "id": "cutie_pie2you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2638" },
+          { "number": 2, "tg_id": "volyacore/2652" },
+          { "number": 3, "tg_id": "volyacore/2654" },
+          { "number": 4, "tg_id": "volyacore/2674" }
+        ]
+      }
+    ]
+  },
   {
     "id": "between-us",
     "title": "Між нами",
-    "enTitle": "",
+    "enTitle": "Between us / เชือกป่าน",
     "description": "Історія про команду плавців, їхні внутрішні переживання, міцну дружбу та глибокі почуття.",
     "cover": "between_us.jpg",
     "status": "completed",
@@ -1236,7 +1304,321 @@
         ]
       }
     ]
+  },
+  {
+    "id": "my_stand_in",
+    "title": "Мій дублер",
+    "enTitle": "My Stand-In / ตัวนาย ตัวแทน",
+    "description": "Джо — каскадер відомого актора Тона, випадково зустрів Міна. Розвинувши глибокі стосунки, Джо не усвідомлював, що Мін завжди бачив у ньому заміну Тона. Коли правда розкривається, Джо повинен працювати на закордонному знімальному майданчику, де нещасний випадок забирає його життя. Коли він прокидається, Джо перебуває в тілі молодого чоловіка на таке ж ім’я Джо, який того ж дня потрапив у аварію. Завдяки допомозі він незабаром починає жити таким же життям, як і раніше — з тими ж людьми — і знову зустрічає Міна. У цьому житті Мін хоче, щоб Джо знову був поруч із ним, як і раніше, і Джо не знає, чому. Мін, який зберіг усі спогади про старого Джо, намагається знайти правду про подальше життя Джо, щоб повернути його на свій бік і дати йому пояснення, які він ніколи не мав нагоди.",
+    "cover": "my_stand_in.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "drama", "fantasy"],
+    "episodesCount": 12,
+    "imdbRating": "7.9",
+    "duration": "57 хв.",
+    "cast": ["Пум Пхупіран", "Ап Пумпат", "Мек Джіракіт", "Порше Танаторн"],
+    "director": "Пепзі Банкорн Ворасатарі",
+    "network": "iQIYI",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_stand_in" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1018" },
+          { "number": 2, "tg_id": "volyacore/1026" },
+          { "number": 3, "tg_id": "volyacore/1047" },
+          { "number": 4, "tg_id": "volyacore/1067" },
+          { "number": 5, "tg_id": "volyacore/1078" },
+          { "number": 6, "tg_id": "volyacore/1101" },
+          { "number": 7, "tg_id": "volyacore/1112" },
+          { "number": 8, "tg_id": "volyacore/1130" },
+          { "number": 9, "tg_id": "volyacore/1147" },
+          { "number": 10, "tg_id": "volyacore/1165" },
+          { "number": 11, "tg_id": "volyacore/1186" },
+          { "number": 12, "tg_id": "volyacore/1206" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bad_guy_my_boss",
+    "title": "Мій бос — поганець",
+    "enTitle": "Bad Guy My Boss / เจ้านายร้ายรัก",
+    "description": "Пат закохується у свого суворого керівника-метиса на ім'я Еліс. Однак, враховуючи їхній статус, Пат має тримати свої почуття в таємниці, намагаючись зберегти їхні стосунки на робочому рівні. Незважаючи на те, що Пат встановив межу, Еліс не полегшує йому життя: він ходить за ним хвостиком і тримається за нього зубами, щоб той був поруч у розпал мільярдних бізнес-війн, де конкуренти також поклали око на молодого асистента. Еліс мусить спекатися своєї зарозумілості й іміджу «поганого боса», якого не люблять інші, та позбутися старого «я» не так легко, як позбутися одягу асистента!",
+    "cover": "bad_guy_my_boss.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.0",
+    "duration": "49 хв.",
+    "cast": ["Джеймс Прескотт", "Кад Плойсупа", "Нік Стайнер", "Фан Танупат", "Закс Наттапат", "Кім Енакін"],
+    "director": "",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "bad_guy_my_boss" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1345" },
+          { "number": 2, "tg_id": "volyacore/1365" },
+          { "number": 3, "tg_id": "volyacore/1390" },
+          { "number": 4, "tg_id": "volyacore/1416" },
+          { "number": 5, "tg_id": "volyacore/1430" },
+          { "number": 6, "tg_id": "volyacore/1457" },
+          { "number": 7, "tg_id": "volyacore/1486" },
+          { "number": 8, "tg_id": "volyacore/1509" },
+          { "number": 9, "tg_id": "volyacore/1535" },
+          { "number": 10, "tg_id": "volyacore/1550" },
+          { "number": 11, "tg_id": "volyacore/1584" },
+          { "number": 12, "tg_id": "volyacore/1609" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1644" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "moonlight_chicken",
+    "title": "Місячне курча",
+    "enTitle": "Moonlight chicken / พระจันทร์มันไก่",
+    "description": "«Місячне курча» розповідає історію про Джима, звичайного хлопця, який заробляє на життя продажем хайнаньського курячого рису. Він знайомиться з Веном, п'яним відвідувачем своєї забігайлівки. Ніч, яка звела їх разом, породила почуття, яке важко осягнути. Ніхто з них не може перестати думати один про одного, незважаючи на те, що Вен – вже зайнятий чоловік. Після цієї ночі все в їхньому житті змінюється.",
+    "cover": "moonlight_chicken.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["food", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "8.8",
+    "duration": "1 год.",
+    "cast": ["Ерт Пірапат Ваттанасецірі", "Мікс Сахапхап Вонгратч"],
+    "director": "Ноппарнах Чайваймол",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "moonlight_chicken" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/312" },
+          { "number": 2, "tg_id": "volyacore/324" },
+          { "number": 3, "tg_id": "volyacore/332" },
+          { "number": 4, "tg_id": "volyacore/340" },
+          { "number": 5, "tg_id": "volyacore/346" },
+          { "number": 6, "tg_id": "volyacore/359" },
+          { "number": 7, "tg_id": "volyacore/387" },
+          { "number": 8, "tg_id": "volyacore/388" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_love_mix_up",
+    "title": "Моє заплутане кохання!",
+    "enTitle": "My Love Mix-Up! / เขียนรักด้วยยางลบ",
+    "description": "Невпевнений в собі Атом довгий час закоханий у Мадмі, подругу яка сидить поруч з ним. Але він впадає у відчай, коли позичає її гумку і бачить, що вона написала на ній ім'я іншого хлопця — Конхапа. Але все стає ще гірше, коли Контхап бачить своє ім'я на гумці, яку впустив Атом. Тепер Конхап думає, що Атом закохався в нього!",
+    "cover": "my_love_mix_up.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "8.6",
+    "duration": "45 хв.",
+    "cast": ["Форт Наттават", "Джемінай Норавіт", "Пан Патітта", "Чокун Паттіпон"],
+    "director": "Ау Корнпром Ньомсіл",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_love_mix_up" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1124" },
+          { "number": 2, "tg_id": "volyacore/1132" },
+          { "number": 3, "tg_id": "volyacore/1151" },
+          { "number": 4, "tg_id": "volyacore/1166" },
+          { "number": 5, "tg_id": "volyacore/1185" },
+          { "number": 6, "tg_id": "volyacore/1205" },
+          { "number": 7, "tg_id": "volyacore/1219" },
+          { "number": 8, "tg_id": "volyacore/1225" },
+          { "number": 9, "tg_id": "volyacore/1236" },
+          { "number": 10, "tg_id": "volyacore/1242" },
+          { "number": 11, "tg_id": "volyacore/1265" },
+          { "number": 12, "tg_id": "volyacore/1282" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_magic_prophecy",
+    "title": "Моє дивне пророцтво",
+    "enTitle": "My Magic Prophecy / ทำนายทายทัพ",
+    "description": "Тапфа — лікар у відділенні інтенсивної терапії, який не вірить у гороскопи чи долю. Коли найкращий друг його молодшої сестри — ворожбит і таролог Інту — попереджає його про наближення низки нещасть, які можуть коштувати йому життя, Тапфа не вірить у ці балачки. Однак передбачувані події змушують його на деякий час заради власної безпеки втекти від життя в місті разом з Інту.",
+    "cover": "my_magic_prophecy.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "8.2",
+    "duration": "48 хв.",
+    "cast": ["Сі Тавінан", "Джиммі Джітарафол", "Сейс Сайсават", "Франк Нарут", "Фьорст Канафан", "Джуніор Паначай"],
+    "director": "А Натафон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_magic_prophecy" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2184" },
+          { "number": 2, "tg_id": "volyacore/2200" },
+          { "number": 3, "tg_id": "volyacore/2227" },
+          { "number": 4, "tg_id": "volyacore/2250" },
+          { "number": 5, "tg_id": "volyacore/2269" },
+          { "number": 6, "tg_id": "volyacore/2309" },
+          { "number": 7, "tg_id": "volyacore/2319" },
+          { "number": 8, "tg_id": "volyacore/2334" },
+          { "number": 9, "tg_id": "volyacore/2342" },
+          { "number": 10, "tg_id": "volyacore/2364" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_sea",
+    "title": "Море кохання",
+    "enTitle": "Love Sea / ต้องรักมหาสมุทร",
+    "description": "Тонрак — письменник популярних любовних романів. Подорожуючи в пошуках натхнення для свого останнього роману, він випадково зустрів дратівливого південного тайця — Магасамута. Однак коли вони опиняються разом у ліжку, Тонрак потрапляє на гачок. Чи зможуть вони покохати одне одного і залишитись разом?",
+    "cover": "love_sea.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "8.5",
+    "duration": "50 хв.",
+    "cast": ["Піт Васаторн Чайджінда", "Форт Тітіпон Сеннґай"],
+    "director": "Не Неті Суванджинда, MAME",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_sea" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1121" },
+          { "number": 2, "tg_id": "volyacore/1140" },
+          { "number": 3, "tg_id": "volyacore/1155" },
+          { "number": 4, "tg_id": "volyacore/1174" },
+          { "number": 5, "tg_id": "volyacore/1199" },
+          { "number": 6, "tg_id": "volyacore/1214" },
+          { "number": 7, "tg_id": "volyacore/1222" },
+          { "number": 8, "tg_id": "volyacore/1230" },
+          { "number": 9, "tg_id": "volyacore/1235" },
+          { "number": 10, "tg_id": "volyacore/1246" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_golden_blood",
+    "title": "Моя золота кров",
+    "enTitle": "My Golden Blood / เลือดนายลมหายใจฉัน",
+    "description": "Марк — вампір, який так і не зміг знайти сенс уському безсмертному житті, допоки не зустрів Тона. Він перевертає його світ та стає сенсом його життя. У Тона рідкісний та потужний тип крові, який неймовірно впливає на вампірів, тому Марк має зробити все, щоб захистити його від інших та від себе самого.",
+    "cover": "my_golden_blood.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["romance", "drama", "supernatural"],
+    "episodesCount": 12,
+    "imdbRating": "7.9",
+    "duration": "48 хв.",
+    "cast": ["Джос Вай-ар", "Ґавін Кескі", "Ум Апасірі", "Монд Танутчай"],
+    "director": "Арк Сародж",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_golden_blood" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1835" },
+          { "number": 2, "tg_id": "volyacore/1848" },
+          { "number": 3, "tg_id": "volyacore/1869" },
+          { "number": 4, "tg_id": "volyacore/1884" },
+          { "number": 5, "tg_id": "volyacore/1903" },
+          { "number": 6, "tg_id": "volyacore/1914" },
+          { "number": 7, "tg_id": "volyacore/1949" },
+          { "number": 8, "tg_id": "volyacore/1957" },
+          { "number": 9, "tg_id": "volyacore/1967" },
+          { "number": 10, "tg_id": "volyacore/2005" },
+          { "number": 11, "tg_id": "volyacore/2008" },
+          { "number": 12, "tg_id": "volyacore/2035" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vice_versa",
+    "title": "Навпаки",
+    "enTitle": "Vice versa / รักสลับโลก",
+    "description": "Нещодавній випускник, який незабаром має розпочати роботу своєї мрії - колористом, несподівано потрапляє у нещасний випадок, внаслідок якого він помирає. Коли вже приходить до тями, то виявляє, що він у чужому тілі в паралельному всесвіті. Щоб повернутися назад у свій світ, хлопцеві потрібно знайтиคนу, пов'язану з тілом, в якому вона знаходиться. І що ж станеться з ним далі? Чи зможе він повернутися у свій всесвіт?",
+    "cover": "vice_versa.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2022,
+    "genres": ["drama"],
+    "episodesCount": 12,
+    "imdbRating": "7.7",
+    "duration": "55 хв.",
+    "cast": ["Сі Тавінан Анукулпрасерт", "Джиммі Джітарафол Потівіхок"],
+    "director": "Ікс Нуттапонг Монгколсавас",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "vice_versa" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/37" },
+          { "number": 2, "tg_id": "volyacore/43" },
+          { "number": 3, "tg_id": "volyacore/49" },
+          { "number": 4, "tg_id": "volyacore/60" },
+          { "number": 5, "tg_id": "volyacore/75" },
+          { "number": 6, "tg_id": "volyacore/88" },
+          { "number": 7, "tg_id": "volyacore/114" },
+          { "number": 8, "tg_id": "volyacore/124" },
+          { "number": 9, "tg_id": "volyacore/134" },
+          { "number": 10, "tg_id": "volyacore/141" },
+          { "number": 11, "tg_id": "volyacore/146" },
+          { "number": 12, "tg_id": "volyacore/155" }
+        ]
+      }
+    ]
   }
+
+
+
+
 ]
 
 
