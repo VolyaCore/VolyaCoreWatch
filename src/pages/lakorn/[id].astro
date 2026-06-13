@@ -48,8 +48,8 @@ export function getStaticPaths() {
             <Image
               src={resolvedImage}
               alt={lakorn.title}
-              width={300} 
-              quality="high" 
+              width={1200} 
+              quality="max" 
               loading="eager" 
               id="movie-poster"
               class="clickable-poster"
@@ -828,20 +828,19 @@ export function getStaticPaths() {
     z-index: 99999;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 23, 42, 0.95);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 15, 30, 0.98); /* Зробили фон ще темнішим для кінематографічного ефекту */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 20px;
+    padding: 0; /* Прибрали всі відступи */
   }
 
   [data-theme="light"] .lightbox {
-    background-color: rgba(241, 245, 249, 0.97);
+    background-color: rgba(248, 250, 252, 0.99);
   }
 
   .lightbox.active {
@@ -849,43 +848,71 @@ export function getStaticPaths() {
     pointer-events: auto;
   }
 
+  /* 👑 МАКСИМАЛЬНО ВЕЛИКЕ ФОТО ДЛЯ ВСІХ ЕКРАНІВ */
   .lightbox-content {
-    max-width: 95%;
-    max-height: 85vh;
-    border-radius: 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-    object-fit: contain;
-    border: 2px solid var(--border-color);
+    width: 100vw !important;    /* Займає всю ширину, якщо картинка горизонтальна */
+    height: 100vh !important;  /* Займає всю висоту, якщо картинка вертикальна */
+    max-width: 98vw !important;  /* Залишаємо крихітний зазор 2% з боків */
+    max-height: 96vh !important; /* Залишаємо крихітний зазор 4% зверху/знизу */
+    border-radius: 8px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    transform: scale(0.95);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    object-fit: contain !important; /* Гарантує, що фото не обріжеться і збереже пропорції */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
   }
 
   .lightbox.active .lightbox-content {
     transform: scale(1);
   }
 
+  /* КНОПКА ЗАКРИТТЯ ПОВЕРХ КАРТИНКИ (ПРАВИЙ ВЕРХНІЙ КУТ ЕКРАНА) */
   .lightbox-close {
     position: absolute;
-    top: 25px;
-    right: 35px;
-    color: #94a3b8;
-    font-size: 44px;
-    font-weight: 300;
+    top: 20px;
+    right: 25px;
+    color: #f1f5f9;
+    font-size: 55px; /* Зробили трохи більшою для зручності */
+    font-weight: 200;
     cursor: pointer;
-    transition: color 0.2s, transform 0.2s;
+    transition: all 0.2s ease;
     user-select: none;
+    z-index: 100000;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* Тінь, щоб кнопку було видно на білих постерах */
+    line-height: 1;
   }
+  
   .lightbox-close:hover {
     color: #ef4444;
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(90deg);
   }
 
+  /* НАЗВА ПРОЄКТУ ПОВЕРХ КАРТИНКИ ЗНИЗУ */
   .lightbox-caption {
-    margin-top: 15px;
-    color: var(--text-primary);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(15, 23, 42, 0.75); /* Акуратна темна плашка */
+    backdrop-filter: blur(8px); /* Ефект розмиття під текстом */
+    padding: 8px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 80%;
+    text-shadow: none;
+    pointer-events: none; /* Щоб клік крізь текст закривав лайтбокс */
+    z-index: 100000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  [data-theme="light"] .lightbox-caption {
+    background: rgba(255, 255, 255, 0.85);
+    color: #0f172a;
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 </style>
