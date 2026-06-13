@@ -120,10 +120,21 @@
     span {
       color: #2563eb;
       text-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
     }
   }
 
-  /* Правий блок дій: об'єднує меню, перемикач теми та бургер */
+  /* 💎 НІЖНЕ ГОЛУБЕ СВІЧЕННЯ ЛОГОТИПУ ДЛЯ СВІТЛОЇ ТЕМИ */
+  :global([data-theme="light"]) .logo {
+    span {
+      color: #ffffff !important;
+      text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(96, 165, 250, 0.6) !important; 
+    }
+  }
+
+  /* Правий блок дій: об'єднує меню, перемикач темы та бургер */
   .header-actions-wrapper {
     display: flex;
     align-items: center;
@@ -181,6 +192,22 @@
     }
   }
 
+  /* 💎 ТОЧНО ТАКЕ Ж ГОЛУБЕ СВІЧЕННЯ ДЛЯ ПОШУКУ ЯК І В ЛОГОТИПІ */
+  :global([data-theme="light"]) .search-wrapper {
+    border-color: #ffffff !important; /* Біла рамка в тон логотипу */
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(96, 165, 250, 0.6) !important;
+
+    &:focus-within {
+      border-color: #ffffff !important;
+      /* При фокусі робимо свічення ледь помітно щільнішим, зберігаючи ніжний тон */
+      box-shadow: 
+        0 0 12px rgba(255, 255, 255, 0.9),
+        0 0 25px rgba(96, 165, 250, 0.8) !important;
+    }
+  }
+
   .theme-toggle-btn {
     background: var(--bg-button);
     border: 1px solid #2563eb;
@@ -198,6 +225,16 @@
     &:hover {
       transform: scale(1.1);
       border-color: #2563eb;
+    }
+  }
+
+  /* Додаткове вирівнювання та підсвітка кнопки зміни теми для білої теми */
+  :global([data-theme="light"]) .theme-toggle-btn {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    &:hover {
+      border-color: #e0f2fe;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -224,6 +261,18 @@
       &:hover {
         background: #1d4ed8;
       }
+    }
+  }
+
+  /* Перефарбовування фону кнопки ТГ у світлій темі для кращого контрасту */
+  :global([data-theme="light"]) .navigation .tg-channel-btn {
+    background: #ffffff;
+    color: #1e3a8a !important;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
+    &:hover {
+      background: #f8fafc;
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.45);
     }
   }
 
@@ -333,6 +382,10 @@
         &:hover {
           color: #2563eb !important;
         }
+      }
+
+      :global([data-theme="light"]) & a:hover {
+        color: #ffffff !important;
       }
 
       .tg-channel-btn {

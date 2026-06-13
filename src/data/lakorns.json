@@ -2874,6 +2874,860 @@
         ]
       }
     ]
+  },
+  {
+    "id": "work_from_heart",
+    "title": "Хаотичне кохання",
+    "enTitle": "Work From Heart / รักป่วนก๊วนออฟฟิศ",
+    "description": "Офіс-менеджер повертає віддалених працівників до офісу. Під час пандемії компанія зазнала значних збитків і потребує відновлення зростання. Генеральний директор поставив ультиматум: або співробітники збільшать прибутки компанії, або всім доведеться шукати нову роботу. Тим часом офіс-менеджер наймає нового талановитого фахівця, який одразу придивляється CEO компанії...",
+    "cover": "work_from_heart.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2022,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 7,
+    "imdbRating": "6.6",
+    "duration": "42 хв.",
+    "cast": ["Геймплей Ганпапхон Лаолекіат", "Фолк Джакрін Сангруан"],
+    "director": "Фадей Охлахун",
+    "network": "DV8 Thailand",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "work_from_heart" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/699" },
+          { "number": 2, "tg_id": "volyacore/716" },
+          { "number": 3, "tg_id": "volyacore/726" },
+          { "number": 4, "tg_id": "volyacore/761" },
+          { "number": 5, "tg_id": "volyacore/799" },
+          { "number": 6, "tg_id": "volyacore/818" },
+          { "number": 7, "tg_id": "volyacore/854"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_boy_next_world",
+    "title": "Хлопець із іншого світу: Розбіжність у часі",
+    "enTitle": "The Boy Next World / คนละกาลเวลา",
+    "description": "Пхукан ніколи ні з ким не зустрічався: не знає взагалі яким є кохання. Одного дня в його житті з'являється Сиус — вродливий холодний чоловік на прізвисько Крижаний Принц. Сиус відрекомендувався хлопцем Пхукана з паралельного світу й каже, що він — найважливіша людина в його житті.",
+    "cover": "the_boy_next_world.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["thriller", "romance", "fantasy"],
+    "episodesCount": 10,
+    "imdbRating": "7.7",
+    "duration": "45 хв.",
+    "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Донат Супавіт", "Форт Кашане"],
+    "director": "Ранпісіт Джірадечакул",
+    "network": "iQIYI",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_boy_next_world" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1659" },
+          { "number": 2, "tg_id": "volyacore/1686" },
+          { "number": 3, "tg_id": "volyacore/1722" },
+          { "number": 4, "tg_id": "volyacore/1725" },
+          { "number": 5, "tg_id": "volyacore/1739" },
+          { "number": 6, "tg_id": "volyacore/1760" },
+          { "number": 7, "tg_id": "volyacore/1777" },
+          { "number": 8, "tg_id": "volyacore/1790" },
+          { "number": 9, "tg_id": "volyacore/1809" },
+          { "number": 10, "tg_id": "volyacore/1826" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_earth",
+    "title": "Чотири стихії: Шлюб на землі",
+    "enTitle": "The Earth / วิวาห์ปฐพี",
+    "description": "Роз Тхіппапха, спадкоємиця ферми Чомчан, повертаєть з Америки до Чіанграю після того, як її вітчим впадає в кому через підозрілу аварію. Удома вона опиняється в небезпеці через Васу – власника виноградників, який намагається силоміць одружитися з Роз, аби заволодіти її землею для незаконного збагачення. На щастя, на її захист стає подруга дитинства – Дін Касама Ватхінваніт, власниця органічної овочевої ферми. Вони змушені укласти шлюб, аби захистити Роз. Хоча цей союз лише фіктивний, відновлена близькість поступово розпалює між ними справжні почуття.",
+    "cover": "the_earth.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.8",
+    "duration": "55 хв.",
+    "cast": ["Епл Лапісара", "Мім Пантіта", "Енгфа Вараха", "Фрін Сароча", "Намнин Мілін", "Нодт Нуттасід"],
+    "director": "Фьюз Кіттісак",
+    "network": "Channel 7",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_earth" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2574" },
+          { "number": 2, "tg_id": "volyacore/2589" },
+          { "number": 3, "tg_id": "volyacore/2635" },
+          { "number": 4, "tg_id": "volyacore/2648" },
+          { "number": 5, "tg_id": "volyacore/2664" },
+          { "number": 6, "tg_id": "volyacore/2683" },
+          { "number": 7, "tg_id": "volyacore/2703" },
+          { "number": 8, "tg_id": "volyacore/2726" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "i_saw_you_in_my_dream",
+    "title": "Я бачив тебе уві сні",
+    "enTitle": "I Saw You in My Dream / เธอ ฉัน ฝัน เรา",
+    "description": "Ай та Ю — з дитинства були запеклими ненависниками. Однак раптом Ю починає з’являтися уві сні Ай, і кожне наступне сновидіння стає романтичнішим за попереднє. Від заклятих ворогів до омріяних коханців? Не може бути! І це ще не все — сни Ай починають ставати реальністю. Що ж відбувається?",
+    "cover": "i_saw_you_in_my_dream.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["romance", "supernatural"],
+    "episodesCount": 12,
+    "imdbRating": "7.6",
+    "duration": "48 хв.",
+    "cast": ["Паттер Пабейз", "Рю Інгкарат"],
+    "director": "Ті Бундіт Синтанапараді",
+    "network": "Dee Hup House",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "i_saw_you_in_my_dream" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1228" },
+          { "number": 2, "tg_id": "volyacore/1234" },
+          { "number": 3, "tg_id": "volyacore/1266" },
+          { "number": 4, "tg_id": "volyacore/1281" },
+          { "number": 5, "tg_id": "volyacore/1312" },
+          { "number": 6, "tg_id": "volyacore/1333" },
+          { "number": 7, "tg_id": "volyacore/1360" },
+          { "number": 8, "tg_id": "volyacore/1385" },
+          { "number": 9, "tg_id": "volyacore/1405" },
+          { "number": 10, "tg_id": "volyacore/1428" },
+          { "number": 11, "tg_id": "volyacore/1458" },
+          { "number": 12, "tg_id": "volyacore/1592" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1640" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I_feel_you_linger_in_the_air",
+    "title": "Я відчуваю, як ти витаєш у повітрі",
+    "enTitle": "I feel you linger in the air / หอมกลิ่นความรัก",
+    "description": "Джом – архітектор, що працює над реконструкцією історичного будинку на березі річки Пінґ. Там він знаходить дерев'яну скриню, наповнену старими малюнками, які виглядають напрочуд знайомими. Але всі його думки лише про те, що скоро він возз’єднається зі своїм хлопцем. Роками Джом рахував дні, коли його хлопець повернеться з далекого навчання, але виявилося, що він заручений з іншою. З розбитим серцем Джом в'їжджає машиною в річку. У холодній темряві Джом вловлює солодкий аромат квітів, що долинає з річки, а вдалині чує глибокий, ніжний голос. Джом прокидається у Чіанґмаї 1920-х років.",
+    "cover": "I_feel_you_linger_in_the_air.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["historical", "romance", "drama", "fantasy"],
+    "episodesCount": 12,
+    "imdbRating": "8.5",
+    "duration": "65 хв.",
+    "cast": ["Нонкул Чанон Сантінаторнкул", "Брайт Рафіфон Фапсуан"],
+    "director": "Ті Бандіт Сінтанапараді",
+    "network": "Dee Hup House",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "I_feel_you_linger_in_the_air" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/859" },
+          { "number": 2, "tg_id": "volyacore/882" },
+          { "number": 3, "tg_id": "volyacore/900" },
+          { "number": 4, "tg_id": "volyacore/917" },
+          { "number": 5, "tg_id": "volyacore/935" },
+          { "number": 6, "tg_id": "volyacore/973" },
+          { "number": 7, "tg_id": "volyacore/1061" },
+          { "number": 8, "tg_id": "volyacore/1255" },
+          { "number": 9, "tg_id": "volyacore/1280" },
+          { "number": 10, "tg_id": "volyacore/1352" },
+          { "number": 11, "tg_id": "volyacore/1641" },
+          { "number": 12, "tg_id": "volyacore/1643" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "me_and_thee",
+    "title": "Я і Ті: Тримайте себе в руках, пане Ті",
+    "enTitle": "Me and Thee / มีสติหน่อยคุณธีร์",
+    "description": "Тіракіт Кіан Лі - старший син колишнього мафіозі, який залишає минуле, пов’язане з торгівлею зброєю, щоб займатися бізнесом парфумів та прикрас. Та його життя перетворюється на хаос після зустрічі з відомим фріланс-фотографом Пічем. Піч, який завжди комфортно почувався у своїй тихій, інтровертній реальності, тепер має стати «викладачем із мистецтва зваблення» для пана Ті. Та замість того, щоб навчати - сам стає об’єктом гучного й драматичного залицяння.",
+    "cover": "me_and_thee.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "8.1",
+    "duration": "57 хв.",
+    "cast": ["Понд Наравіт", "Пхувін Тансак’юен", "Ест Супха", "Боні Патрафус"],
+    "director": "Ікс Наттапон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "me_and_thee" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2483" },
+          { "number": 2, "tg_id": "volyacore/2492" },
+          { "number": 3, "tg_id": "volyacore/2521" },
+          { "number": 4, "tg_id": "volyacore/2529" },
+          { "number": 5, "tg_id": "volyacore/2541" },
+          { "number": 6, "tg_id": "volyacore/2549" },
+          { "number": 7, "tg_id": "volyacore/2558" },
+          { "number": 8, "tg_id": "volyacore/2565" },
+          { "number": 9, "tg_id": "volyacore/2575" },
+          { "number": 10, "tg_id": "volyacore/2630" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gelboys",
+    "title": "Gelboys: У стані невизначеності",
+    "enTitle": "GELBOYS / สถานะกั๊กใจ",
+    "description": "Чіан – хлопець із гелевим дизайном нігтів – часто запрошує учня старших класів Формода разом робити манікюр на площі Сіам. Його залицяння поступово змушують Формода закохатися. Та коли він дізнається, що на ці сеанси Чіан також запрошує напівфранцуза, тіктотера Буана, Формод розуміє, що його тримають «на лаві запасних». Щоб змусити Чіана ревнувати, він вирішує використати свого близького друга Бабіна та зробити те саме.",
+    "cover": "gelboys.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["romance", "youth", "drama"],
+    "episodesCount": 7,
+    "imdbRating": "8.2",
+    "duration": "60 хв.",
+    "cast": ["Піджей Магідол", "Нью Чаяпак", "Леон Зек", "Пайд Монтапум", "Пейпер Пірада", "Фокус Джирапат"],
+    "director": "Бос Куно, Джуніор Нарон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "gelboys" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1817" },
+          { "number": 2, "tg_id": "volyacore/1819" },
+          { "number": 3, "tg_id": "volyacore/1838" },
+          { "number": 4, "tg_id": "volyacore/1841" },
+          { "number": 5, "tg_id": "volyacore/1852" },
+          { "number": 6, "tg_id": "volyacore/1876" },
+          { "number": 7, "tg_id": "volyacore/1896" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "home_school",
+    "title": "Home School",
+    "enTitle": "Home School / นักเรียนต้องขัง",
+    "description": "Home School — це школа-інтернат посеред глухого лісу. Кожні три роки школа відбирає нових учнів, які відповідають її критеріям, кожне покоління складається не більше ніж з тринадцяти учнів. Загалом учні проводять у школі три роки. Школа має привабити заможних учнів своєю унікальною навчальною програмою та всіма домашніми зручностями. Однак Home School більше схожа на в'язницю, ніж на школу, з її суворими правилами та суворою ізоляцією.",
+    "cover": "home_school.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["thriller", "mysticism", "youth"],
+    "episodesCount": 18,
+    "imdbRating": "8.2",
+    "duration": "55 хв.",
+    "cast": ["Наппон Гомарачун", "Сінді Сірін'я Бішоп", "Ґан Аттапан", "Філм Рачанун", "Дью Джірават"],
+    "director": "Фон Канітта Квуньо",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "home_school" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1388" },
+          { "number": 2, "tg_id": "volyacore/1417" },
+          { "number": 3, "tg_id": "volyacore/1439" },
+          { "number": 4, "tg_id": "volyacore/1473" },
+          { "number": 5, "tg_id": "volyacore/1676" },
+          { "number": 6, "tg_id": "volyacore/1749" },
+          { "number": 7, "tg_id": "volyacore/1770" },
+          { "number": 8, "tg_id": "volyacore/1940" },
+          { "number": 9, "tg_id": "volyacore/2294" },
+          { "number": 10, "tg_id": "volyacore/2312" },
+          { "number": 11, "tg_id": "volyacore/2318" },
+          { "number": 12, "tg_id": "volyacore/2551" },
+          { "number": 13, "tg_id": "volyacore/2553" },
+          { "number": 14, "tg_id": "volyacore/2563" },
+          { "number": 15, "tg_id": "volyacore/2576" },
+          { "number": 16, "tg_id": "volyacore/2627" },
+          { "number": 17, "tg_id": "volyacore/2640" },
+          { "number": 18, "tg_id": "volyacore/2650" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "180_degree_longitude_passes_through_us",
+    "title": "180 градусів довготи проходять крізь нас",
+    "enTitle": "180 Degree Longitude Passes Through Us / เส้นลองจิจูดที่ 180 องศาลากผ่านเรา",
+    "description": "Сасівімол — надзвичайно успішна режисерка. У неї близькі, дружні стосунки із сином-підлітком Веном. Що вона робитиме, коли Вен уперше закохається? І не в будького, а в її близького друга Інтавута? Кохання, стосунки, розуміння — усього цього мати й син намагаються навчитися в непросту епоху мінливості. А дружба зміниться назавжди.",
+    "cover": "180_degree_longitude_passes_through_us.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2022,
+    "genres": ["romance", "drama", "melodrama"],
+    "episodesCount": 8,
+    "imdbRating": "7.8",
+    "duration": "46 хв.",
+    "cast": ["Понд Понлавіт", "Найк Нітідон", "Мам Каталія", "Паґ Раяват", "Темс Санпакіт"],
+    "director": "Ту Пунасак",
+    "network": "MTI HD",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "180_degree_longitude_passes_through_us" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1900" },
+          { "number": 2, "tg_id": "volyacore/1909" },
+          { "number": 3, "tg_id": "volyacore/1913" },
+          { "number": 4, "tg_id": "volyacore/1917" },
+          { "number": 5, "tg_id": "volyacore/1924" },
+          { "number": 6, "tg_id": "volyacore/1936" },
+          { "number": 7, "tg_id": "volyacore/1950" },
+          { "number": 8, "tg_id": "volyacore/1963" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "leap_day",
+    "title": "29 лютого",
+    "enTitle": "Leap Day / วันแก้ตาย",
+    "description": "Народжені в день та ніч 29 лютого, Дей та Найт страждають від страшного прокляття. Раз на чотири роки воно відбирає в них тих, кого вони цінують найбільше. Небезпека, яку прокляття становить для людей навколо, тримає їх в ізоляції. Та одного дня Найт зустрічає Дрім, яка стає його джерелом радості. Тим часом Дей, після смерті далекої родички, піклується про Озона – її сина з розладом аутистичного спектра. З наближенням їхнього двадцятиліття, зростає й страх Дея та Найта за своїх близьких.",
+    "cover": "leap_day.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["thriller", "drama"],
+    "episodesCount": 12,
+    "imdbRating": "7.7",
+    "duration": "42 хв.",
+    "cast": ["Дью Джірават", "Понд Наравіт", "Ґан Аттапан", "Пан Патіта"],
+    "director": "Чік Сакон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "leap_day" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1882" },
+          { "number": 2, "tg_id": "volyacore/1899" },
+          { "number": 3, "tg_id": "volyacore/1939" },
+          { "number": 4, "tg_id": "volyacore/1956" },
+          { "number": 5, "tg_id": "volyacore/1965" },
+          { "number": 6, "tg_id": "volyacore/1978" },
+          { "number": 7, "tg_id": "volyacore/2020" },
+          { "number": 8, "tg_id": "volyacore/2092" },
+          { "number": 9, "tg_id": "volyacore/2140" },
+          { "number": 10, "tg_id": "volyacore/2150" },
+          { "number": 11, "tg_id": "volyacore/2159" },
+          { "number": 12, "tg_id": "volyacore/2169" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "girl_rules",
+    "title": "Дівочі правила",
+    "enTitle": "Girl Rules / กฎหลัก...ห้ามรักเธอ",
+    "description": "Компанію друзів поглинув хаос, адже їхні стосунки потрапляють під усілякі труднощі, перша з яких — повернення колишньої. Прім з Мін займаються своєю рекламною агенцією, та ось до них приходить нова клієнтка Бамбі — колишня Прім, яка хоче воз'єднатися з нею. До їхньої дружби доєднується молода стилістка Прім — Ґоя, яка шукає серйозних стосунків, а також Преу — фотографиня-лесбійка з бару, який часто відвідує Мін.",
+    "cover": "girl_rules.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance", "drama"],
+    "episodesCount": 12,
+    "imdbRating": "",
+    "duration": "51 хв.",
+    "cast": ["Намтан Тіпнарі", "Філм Рачанун", "Мілк Панса", "Лав Паттраніт", "В‘ю Беньяпа", "Мім Ріттанаваді"],
+    "director": "Джоджо Тічакорн",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "girl_rules" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2702" },
+          { "number": 2, "tg_id": "volyacore/2719" },
+          { "number": 3, "tg_id": "volyacore/2740" },
+          { "number": 4, "tg_id": "volyacore/2759" },
+          { "number": 5, "tg_id": "volyacore/2771" },
+          { "number": 6, "tg_id": "volyacore/2813" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hide_and_sis",
+    "title": "Зникла сестра",
+    "enTitle": "Hide & Sis / น้องสาวหายนะ",
+    "description": "Чатфа, наймолодша сестра родини Буппачінда, щойно отримала найбільшу частку батьківської спадщини й готується до весілля. Та раптом вона падає з найвищого поверху заміського будинку на очах трьох старших сестер. Коли ж тіло зникає без сліду, під підозру потрапляють самі сестри – Буа, Чомпу та Пудпіча. У пошуках зниклої сестри на них чекають нові трагедії, які ще більше загострюють підозри. Коли довіряти більше нікому, трьом сестрам доведеться спробувати довіритися одна одній. Вони повертаються до родинного маєтку, аби розкрити таємницю зникнення Чатфи, за якою може стояти одна з них.",
+    "cover": "hide_and_sis.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["thriller", "mysticism", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "46 хв.",
+    "cast": ["Ян Плойшомпу", "Ай Сарунчана", "ДжінДжін Праріят", "Піплой Кан'ярт"],
+    "director": "Тле Таван",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "hide_and_sis" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2116" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ticket_to_heaven",
+    "title": "Квиток до раю",
+    "enTitle": "Ticket to Heaven / เด็กชายไม่ไปสวรรค์",
+    "description": "Танрак — побожний юнак, який твердо вирішив стати священником, сподіваючись одного дня зустріти своїх покійних батьків на небесах. Проте його віра та серце проходять непросте випробування, коли він знайомиться з Бартом — новим другом із глибокими емоційними ранами. Попри залізні правила школи та пильний нагляд Отця Аннона, між хлопцями виникає зв'язок, який виходить далеко за межі дружби. Танрак постає перед нестерпним вибором: обрати шлях до Господа чи піти за своїм коханням?",
+    "cover": "ticket_to_heaven.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance", "youth", "drama"],
+    "episodesCount": 6,
+    "imdbRating": "",
+    "duration": "55 хв.",
+    "cast": ["Форт Наттават", "Джемінай Норавіт", "Аші Піракан", "Ан Олівер Пупарт"],
+    "director": "Аоф Ноппхарнак",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ticket_to_heaven" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2806" },
+          { "number": 2, "tg_id": "volyacore/2810" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_upon_a_time",
+    "title": "Кохання крізь час",
+    "enTitle": "Love Upon a Time / ภพเธอ",
+    "description": "Накун — двадцятирічний студент, який не вірить у забобони. Одного разу доля грає з ним у злий жарт, і він опиняється на чотириста років назад — у минулому в королістві Аютххая. Його приймають за зниклого безвісти чоловіка, тож Накун грає роль Клао й намагається розгадати таємницю його зникнення, водночас шукаючи спосіб повернутися у свій час. Друг Клао, Поп, не вірить, що Накун — його нонг, якого він колись знав, і пильно стежить за ним.",
+    "cover": "love_upon_a_time.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["historical", "romance", "fantasy"],
+    "episodesCount": 12,
+    "imdbRating": "",
+    "duration": "58 хв.",
+    "cast": ["Нет Сірафоп", "ДжейДжей Радчапон", "Кім Понсатон", "Латте Танутчон"],
+    "director": "Ден Пануват",
+    "network": "Mandee Channel",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_upon_a_time" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2757" },
+          { "number": 2, "tg_id": "volyacore/2768" },
+          { "number": 3, "tg_id": "volyacore/2780" },
+          { "number": 4, "tg_id": "volyacore/2789" },
+          { "number": 5, "tg_id": "volyacore/2807" },
+          { "number": 6, "tg_id": "volyacore/2819" },
+          { "number": 7, "tg_id": "volyacore/2828" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_you_teacher",
+    "title": "Кохаю тебе, учителю: Найкращий учитель у всьому світі",
+    "enTitle": "Love You Teacher / รักครูเท่าโลกเลย",
+    "description": "Учитель початкової школи Побмек зовсім не любить дітей. Натомість його хлопець, учитель Солар, їх обожнює. Та Побмек любить Солара настільки сильно, що готовий миритися з цим. Проте одного дня трапляється нещасний випадок: Солар отримує травму голови, яка іноді повертає його до стану семирічного хлопчика. Після того як Побмек забирає «нонг’Сана» додому, у його житті більше не залишається жодної миті відпочинку від дітей.",
+    "cover": "love_you_teacher.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["comedy", "romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "50 хв.",
+    "cast": ["Перт Танапон", "Санта Понсапак", "Саманта Мелані", "Кей Лерціттічай"],
+    "director": "Дом Джарупат",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_you_teacher" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2713" },
+          { "number": 2, "tg_id": "volyacore/2736" },
+          { "number": 3, "tg_id": "volyacore/2787" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sweet_tooth_good_dentist",
+    "title": "Ласун та дантист: 9 з 10 стоматологів рекомендують",
+    "enTitle": "Sweet Tooth, Good Dentist / แฟนที่ทันตแพทย์ส่วนใหญ่แนะนำ",
+    "description": "Сон — студент, у якого є канал з ASMR-контентом, де він їсть різні солодощі та десерти. Усе йде добре, допоки в його житті не стається трагедія – у його зубі зʼявляється карієс. Через це він змушений піти до Джея – дивакуватого дантиста-інтерна. Їх стосунки починаються напружено — вони ніби вода та олія, що постійно відштовхують один одного. Але з часом Сону починає здаватися, що турботливість Джея поступово виходить за рамки взаємин лікаря та пацієнта.",
+    "cover": "sweet_tooth_good_dentist.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 11,
+    "imdbRating": "",
+    "duration": "45 хв.",
+    "cast": ["Марк Пакін", "Ом Тіпакон", "Джиммі Джітарафол", "Пун Mitpakdee", "В'ю Беньяпа", "Мім Рітанаваді"],
+    "director": "Пепзі Банкорн Ворасатарі",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "sweet_tooth_good_dentist" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1861" },
+          { "number": 2, "tg_id": "volyacore/1889" },
+          { "number": 3, "tg_id": "volyacore/1912" },
+          { "number": 4, "tg_id": "volyacore/1926" },
+          { "number": 5, "tg_id": "volyacore/1952" },
+          { "number": 6, "tg_id": "volyacore/1968" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "melody_of_secrets",
+    "title": "Мелодія таємниць",
+    "enTitle": "Melody of Secrets / ความลับในบทเพลงที่บรรเลงไม่รู้จบ",
+    "description": "Раптово кримінальному журналісту Ботплену закортіло розшукати своє перше кохання – чоловіка на ім'я Танкун. Проте частина його спогадів втрачена, тож він навіть не пам'ятає, який у того вигляд. Чи справді кримінолог Танкун, який видає себе за його давнє кохання, є тим самим?",
+    "cover": "melody_of_secrets.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["thriller", "mysticism", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "45 хв.",
+    "cast": ["Бук Касідет", "Форс Джіратчапон", "Джен Плойчомпу", "Бун Ноппанат"],
+    "director": "Тле Таван, Аріса Вавванджіт",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "melody_of_secrets" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2505" },
+          { "number": 2, "tg_id": "volyacore/2513" },
+          { "number": 3, "tg_id": "volyacore/2538" },
+          { "number": 4, "tg_id": "volyacore/2552" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "muteluv",
+    "title": "Му-Те-Лав",
+    "enTitle": "MuteLuv / โปรดใช้วิจารณญาณในการรักเธอ",
+    "description": "Антологія з семи повістей про людей, які звертаються до провидця задля досягнення власних цілей. За кожним із них своя історія. У кожного звернення своя мета.",
+    "cover": "muteluv.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["comedy", "romance", "supernatural"],
+    "episodesCount": 28,
+    "imdbRating": "",
+    "duration": "44 хв.",
+    "cast": ["Кін Сувітжак", "Сі Дечат", "Нані Хірункіт", "Прем Варут", "Парн Начча", "Леґо Рапіпон", "Флюк Натапон", "Нео Трай"],
+    "director": "Доум Джарупат, Нат Тачай, Пінг Понг Суванун, Муантай Сарупкарн, Пран Сасінан",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "muteluv" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2263" },
+          { "number": 2, "tg_id": "volyacore/2289" },
+          { "number": 3, "tg_id": "volyacore/2303" },
+          { "number": 4, "tg_id": "volyacore/2320" },
+          { "number": 5, "tg_id": "volyacore/2346" },
+          { "number": 6, "tg_id": "volyacore/2370" },
+          { "number": 7, "tg_id": "volyacore/2387" },
+          { "number": 8, "tg_id": "volyacore/2410" },
+          { "number": 9, "tg_id": "volyacore/2670" },
+          { "number": 10, "tg_id": "volyacore/2685" },
+          { "number": 11, "tg_id": "volyacore/2704" },
+          { "number": 12, "tg_id": "volyacore/2723" },
+          { "number": 13, "tg_id": "volyacore/2737" },
+          { "number": 14, "tg_id": "volyacore/2801" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fourever_you",
+    "title": "Назавжди ти",
+    "enTitle": "Fourever You / เพราะรักนำทาง",
+    "description": "Істер навмисно вступає до університету на півночі Таїланду, щоб відновити душевну рівновагу і стерти спогади про свої колишні стосунки. Хто б міг подумати, що саме тут він зустрінеться з Гіллом, своїм колишнім? Це стає початком стосунків, які тепер матимуть інший фінал. У той же час Норт, його сусід по кімнаті, після нічної п’яної бійки прокинувся з купою проблем і боргом перед гарячим звабником Джоханом. Історії цих хлопців почалися під сміх друзів з клубу малювання – Тайфуна й Даотока, які також потрапляють у пастку неочікуваних стосунків зі студентами старших курсів медфакультету – Тонфа та Архітом.",
+    "cover": "fourever_you.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2024,
+    "genres": ["comedy", "romance", "youth"],
+    "episodesCount": 17,
+    "imdbRating": "",
+    "duration": "45 хв.",
+    "cast": ["Понд Понпавіт", "Ерт Кацамонат", "Макскі Ратчата", "Бас Хацанат", "Бевер Пацапон", "Тонпи Метафат", "Нгерн Анупарт", "Оат Таратон"],
+    "director": "Нью Сівадж, Ко Нанталіт",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "fourever_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2667" },
+          { "number": 2, "tg_id": "volyacore/2687" },
+          { "number": 3, "tg_id": "volyacore/2695" },
+          { "number": 4, "tg_id": "volyacore/2718" },
+          { "number": 5, "tg_id": "volyacore/2746" },
+          { "number": 6, "tg_id": "volyacore/2766" },
+          { "number": 7, "tg_id": "volyacore/2777" },
+          { "number": 8, "tg_id": "volyacore/2788" },
+          { "number": 9, "tg_id": "volyacore/2823" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goddess_bless_you_from_death",
+    "title": "Нехай богиня благословить тебе від смерті",
+    "enTitle": "Goddess Bless You From Death / สิงสาลาตาย",
+    "description": "Туп — сирота, який наділений надзвичайними здібностями, втягується в розслідування таємничої справи про вбивство, що тягнеться десятиліттями, разом із більш раціональним Сінхою, який заперечує все окультне. Але те, з чим вони стикаються, не піддається логіці: ця справа зшита докупи давніми віруваннями, надприродними силами та найпохмурішими куточками людського бажання. Кожні п'ять років віра заманює нових жертв до храмів, аби принести їх у жертву в зловісному ритуалі для продовження життя вбивці. Туп і Сінха повинні поєднувати криміналістику та давнє чаклунство, долаючи загрози.",
+    "cover": "goddess_bless_you_from_death.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["thriller", "mysticism", "horror", "romance", "drama", "fantasy"],
+    "episodesCount": 13,
+    "imdbRating": "",
+    "duration": "58 хв.",
+    "cast": ["Павел Нарет", "Пух Кріттін", "Майкл Кіарітсак", "Топтеп Сапакорн", "Лі Асре", "Отто Фачара"],
+    "director": "Пітер Нопачай",
+    "network": "CHANGE2561",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "goddess_bless_you_from_death" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2440" },
+          { "number": 2, "tg_id": "volyacore/2516" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "that_summer",
+    "title": "Того літа: Я зустрів принца на пляжі",
+    "enTitle": "That Summer / ผมเจอเจ้าชายบนชายหาด",
+    "description": "Мати відправляє Лаву до дядька на пляж, і йому миттєво знаходять роботу. Одного дня він знаходить хлопця, якого винесло хвилями на берег. Лікар Вут діагностує в хлопця амнезію, а дядько пропонує Лаві стати його опікуном. Лава називає хлопця Вейвом та перекладає усі свої обов'язки на цього незнайомця. Вейв виявляється вередливим та невмілим у фізичній праці, що натякає на розпещене минуле.",
+    "cover": "that_summer.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2025,
+    "genres": ["romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "50 хв.",
+    "cast": ["Вінні Танавін", "Сатан Кіттіпхоп", "Монд Танутчай", "Рю Пудтріпарт", "Нео Трай", "Мінт Тішар"],
+    "director": "Джоджо Тічакорн",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "that_summer" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2345" },
+          { "number": 2, "tg_id": "volyacore/2369" },
+          { "number": 3, "tg_id": "volyacore/2399" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yesterday",
+    "title": "Учора: Відлуння кохання",
+    "enTitle": "Yesterday / รอยรัก วันวาน",
+    "description": "На вечірці, яку влаштував деспотичний старший брат Кен, Кельвін зустрічає Вієра - спадкоємця VPG Group. Ця випадкова зустріч стає шансом для Кельвіна: родина роками тримала його в тіні, і тепер він вирішує використати власну харизму та почуття Вієра, щоб захопити владу в King Group. Після низки болючих зрад Вієр змушений тікати до Чіангмая, намагаючись почати все спочатку. Проте доля знову зводить його з Кельвіном, який налаштований повернути коханого будь-якою ціною. Але тепер його колишня пристрасть перетворюється на токсичне переслідування.",
+    "cover": "yesterday.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "1 год. 9 хв.",
+    "cast": ["Піт Васаторн", "Форт Тітіпон", "Френд Діна"],
+    "director": "Піке Пасавут, Під Панчапон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "yesterday" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2644" },
+          { "number": 2, "tg_id": "volyacore/2653" },
+          { "number": 3, "tg_id": "volyacore/2662" },
+          { "number": 4, "tg_id": "volyacore/2679" },
+          { "number": 5, "tg_id": "volyacore/2696" },
+          { "number": 6, "tg_id": "volyacore/2720" },
+          { "number": 7, "tg_id": "volyacore/2735" },
+          { "number": 8, "tg_id": "volyacore/2776" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chermchey",
+    "title": "ЧермЧей",
+    "enTitle": "ChermChey / เฉิ่มเชย",
+    "description": "Аккара, якому кохання щоразу завдавало лише болю, уже й не вірив, що колись зустріне справжню любов у цьому житті. Але одного разу в храмі він наважується загадати бажання, сказавши собі: «Спробую востаннє». Тієї ж миті доля зводить його з брутальним і самовпевненим Інтою. Інта звик довіряти інстинктам, тож одразу починає відкрито залицятися до Аккари. Проте хлопець, чиє серце досі в шрамах від минулого розставання, просто не наважується прийняти ці почуття. Поки вони разом працюють і живуть у барі «ЧермЧей», алкоголь поступово розтоплює лід між ними, а щоденна турбота зближує їх дедалі дужче.",
+    "cover": "chermchey.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["romance"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "45 хв.",
+    "cast": ["Тьютор Корапат", "Їм Праріньякорн", "Мак Фасакорн", "Фей Чінтуб"],
+    "director": "Чівін Танамін",
+    "network": "Change2561",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "chermchey" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2817" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "im_the_most_beautiful_count",
+    "title": "Я – найгарніший граф",
+    "enTitle": "I'm the Most Beautiful Count / ฉันนี่แหละท่านขุนที่สวยที่สุด",
+    "description": "Принц, справжня висхідна зірка, здійснила камінг-аут і здобула неабиякий успіх у своїй карʼєрі. Але, як часто буває, її життя робить неочікуваний поворот, і Принц прокидається у тілі лорда Ворадея, що жив 200 років тому. Їй доводиться змиритися з тим, що тепер вона живе в королівстві Тханапура, де за кохання до своєї статі жорстоко карають.",
+    "cover": "im_the_most_beautiful_count.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["action", "comedy", "romance", "drama", "fantasy"],
+    "episodesCount": 13,
+    "imdbRating": "",
+    "duration": "52 хв.",
+    "cast": ["Нат Супанат", "Пін Орбніті", "Поп Патарафол", "Лі Асре"],
+    "director": "О Крітсада",
+    "network": "CHANGE2561",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "im_the_most_beautiful_count" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2191" },
+          { "number": 2, "tg_id": "volyacore/2238" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crazy_love_moo_moo",
+    "title": "Божевільно закоханий у Му-Му",
+    "enTitle": "Crazy Love Moo Moo / พี่ฟากชอบเธอมู่",
+    "description": "Хіа Фу – харизматичний чоловік, до безтями закоханий у Му-Му ще зі школи. Хоча Фу щосили намагається завоювати серце коханого, Му-Му невпинно відштовхує його через нелюбов до світлошкірих китайців. Однак, що більше Му-Му його ігнорує, то наполегливішим стає Хіа Фу. Він налаштований використати всі можливі хитрощі, щоб підкорити серце неприступного. Від суперників до коханців – стосунки, сповнені ревнощів і безперечної хімії, де сторони не готові зізнатися у своїх справжніх почуттях.",
+    "cover": "crazy_love_moo_moo.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "year": 2026,
+    "genres": ["comedy", "romance", "youth", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "47 хв.",
+    "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Но Пхулуан", "Турбо Чанокчон"],
+    "director": "Філм Павіс, Сендвіч Парнупон",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "crazy_love_moo_moo" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2827" }
+        ]
+      }
+    ]
   }
 
 

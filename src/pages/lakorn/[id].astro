@@ -345,9 +345,9 @@ export function getStaticPaths() {
       "lightbox-img"
     ) as HTMLImageElement;
     const lightboxCaption = document.getElementById("lightbox-caption");
-    const closeBtn = document.getElementById("lightbox-close");
 
     if (poster && lightbox && lightboxImg) {
+      // Відкриття лайтбокса
       poster.addEventListener("click", () => {
         lightbox.classList.add("active");
         lightboxImg.src = poster.src;
@@ -357,18 +357,13 @@ export function getStaticPaths() {
         document.body.style.overflow = "hidden";
       });
 
-      closeBtn?.addEventListener("click", () => {
+      // 🔥 КЛІК У БУДЬ-ЯКЕ МІСЦЕ (на постер, фон чи текст) — закриває лайтбокс
+      lightbox.addEventListener("click", () => {
         lightbox.classList.remove("active");
         document.body.style.overflow = "";
       });
 
-      lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.classList.remove("active");
-          document.body.style.overflow = "";
-        }
-      });
-
+      // Закриття на клавішу Escape
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && lightbox.classList.contains("active")) {
           lightbox.classList.remove("active");
@@ -850,15 +845,15 @@ export function getStaticPaths() {
 
   /* 👑 МАКСИМАЛЬНО ВЕЛИКЕ ФОТО ДЛЯ ВСІХ ЕКРАНІВ */
   .lightbox-content {
-    width: 100vw !important;    /* Займає всю ширину, якщо картинка горизонтальна */
-    height: 100vh !important;  /* Займає всю висоту, якщо картинка вертикальна */
-    max-width: 98vw !important;  /* Залишаємо крихітний зазор 2% з боків */
-    max-height: 96vh !important; /* Залишаємо крихітний зазор 4% зверху/знизу */
-    border-radius: 8px;
+    width: auto !important;
+    height: auto !important;
+    max-width: 80vw !important;  /* Обмежуємо ширину до 90% екрана */
+    max-height: 75vh !important; /* Зменшили висоту до 85%, щоб фото було чуть меншим і акуратнішим */
+    border-radius: 12px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
     transform: scale(0.95);
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    object-fit: contain !important; /* Гарантує, що фото не обріжеться і збереже пропорції */
+    object-fit: contain !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
   }
