@@ -3256,6 +3256,1279 @@
     ]
   },
   {
+    "id": "legend_of_yunze",
+    "title": "Легенда про Юнзе",
+    "enTitle": "Legend of Yunze / 云泽传",
+    "description": "Меч культиватора Цзян Чжао Юнь, Танге, приводить її до села Чаншуй, де раптово з'явилася таємнича молода жінка А-Зе. Вона відчуває, що в селі Чаншуй відбувається щось дивне, і просить Чжао Юнь дослідити село разом. Вони поступово дізнаються правду про дивні події в селі Чаншуй. За допомогою А-Зе, Чжао Юнь, яка завжди вважала, що всі демони злочинці та менш гідні людей, усвідомлює, що люди можуть бути ще жорстокішими та хижішими, ніж демони. Після подій у селі Чаншуй вони погоджуються разом поїхати на гору Ціньюань.",
+    "cover": "legend_of_yunze.jpg",
+    "status": "completed",
+    "country": "china",
+    "year": 2021,
+    "genres": ["mysticism", "fantasy", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.5",
+    "duration": "3 хв.",
+    "cast": ["Пен Цзін Сіань", "Ван Лао Цзі"],
+    "director": "Чжан Чжівей",
+    "network": "Kuaishou",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "legend_of_yunze" },
+      { "title": "2 Сезон", "id": "legend_of_yunze2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": "1-3", "tg_id": "volyacore/269" },
+          { "number": "4-6", "tg_id": "volyacore/288" },
+          { "number": "7-9", "tg_id": "volyacore/309" },
+          { "number": "10-12", "tg_id": "volyacore/310" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуски",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/353" },
+          { "number": 2, "tg_id": "volyacore/354" },
+          { "number": 3, "tg_id": "volyacore/355" },
+          { "number": 4, "tg_id": "volyacore/356" },
+          { "number": 5, "tg_id": "volyacore/358" },
+          { "number": 6, "tg_id": "volyacore/360" },
+          { "number": 7, "tg_id": "volyacore/362" },
+          { "number": 8, "tg_id": "volyacore/365" },
+          { "number": 9, "tg_id": "volyacore/367" },
+          { "number": 10, "tg_id": "volyacore/368" },
+          { "number": 11, "tg_id": "volyacore/373" },
+          { "number": 12, "tg_id": "volyacore/374" },
+          { "number": 13, "tg_id": "volyacore/377" },
+          { "number": 14, "tg_id": "volyacore/378" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "legend_of_yunze2",
+    "title": "Легенда про Юнзе 2",
+    "enTitle": "Legend of Yunze 2 / 云泽传2",
+    "description": "У Цзянь Чаоюнь і А-Зе не вдається піти в Лінчуань, як вони планували, бо Орден гори Ву Лінь надсилає Чаоюнь завдання, яке негайно потрібно виконати: вона повинна знайти вкрадені артефакти. У процесі їхніх пригод Цзянь стикається з моральними питаннями щодо природи демонів, а А-Зе стикається зі своїм минулим і її справжня сутність відкривається. Таємниці випадкової зустрічі двох дівчат, нарешті, розкриваються.",
+    "cover": "legend_of_yunze2.jpg",
+    "status": "completed",
+    "country": "china",
+    "year": 2022,
+    "genres": ["mysticism", "fantasy", "romance"],
+    "episodesCount": 15,
+    "imdbRating": "8.9",
+    "duration": "3 хв.",
+    "cast": ["Пен Цзін Сіань", "Ван Лао Цзі"],
+    "director": "Чжан Чжівей",
+    "network": "Kuaishou",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "legend_of_yunze" },
+      { "title": "2 Сезон", "id": "legend_of_yunze2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/541" },
+          { "number": 2, "tg_id": "volyacore/542" },
+          { "number": 3, "tg_id": "volyacore/545" },
+          { "number": 4, "tg_id": "volyacore/547" },
+          { "number": 5, "tg_id": "volyacore/548" },
+          { "number": 6, "tg_id": "volyacore/552" },
+          { "number": 7, "tg_id": "volyacore/553" },
+          { "number": 8, "tg_id": "volyacore/555" },
+          { "number": 9, "tg_id": "volyacore/556" },
+          { "number": 10, "tg_id": "volyacore/562" },
+          { "number": 11, "tg_id": "volyacore/565" },
+          { "number": 12, "tg_id": "volyacore/566" },
+          { "number": 13, "tg_id": "volyacore/567" },
+          { "number": 14, "tg_id": "volyacore/569" },
+          { "number": 15, "tg_id": "volyacore/570" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I_see_your_love",
+    "title": "Бачу твоє кохання",
+    "enTitle": "I See Your Love / 看見愛",
+    "description": "Ян Дзисяна відправляють на Тайвань для ділових переговорів, але він зазнає нападу. Він наймає Дзян Шаопена, щоб той піклувався про нього, і користується цією можливістю, щоб уникнути сімейних обов’язків, а також закохується в Шаопена. Помічник Дзисяна, Феньцзі, підміняє свого боса, а тим часом, Сінь Дзя, вбивця, якого найняли, щоб позбутися Дзисяна, намагається вбити свою ціль, але це йому ніяк не вдається. Під час цього безладу намагається розквітнути чисте кохання.",
+    "cover": "I_see_your_love.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2024,
+    "genres": ["thriller", "drama", "crime"],
+    "episodesCount": 13,
+    "imdbRating": "7.9",
+    "duration": "25 хв.",
+    "cast": ["Лін Ю", "Кім Юн", "Лін Чіан Йо", "Лін Ян Чен"],
+    "director": "Чіан Пін Чен",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "I_see_your_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1466" },
+          { "number": 2, "tg_id": "volyacore/1469" },
+          { "number": 3, "tg_id": "volyacore/1490" },
+          { "number": 4, "tg_id": "volyacore/1515" },
+          { "number": 5, "tg_id": "volyacore/1536" },
+          { "number": 6, "tg_id": "volyacore/1555" },
+          { "number": 7, "tg_id": "volyacore/1571" },
+          { "number": 8, "tg_id": "volyacore/1596" },
+          { "number": 9, "tg_id": "volyacore/1612" },
+          { "number": 10, "tg_id": "volyacore/1622" },
+          { "number": 11, "tg_id": "volyacore/1632" },
+          { "number": 12, "tg_id": "volyacore/1651" },
+          { "number": 13, "tg_id": "volyacore/1669" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eternal_butler",
+    "title": "Вічний дворецький",
+    "enTitle": "Eternal Butler / 全面管控",
+    "description": "Коли Евер-4, складний робот зі штучним інтелектом, стає особистим дворецьким Буши Ло, розбещеного, але самотнього молодого спадкоємця, розгортається несподівана історія кохання. Призначений після дезертирства Евер-9, Евер-4 відстоює права роботів, водночас розкриваючи свою химерну особистість під спокійною зовнішністю. У міру того, як Евер-4 прив'язується до свого супутника-людини, непохитна вірність робота й поступова трансформація Буши Ло формують історію про дружбу і зв'язок, що виходить за рамки біологічних видів.",
+    "cover": "eternal_butler.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2024,
+    "genres": ["romance", "sci-fi"],
+    "episodesCount": 12,
+    "imdbRating": "7.6",
+    "duration": "24 хв.",
+    "cast": ["Кевін Чен", "Іден Чен", "Лоуренс Ло", "Хун Ян Сін"],
+    "director": "Нью Сівадж Саватманікул",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "eternal_butler" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1654" },
+          { "number": 2, "tg_id": "volyacore/1661" },
+          { "number": 3, "tg_id": "volyacore/1668" },
+          { "number": 4, "tg_id": "volyacore/1681" },
+          { "number": 5, "tg_id": "volyacore/1688" },
+          { "number": 6, "tg_id": "volyacore/1700" },
+          { "number": 7, "tg_id": "volyacore/1728" },
+          { "number": 8, "tg_id": "volyacore/1753" },
+          { "number": 9, "tg_id": "volyacore/1769" },
+          { "number": 10, "tg_id": "volyacore/1789" },
+          { "number": 11, "tg_id": "volyacore/1806" },
+          { "number": 12, "tg_id": "volyacore/1828" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_on1y_one",
+    "title": "Єдиний",
+    "enTitle": "The On1y One / 某某",
+    "description": "Життя Шен Вана і так нелегке; перевівшись до нової школи в середині навчання, у хлопця одразу ж виникає конфлікт з однокласником Дзян Тянем. Що ще гірше, в цей же день він дізнається, що вони будуть зведеними братами. Коли батько Шен Вана і мати Дзян Тяня вирішують одружитися, життя обох хлопців перевертається з ніг на голову. Шен Ван і Дзян Тянь повинні домовитися про свій новий статус зведених братів, разом переживаючи злети і падіння шкільного та сімейного досвіду.",
+    "cover": "the_on1y_one.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2024,
+    "genres": ["comedy", "romance", "youth", "drama"],
+    "episodesCount": 12,
+    "imdbRating": "8.3",
+    "duration": "49 хв.",
+    "cast": ["Льов Дон Цінь", "Бенджамін Цан", "Піпі Яо", "Лу Тін Ю", "Семюель Ґу", "Янь Ю Лінь"],
+    "director": "Лю Куан Хві",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_on1y_one" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1276" },
+          { "number": 2, "tg_id": "volyacore/1284" },
+          { "number": 3, "tg_id": "volyacore/1292" },
+          { "number": 4, "tg_id": "volyacore/1298" },
+          { "number": 5, "tg_id": "volyacore/1304" },
+          { "number": 6, "tg_id": "volyacore/1313" },
+          { "number": 7, "tg_id": "volyacore/1329" },
+          { "number": 8, "tg_id": "volyacore/1330" },
+          { "number": 9, "tg_id": "volyacore/1350" },
+          { "number": 10, "tg_id": "volyacore/1355" },
+          { "number": 11, "tg_id": "volyacore/1372" },
+          { "number": 12, "tg_id": "volyacore/1374" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "because_of_you",
+    "title": "Завдяки тобі",
+    "enTitle": "Because of You / 因為愛你",
+    "description": "Три брати Юань, які виросли у великій заможній родині, ніколи нічого не потребували. Юань Чун Чен, Юань Чун Дао та Юань Чун Пін народилися від різних матерів і змагалися за бізнес-імперію свого батька. Усе почало змінюватися, коли Лінь Сюна, бідного молодого чоловіка, який раніше допоміг Чун Чену, попросили зателефонувати батькові трьох братів Юань, оскільки його мати вмирала. Це порушує тонко збалансовану екосистему сім’ї Юань, і Чун Чен несподівано виявляється затягнутим глибше, ніж очікував.",
+    "cover": "because_of_you.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2020,
+    "genres": ["comedy", "romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "7.4",
+    "duration": "15 хв.",
+    "cast": ["Лі Ші Кан", "Хсу Му Джі", "Вілл Чан", "Ліо Ґуо", "Джером Хуан Алуф", "Веллс Су"],
+    "director": "Зіроу Ху",
+    "network": "Line TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "because_of_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/940" },
+          { "number": 2, "tg_id": "volyacore/949" },
+          { "number": 3, "tg_id": "volyacore/956" },
+          { "number": 4, "tg_id": "volyacore/963" },
+          { "number": 5, "tg_id": "volyacore/972" },
+          { "number": 6, "tg_id": "volyacore/988" },
+          { "number": 7, "tg_id": "volyacore/995" },
+          { "number": 8, "tg_id": "volyacore/1005" },
+          { "number": 9, "tg_id": "volyacore/1014" },
+          { "number": 10, "tg_id": "volyacore/1022" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "history3_trapped",
+    "title": "Його історія 3: Пастка",
+    "enTitle": "HIStory3: Trapped",
+    "description": "Мен Шао Фей – поліцейський, який розслідує загибель своєї наставниці. Він знаходить зв'язок між загибеллю поліцейської та новим ватажком банди, Тан І. Не зважаючи на свої цілі, під час розслідування, Мен стає жертвою хитрої пастки Тана. Обидва потрапляють в ситуацію виживання в горах, і це змушує їх співпрацювати. З часом їхні стосунки починають змінюватися. Мен розуміє, що Тан І – не тільки безжалісний мафіозі, але й людина зі своєю історією. Відчуття до Тан І починають перемагати бажання помсти.",
+    "cover": "history3_trapped.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2019,
+    "genres": ["action", "thriller", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "8.4",
+    "duration": "45 хв.",
+    "cast": ["Джейк Хсу", "Кріс Ву", "Енді Біан", "Кенні Чен"],
+    "director": "Лі Чін Джун",
+    "network": "Line TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "history3_trapped" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/572" },
+          { "number": 2, "tg_id": "volyacore/584" },
+          { "number": 3, "tg_id": "volyacore/613" },
+          { "number": 4, "tg_id": "volyacore/673" },
+          { "number": 5, "tg_id": "volyacore/695" },
+          { "number": 6, "tg_id": "volyacore/722" },
+          { "number": 7, "tg_id": "volyacore/732" },
+          { "number": 8, "tg_id": "volyacore/757" },
+          { "number": 9, "tg_id": "volyacore/769" },
+          { "number": 10, "tg_id": "volyacore/785" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fragrance_of_the_first_flower",
+    "title": "Пахощі першої квітки",
+    "enTitle": "Fragrance of the First Flower / 第一次遇見花香的那刻",
+    "description": "Йтиметься про заборонене кохання двох прекрасних жінок, які ще в шкільні роки усвідомили, що їхні почуття не просто дружба. Коли дорослі дізнаються про їх зв'язок, станеться великий скандал і дівчат розлучать. Прийшовши низку життєвих випробувань, героїні романтичної драми, всупереч усьому зуміли зберегти всередині вогник першого кохання, і коли вони зовсім ні на що не розраховували, через багато років доля подарувала їм нову зустріч.",
+    "cover": "fragrance_of_the_first_flower",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2021,
+    "genres": ["melodrama", "drama", "romance"],
+    "episodesCount": 6,
+    "imdbRating": "7.5",
+    "duration": "20 хв.",
+    "cast": ["Зай Зай Лін", "Лян Су", "І Лі"],
+    "director": "Енжел Тен",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "fragrance_of_the_first_flower" },
+      { "title": "2 Сезон", "id": "fragrance_of_the_first_flower_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/116" },
+          { "number": 2, "tg_id": "volyacore/120" },
+          { "number": 3, "tg_id": "volyacore/125" },
+          { "number": 4, "tg_id": "volyacore/129" },
+          { "number": 5, "tg_id": "volyacore/133" },
+          { "number": 6, "tg_id": "volyacore/135" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fragrance_of_the_first_flower_2",
+    "title": "Пахощі першої квітки 2",
+    "enTitle": "Fragrance of the First Flower 2 / 第一次遇見花香的那刻2",
+    "description": "Упередження та страх завадили шкільному роману Ї-Мінь та Тін-Тін. Через рік після того, як вони розлучилися на естакаді, Ї-Мінь та Тін-Тін почали нове життя. Ї-Мінь розриває свій шлюб та повертається на роботу; Тін-Тін відкриває для себе інтерес до гри в коледжі та зустрічає хлопця, який любить музику і досить сміливий, щоб шукати кохання. Коли вони знову зустрінуться вже дорослими, чи зможе їхня історія кохання мати щасливий кінець?",
+    "cover": "fragrance_of_the_first_flower_2.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.5",
+    "duration": "25 хв.",
+    "cast": ["Лін Зай Зай", "Ліан Чен"],
+    "director": "Енджел Тен",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "fragrance_of_the_first_flower" },
+      { "title": "2 Сезон", "id": "fragrance_of_the_first_flower_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1798" },
+          { "number": 2, "tg_id": "volyacore/1839" },
+          { "number": 3, "tg_id": "volyacore/1849" },
+          { "number": 4, "tg_id": "volyacore/1866" },
+          { "number": 5, "tg_id": "volyacore/1879" },
+          { "number": 6, "tg_id": "volyacore/1901" },
+          { "number": 7, "tg_id": "volyacore/1922" },
+          { "number": 8, "tg_id": "volyacore/1937" },
+          { "number": 9, "tg_id": "volyacore/1951" },
+          { "number": 10, "tg_id": "volyacore/1966" },
+          { "number": 11, "tg_id": "volyacore/1979" },
+          { "number": 12, "tg_id": "volyacore/2014" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "first_note_of_love",
+    "title": "Перша нота кохання",
+    "enTitle": "First Note of Love / 彈一場完美戀愛",
+    "description": "Ніл – вокаліст відомого гурту Magnet, оголошує про свій відхід з гурту після того, як його брат, клавішник гурту, гине в трагічній автокатастрофі. Після цього інциденту хлопець отримав страх перед сценою, Ніл вирішує почати з вуличних виступів. Шість років потому Сі, який став самостійним талановитим музикантом, отримує запрошення попрацювати зі своїм кумиром Нілом. Однак Ніл вже не той впевнений у собі музикант, яким був раніше, і тепер бореться з проблемами тривожності. Разом Ніл і Сі вирушають у подорож до зцілення через музику.",
+    "cover": "first_note_of_love.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2024,
+    "genres": ["music", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "7.9",
+    "duration": "25 хв.",
+    "cast": ["Чарльз Ту", "Майкл Чан", "Джейм Касама"],
+    "director": "Цзянь Сюебінь",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "first_note_of_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1249" },
+          { "number": 2, "tg_id": "volyacore/1260" },
+          { "number": 3, "tg_id": "volyacore/1263" },
+          { "number": 4, "tg_id": "volyacore/1287" },
+          { "number": 5, "tg_id": "volyacore/1299" },
+          { "number": 6, "tg_id": "volyacore/1320" },
+          { "number": 7, "tg_id": "volyacore/1340" },
+          { "number": 8, "tg_id": "volyacore/1363" },
+          { "number": 9, "tg_id": "volyacore/1392" },
+          { "number": 10, "tg_id": "volyacore/1408" },
+          { "number": 11, "tg_id": "volyacore/1431" },
+          { "number": 12, "tg_id": "volyacore/1462" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "about_youth",
+    "title": "Про юність",
+    "enTitle": "About Youth / 默默的我，不默默的我們",
+    "description": "Є Гуан — популярний старшокласник із високими оцінками та владними батьками. Сю Ці Жан вдень — звичайний студент, а вночі — рок-зірка. Хоча вони настільки різні, наскільки це можливо, вони можуть бути більш схожими, ніж вони думають.",
+    "cover": "about_youth.png",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2022,
+    "genres": ["drama", "music", "youth", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "23 хв.",
+    "cast": ["Шень Цзюнь", "Лі Чжень Хао", "Хсу Шуо Тін", "Енді Хуан"],
+    "director": "Цай Мі Цзе",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "about_youth" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/173" },
+          { "number": 2, "tg_id": "volyacore/185" },
+          { "number": 3, "tg_id": "volyacore/203" },
+          { "number": 4, "tg_id": "volyacore/263" },
+          { "number": 5, "tg_id": "volyacore/264" },
+          { "number": 6, "tg_id": "volyacore/285" },
+          { "number": 7, "tg_id": "volyacore/300" },
+          { "number": 8, "tg_id": "volyacore/305" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ayaka_is_in_love_with_hiroko",
+    "title": "Аяка закохана в Хіроко!",
+    "enTitle": "Ayaka Is in Love with Hiroko! / 彩香ちゃんは弘子先輩に恋してる",
+    "description": "Усаіда Аяка — товариська і весела офісна працівниця, закохується у свою керівницю Кано Хіроко. Вона намагається привернути увагу семпая, постійно змінюючи одяг, а Хіроко не піддається своїм бажанням, хибно сприймаючи ситуацію. Однак Аяка не лякається та зізнається у своїх почуттях.",
+    "cover": "ayaka_is_in_love_with_hiroko.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["comedy", "romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.0",
+    "duration": "24 хв.",
+    "cast": ["Като Шіго", "Морі Канна", "Хонда Куйоя", "Юкі Міо"],
+    "director": ["Аокі Тацуя", "Мацумото Юсаку"],
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ayaka_is_in_love_with_hiroko" },
+      { "title": "2 Сезон", "id": "ayaka_is_in_love_with_hiroko_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1197" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1207" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1221" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1229" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1233" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1241" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1264" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1294" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ayaka_is_in_love_with_hiroko_2",
+    "title": "Аяка закохана в Хіроко! 2",
+    "enTitle": "Ayaka Is in Love with Hiroko! 2 / 彩香ちゃんは弘子先輩に恋してる 2nd Stage",
+    "description": "Минув рік відтоді, як Аяка та Хіроко стали парою. Тепер вони живуть разом, однак спільне життя приносить нові випробування. Турботлива й обережна Хіроко намагається не поспішати, щоб не засмутити кохану. Тим часом емоційна й щира Аяка починає хвилюватися, що їхні стосунки досі не перейшли на новий рівень. Невисловлені переживання призводять до ще більших непорозумінь! Чи зможуть вони відверто поговорити одна з одною та зміцнити свій зв'язок?",
+    "cover": "ayaka_is_in_love_with_hiroko_2.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 6,
+    "imdbRating": "7.4",
+    "duration": "30 хв.",
+    "cast": ["Като Шіго", "Морі Канна", "Хонда Куйоя", "Юкі Міо"],
+    "director": "І Юко, Ішібаші Юхо",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ayaka_is_in_love_with_hiroko" },
+      { "title": "2 Сезон", "id": "ayaka_is_in_love_with_hiroko_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/2647" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/2661" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/2680" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/2697" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/2721" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/2738" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "one_room_angel",
+    "title": "В одній кімнаті з янголом",
+    "enTitle": "One Room Angel / ワンルームエンジェル",
+    "description": "Ні хобі, ні друзів, ні коханої людини. Є багато речей, яких немає у Кіко. Історія починається, коли Кіко – апатичний працівник цілодобового магазину, який намагається знайти сенс у своєму повсякденному житті, отримує удар ножем від випадкового бандита. Перед смертю він бачить прекрасного ангела з білосніжними крилами. Думаючи, що його забирають до потойбічного світу, він здивовано прокидається і виявляє, що повністю одужав. Повернувшись додому, він бачить, що той самий ангел, який йому наснився, вже там. Дізнавшись, що ангел втратив пам'ять і не вміє літати, він жаліє його і вирішує дозволити йому на деякий час залишитися з ним...",
+    "cover": "one_room_angel.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2023,
+    "genres": ["romance", "fantasy"],
+    "episodesCount": 6,
+    "imdbRating": "7.8",
+    "duration": "24 хв.",
+    "cast": ["Юсугі Шухей", "Нішімура Такуя"],
+    "director": "Еда Юука",
+    "network": "MBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "one_room_angel" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/663" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/664" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/674" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/686" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/714" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/719" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "depth_of_field",
+    "title": "Глибина різкості",
+    "enTitle": "Depth of Field / 被写界深度",
+    "description": "Вирушивши на дах Хаякава Шюічіро зустрічає свого однокласника Конно Рьохея. Кажуть, що він «непідступний» або «з ним важко спілкуватися», та коли той дивиться через об'єктив камери, на його обличчі завжди сяє щира усмішка. Хаякава, який відмовився від улюбленої музики, через інцидент у минулому, порівнює себе з Конно, який абсолютно непохитний у своїх улюблених заняттях та мріях, і починає відчувати заздрість та меншовартість. Приголомшений цими складними емоціями, Хаякава випалює свої неконтрольовані почуття: «Кон-чян... Може, займемося сексом?» З того дня їхні стосунки перетворилися з дружби на щось інше.",
+    "cover": "depth_of_field.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 6,
+    "imdbRating": "7.2",
+    "duration": "26 хв.",
+    "cast": ["Уса Такума", "Хірано Кошу"],
+    "director": "Кавасакі Рьо",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "depth_of_field" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/2087" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/2095" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/2105" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/2130" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/2145" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/2158" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chaser_game_w",
+    "title": "Гра в переслідування: Мій злий бос – моя колишня",
+    "enTitle": "Chaser Game W / チェイサーゲームW パワハラ上司は私の元カノ",
+    "description": "Історія розповідає про Харумото Іцукі, 27-річну співробітницю компанії з розробки ігор «Dynamic Dream». Її обирають керівником проєкту великої спільної роботи між Японією та Китаєм. Хаяші Фую – бос великої китайської контент-компанії, але вона також є колишньою дівчиною Харумото. Це драма про помсту, кохання та ненависть між керівницею-лесбійкою та її підлеглою.",
+    "cover": "chaser_game_w.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "23 хв.",
+    "cast": ["Сугай Юка", "Накамура Юріка", "Сато Канта", "Кікучі Хіна"],
+    "director": "Ацуші Асада",
+    "network": "TV Tokyo",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "chaser_game_w" },
+      { "title": "2 Сезон", "id": "chaser_game_w2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/778" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/793" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/801" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/816" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/828" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/844" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/867" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/873" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chaser_game_w2",
+    "title": "Гра в переслідування 2: Небесне кохання",
+    "enTitle": "Chaser Game W 2 / チェイサーゲームW2 美しき天女たち",
+    "description": "Хоча Іцукі та Фую колись були розлучені, незважаючи на почуття одна до одної, вони успішно зійшлись з розумінням чоловіка Фую та їхньої доньки. Вони проводять щасливий час разом, заповнюючи прогалину, що утворилася за час their розставання, багато розмовляють і обіймають одна одну. Однак несподівано з'являється перше кохання Іцукі, а мати Фую, яка не схвалює їхніх стосунків, продовжує стежити за ними, створюючи напружену атмосферу між закоханими. Як вони подолають випробування, що постають на їхньому шляху, коли вони нарешті разом?",
+    "cover": "chaser_game_w2.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "8.0",
+    "duration": "23 хв.",
+    "cast": ["Сугай Юка", "Накамура Юріка", "Чіз", "Кікучі Хіна"],
+    "director": "Сугіока Томоя",
+    "network": "TV Tokyo",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "chaser_game_w" },
+      { "title": "2 Сезон", "id": "chaser_game_w2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1376" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1516" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1525" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1546" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1556" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1578" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1580" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1582" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "living_with_him",
+    "title": "Життя з ним",
+    "enTitle": "Living with Him / 彼のいる生活",
+    "description": "Нацукава Рьота збирається вступити до університету і чекає на своє самостійне і вільне від сестер життя. Втім його сусідом по кімнаті стає друг дитинства Танака Казухіто. Привабливому іхорошому Казухіто не щастить з дівчатами. З цікавості Рьота починає пошук недоліків його сусіда. Так починається їхнє спільне життя, де вони взаємно усвідомлюють присутність один одного!",
+    "cover": "living_with_him.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["comedy", "romance", "youth", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "7.8",
+    "duration": "30 хв.",
+    "cast": ["Сато Рюґа", "Сакай Шо", "Морі Хінамі", "Савамура Рей"],
+    "director": "Като Аяка",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "living_with_him" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/975" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/991" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1009" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1028" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1049" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1068" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1077" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1106" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "when_it_rains_it_pours",
+    "title": "Злива після дощу",
+    "enTitle": "When It Rains, It Pours / ふったらどしゃぶり",
+    "description": "Хаґівара Кадзуакі живе зі своєю дівчиною, але в їх стосунках вже немає близості, і одного разу він помилково надсилає електронного листа своєму колезі Накарай Сею. Те, що починається як просте повідомлення, швидко перетворюється на відкритий і розкутий зв'язок між двома людьми, які прагнуть кохання та сексу...",
+    "cover": "when_it_rains_it_pours.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 7,
+    "imdbRating": "7.7",
+    "duration": "25 хв.",
+    "cast": ["Муто Джун", "Іто Асахі", "Кітамура Юі", "Акіта Шіорі"],
+    "director": "Томіта Мікі, Такагаші Нацукі",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "when_it_rains_it_pours" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1680" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1702" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1720" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1736" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1752" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1768" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1784" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perfect_propose",
+    "title": "Ідеальна пропозиція",
+    "enTitle": "Perfect Propose / パーフェクトプロポーズ",
+    "description": "Хіро настільки напружений на роботі, що ледве може повноцінно поїсти чи виспатися, як того заслуговує. Коли він втрачає свідомість на тротуарі після чергового напруженого дня, його кличе незнайоме обличчя, мабуть, колись вони обіцяли один одному одружитися? Що замислює Кай Фукая і чому він так наполегливо хоче бути нареченим Хіро?",
+    "cover": "perfect_propose.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["drama"],
+    "episodesCount": 6,
+    "imdbRating": "8.2",
+    "duration": "25 хв.",
+    "cast": ["Канеко Шинуйя", "Номура Кота", "Айрі Джінґі", " Такаші Ріо"],
+    "director": "Гораі Тадаакі",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "perfect_propose" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/804" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/812" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/817" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/830" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/840" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/857" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "his_i_didnt_think_i_would_fall_in_love",
+    "title": "Його: Я не думав, що закохаюся",
+    "enTitle": "His: I Didn't Think I Would Fall in Love / 〜恋するつもりなんてなかった〜",
+    "description": "Наґісі 17 років, він навчається на другому курсі середньої школи. Живе окремо від батьків, у приморському містечку Фудзісава в Канаґаві. Захоплюється серфінгом і працює в готелі на острові Еношіма. Шун такого ж віку, як Наґіса, і відвідує Фудзісаву на весняних канікулах. Вони зустрічаються і їхні стосунки переростають у щось більше, ніж дружбу. Однак дочка власника магазину спорядження для серфінгу Чіка таємно закохана в Наґісу. А її подруга, Ако, зацікавилася Шуном.",
+    "cover": "his_i_didnt_think_i_would_fall_in_love.png",
+    "status": "completed",
+    "country": "japan",
+    "year": 2019,
+    "genres": ["sports", "romance", "youth"],
+    "episodesCount": 5,
+    "imdbRating": "7.9",
+    "duration": "24 хв.",
+    "cast": ["Кура Юкі", "Кусакава Наоя", "Шіда Сара", "Курібаяші Айно"],
+    "director": "Імаідзумі Рікія",
+    "network": "Nagoya TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "his_i_didnt_think_i_would_fall_in_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/521" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/524" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/536" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/551" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/564" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "KeixYaku",
+    "title": "Кей та Яку: Небезпечні приятелі",
+    "enTitle": "Kei x Yaku: Dangerous Buddy / ケイ×ヤク －あぶない相棒－",
+    "description": "Три роки тому зникнення, відоме як «справа Джокера», залишилося нерозкритим, і справу закрили. Відновлення інтересу до справи вимагає повторного вивчення доказів. Слідчий Кунішіта Ічіро з Департаменту Соціальної Безпеки столичної поліції Токіо викликаний для повторного проведення розслідування. Однак йому доручають зовсім іншу місію. Його завдання — шпигувати за бандитським кланом на чолі з його молодим головою Ханабусою Шіро. Загадкова людина, Шіро за три короткі роки піднявся до рангу Вакагашіра. Під час своєї місії зблизившись з Шіро, Ічіро дізнається шокуючий факт, який спонукає його скласти з Шіро фальшивий контракт коханця. Їх таємна операція поступово призводить до інциденту, який неодмінно сколихне як націю, так і їхні долі.",
+    "cover": "KeixYaku.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["action", "thriller", "mysticism", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "7.5",
+    "duration": "45 хв.",
+    "cast": ["Інукай Ацухіро", "Сузукі Нубуюкі", "Хірата Мітсуру", "Кіруяма Чікі", "Токі Йошімі"],
+    "director": "Кураката Масатоші, Хатано Такафумі",
+    "network": "Yomiuri TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "KeixYaku" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/981" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1001" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1016" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1042" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1058" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1075" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1092" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1111" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1126" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1144" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "call_me_by_no_name",
+    "title": "Клич мене безіменною",
+    "enTitle": "Call Me by No Name / コールミー・バイ・ノーネーム",
+    "description": "Йоцуґі Меґумі, студентка університету Ейчі, зустрічає Фурухаші Котоху, красиву дівчину, покинуту на смітнику. Відвідавши таємничий дім Котохи, Меґумі вирішує, що хоче подружитися з нею, проте отримує категоричну відмову. Пізніше вона дізнається, що «Котоха» — це псевдонім. Тому Котоха пропонує їй: будь моєю дівчиною, поки не вгадаєш моє ім'я. Дивне парі: якщо під час їхніх тимчасових стосунків Меґумі вгадає її справжнє ім’я, вони стануть подругами. Меґумі, не в змозі відмовити, поглиблює свої стосунки із Котохою як її дівчина. Однак минуле, приховане в імені, починає оголювати свої ікла. Зіткнутися з іншими віч-на-віч. Прийняти себе. Щоб дізнатися, що таке щастя. Історія кохання дівчат нового покоління, сповнена незграбних почуттів і розбитого серця від тривалих стосунків.",
+    "cover": "call_me_by_no_name.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2025,
+    "genres": ["drama"],
+    "episodesCount": 8,
+    "imdbRating": "7.6",
+    "duration": "24 хв.",
+    "cast": ["Кудо Міо", "Осакі Ічіка", "Накай Томо", "Міхара Уі"],
+    "director": "Еда Уюка",
+    "network": "MBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "call_me_by_no_name" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1744" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1761" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1775" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1792" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1816" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1824" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1843" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1864" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_in_the_air_premonition_of_love",
+    "title": "Кохання в повітрі: Передчуття любові",
+    "enTitle": "Love in the Air: Premonition of Love / 恋の予感",
+    "description": "Коли хмари на небі та дощ дражнять двох близьких друзів, що потрапили в біду, Рея та Кая, вони зустрічають Араші та Фуму, які є не лише хитрими рятівниками, але й хлопцями, що здіймають бурі в серцях двох найкращих друзів. Війна за кохання відбуватиметься теплою весною, спекотним літом, самотньою осінню та холодною зимою. Якою буде атмосфера кохання? В який бік полетять їхні серця, а повітря, сповнене коханням, віднесе їх?",
+    "cover": "love_in_the_air_premonition_of_love.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["drama"],
+    "episodesCount": 10,
+    "imdbRating": "8.1",
+    "duration": "26 хв.",
+    "cast": ["Нагумо Шома", "Хамая Такуто", "Сузукі Асахі", "Нагацумо Рео", "Хігучі Хіна", "Мочіжукі Аюму"],
+    "director": "Томорі Ацукі",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_in_the_air_premonition_of_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1508" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1531" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1543" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1561" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1583" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1604" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1621" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1627" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1639" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1662" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_is_like_a_poison",
+    "title": "Кохання, як отрута",
+    "enTitle": "Love Is Like a Poison / 毒恋～毒もすぎれば恋となる～",
+    "description": "Шіба Рьома, геніальний юрист, склав адвокатський іспит на найвищий бал під час навчання в університеті і став наймолодшим співпартнером у великій юридичній фірмі. Одного дня в барі Шіба знайомиться з Харуто, таємничим геніальним шахраєм. Харуто запрошує Шібу зі словами: «Ти можеш бути моїм партнером». Шіба вирішує залишити Харуто в своєму домі. Шіба — новачок у коханні, поступово отруюється Харуто, дуже милим і відданим своєму «господарю». Двоє зовсім протилежних людей стають таємними партнерами та вирішують проблеми захоплюючим способом. Харуто поступово починає любити чутливість і незграбність Шіби, а Шіба розчарований своєю нездатністю висловити почуття, які він розвиває до Харуто. Зрештою ці двоє зіткнуться віч-на-віч з великим злом.",
+    "cover": "love_is_like_a_poison.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["thriller", "law", "romance"],
+    "episodesCount": 12,
+    "imdbRating": "8.0",
+    "duration": "20 хв.",
+    "cast": ["Хама Шого", "Хьодо Кацумі", "Кавай Аоба", "Накамура Ікудзі", "Ноус Рін"],
+    "director": ["Оцука Кьохеі", "Міямото Хідеміцу"],
+    "network": "TBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_is_like_a_poison" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1349" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1371" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1396" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1413" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1434" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1491" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1514" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1539" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1577" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1581" },
+          { "number": 11, "tg_id": "https://t.me/volyacore/1603" },
+          { "number": 12, "tg_id": "https://t.me/volyacore/1624" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "our_youth",
+    "title": "Наша юність",
+    "enTitle": "Our Youth / 未成年～未熟な俺たちは不器用に進行中～",
+    "description": "Мінасе Джин тихий та розважливий старшокласник, який ненавидів Хірукаву Харукі, що очолював шкільну банду хуліганів. Вирішивши з ними не зв'язуватися, Джин жив лише спостерігаючи. Однак, дізнавшись про таємніть Харукі, між ними швидко виникають близькі стосунки.",
+    "cover": "our_youth.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["romance", "youth"],
+    "episodesCount": 10,
+    "imdbRating": "8.3",
+    "duration": "30 хв.",
+    "cast": ["Мотоджіма Джюнсей", "Камімура Кеншін", "Імаї Юкі", "Маіяджі Ицукі"],
+    "director": "Шібата Кейсуке, Макіно Масару",
+    "network": "MBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "our_youth" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1529" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1540" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1554" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1572" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1593" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1610" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1618" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1629" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1652" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1665" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1666" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "our_dining_table",
+    "title": "Наш обідній стіл",
+    "enTitle": "Our Dining Table / 僕らの食卓",
+    "description": "Їсти в присутності інших людей для найманого робітника Ютаки – справжнє випробування, незважаючи на його кулінарний талант. Усе змінюється, коли він зустріче Мінору і Тане – двох братів з різницею у віці в багато років, які просять його навчити їх готувати його смачну їжу! Невдовзі Ютака змінює свої погляди, бо з нетерпінням чекає на їхні спільні трапези.",
+    "cover": "our_dining_table.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2023,
+    "genres": ["food", "romance", "routine"],
+    "episodesCount": 10,
+    "imdbRating": "8.3",
+    "duration": "30 хв.",
+    "cast": ["Інукай Ацухіро", "Хірокі Іідзіма", "Маеяма Кууга"],
+    "director": "Ішібаші Юхо, Камімура Нахоб, Іідзука Кашоу",
+    "network": "BS-TBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "our_dining_table" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/490" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/498" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/499" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/501" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/502" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/504" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/509" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/514" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/523" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/528" }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/530" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "i_cannot_reach_you",
+    "title": "Не можу дотягнутися до тебе",
+    "enTitle": "I Cannot Reach You / 君には届かない",
+    "description": "«Скільки б часу ми не проводили разом, я ніколи не стану для тебе особливим». Найкращі друзі дитинства. Дві половинки одного цілого. Один – крутий, розумний, вміє майже все, і його звичайний друг, який намагається зробити щось правильно – Ямато і Какеру. Завжди поруч, але не разом так, як їм насправді хочеться. Як би вони не намагалися, їхні серця не можуть досягти одне одного...",
+    "cover": "i_cannot_reach_you.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2023,
+    "genres": ["romance", "youth"],
+    "episodesCount": 8,
+    "imdbRating": "8.3",
+    "duration": "20 хв.",
+    "cast": ["Маедо Кентаро", "Кашівагі Хару"],
+    "director": "Танадзава Такайоші, Ізумі Масахіде, Хаяші Масатака",
+    "network": "TBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "i_cannot_reach_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/735" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/737" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/741" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/753" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/763" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/775" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/786" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/800" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_8_2_second_rule",
+    "title": "Правило 8.2 секунд",
+    "enTitle": "The 8.2 Second Rule / 8.2秒の法則",
+    "description": "Історія про Амай Коічі, який добре вміє пекти і робити солодощі, намагаючись допомогти ікеменам. Якщо двоє людей дивляться один одному в очі 8,2 секунди, вони закохаються. Амай приваблюють чоловіки, коли він дивиться на них, то закохується. У кожного героя кожного епізоду є проблеми, тому Амай готує для них солодощі/десерти, сподіваючись допомогти їм.",
+    "cover": "the_8_2_second_rule.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["food", "romance", "drama"],
+    "episodesCount": 5,
+    "imdbRating": "6.7",
+    "duration": "10 хв.",
+    "cast": ["Охіра Шузо", "Ямашіта Кокі", "Іноє Сора", "Тогаші Ейджі"],
+    "director": "Окамото Куміко",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_8_2_second_rule" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/877" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/890" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/899" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/909" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/914" }
+        ]
+      }
+    ]
+  },  
+  {
+    "id": "mr_sahara_and_toki_kun",
+    "title": "Сахара-сенсей і Токі-кун",
+    "enTitle": "Mr. Sahara and Toki-kun / 佐原先生と土岐くん",
+    "description": "Токі Кенеда — хуліган, який часто потрапляє в бійки. Але, незважаючи на свій спосіб життя, він має щире серце. Він завойовує прихильність симпатичного вчителя фізкультури Сахари Ічіро, в якого згодом починає закохуватися. Як наслідок, він починає ходити до школи щодня, аби тільки побачити Сахару. Так починається одностороннє, щире кохання між надзвичайно вродливим вчителем та учнем!",
+    "cover": "mr_sahara_and_toki_kun.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2023,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.5",
+    "duration": "30 хв.",
+    "cast": ["Кізу Такумі", "Хачімура Рінтаро"],
+    "director": "Шібата Кейсуке, Комура Тошіюкі",
+    "network": "MBS",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "mr_sahara_and_toki_kun" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/671" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/675" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/691" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/720" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/743" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/765" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/774" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/790" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "although_i_love_you_and_you",
+    "title": "Утім, я кохаю тебе, а ти?",
+    "enTitle": "Although I Love You, and You? / 好きやねんけどどうやろか",
+    "description": "Чарівний красень, власник невеликого ресторану, який може порадувати шлунок і серце будь-кого, знайомиться з розлученим офісним працівником, який переїхав до Осаки, і... закохується в нього з першого погляду?..",
+    "cover": "although_i_love_you_and_you.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["food", "comedy", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "7.5",
+    "duration": "23 хв.",
+    "cast": ["Кан Хідейоші", "Нішіяма Джун"],
+    "director": "Такагаші Юйя, Шібата Кейсуке",
+    "network": "Yomiuri TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "although_i_love_you_and_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/755" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/762" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/781" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/795" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/809" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/822" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/841" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/860" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/883" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/902" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "happy_of_the_end",
+    "title": "Щасливий кінець",
+    "enTitle": "Happy of the End / ハッピー・オブ・ジ・エンド",
+    "description": "Ошелешений і збентежений Чіхіро прокидається на купі сміття зі спогадами про весілля. Коли зненацька перед ним з'являється молодий чоловік на ім'я Кейто. Миттєво він згадує ніч, яку він провів з цією людиною. Випивка! Готель! Удар в обличчя! Можливо, Чіхіро зараз не має місця, яке можна назвати домом, а Кейто, можливо, не дуже хороша людина, але, можливо, вони двоє могли б бути щасливими разом.",
+    "cover": "happy_of_the_end.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["psychological", "romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "7.5",
+    "duration": "25 хв.",
+    "cast": ["Савамура Рей", "Беппу Юрай", "Кубота Юкі", "Яманака Со"],
+    "director": "Комура Тошіюкі, Фурумая Томоюкі",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "happy_of_the_end" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1302" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1325" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1327" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1351" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1370" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1380" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1395" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1398" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "i_hear_the_sunspot",
+    "title": "Я чую сонячні спалахи",
+    "enTitle": "I Hear the Sunspot / ひだまりが聴こえる",
+    "description": "Майбутній економіст Таічі шукає підробіток. Через бійку це виявляється дуже складно. Та він випадково стикається з Кохей-куном, який пригощає голодного своїм бенто. З першої зустрічі, Таічі помічає щось дивне в поведінці свого співрозмовника. Розпитавши у друзів, він дізнається несподівану для себе новину...",
+    "cover": "i_hear_the_sunspot.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["drama", "romance", "youth"],
+    "episodesCount": 12,
+    "imdbRating": "8.3",
+    "duration": "30 хв.",
+    "cast": ["Наказава Мотокі", "Кобаяші Тораносуке"],
+    "director": "Яегаші Фууга, Макіно Масару, Харашіма Таканобу",
+    "network": "TV Tokyo",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "i_hear_the_sunspot" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/1158" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/1181" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/1201" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/1216" },
+          { "number": 5, "tg_id": "https://t.me/volyacore/1224" },
+          { "number": 6, "tg_id": "https://t.me/volyacore/1232" },
+          { "number": 7, "tg_id": "https://t.me/volyacore/1239" },
+          { "number": 8, "tg_id": "https://t.me/volyacore/1254" },
+          { "number": 9, "tg_id": "https://t.me/volyacore/1270" },
+          { "number": 10, "tg_id": "https://t.me/volyacore/1289" },
+          { "number": 11, "tg_id": "https://t.me/volyacore/1303" },
+          { "number": 12, "tg_id": "https://t.me/volyacore/1328" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "i_just_want_to_see_you",
+    "title": "Я хочу дивитися лише на тебе",
+    "enTitle": "I Just Want to See You / 君のことだけ見ていたい",
+    "description": "Друзі дитинства Нагасе Юма та Асакура Сакура були разом у початковій, молодшій та середній школі. Сакура завжди відчував до Юми щось таке, про що він ніколи не міг йому сказати. В останнє літо старшої школи Сакура зізнається Юмі у своїх почуттях і цілує його.",
+    "cover": "i_just_want_to_see_you.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["romance", "life", "youth"],
+    "episodesCount": 4,
+    "imdbRating": "7.4",
+    "duration": "21 хв.",
+    "cast": ["Кура Юкі", "Мізусава Рінтаро", "Ішікава Рука", "Катаяма Юкі"],
+    "director": "Каріяма Шунсуке",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "i_just_want_to_see_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/893" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/908" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/925" },
+          { "number": 4, "tg_id": "https://t.me/volyacore/946" }
+        ]
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
     "id": "girl_rules",
     "title": "Дівочі правила",
     "enTitle": "Girl Rules / กฎหลัก...ห้ามรักเธอ",
@@ -3729,10 +5002,6 @@
       }
     ]
   }
-
-
-
-
 ]
 
 

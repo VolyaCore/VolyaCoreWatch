@@ -63,7 +63,7 @@ const isOngoing = statusNormalized.includes("онгоінг") || statusNormalize
     }
 
     <span class={`status-badge ${isOngoing ? "ongoing" : "completed"}`}>
-      {isOngoing ? "Онгоінг" : "Завершено"}
+      {isOngoing ? "В процесі" : "Завершено"}
     </span>
     
     {imdbRating && <span class="rating-badge">⭐ {imdbRating}</span>}

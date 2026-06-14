@@ -68,7 +68,7 @@ export function getStaticPaths() {
 
         <div class="tags-row">
           <span class={`status-tag ${lakorn.status}`}>
-            {lakorn.status === "ongoing" ? "Онгоінг" : "Завершено"}
+            {lakorn.status === "ongoing" ? "В ПРОЦЕСІ" : "Завершено"}
           </span>
           <span class="country-tag">
             📍 {
@@ -92,7 +92,7 @@ export function getStaticPaths() {
           </span>
           {
             lakorn.imdbRating && (
-              <span class="meta-tag imdb">⭐ IMDb: {lakorn.imdbRating}</span>
+              <span class="meta-tag imdb">⭐ MDL: {lakorn.imdbRating}</span>
             )
           }
           {
