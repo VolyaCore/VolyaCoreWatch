@@ -3713,14 +3713,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1197" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1207" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1221" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1229" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1233" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1241" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1264" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1294" }
+          { "number": 1, "tg_id": "volyacore/1197" },
+          { "number": 2, "tg_id": "volyacore/1207" },
+          { "number": 3, "tg_id": "volyacore/1221" },
+          { "number": 4, "tg_id": "volyacore/1229" },
+          { "number": 5, "tg_id": "volyacore/1233" },
+          { "number": 6, "tg_id": "volyacore/1241" },
+          { "number": 7, "tg_id": "volyacore/1264" },
+          { "number": 8, "tg_id": "volyacore/1294" }
         ]
       }
     ]
@@ -3749,12 +3749,12 @@
       {
         "blockTitle": "2 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/2647" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/2661" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/2680" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/2697" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/2721" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/2738" }
+          { "number": 1, "tg_id": "volyacore/2647" },
+          { "number": 2, "tg_id": "volyacore/2661" },
+          { "number": 3, "tg_id": "volyacore/2680" },
+          { "number": 4, "tg_id": "volyacore/2697" },
+          { "number": 5, "tg_id": "volyacore/2721" },
+          { "number": 6, "tg_id": "volyacore/2738" }
         ]
       }
     ]
@@ -3782,12 +3782,12 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/663" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/664" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/674" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/686" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/714" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/719" }
+          { "number": 1, "tg_id": "volyacore/663" },
+          { "number": 2, "tg_id": "volyacore/664" },
+          { "number": 3, "tg_id": "volyacore/674" },
+          { "number": 4, "tg_id": "volyacore/686" },
+          { "number": 5, "tg_id": "volyacore/714" },
+          { "number": 6, "tg_id": "volyacore/719" }
         ]
       }
     ]
@@ -3815,12 +3815,12 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/2087" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/2095" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/2105" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/2130" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/2145" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/2158" }
+          { "number": 1, "tg_id": "volyacore/2087" },
+          { "number": 2, "tg_id": "volyacore/2095" },
+          { "number": 3, "tg_id": "volyacore/2105" },
+          { "number": 4, "tg_id": "volyacore/2130" },
+          { "number": 5, "tg_id": "volyacore/2145" },
+          { "number": 6, "tg_id": "volyacore/2158" }
         ]
       }
     ]
@@ -3849,14 +3849,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/778" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/793" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/801" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/816" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/828" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/844" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/867" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/873" }
+          { "number": 1, "tg_id": "volyacore/778" },
+          { "number": 2, "tg_id": "volyacore/793" },
+          { "number": 3, "tg_id": "volyacore/801" },
+          { "number": 4, "tg_id": "volyacore/816" },
+          { "number": 5, "tg_id": "volyacore/828" },
+          { "number": 6, "tg_id": "volyacore/844" },
+          { "number": 7, "tg_id": "volyacore/867" },
+          { "number": 8, "tg_id": "volyacore/873" }
         ]
       }
     ]
@@ -3885,14 +3885,14 @@
       {
         "blockTitle": "2 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1376" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1516" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1525" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1546" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1556" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1578" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1580" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1582" }
+          { "number": 1, "tg_id": "volyacore/1376" },
+          { "number": 2, "tg_id": "volyacore/1516" },
+          { "number": 3, "tg_id": "volyacore/1525" },
+          { "number": 4, "tg_id": "volyacore/1546" },
+          { "number": 5, "tg_id": "volyacore/1556" },
+          { "number": 6, "tg_id": "volyacore/1578" },
+          { "number": 7, "tg_id": "volyacore/1580" },
+          { "number": 8, "tg_id": "volyacore/1582" }
         ]
       }
     ]
@@ -3920,14 +3920,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/975" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/991" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1009" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1028" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1049" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1068" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1077" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1106" }
+          { "number": 1, "tg_id": "volyacore/975" },
+          { "number": 2, "tg_id": "volyacore/991" },
+          { "number": 3, "tg_id": "volyacore/1009" },
+          { "number": 4, "tg_id": "volyacore/1028" },
+          { "number": 5, "tg_id": "volyacore/1049" },
+          { "number": 6, "tg_id": "volyacore/1068" },
+          { "number": 7, "tg_id": "volyacore/1077" },
+          { "number": 8, "tg_id": "volyacore/1106" }
         ]
       }
     ]
@@ -3955,13 +3955,13 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1680" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1702" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1720" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1736" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1752" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1768" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1784" }
+          { "number": 1, "tg_id": "volyacore/1680" },
+          { "number": 2, "tg_id": "volyacore/1702" },
+          { "number": 3, "tg_id": "volyacore/1720" },
+          { "number": 4, "tg_id": "volyacore/1736" },
+          { "number": 5, "tg_id": "volyacore/1752" },
+          { "number": 6, "tg_id": "volyacore/1768" },
+          { "number": 7, "tg_id": "volyacore/1784" }
         ]
       }
     ]
@@ -3989,12 +3989,12 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/804" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/812" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/817" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/830" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/840" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/857" }
+          { "number": 1, "tg_id": "volyacore/804" },
+          { "number": 2, "tg_id": "volyacore/812" },
+          { "number": 3, "tg_id": "volyacore/817" },
+          { "number": 4, "tg_id": "volyacore/830" },
+          { "number": 5, "tg_id": "volyacore/840" },
+          { "number": 6, "tg_id": "volyacore/857" }
         ]
       }
     ]
@@ -4022,11 +4022,11 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/521" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/524" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/536" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/551" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/564" }
+          { "number": 1, "tg_id": "volyacore/521" },
+          { "number": 2, "tg_id": "volyacore/524" },
+          { "number": 3, "tg_id": "volyacore/536" },
+          { "number": 4, "tg_id": "volyacore/551" },
+          { "number": 5, "tg_id": "volyacore/564" }
         ]
       }
     ]
@@ -4054,16 +4054,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/981" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1001" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1016" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1042" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1058" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1075" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1092" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1111" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1126" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1144" }
+          { "number": 1, "tg_id": "volyacore/981" },
+          { "number": 2, "tg_id": "volyacore/1001" },
+          { "number": 3, "tg_id": "volyacore/1016" },
+          { "number": 4, "tg_id": "volyacore/1042" },
+          { "number": 5, "tg_id": "volyacore/1058" },
+          { "number": 6, "tg_id": "volyacore/1075" },
+          { "number": 7, "tg_id": "volyacore/1092" },
+          { "number": 8, "tg_id": "volyacore/1111" },
+          { "number": 9, "tg_id": "volyacore/1126" },
+          { "number": 10, "tg_id": "volyacore/1144" }
         ]
       }
     ]
@@ -4091,14 +4091,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1744" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1761" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1775" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1792" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1816" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1824" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1843" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1864" }
+          { "number": 1, "tg_id": "volyacore/1744" },
+          { "number": 2, "tg_id": "volyacore/1761" },
+          { "number": 3, "tg_id": "volyacore/1775" },
+          { "number": 4, "tg_id": "volyacore/1792" },
+          { "number": 5, "tg_id": "volyacore/1816" },
+          { "number": 6, "tg_id": "volyacore/1824" },
+          { "number": 7, "tg_id": "volyacore/1843" },
+          { "number": 8, "tg_id": "volyacore/1864" }
         ]
       }
     ]
@@ -4126,16 +4126,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1508" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1531" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1543" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1561" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1583" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1604" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1621" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1627" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1639" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1662" }
+          { "number": 1, "tg_id": "volyacore/1508" },
+          { "number": 2, "tg_id": "volyacore/1531" },
+          { "number": 3, "tg_id": "volyacore/1543" },
+          { "number": 4, "tg_id": "volyacore/1561" },
+          { "number": 5, "tg_id": "volyacore/1583" },
+          { "number": 6, "tg_id": "volyacore/1604" },
+          { "number": 7, "tg_id": "volyacore/1621" },
+          { "number": 8, "tg_id": "volyacore/1627" },
+          { "number": 9, "tg_id": "volyacore/1639" },
+          { "number": 10, "tg_id": "volyacore/1662" }
         ]
       }
     ]
@@ -4163,18 +4163,18 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1349" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1371" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1396" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1413" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1434" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1491" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1514" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1539" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1577" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1581" },
-          { "number": 11, "tg_id": "https://t.me/volyacore/1603" },
-          { "number": 12, "tg_id": "https://t.me/volyacore/1624" }
+          { "number": 1, "tg_id": "volyacore/1349" },
+          { "number": 2, "tg_id": "volyacore/1371" },
+          { "number": 3, "tg_id": "volyacore/1396" },
+          { "number": 4, "tg_id": "volyacore/1413" },
+          { "number": 5, "tg_id": "volyacore/1434" },
+          { "number": 6, "tg_id": "volyacore/1491" },
+          { "number": 7, "tg_id": "volyacore/1514" },
+          { "number": 8, "tg_id": "volyacore/1539" },
+          { "number": 9, "tg_id": "volyacore/1577" },
+          { "number": 10, "tg_id": "volyacore/1581" },
+          { "number": 11, "tg_id": "volyacore/1603" },
+          { "number": 12, "tg_id": "volyacore/1624" }
         ]
       }
     ]
@@ -4202,22 +4202,22 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1529" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1540" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1554" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1572" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1593" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1610" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1618" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1629" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1652" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1665" }
+          { "number": 1, "tg_id": "volyacore/1529" },
+          { "number": 2, "tg_id": "volyacore/1540" },
+          { "number": 3, "tg_id": "volyacore/1554" },
+          { "number": 4, "tg_id": "volyacore/1572" },
+          { "number": 5, "tg_id": "volyacore/1593" },
+          { "number": 6, "tg_id": "volyacore/1610" },
+          { "number": 7, "tg_id": "volyacore/1618" },
+          { "number": 8, "tg_id": "volyacore/1629" },
+          { "number": 9, "tg_id": "volyacore/1652" },
+          { "number": 10, "tg_id": "volyacore/1665" }
         ]
       },
       {
         "blockTitle": "Спецвипуск",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1666" }
+          { "number": 1, "tg_id": "volyacore/1666" }
         ]
       }
     ]
@@ -4245,22 +4245,22 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/490" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/498" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/499" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/501" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/502" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/504" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/509" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/514" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/523" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/528" }
+          { "number": 1, "tg_id": "volyacore/490" },
+          { "number": 2, "tg_id": "volyacore/498" },
+          { "number": 3, "tg_id": "volyacore/499" },
+          { "number": 4, "tg_id": "volyacore/501" },
+          { "number": 5, "tg_id": "volyacore/502" },
+          { "number": 6, "tg_id": "volyacore/504" },
+          { "number": 7, "tg_id": "volyacore/509" },
+          { "number": 8, "tg_id": "volyacore/514" },
+          { "number": 9, "tg_id": "volyacore/523" },
+          { "number": 10, "tg_id": "volyacore/528" }
         ]
       },
       {
         "blockTitle": "Спецвипуск",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/530" }
+          { "number": 1, "tg_id": "volyacore/530" }
         ]
       }
     ]
@@ -4288,14 +4288,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/735" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/737" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/741" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/753" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/763" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/775" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/786" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/800" }
+          { "number": 1, "tg_id": "volyacore/735" },
+          { "number": 2, "tg_id": "volyacore/737" },
+          { "number": 3, "tg_id": "volyacore/741" },
+          { "number": 4, "tg_id": "volyacore/753" },
+          { "number": 5, "tg_id": "volyacore/763" },
+          { "number": 6, "tg_id": "volyacore/775" },
+          { "number": 7, "tg_id": "volyacore/786" },
+          { "number": 8, "tg_id": "volyacore/800" }
         ]
       }
     ]
@@ -4323,11 +4323,11 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/877" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/890" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/899" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/909" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/914" }
+          { "number": 1, "tg_id": "volyacore/877" },
+          { "number": 2, "tg_id": "volyacore/890" },
+          { "number": 3, "tg_id": "volyacore/899" },
+          { "number": 4, "tg_id": "volyacore/909" },
+          { "number": 5, "tg_id": "volyacore/914" }
         ]
       }
     ]
@@ -4355,14 +4355,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/671" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/675" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/691" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/720" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/743" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/765" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/774" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/790" }
+          { "number": 1, "tg_id": "volyacore/671" },
+          { "number": 2, "tg_id": "volyacore/675" },
+          { "number": 3, "tg_id": "volyacore/691" },
+          { "number": 4, "tg_id": "volyacore/720" },
+          { "number": 5, "tg_id": "volyacore/743" },
+          { "number": 6, "tg_id": "volyacore/765" },
+          { "number": 7, "tg_id": "volyacore/774" },
+          { "number": 8, "tg_id": "volyacore/790" }
         ]
       }
     ]
@@ -4390,16 +4390,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/755" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/762" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/781" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/795" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/809" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/822" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/841" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/860" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/883" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/902" }
+          { "number": 1, "tg_id": "volyacore/755" },
+          { "number": 2, "tg_id": "volyacore/762" },
+          { "number": 3, "tg_id": "volyacore/781" },
+          { "number": 4, "tg_id": "volyacore/795" },
+          { "number": 5, "tg_id": "volyacore/809" },
+          { "number": 6, "tg_id": "volyacore/822" },
+          { "number": 7, "tg_id": "volyacore/841" },
+          { "number": 8, "tg_id": "volyacore/860" },
+          { "number": 9, "tg_id": "volyacore/883" },
+          { "number": 10, "tg_id": "volyacore/902" }
         ]
       }
     ]
@@ -4427,14 +4427,14 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1302" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1325" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1327" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1351" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1370" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1380" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1395" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1398" }
+          { "number": 1, "tg_id": "volyacore/1302" },
+          { "number": 2, "tg_id": "volyacore/1325" },
+          { "number": 3, "tg_id": "volyacore/1327" },
+          { "number": 4, "tg_id": "volyacore/1351" },
+          { "number": 5, "tg_id": "volyacore/1370" },
+          { "number": 6, "tg_id": "volyacore/1380" },
+          { "number": 7, "tg_id": "volyacore/1395" },
+          { "number": 8, "tg_id": "volyacore/1398" }
         ]
       }
     ]
@@ -4462,18 +4462,18 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1158" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1181" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1201" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1216" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1224" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1232" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1239" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1254" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1270" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1289" },
-          { "number": 11, "tg_id": "https://t.me/volyacore/1303" },
-          { "number": 12, "tg_id": "https://t.me/volyacore/1328" }
+          { "number": 1, "tg_id": "volyacore/1158" },
+          { "number": 2, "tg_id": "volyacore/1181" },
+          { "number": 3, "tg_id": "volyacore/1201" },
+          { "number": 4, "tg_id": "volyacore/1216" },
+          { "number": 5, "tg_id": "volyacore/1224" },
+          { "number": 6, "tg_id": "volyacore/1232" },
+          { "number": 7, "tg_id": "volyacore/1239" },
+          { "number": 8, "tg_id": "volyacore/1254" },
+          { "number": 9, "tg_id": "volyacore/1270" },
+          { "number": 10, "tg_id": "volyacore/1289" },
+          { "number": 11, "tg_id": "volyacore/1303" },
+          { "number": 12, "tg_id": "volyacore/1328" }
         ]
       }
     ]
@@ -4501,16 +4501,1620 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/893" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/908" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/925" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/946" }
+          { "number": 1, "tg_id": "volyacore/893" },
+          { "number": 2, "tg_id": "volyacore/908" },
+          { "number": 3, "tg_id": "volyacore/925" },
+          { "number": 4, "tg_id": "volyacore/946" }
         ]
       }
     ]
   },
-
-
+  {
+    "id": "big_mouth",
+    "title": "Базікало",
+    "enTitle": "Big Mouth / 빅마우스",
+    "description": "Пак Чанг Хо відомий ще зі шкільних часів як «Базікало», тому що він говорить про великі речі і обіцяє великі речі, але не може стежити за цим. Він також сумнозвісний юрист з дуже низьким рівнем успіху, який був найнятий мером через свою некомпетентність. На жаль, його підставили як горезвісного і загадкового афериста «Велику мишу» і відправили до в'язниці. Го Мі Хо – любляча дружина Пак Чанг Хо, яка працює медсестрою. Вона має сильну особистість і зробить все, щоб довести невинність чоловіка і допомогти вирішити справу, яку мер подарував її чоловікові. Чи вдасться Го Мі Хо довести невинність чоловіка? Або ж її розслідування призведуть до відкриття банки з глистами?",
+    "cover": "big_mouth.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["thriller", "crime", "mystery", "drama"],
+    "episodesCount": 16,
+    "imdbRating": "8.5",
+    "duration": "60 хв.",
+    "cast": ["Ян Гьон Вон", "Лі Чон Сок", "Кім Чжу Хун", "Лім Юна", "Квак Дон Йон"],
+    "director": "О Чун Хван, Пе Хьон Джин",
+    "network": "MBC",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "big_mouth" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/131" },
+          { "number": 2, "tg_id": "volyacore/137" },
+          { "number": 3, "tg_id": "volyacore/156" },
+          { "number": 4, "tg_id": "volyacore/168" },
+          { "number": 5, "tg_id": "volyacore/186" },
+          { "number": 6, "tg_id": "volyacore/200" },
+          { "number": 7, "tg_id": "volyacore/213" },
+          { "number": 8, "tg_id": "volyacore/218" },
+          { "number": 9, "tg_id": "volyacore/242" },
+          { "number": 10, "tg_id": "volyacore/271" },
+          { "number": 11, "tg_id": "volyacore/287" },
+          { "number": 12, "tg_id": "volyacore/298" },
+          { "number": 13, "tg_id": "volyacore/304" },
+          { "number": 14, "tg_id": "volyacore/363" },
+          { "number": 15, "tg_id": "volyacore/399" },
+          { "number": 16, "tg_id": "volyacore/421" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_nameless_season",
+    "title": "Безіменний сезон",
+    "enTitle": "The Nameless Season / 이름 모를 계절",
+    "description": "Останній рік навчання – період, який ніколи не повернеться. Дован відчуває тривогу, що його час із Джеюлем добігає кінця й швидкоплинні моменти між ними стають дедалі ціннішими.",
+    "cover": "the_nameless_season.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "youth"],
+    "episodesCount": 6,
+    "imdbRating": "7.5",
+    "duration": "10 хв.",
+    "cast": ["Но Юну", "І Чжехьоп", "Кім Мінук", "Ан Канчжу"],
+    "director": "Ю Хвансан",
+    "network": "GND STUDIO",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_nameless_season" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2249" },
+          { "number": 2, "tg_id": "volyacore/2253" },
+          { "number": 3, "tg_id": "volyacore/2274" },
+          { "number": 4, "tg_id": "volyacore/2278" },
+          { "number": 5, "tg_id": "volyacore/2300" },
+          { "number": 6, "tg_id": "volyacore/2317" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "more_than_or_equalto_75_degrees_Celsius",
+    "title": "Більше або дорівнює 75° за Цельсієм",
+    "enTitle": "More Than or Equal to 75 Degrees Celsius /  여성퀴어 웹드라마 '크거나같거나 75도씨",
+    "description": "Чайна майстриня Хонг перемогла у конкурсі \"Winter Course\", що проходив у штаб-квартирі \"Altdif\". Керівниця відділу маркетингу Ча, яка прийшла по співпраці, не погоджується. Чи зможуть вони завершити ідеальний зимовий чай?",
+    "cover": "more_than_or_equalto_75_degrees_Celsius.jpg",
+    "status": "ongoing",
+    "country": "korea",
+    "year": 2019,
+    "genres": ["romance", "comedy", "food"],
+    "episodesCount": 5,
+    "imdbRating": "7.0",
+    "duration": "7 хв.",
+    "cast": ["Парк Джі Ан", "Шин Хюн Джин", "Лі Ю Рі"],
+    "director": "Накамува Юічіро",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "#more_than_or_equalto_75_degrees_Celsius" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": "1-5", "tg_id": "volyacore/297" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "close_to_you",
+    "title": "Близький до тебе",
+    "enTitle": "Close to You / 클로즈 투 유",
+    "description": "«Якщо я скажу, що ти мені подобаєшся, ти повіриш?» Це серіал-антологія чотирьох історій кохання, кожна з яких має свою унікальну розв'язку.",
+    "cover": "close_to_you.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.4",
+    "duration": "10 хв.",
+    "cast": ["Но Юну", "І Чжехьоп", "Кім Чонсок", "Кван Гонхі"],
+    "director": "Чень Ї Юй",
+    "network": "GND STUDIO",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "close_to_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2233" },
+          { "number": 2, "tg_id": "volyacore/2235" },
+          { "number": 3, "tg_id": "volyacore/2254" },
+          { "number": 4, "tg_id": "volyacore/2273" },
+          { "number": 5, "tg_id": "volyacore/2280" },
+          { "number": 6, "tg_id": "volyacore/2290" },
+          { "number": 7, "tg_id": "volyacore/2298" },
+          { "number": 8, "tg_id": "volyacore/2308" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a_breeze_of_love",
+    "title": "Вітер кохання",
+    "enTitle": "A Breeze of Love / 일기예보적연애",
+    "description": "До У щоночі страждає від хронічного безсоння, яке погіршується з поганою погодою. Однієї ночі він випадково засинає поруч з До Хьоном. Відтоді До Хьон, єдиний порятунок для До У. Незважаючи на свої початкові почуття один до одного, їхні стосунки зазнають важких випробувань, коли До У змушений перевестися до іншої школи через бізнес свого батька. Він не зміг висловити свої почуття До Хьону після того, як став свідком його близькості до іншого однокласника, і відходит, не завдавши До Хьону нічого, окрім болю. Але через п'ять років їх шляхи знову перетинаються на університетському баскетбольному матчі. Чи зможуть вони відновити свої зруйновані стосунки? Ця нова зустріч може бути шансом на вирішення невирішених конфліктів та відкриття нової сторінки в їхньому відношенні.",
+    "cover": "a_breeze_of_love.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "8.2",
+    "duration": "16 хв.",
+    "cast": ["Шин Чон Ю", "У Джі Хан"],
+    "director": "Сон До Джун",
+    "network": "Watcha",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "a_breeze_of_love" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/646" },
+          { "number": 2, "tg_id": "volyacore/647" },
+          { "number": 3, "tg_id": "volyacore/657" },
+          { "number": 4, "tg_id": "volyacore/665" },
+          { "number": 5, "tg_id": "volyacore/666" },
+          { "number": 6, "tg_id": "volyacore/680" },
+          { "number": 7, "tg_id": "volyacore/690" },
+          { "number": 8, "tg_id": "volyacore/715" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "she_makes_my_heart_flutter",
+    "title": "Вона змушує моє серце тріпотіти",
+    "enTitle": "She Makes My Heart Flutter / 여자에게 설레는 편",
+    "description": "Кан Соль і Чон Ван, племінниця і тітка, одна комунікабельна, а інша сором'язлива, працюють разом у барі лише для жінок під назвою «Кімната Дікінсон». Незважаючи на те, що вони мають однакову сексуальну орієнтацію, вони, здається, різні світи та мають дуже різні історії кохання.",
+    "cover": "she_makes_my_heart_flutter.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 5,
+    "imdbRating": "8.3",
+    "duration": "10-15 хв.",
+    "cast": ["Ан Джі Хі", "Шин Джу Йон"],
+    "director": "Нам Сон Ву",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "she_makes_my_heart_flutter" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/469" },
+          { "number": 2, "tg_id": "volyacore/470" },
+          { "number": 3, "tg_id": "volyacore/478" },
+          { "number": 4, "tg_id": "volyacore/480" },
+          { "number": 5, "tg_id": "volyacore/482" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_eighth_sense",
+    "title": "Восьме почуття",
+    "enTitle": "The Eighth Sense / 여덟 번째 감각",
+    "description": "Джі Хьон, новий студент із тихого сільського містечка, намагається звикнути до галасливого міського життя Сеула. Під час навчання в університеті він знайомиться з Дже Воном, який щойно закінчив військову службу. Коли вони поділяють любов до серфінгу, вони починають відчувати почуття один до одного. Під час серфінгу вони цілуються, але Дже Вон поводиться так, наче нічого не сталося, через що Джі Хьон спантеличений їхнім зв’язком.",
+    "cover": "the_eighth_sense.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["romance", "drama", "melodrama"],
+    "episodesCount": 10,
+    "imdbRating": "9.7",
+    "duration": "30 хв.",
+    "cast": ["Ім Джі Саб", "О Джун Тек"],
+    "director": "Вернер дю Плессіс, Іну Бек",
+    "network": "LINE TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_eighth_sense" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/410" },
+          { "number": 2, "tg_id": "volyacore/424" },
+          { "number": 3, "tg_id": "volyacore/428" },
+          { "number": 4, "tg_id": "volyacore/433" },
+          { "number": 5, "tg_id": "volyacore/443" },
+          { "number": 6, "tg_id": "volyacore/451" },
+          { "number": 7, "tg_id": "volyacore/459" },
+          { "number": 8, "tg_id": "volyacore/463" },
+          { "number": 9, "tg_id": "volyacore/477" },
+          { "number": 10, "tg_id": "volyacore/484" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thundercloud_rainstorm",
+    "title": "Грозові хмари та злива",
+    "enTitle": "Thundercloud Rainstorm / 천둥구름 비바람",
+    "description": "Позашлюбний син І Ільчо зазнає знущань від свого зведеного брата Со Чоніна на похороні батька. Зрештою, герой знаходить прихисток у домі свого кузена – Со Чонхана. Під дією алкоголю Ільчо цілує Чонхана, та у відповідь отримує лише призирство. Коли Ільчо потрапляє до лікарні, холодний та безжальний Со Чонхан оплачує операцію, пропонуючи Ільчо угоду «Поверни борг тілом». Він заявляє, що «всі права на Ільчо належать Со Чонхану». Поступово їхній зв’язок стає глибшим як фізично, так і емоційно, збільшуючи одержимість Чонхана і його бажання володіти Ільчо.",
+    "cover": "thundercloud_rainstorm.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.3",
+    "duration": "30 хв.",
+    "cast": ["Юн Джісун", "Чон Ріу"],
+    "director": "Мін Чейон",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "thundercloud_rainstorm" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2509" },
+          { "number": 2, "tg_id": "volyacore/2512" },
+          { "number": 3, "tg_id": "volyacore/2515" },
+          { "number": 4, "tg_id": "volyacore/2518" },
+          { "number": 5, "tg_id": "volyacore/2528" },
+          { "number": 6, "tg_id": "volyacore/2537" },
+          { "number": 7, "tg_id": "volyacore/2542" },
+          { "number": 8, "tg_id": "volyacore/2548" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jun_and_jun",
+    "title": "Джун і Джун",
+    "enTitle": "Jun and Jun / 준과 준",
+    "description": "Його перше кохання дитинства Че Джун, який зник без жодного слова, повернувся гарячим генеральним директором! Офісний романтичний комікс про Лі Джуна, який став стажером, і Че Джуна, неймовірного геніального директора.",
+    "cover": "jun_and_jun.png",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["romance", "comedy"],
+    "episodesCount": 8,
+    "imdbRating": "7.7",
+    "duration": "25 хв.",
+    "cast": ["Кі Хьон У", "Пак Хьон Сеоп", "Ян Джун Мо", "Чо Чан Хьон"],
+    "director": "Кім Ин Хе",
+    "network": "W-STORY",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "jun_and_jun" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/513" },
+          { "number": 2, "tg_id": "volyacore/527" },
+          { "number": 3, "tg_id": "volyacore/533" },
+          { "number": 4, "tg_id": "volyacore/544" },
+          { "number": 5, "tg_id": "volyacore/559" },
+          { "number": 6, "tg_id": "volyacore/578" },
+          { "number": 7, "tg_id": "volyacore/588" },
+          { "number": 8, "tg_id": "volyacore/593" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blue_of_winter",
+    "title": "Дзюдоїст: Блакить зими",
+    "enTitle": "Blue of Winter / 유도 소년",
+    "description": "Джі Сок і До Джин зустрічають Хьон У на змаганнях з дзюдо між середніми школами в Сеулі. Одержимий боротьбою, Хьон У використовує необачні прийоми, щоб перемогти. Зрештою він перемагає, однак отримує травму. З того дня Джі Сок і До Джин зацікавлені в Хьон У. Кого ж він обере?",
+    "cover": "blue_of_winter.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["romance", "sport"],
+    "episodesCount": 5,
+    "imdbRating": "5.8",
+    "duration": "9 хв.",
+    "cast": ["Чон Ю Бін", "Мін Ін Ґі", "Лі Чон Мін", "Ю Йон Мо"],
+    "director": "Кім Ін Хе",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "blue_of_winter" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/597" },
+          { "number": 2, "tg_id": "volyacore/601" },
+          { "number": 3, "tg_id": "volyacore/605" },
+          { "number": 4, "tg_id": "volyacore/607" },
+          { "number": 5, "tg_id": "volyacore/610" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eccentric_romance",
+    "title": "Дивний роман",
+    "enTitle": "Eccentric Romance / 기이한 로맨스",
+    "description": "Джей, іноземний студент із Таїланду, приїжджає до Кореї, щоб побачити зустрітись зі своїм другом Сон Хуном. Вони навчаються в одному коледжі на курсі «Здоров'я і щастя», і їм потрібно зробити автопортрет, чкий відображатиме внутрішній світ. Сон Хун регулярно займається спортом, але Джей перебуває не в найкращій формі і зазнає труднощів у тренажерному залі. Саме тоді Джін Ук, особистий тренер, виявляє особливий інтерес до Джея, на велике невдоволення Сон Хуна. Однак Джін Ук здається трохи дивним. Незважаючи на його доброту до Джея, починають виникати підозри, що Джін Ук може бути причетний до вбивства та зникнення людини. Чи чекає на Джея та Сон Хуна щасливий кінець, чи стосунки Джея з Джін Уком, що зароджуються, обійдуться йому невимовно дорого?",
+    "cover": "eccentric_romance.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["mysticism", "comedy", "romance", "youth"],
+    "episodesCount": 12,
+    "imdbRating": "7.3",
+    "duration": "15 хв.",
+    "cast": ["Юн Джунвон", "Сейв Сайсават", "І Гон'ю", "Ґо Бьонван", "Кім Теха"],
+    "director": "Джаґван Ґонґ",
+    "network": "Moving Pictures Company",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "eccentric_romance" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1420" },
+          { "number": 2, "tg_id": "volyacore/1422" },
+          { "number": 3, "tg_id": "volyacore/1441" },
+          { "number": 4, "tg_id": "volyacore/1443" },
+          { "number": 5, "tg_id": "volyacore/1464" },
+          { "number": 6, "tg_id": "volyacore/1467" },
+          { "number": 7, "tg_id": "volyacore/1494" },
+          { "number": 8, "tg_id": "volyacore/1496" },
+          { "number": 9, "tg_id": "volyacore/1517" },
+          { "number": 10, "tg_id": "volyacore/1518" },
+          { "number": 11, "tg_id": "volyacore/1537" },
+          { "number": 12, "tg_id": "volyacore/1538" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_director_who_buys_me_dinner",
+    "title": "Директор, який пригощає мене вечерею",
+    "enTitle": "The Director Who Buys Me Dinner / 밥만 잘 사주는 이상한 이사님",
+    "description": "Сотні років тому дитину назвали на честь бога — і його було проклято. Після чотирьох перероджень він знаходить кохання в образі працівника своєї компанії — ще й чоловіка! І якщо вони не почнуть зустрічатися, то помруть! «Ми маємо бути разом. Якщо так не буде — помремо.» Донбек — один з новеньких працівників в компанії Min Entertainment. Його директор, Юдам, бездоганний у всіх аспектах. Проте Донбек вважає, що його директор з'їхав з глузду... Як це він вже прожив три життя й через це хоче з ним зустрічатись? Що тут взагалі відбувається?",
+    "cover": "the_director_who_buys_me_dinner.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["romance", "fantasy"],
+    "episodesCount": 10,
+    "imdbRating": "7.3",
+    "duration": "15 хв.",
+    "cast": ["Пак Янун", "Пак Чону", "Джан Юсон"],
+    "director": "Ян Гюнхі",
+    "network": "Moving Pictures Company",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_director_who_buys_me_dinner" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+        { "number": 1, "tg_id": "volyacore/2466" },
+        { "number": 2, "tg_id": "volyacore/2478" },
+        { "number": 3, "tg_id": "volyacore/2486" },
+        { "number": 4, "tg_id": "volyacore/2489" },
+        { "number": 5, "tg_id": "volyacore/2498" },
+        { "number": 6, "tg_id": "volyacore/2499" },
+        { "number": 7, "tg_id": "volyacore/2502" },
+        { "number": 8, "tg_id": "volyacore/2506" },
+        { "number": 9, "tg_id": "volyacore/2510" },
+        { "number": 10, "tg_id": "volyacore/2511" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "to_my_star",
+    "title": "До моєї зірки",
+    "enTitle": "To My Star / 나의 별에게",
+    "description": "Актор Кан Со Джун колись був однією з найбільших і найпопулярніших зірок Південної Кореї, але зараз його кар’єра йде на спад. Незважаючи на падіння популярності, він вважає, що його доля змінилася, коли він зустрів і закохався в розважливого молодого шеф-кухаря Хан Джи Ву. Однак їхнє кохання опиниться під загрозою, коли більш стриманий Хан Джи Ву та вільний духом Кан Со Джун усвідомлюють, що their погляди на життя, кохання та все інше безповоротно відрізняються. Що їх чекатиме? Дізнаємось під час перегляду \"До моєї зірки\".",
+    "cover": "to_my_star.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["drama", "romance", "kitchen", "melodrama"],
+    "episodesCount": 9,
+    "imdbRating": "8.1",
+    "duration": "15 хв.",
+    "cast": ["Со Ву Хьон", "Кім Кан Мін", "QN_дже Йонг"],
+    "director": "Хван Да Силь",
+    "network": "Energedic Company",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "to_my_star" },
+      { "title": "2 Сезон", "id": "to_my_star_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/7" },
+          { "number": 2, "tg_id": "volyacore/8" },
+          { "number": 3, "tg_id": "volyacore/10" },
+          { "number": 4, "tg_id": "volyacore/11" },
+          { "number": 5, "tg_id": "volyacore/12" },
+          { "number": 6, "tg_id": "volyacore/14" },
+          { "number": 7, "tg_id": "volyacore/15" },
+          { "number": 8, "tg_id": "volyacore/16" },
+          { "number": 9, "tg_id": "volyacore/19" },
+          { "number": "10 (за лаштунками)", "tg_id": "volyacore/21" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "to_my_star_2",
+    "title": "До моєї зірки 2",
+    "enTitle": "To My Star 2 / 나의 별에게2 : 우리의 못다 한 이야기",
+    "description": "Це продовження вашого улюбленого серіалу \"До моєї зірки\". Незважаючи на відмінності характерів, шеф-кухар і знаменитість не змогли встояти перед чарами один одного. Вистоюючи один за одного, Со Джун і Джи Ву вірили, що нарешті знайшли своє щастя. Але їхнє щастя виявляється недовгим, коли один із них зникає, не залишивши нічого, крім записки. Загублені без інших, чи знайдуть ці двоє зіркових закоханих шлях назад один до одного, чи їхній казковий роман справді закінчився?",
+    "cover": "to_my_star_2.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["drama", "romance", "kitchen", "melodrama"],
+    "episodesCount": 10,
+    "imdbRating": "8.1",
+    "duration": "25 хв.",
+    "cast": ["Со Ву Хьон", "Кім Кан Мін", "QN_дже Йонг"],
+    "director": "Хван Да Силь",
+    "network": "Energedic Company",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "to_my_star" },
+      { "title": "2 Сезон", "id": "to_my_star_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/25" },
+          { "number": 2, "tg_id": "volyacore/29" },
+          { "number": 3, "tg_id": "volyacore/31" },
+          { "number": 4, "tg_id": "volyacore/42" },
+          { "number": 5, "tg_id": "volyacore/47" },
+          { "number": 6, "tg_id": "volyacore/48" },
+          { "number": 7, "tg_id": "volyacore/53" },
+          { "number": 8, "tg_id": "volyacore/58" },
+          { "number": 9, "tg_id": "volyacore/59" },
+          { "number": 10, "tg_id": "volyacore/64" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "friendly_rivalry",
+    "title": "Дружнє суперництво",
+    "enTitle": "Friendly Rivalry / 선의의 경쟁",
+    "description": "У Сильґі, сирота з провінційного містечка, переїздіє до Сеула, щоб навчатися в Старшій школі для дівчат Чева – елітній школі для обдарованих учениць. Вона намагається адаптуватися в класі, поки не зустрічає Ю Джеі, найкращу ученицю школи. Ю Джеі – розумна, заможна, впевнена у своєму статусі – інтригує Сильґі. Їхня прихильність незабаром переростає в складні стосунки, наповнені як дружбою, так і одержимістю.",
+    "cover": "friendly_rivalry.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["thriller", "mystery", "psychological", "drama"],
+    "episodesCount": 16,
+    "imdbRating": "7.8",
+    "duration": "30 хв.",
+    "cast": ["Лі Хєрі", "Чон Субін", "Кан Хьовон", "О Урі"],
+    "director": "Кім Техі",
+    "network": "U+Mobiletv",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "friendly_rivalry" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1987" },
+          { "number": 2, "tg_id": "volyacore/1998" },
+          { "number": 3, "tg_id": "volyacore/2011" },
+          { "number": 4, "tg_id": "volyacore/2022" },
+          { "number": 5, "tg_id": "volyacore/2044" },
+          { "number": 6, "tg_id": "volyacore/2061" },
+          { "number": 7, "tg_id": "volyacore/2072" },
+          { "number": 8, "tg_id": "volyacore/2096" },
+          { "number": 9, "tg_id": "volyacore/2118" },
+          { "number": 10, "tg_id": "volyacore/2134" },
+          { "number": 11, "tg_id": "volyacore/2146" },
+          { "number": 12, "tg_id": "volyacore/2161" },
+          { "number": 13, "tg_id": "volyacore/2177" },
+          { "number": 14, "tg_id": "volyacore/2196" },
+          { "number": 15, "tg_id": "volyacore/2212" },
+          { "number": 16, "tg_id": "volyacore/2226" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "behind_cut",
+    "title": "За лаштунками",
+    "enTitle": "Behind Cut / 비하인드 컷",
+    "description": "Кіджун – початківець студент-модельєр, який мріє про велике: він хоче стать всесвітньо відомим дизайнером одягу. Одного разу на вулиці він стикається з Йону, вічно оптимістично налаштованим кур’єром. Незважаючи на те, що для Кіджуна та Йону все почалося явно хитко, вони починають прихильно ставитися один до одного й починають замислюватися, чи може їхнє, здавалося б, протилежне поєднання рішучості та прийняття бути випадком «протилежностей, що притягуються». Але коли з’являється провідна модель на ім’я Ібін, усе ускладнюється. Він починає закохуватися в Кіджуна. Чи може цей розвиток подій означати кінець новонародженого роману між Кіджуном та Йону?",
+    "cover": "behind_cut.png",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "6.8",
+    "duration": "15 хв.",
+    "cast": ["Пак Бомджун", "Ом Севон", "Чу Сокйон", "Кім Воншик", "Мун Борьон"],
+    "director": "Хан Уім",
+    "network": "Emotion Studio",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "behind_cut" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/985" },
+          { "number": 2, "tg_id": "volyacore/1004" },
+          { "number": 3, "tg_id": "volyacore/1015" },
+          { "number": 4, "tg_id": "volyacore/1041" },
+          { "number": 5, "tg_id": "volyacore/1059" },
+          { "number": 6, "tg_id": "volyacore/1076" },
+          { "number": 7, "tg_id": "volyacore/1094" },
+          { "number": 8, "tg_id": "volyacore/1108" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heart_stain",
+    "title": "Заплямоване серце",
+    "enTitle": "Heart Stain / 하트 스테인",
+    "description": "«Учителю. Мені дехто подобається... але це чоловік.» Ухьон закоханий у свого класного керівника й має намір тримати ці почуття в таємниці. Коли про це дізнається його найкращий друг Доха, він боїться, що той засудить його через любов до чоловіка. Проте Доха має інші плани. Він пропонує Ухьону парі, яке той приймає.",
+    "cover": "heart_stain.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "youth"],
+    "episodesCount": 8,
+    "imdbRating": "7.6",
+    "duration": "22 хв.",
+    "cast": ["Кім Джі О", "Хамін", "Кан Яндже"],
+    "director": "Наттапат Котчапаткан",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "heart_stain" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1751" },
+          { "number": 2, "tg_id": "volyacore/1758" },
+          { "number": 3, "tg_id": "volyacore/1766" },
+          { "number": 4, "tg_id": "volyacore/1767" },
+          { "number": 5, "tg_id": "volyacore/1779" },
+          { "number": 6, "tg_id": "volyacore/1781" },
+          { "number": 7, "tg_id": "volyacore/1799" },
+          { "number": 8, "tg_id": "volyacore/1801" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "out_of_breath",
+    "title": "Затамувавши подих",
+    "enTitle": "Out of Breath / 숨이 벅차",
+    "description": "Дівчина Ха Ен розходиться з нею, тому що боїться, що люди дізнаються, що она лесбійка. Після підштовхування її найкращої подруги, Ха Ен зустрічає Мін Со в додатку для знайомств. Вони двоє роблять усе те, що зі списку побачень Ха Ен вона ніколи не робила зі своєю дівчиною. Після спільного проведення часу чи зможе Ха Ен забути свою колишню і жити далі?",
+    "cover": "out_of_breath.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2019,
+    "genres": ["romance", "life", "drama"],
+    "episodesCount": 3,
+    "imdbRating": "7.8",
+    "duration": "14 хв.",
+    "cast": ["Сон Сохьон", "Лім Джіан", "Чхве Джівон"],
+    "director": "Студія Lululala / Незалежне виробництво",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "out_of_breath" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/740" },
+          { "number": 2, "tg_id": "volyacore/747" },
+          { "number": 3, "tg_id": "volyacore/759" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "let_free_the_curse_of_taekwondo",
+    "title": "Звільнення від прокляття тхеквондо",
+    "enTitle": "Let Free the Curse of Taekwondo / 태권도의 저주를 풀어줘",
+    "description": "Старшокласник Дохе живе зі своїм батьком, який керує спортзалом з тхеквондо в сільській місцевості. Він зневажає насильницьку та жорстоку атмосферу свого дому. Одного дня з Сеула приїжджає його життєрадісний і яскравий одноліток Джуйон, який мріє вступити до коледжу за спеціальністю «Тхеквондо». З приїздом Джуйона маленькі та великі радощі починають наповнювати раніше похмуре життя Дохе. Однак гнітюча культура, яку символізує його батько, остаточно спотворює їхні стосунки, і після несподіваного інциденту, що змушує їх розлучитися, вони возз'єднуються через десять років.",
+    "cover": "let_free_the_curse_of_taekwondo.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.6",
+    "duration": "35 хв.",
+    "cast": ["Кім Нурім", "І Сон", "Чан Йону", "Ю Хабок", "Хан Сохюн"],
+    "director": "Хван Дасул",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "let_free_the_curse_of_taekwondo" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1449" },
+          { "number": 2, "tg_id": "volyacore/1453" },
+          { "number": 3, "tg_id": "volyacore/1478" },
+          { "number": 4, "tg_id": "volyacore/1481" },
+          { "number": 5, "tg_id": "volyacore/1495" },
+          { "number": 6, "tg_id": "volyacore/1501" },
+          { "number": 7, "tg_id": "volyacore/1519" },
+          { "number": 8, "tg_id": "volyacore/1527" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_story_of_bi_hyeong",
+    "title": "Історія Біхьона: Володар Токкебі",
+    "enTitle": "The Story of Bi Hyeong / 비형전: 도깨비의 주인",
+    "description": "Кимбок, сільський хлопець, який приїхав до Сеула, мріючи бути актором, стає жертвою шахрайства з орендою житла. Після цього він випадково знайомиться з Біхьоном – Володарем Токкебі, який страждає через неможливість поглинати людські душі. Між ними двома починається дивне співжиття. У цю історію вплітаються також стосунки вірного охоронця Біхьона – Кільдаля та Чігві – куміхо, дев’ятихвостого лиса, який ще тисячу років тому був у нього закоханий. У вирі одержимості, ревнощів і непорозумінь трьох демонів Кимбок поступово стає мішенню для примар.",
+    "cover": "the_story_of_bi_hyeong.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["comedy", "romance", "fantasy"],
+    "episodesCount": 12,
+    "imdbRating": "7.5",
+    "duration": "25 хв.",
+    "cast": ["Хван Джеук", "І Чамін", "Кан Чану", "Нам Текджун"],
+    "director": "Пак Сон Дже",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_story_of_bi_hyeong" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2382" },
+          { "number": 2, "tg_id": "volyacore/2389" },
+          { "number": 3, "tg_id": "volyacore/2395" },
+          { "number": 4, "tg_id": "volyacore/2406" },
+          { "number": 5, "tg_id": "volyacore/2415" },
+          { "number": 6, "tg_id": "volyacore/2423" },
+          { "number": 7, "tg_id": "volyacore/2431" },
+          { "number": 8, "tg_id": "volyacore/2436" },
+          { "number": 9, "tg_id": "volyacore/2451" },
+          { "number": 10, "tg_id": "volyacore/2456" },
+          { "number": 11, "tg_id": "volyacore/2467" },
+          { "number": 12, "tg_id": "volyacore/2468" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "unintentional_love_story",
+    "title": "Історія ненавмисного кохання",
+    "enTitle": "Unintentional Love Story / 비의도적 연애담",
+    "description": "Через корупційний скандал невинного Чі Воньона звільняють разом з його керівником. Відчайдушно прагнучи повернути свою роботу, Воньон намагається розшукати улюбленого митця президента. Він знаходить зниклого чоловіка, який керує гончарною крамницею у віддаленому містечку, але очевидно, що Юн Теджун не хоче, аби його відшукали. Воньон вирішує залишитися в місті й стежити за митцем, аби дізнатися його таємниці. Проте між ними з'являються певні почуття, і Воньон починає сумніватися у своїй орієнтації, мотивації та бажанні повернутися до старого життя в Сеулі. Що станеться, коли Теджун дізнається, що Воньон увесь час шпигував за ним?",
+    "cover": "unintentional_love_story.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "8.3",
+    "duration": "35 хв.",
+    "cast": ["Ча Севон", "Ґончан", "До У", "Вон Темін", "Лім Хюнте", "Лі Джунхьок"],
+    "director": "Чай Юйсоун",
+    "network": "TVING",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "unintentional_love_story" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1096" },
+          { "number": 2, "tg_id": "volyacore/1099" },
+          { "number": 3, "tg_id": "volyacore/1107" },
+          { "number": 4, "tg_id": "volyacore/1110" },
+          { "number": 5, "tg_id": "volyacore/1115" },
+          { "number": 6, "tg_id": "volyacore/1123" },
+          { "number": 7, "tg_id": "volyacore/1135" },
+          { "number": 8, "tg_id": "volyacore/1136" },
+          { "number": 9, "tg_id": "volyacore/1143" },
+          { "number": 10, "tg_id": "volyacore/1149" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a_first_love_story",
+    "title": "Історія першого кохання",
+    "enTitle": "A First Love Story / 퍼스트러브스토리",
+    "description": "Мін Ґю був здивований несподіваною новиною. Йому ніяково від звістки про призов близького друга Дже Сонга в армію, і він не знає, чому. Він вдає, що йому байдуже, але серце його не заспокоюється...",
+    "cover": "a_first_love_story.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["romance", "drama"],
+    "episodesCount": 2,
+    "imdbRating": "8.0",
+    "duration": "8 хв.",
+    "cast": ["Кім Хьон Вон", "Чон Дже Ун"],
+    "director": "Кім Ин Хє",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "a_first_love_story" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/442" },
+          { "number": 2, "tg_id": "volyacore/445" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lonely_girls",
+    "title": "Коли ми в кімнаті одні",
+    "enTitle": "Lonely Girls / 자취방의 고백",
+    "description": "Ми познайомилися випадково в Тіндері, але тепер ми стали ближчими, ніж будь-хто інший, Дже Ін і Мін А. Дже Ін заповнює куточок мого серця, який інші друзі не змогли заповнити. Це симпатія, якого я ніколи раніше не відчувала. Насправді, ти мені дуже подобаєшся, і це камнем лежить на моєму серці.",
+    "cover": "lonely_girls.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "drama"],
+    "episodesCount": 4,
+    "imdbRating": "7.1",
+    "duration": "11 хв.",
+    "cast": ["Пак Сою", "Ян Ґаин"],
+    "director": "Хан Кьон Хун",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "lonely_girls" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": "1-4", "tg_id": "volyacore/1415" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_in_the_big_city",
+    "title": "Кохання у великому місті",
+    "enTitle": "Love in the Big City / 대도시의 사랑법",
+    "description": "Смілива історія про двох сусідів по кімнаті — ґея та гетеросексуальної дівчини. Очима Міе починається незграбна історія кохання Ґойона. Історія сміху, сліз і ран між матір'ю, яка заперечує сексуальність свого сина, і його нездатністю уникнути суспільного осуду. Ґойон нарешті зустрічає справжнє кохання, не схоже на жодне інше, Ґюхо, але не має іншого вибору, окрім як відпустити його. Після від'їзду Ґюхо, Ґойон їде за незнайомцем до Таїланду, де проводить відпустку під час пізнього мусону. Згадуючи старі добрі часи, які вже ніколи не повернути, він досягає повного особистісного зростання.",
+    "cover": "love_in_the_big_city.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "youth", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.6",
+    "duration": "50 хв.",
+    "cast": ["Нам Юнсу", "І Сукьон", "Джін Хоин", "О Хьонкйон", "Квон Хьок", "І Хьонсо", "І Сехі"],
+    "director": "Хо Джінхо, Хон Джійон, Сон Теґьом, Кім Сеін",
+    "network": "TVING",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_in_the_big_city" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1455" },
+          { "number": 2, "tg_id": "volyacore/1459" },
+          { "number": 3, "tg_id": "volyacore/1461" },
+          { "number": 4, "tg_id": "volyacore/1468" },
+          { "number": 5, "tg_id": "volyacore/1470" },
+          { "number": 6, "tg_id": "volyacore/1471" },
+          { "number": 7, "tg_id": "volyacore/1472" },
+          { "number": 8, "tg_id": "volyacore/1475" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "always_meet_again",
+    "title": "Ми завжди зустрічатимемось знову",
+    "enTitle": "Always Meet Again / 언제나 다시 만나",
+    "description": "Ви колись уявляли своє повернення в минуле? Що змінили б? Ось так, дивним чином, домалювавши портрет І Уджина, свого першого кохання, художник Чан Хесон повертається на 17 років назад у минуле – шкільні роки. Хесон намагається уникати Уджина, аби не повторювати помилок, проте наполегливість хлопця не залишає йому шансів. Чи вдасться їм цього разу змінити долю й бути разом?",
+    "cover": "always_meet_again.png",
+    "status": "completed",
+    "country": "korea",
+    "year": 2026,
+    "genres": ["romance", "youth", "fantasy"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "30 хв.",
+    "cast": ["Пром Ратчапат", "Бонз Недол"],
+    "director": "Танават Патхаратхонгъє",
+    "network": "Line TV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "always_meet_again" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2692" },
+          { "number": 2, "tg_id": "volyacore/2699" },
+          { "number": 3, "tg_id": "volyacore/2717" },
+          { "number": 4, "tg_id": "volyacore/2722" },
+          { "number": 5, "tg_id": "volyacore/2733" },
+          { "number": 6, "tg_id": "volyacore/2751" },
+          { "number": 7, "tg_id": "volyacore/2760" },
+          { "number": 8, "tg_id": "volyacore/2765" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_bias_is_showing",
+    "title": "Мій біас з'явився",
+    "enTitle": "My Bias Is Showing / 최애가 나타났다!",
+    "description": "Коли На Еджун, учитель старших класів, приходить на роботу звичайного дня, він навіть не підозрює, що випадково зустріне свою улюблену зірку в коридорі. Але коли його школа стає місцем фільмувань шоу за участі Чве Шийоля, його біаса з айдол-гурту A-One, саме це й трапляється! І якщо цього недостатньо, щоб серце фанбоя не витримало, Шийоль ще й зацікавлюється Еджуном і пропонує йому стати його «наставником» у шоу. Відчайдушно намагаючись приховати своє фанатське життя, Еджун змушений випробовувати свої акторські здібності не лише перед камерами. Але чим більше часу він проводить із Шийолем, тим важче підтримувати обман. Не кажучи вже про те, що, можливо, він не єдиний, хто має таємниці...",
+    "cover": "my_bias_is_showing.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["comedy", "romance", "youth"],
+    "episodesCount": 10,
+    "imdbRating": "7.8",
+    "duration": "23 хв.",
+    "cast": ["Кім Канмін", "Пак Чіну", "Бьонхон", "Кім Хонджун"],
+    "director": "Бек Мінхі",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_bias_is_showing" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2284" },
+          { "number": 2, "tg_id": "volyacore/2291" },
+          { "number": 3, "tg_id": "volyacore/2296" },
+          { "number": 4, "tg_id": "volyacore/2299" },
+          { "number": 5, "tg_id": "volyacore/2307" },
+          { "number": 6, "tg_id": "volyacore/2314" },
+          { "number": 7, "tg_id": "volyacore/2330" },
+          { "number": 8, "tg_id": "volyacore/2338" },
+          { "number": 9, "tg_id": "volyacore/2349" },
+          { "number": 10, "tg_id": "volyacore/2358" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_secret_vampire",
+    "title": "Мій таємний вампір: Брехня, де ж, у біса, ці кровопивці?",
+    "enTitle": "My Secret Vampire / 거짓말, 뱀파이어가 어디 있어?",
+    "description": "Чуван, Инхо, Сондже та Кюмін – четверо сусідів по квартирі, які шукають п’ятого мешканця. Вони не можуть повірити своєму щастю, коли Донха, який виріс ізольованим від світу, безтурботно усміхається, кажучи: «У світі надто багато добрих людей». Вампіри в душі тішаться, що їм трапилася така здобич. Та зрештою, саме вони опиняються в ситуації, коли йде носом кров. Чи зможуть вони бодай якось безпечно пити кров Донхи, не наражаючи власні серця на небезпеку?",
+    "cover": "my_secret_vampire.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["comedy", "romance", "fantasy"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "16 хв.",
+    "cast": ["Ю Шін", "Пак Донджу", "І Техьон", "І Донйоль", "І Чуйон"],
+    "director": "Пак Хьон У",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "my_secret_vampire" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2376" },
+          { "number": 2, "tg_id": "volyacore/2378" },
+          { "number": 3, "tg_id": "volyacore/2384" },
+          { "number": 4, "tg_id": "volyacore/2386" },
+          { "number": 5, "tg_id": "volyacore/2393" },
+          { "number": 6, "tg_id": "volyacore/2396" },
+          { "number": 7, "tg_id": "volyacore/2402" },
+          { "number": 8, "tg_id": "volyacore/2408" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "girlfriend_from_today",
+    "title": "Моя дівчина від сьогодні",
+    "enTitle": "Girlfriend from Today / 오늘부터 여자친구",
+    "description": "«Мене кинули, щойно ми зустрілися. Вона відмовилася спілкуватися. Побудувати стосунки було неможливо». Як виконати завдання, коли ти працьовита бджілка, а твій партнер легковажить? До чого призведе зустріч Сон Хі Рам і Ан Га Ін на лекції по психології?",
+    "cover": "girlfriend_from_today.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["everyday", "romance"],
+    "episodesCount": 4,
+    "imdbRating": "6",
+    "duration": "9 хв.",
+    "cast": ["Пак Хьону", "Бін Хеджин"],
+    "director": "Кім Кван Ин",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "girlfriend_from_today" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": "1-4", "tg_id": "volyacore/326" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "our_relationship_ended_before_it_began",
+    "title": "Наші стосунки закінчилися, так і не розпочавшись",
+    "enTitle": "Our Relationship Ended Before It Began / 우리의 연애는 시작도 전에 끝났다",
+    "description": "Кім А Янг нещодавно почала працювати в кафе Юн А. Хоча спочатку дражнилки Юн А діяли їй на нерви, А Янг швидко зрозуміла, що у неї з'явилися романтичні почуття до неї. Але Юн А нещодавно розлучилась з дівчиною. Чи зможуть вони набратися сміливості, щоб реалізувати свої почуття, що зароджуються?",
+    "cover": "our_relationship_ended_before_it_began.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["romance", "drama"],
+    "episodesCount": 4,
+    "imdbRating": "7.7",
+    "duration": "8 хв.",
+    "cast": ["Парк Ха Йон", "Парк Сан Ха"],
+    "director": "Незалежне інді-виробництво",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "our_relationship_ended_before_it_began" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/510" },
+          { "number": 2, "tg_id": "volyacore/516" },
+          { "number": 3, "tg_id": "volyacore/517" },
+          { "number": 4, "tg_id": "volyacore/519" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "never_fair",
+    "title": "Несправедливе кохання",
+    "enTitle": "Never Fair / 불공정 연애",
+    "description": "У пошуках роботи, Джі Ухьок оселився в будинку сина подруги своєї матері, Оню, успішного письменника. Так усе й почалося...",
+    "cover": "never_fair.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "drama"],
+    "episodesCount": 4,
+    "imdbRating": "7.0",
+    "duration": "8 хв.",
+    "cast": ["Шін Джувон", "Ю Джінсок"],
+    "director": "Хан Джи Ин",
+    "network": "Sukfilm",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "never_fair" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2051" },
+          { "number": 2, "tg_id": "volyacore/2054" },
+          { "number": 3, "tg_id": "volyacore/2058" },
+          { "number": 4, "tg_id": "volyacore/2063" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "never_forget_your_enemy",
+    "title": "Ніколи не забувай свого ворога",
+    "enTitle": "Never Forget Your Enemy / ยังไงก็ใช่นาย",
+    "description": "Кі Ханиль після аварії втрачає спогади про останні 10 років. Першою людиною, яку він зустріче після отямлення, стає Йо Себьок. Ханиль дізнається, що його колишній шкільний ворог тепер нібито є його хлопцем. Хоча фотографії, повідомлення й навіть власні інстинкти підказують йому, що вони були глибоко закохані, Ханиль пам’ятає його лише як ворога. Коли фрагменти спогадів поступово повертаються, він намагається з'ясувати, чи їхнє кохання – справжнє, або ж це якась форма помсти. Його серце каже «ні», але тіло відповідає інакше. Кохання, яке починається зі слова «ворог».",
+    "cover": "never_forget_your_enemy.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2026,
+    "genres": ["romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.7",
+    "duration": "31 хв.",
+    "cast": ["І Джаун", "Хван Джунсу", "О Джехьон", "Філа І"],
+    "director": "Кан Ву Джін",
+    "network": "WeTV Original",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "never_forget_your_enemy" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2730" },
+          { "number": 2, "tg_id": "volyacore/2753" },
+          { "number": 3, "tg_id": "volyacore/2754" },
+          { "number": 4, "tg_id": "volyacore/2769" },
+          { "number": 5, "tg_id": "volyacore/2790" },
+          { "number": 6, "tg_id": "volyacore/2791" },
+          { "number": 7, "tg_id": "volyacore/2814" },
+          { "number": 8, "tg_id": "volyacore/2820" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "one_high_school_heroes",
+    "title": "Один: Герої старшої школи",
+    "enTitle": "One High School Heroes / ONE : 하이스쿨 히어로즈",
+    "description": "Кім Иґьом – тихий і стриманий відмінник, що уникає будь-яких конфліктів. Та у стінах дому батько тримає його в жорстких рамках нещадного контролю. Кім Сокте – впливовий бізнесмен, який справляє враження турботливого чоловіка й тата, але нав'язує Иґьому сувору дисципліну, мріючи бачити його лікарем. Одного дня в школі Иґьом відкриває в собі природний хист до бою. Його однокласник Кан Юнґі вміє швидко оцінювати ситуацію та сам володіє відмінними бойовими навичками, тож швидко помічає цей талант. Вони об'єднуються в команду замаскованих Героїв старшої школи. Приховуючи свої справжні мотиви, Кан Юнґі поступово занурює Иґьома у світ боротьби. Врешті той дає волю своїй люті, один за одним розправляючись зі шкільними хуліганами.",
+    "cover": "one_high_school_heroes.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["action", "youth", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.2",
+    "duration": "45 хв.",
+    "cast": ["І Джунха", "Кім Дуан"],
+    "director": "І Сунте",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "one_high_school_heroes" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2579" },
+          { "number": 2, "tg_id": "volyacore/2587" },
+          { "number": 3, "tg_id": "volyacore/2631" },
+          { "number": 4, "tg_id": "volyacore/2649" },
+          { "number": 5, "tg_id": "volyacore/2663" },
+          { "number": 6, "tg_id": "volyacore/2682" },
+          { "number": 7, "tg_id": "volyacore/2698" },
+          { "number": 8, "tg_id": "volyacore/2716" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ocean_likes_me",
+    "title": "Океан любить мене",
+    "enTitle": "Ocean Likes Me / 오션라이크미",
+    "description": "Хан Ба Да – молодий підприємець з великою мрією. Він мріє відкрити унікальний ресторан із стравами удон, розташований прямо на пляжі. Ба Да не тільки зіткнувся з труднощами у забезпеченні гастрономічної якості страв, але і виявив труднощі зі спілкуванням з клієнтами. Томмі – харизматичний музикант, який повертається додому з багатогранним багажем досвіду та нової мрії. Разом вони входять у світ кулінарних експериментів та креативу, працюючи над реалізацією Ба Да планів. Спільні сміх, турбота та підтримка роблять їх ближчими друзями, а їхні мрії - справжніми. З кожним днем вони підкріплюють одне одного вірою в себе і в здатність здійснити свої найбільші бажання.",
+    "cover": "ocean_likes_me.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["food", "romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "6.8",
+    "duration": "15 хв.",
+    "cast": ["Холланд", "Хан Ґі Чан", "Хан Со Вул"],
+    "director": "Лі Си Джи",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ocean_likes_me" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/587" },
+          { "number": 2, "tg_id": "volyacore/599" },
+          { "number": 3, "tg_id": "volyacore/608" },
+          { "number": 4, "tg_id": "volyacore/619" },
+          { "number": 5, "tg_id": "volyacore/636" },
+          { "number": 6, "tg_id": "volyacore/658" },
+          { "number": 7, "tg_id": "volyacore/678" },
+          { "number": 8, "tg_id": "volyacore/688" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oh_boarding_house",
+    "title": "Пансіон",
+    "enTitle": "Oh Boarding House / 하숙집 오!번지",
+    "description": "Сул Вон – безробітний молодий чоловік, чия мати керує недорогим хостелом для студентів і чоловіків. Коли вона раптово від'їжджає, Сул Вон стає несподівано відповідальним за господарювання. У пансіонаті збирається диверсифікована група мешканців: його власний молодший двоюрідний брат, який ходить до школи; університетський друг, з яким вони мали заплутані стосунки; і студент літературного напрямку, що прагне стати відомим письменником. Всі герої починають спілкуватися та незабаром дружити. Однак найближчим часом очікується заселення нового орендаря, Кім Чун Со – вчитель старших класів зі своєю власною історією. Коли він заїжджає, все змінюється кардинальним чином, до чого для самого власника.",
+    "cover": "oh_boarding_house.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["comedy", "romance", "youth"],
+    "episodesCount": 8,
+    "imdbRating": "7.1",
+    "duration": "15 хв.",
+    "cast": ["Шин Йон Сок", "Ім Сон Гюн"],
+    "director": "Пак Ин Джу",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "oh_boarding_house" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/574" },
+          { "number": 2, "tg_id": "volyacore/579" },
+          { "number": 3, "tg_id": "volyacore/585" },
+          { "number": 4, "tg_id": "volyacore/590" },
+          { "number": 5, "tg_id": "volyacore/592" },
+          { "number": 6, "tg_id": "volyacore/595" },
+          { "number": 7, "tg_id": "volyacore/604" },
+          { "number": 8, "tg_id": "volyacore/612" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "peach_trap",
+    "title": "Персикова пастка: Квіти розпустилися",
+    "enTitle": "Peach Trap / 복숭아 꽃이 피었습니다",
+    "description": "Троє чоловіків зближуються з головним героєм, Дохою, який понад усе хоче кохати. Хороший працівник, але холодний керівник – Чон Йонсан. Майстр флірту, працівник кафе на півставки – Йон Харам. І друг дитинства – Тек Кьон – колишній член національної збірної. Головний герой опиняється у вирі бурхливого роману з ними всіма одночасно! Вітер долі кружляє навколо Дохи, то кого ж він зрештою обере? Яскрава та весела романтична комедія про подорож «У пошуках хлопця».",
+    "cover": "peach_trap.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.8",
+    "duration": "25 хв.",
+    "cast": ["Чон Субін", "Ча Седжін", "Ча Юхьон", "І Дохан"],
+    "director": "Кім Айон",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "peach_trap" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2473" },
+          { "number": 2, "tg_id": "volyacore/2475" },
+          { "number": 3, "tg_id": "volyacore/2477" },
+          { "number": 4, "tg_id": "volyacore/2479" },
+          { "number": 5, "tg_id": "volyacore/2488" },
+          { "number": 6, "tg_id": "volyacore/2491" },
+          { "number": 7, "tg_id": "volyacore/2493" },
+          { "number": 8, "tg_id": "volyacore/2494" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bump_up_business",
+    "title": "Підняти бізнес",
+    "enTitle": "Bump Up Business / 범프 업 비즈니스",
+    "description": "Іден – молодий хлопець, який готується дебютувати в хлопчачому гурті під назвою \"BoK\", одного дня зустрічає Джіхуна, відомого артиста із того самого агентства. Після зустрічі хлопець заприсягся стати популярнішим за Джіхуна, однак, виявляється, що щоб дебютувати, хлопець повинен виконати \"ґей-перфоманс (BGP)\" у команді з Джіхуном. Джіхун починає дражнити Ідена, ці двоє продовжують сваритися, але поступово проводячи більше часу разом через підготовку до вистави, починають зближуватися. Тим часом, з появою головних зірок Хьонбіна і Джея, непорозуміння між Іденом і Джіхуном накопичується. Чи зможуть вони вирішити непорозуміння та з’ясувати свої справжні почуття одне до одного?",
+    "cover": "bump_up_business.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["music", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "15 хв",
+    "cast": ["Лі Йонсу", "Чон Укджін", "Шін Кюбін", "Лі Тейоб", "Лі Сонхо", "Кім Джунхьон"],
+    "director": "Лі Чан Хай",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "bump_up_business" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/630" },
+          { "number": 2, "tg_id": "volyacore/631" },
+          { "number": 3, "tg_id": "volyacore/632" },
+          { "number": 4, "tg_id": "volyacore/634" },
+          { "number": 5, "tg_id": "volyacore/635" },
+          { "number": 6, "tg_id": "volyacore/637" },
+          { "number": 7, "tg_id": "volyacore/639" },
+          { "number": 8, "tg_id": "volyacore/641" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_for_loves_sake",
+    "title": "Просто закохайся в мене",
+    "enTitle": "Love for Love's Sake / 연애 지상주의 구역",
+    "description": "Двадцятидев’ятирічний Те Мьон Ха переживає дивовижний поворот долі, коли раптом потрапляє у вигадану онлайн-гру, де він вселяється в тіло дев’ятнадцятирічного персонажа. Незабаром Мьон Ха вирушає на квест у віртуальному світі, щоб зробити щасливим персонажа на ім’я Ча Йо Ун. Незважаючи на своє скромне виховання, Ча Йо Уну вдалося досягти успіху в національних чемпіонатах з легкої атлетики, зберігши чудову репутацію серед своїх однолітків завдяки своїй гарній зовнішності та спортивній статурі. Чон Сан Вон походить із заможної сім’ї та емоційно зв’язується з Те Мьон Ха. Його участь ускладнює стосунки, що розвиваються між Мьон Ха і Йо Уном. Ан Кьон Хун, замкнутий інтроверт, підтримує та допомагає Мьон Ха в його місії у віртуа світі.",
+    "cover": "love_for_loves_sake.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "youth", "fantasy"],
+    "episodesCount": 8,
+    "imdbRating": "8.5",
+    "duration": "40 хв.",
+    "cast": ["Ле Тебін", "Ча Джуван", "О Мінсу", "Ча Унґі"],
+    "director": "Кім Ґюна",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_for_loves_sake" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/772" },
+          { "number": 2, "tg_id": "volyacore/779" },
+          { "number": 3, "tg_id": "volyacore/791" },
+          { "number": 4, "tg_id": "volyacore/797" },
+          { "number": 5, "tg_id": "volyacore/805" },
+          { "number": 6, "tg_id": "volyacore/810" },
+          { "number": 7, "tg_id": "volyacore/814" },
+          { "number": 8, "tg_id": "volyacore/821" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tinted_with_you",
+    "title": "Розфарбований тобою",
+    "enTitle": "Tinted with You / 물들여",
+    "description": "Хе Он – юний принц, якого хоче вбити рідний брат-король. Король планує назавжди зберегти своє становище, змушуючи Лі Хе Она боятися за своє життя на кожному кроці. Єдиний союзник - Ге Ум, вірний охоронець з великим серцем. Сучасність, де мистецтво – це весь світ старшокласника Ин Хо. Хлопець приймає замовлення на завершення незакінченого полотна, незважаючи на його таємничу атмосферу. Незрозумілим чином Чон потрапляє в минуле де зустрічає Лі Хе Она, якому загрожує смертельна небезпека, і з яким у нього зав’язується тісний і романтичний зв’язок. Щоб захистити коханого та повернутися додому, підлітку необхідно домалювати загадкову картину, яка є ключем до розв'язання всіх головоломок їхнього минулого і майбутнього.",
+    "cover": "tinted_with_you.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["historical", "romance", "fantasy"],
+    "episodesCount": 8,
+    "imdbRating": "7.2",
+    "duration": "12 хв.",
+    "cast": ["Пак Джун Хі", "Ю Хьон Ву", "Кім Те Джун"],
+    "director": "Ра Ха На",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "tinted_with_you" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/576" },
+          { "number": 2, "tg_id": "volyacore/580" },
+          { "number": 3, "tg_id": "volyacore/600" },
+          { "number": 4, "tg_id": "volyacore/609" },
+          { "number": 5, "tg_id": "volyacore/623" },
+          { "number": 6, "tg_id": "volyacore/713" },
+          { "number": 7, "tg_id": "volyacore/725" },
+          { "number": 8, "tg_id": "volyacore/751" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "seoul_blues",
+    "title": "Сеульський блюз",
+    "enTitle": "Seoul Blues / 서울블루스",
+    "description": "Джон Ха, Те Йон і Мін Джі є близькими друзями дитинства. Одного разу вони зустрілися, щоб випити втрьох, і Те Йон зізнався Джон Ха, що він йому подобається. Однак Джон Ха був настільки приголомшений раптовою заявою друга, що відкинув його почуття. Після цього моменту пройшло декілька днів. Друзі знову вирішили зустрітися у кафе, де Те Йон признається, що зустрічається із Мін Джі. Джон Ха був здивований несподіваною поведінкою Те Йона, але він намагався вберегти їхню дружбу.",
+    "cover": "seoul_blues.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "7.4",
+    "duration": "10 хв.",
+    "cast": ["Чон Ріу", "Чхве Синджин", "Лі Суха"],
+    "director": "Чхвє Мін У",
+    "network": "YouTube",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "seoul_blues" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1317" },
+          { "number": 2, "tg_id": "volyacore/1324" },
+          { "number": 3, "tg_id": "volyacore/1342" },
+          { "number": 4, "tg_id": "volyacore/1358" },
+          { "number": 5, "tg_id": "volyacore/1373" },
+          { "number": 6, "tg_id": "volyacore/1393" },
+          { "number": 7, "tg_id": "volyacore/1407" },
+          { "number": 8, "tg_id": "volyacore/1432" }
+        ]
+      },
+      {
+        "blockTitle": "Spin-off",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1600" },
+          { "number": 2, "tg_id": "volyacore/1613" },
+          { "number": 3, "tg_id": "volyacore/1716" },
+          { "number": 4, "tg_id": "volyacore/1719" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gray_shelter",
+    "title": "Сірий прихисток",
+    "enTitle": "Gray Shelter / 회색기류",
+    "description": "Ча Су Хьок зосереджений лише на своєму виживанні, без будь-яких великих цілей. Його життя повністю змінюється, коли він випадково зустрічає Лі Юн Де, свого зведеного брата. Через певні обставини вони знову живуть разом.",
+    "cover": "gray_shelter.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 5,
+    "imdbRating": "7.5",
+    "duration": "20 хв.",
+    "cast": ["Лі Джебін", "Чан Уйон"],
+    "director": "Лі Соним",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "gray_shelter" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/966" },
+          { "number": 2, "tg_id": "volyacore/977" },
+          { "number": 3, "tg_id": "volyacore/987" },
+          { "number": 4, "tg_id": "volyacore/996" },
+          { "number": 5, "tg_id": "volyacore/1006" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "weak_hero_class",
+    "title": "Слабкий герой",
+    "enTitle": "Weak Hero Class 1 / 약한영웅 Class 1",
+    "description": "Йон Шіин – найкращий учень своєї школи. Фізично він видається слабким, але використовуючи кмітливість та психологічні прийоми, бореться проти насильства, яке відбувається всередині та за межами його школи.",
+    "cover": "weak_hero_class.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["action", "youth", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "9.1",
+    "duration": "40 хв.",
+    "cast": ["Пак Джіхун", "Чве Хьонук", "Хон Кюн", "Кім Суґьом"],
+    "director": "Пак Данхі",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "weak_hero_class" },
+      { "title": "2 Сезон", "id": "weak_hero_class_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1995" },
+          { "number": 2, "tg_id": "volyacore/1996" },
+          { "number": 3, "tg_id": "volyacore/2000" },
+          { "number": 4, "tg_id": "volyacore/2004" },
+          { "number": 5, "tg_id": "volyacore/2009" },
+          { "number": 6, "tg_id": "volyacore/2012" },
+          { "number": 7, "tg_id": "volyacore/2018" },
+          { "number": 8, "tg_id": "volyacore/2021" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "weak_hero_class_2",
+    "title": "Слабкий герой 2",
+    "enTitle": "Weak Hero Class 2 / 약한영웅 Class 2",
+    "description": "Слабкі мають вийти за межі своїх можливостей або зламатися. Після переходу до старшої школи Инджан, Йон Шіин усе ще несе шрами свого минулого – жорстокий урок про те, що означає боротися та зазнати поразки. Сповнений рішучості більше не втратити жодного друга, він встановлює несподіваний зв'язок із Пак Хюміном, Со Джунте та Ґо Хьонтаком. Та зовсім скоро їхня дружба привертає увагу Спілки – безжальної банди, яку очолює жорстокий На Бекджин. Втягнутий у чергову війну на виживання, Шіин мусить вийти за межі своїх можливостей. Але чи зможе він захистити людей на своєму боці від ворога, сильнішого та нещаднішого за всіх, із ким він стикався раніше? Чи ще раз безпорадно дивитиметься на їхнє падіння? Битва за панування починається. Вистоїть найсильніший.",
+    "cover": "weak_hero_class_2.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["action", "thriller", "youth", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "8.8",
+    "duration": "43 хв.",
+    "cast": ["Пак Джіхун", "Рьоун", "Чве Міньон", "Лі Міндже", "Бе Нера", "І Джуньон"],
+    "director": "Пак Данхі",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "weak_hero_class" },
+      { "title": "2 Сезон", "id": "weak_hero_class_2" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2030" },
+          { "number": 2, "tg_id": "volyacore/2032" },
+          { "number": 3, "tg_id": "volyacore/2040" },
+          { "number": 4, "tg_id": "volyacore/2043" },
+          { "number": 5, "tg_id": "volyacore/2052" },
+          { "number": 6, "tg_id": "volyacore/2060" },
+          { "number": 7, "tg_id": "volyacore/2064" },
+          { "number": 8, "tg_id": "volyacore/2075" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blossom_campus",
+    "title": "Студмістечко, що квітне",
+    "enTitle": "Blossom Campus / 블러썸 캠퍼스",
+    "description": "Історія розповідає про переведеного студента Кім Міндже, на спеціалість «Прикладна музика» та працює неповний робочий день в бібліотеці, а також Юн Чана, фахівця з тхеквондо. З моменту їх першої зустрічі, вони починають зближуватись, що призводить до розвитку їх романтичних стосунків.",
+    "cover": "blossom_campus.png",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "youth"],
+    "episodesCount": 6,
+    "imdbRating": "7.1",
+    "duration": "25 хв.",
+    "cast": ["Сон Бьонхун", "Чой Донхо", "Кім Йонсол", "Чо Юсок", "Кім Джунбам"],
+    "director": "Кан Ву",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "blossom_campus" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1084" },
+          { "number": 2, "tg_id": "volyacore/1088" },
+          { "number": 3, "tg_id": "volyacore/1089" },
+          { "number": 4, "tg_id": "volyacore/1090" },
+          { "number": 5, "tg_id": "volyacore/1091" },
+          { "number": 6, "tg_id": "volyacore/1098" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "secret_relationship",
+    "title": "Таємні стосунки",
+    "enTitle": "Secret Relationship / 비밀 사이",
+    "description": "Дитинство в злиднях лишило на серці Даона глибокі шрами. Він докладає всіх зусиль, щоб позбутися бідності, проте сором став його постійним супутником. Ці намагання неймовірно дратують його колегу Сохьона, що, здається, просто ненавидить Даона. Несподівано вони стають ближчими після конфлікту Даона з батьком. Проте чи не намагається Даон новими стосунками заповнити порожнечу, що залишив його колишній репетитор Джемін? Чи принесе кохання таке бажане Даону багатство, або ж потопить його в бідності?",
+    "cover": "secret_relationship.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "7.7",
+    "duration": "30 хв.",
+    "cast": ["Кім Джунсо", "Че Санхьон", "Кім Хоян", "Ча Чону"],
+    "director": "Ян Гюнхі",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "secret_relationship" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1804" },
+          { "number": 2, "tg_id": "volyacore/1811" },
+          { "number": 3, "tg_id": "volyacore/1821" },
+          { "number": 4, "tg_id": "volyacore/1829" },
+          { "number": 5, "tg_id": "volyacore/1840" },
+          { "number": 6, "tg_id": "volyacore/1845" },
+          { "number": 7, "tg_id": "volyacore/1850" },
+          { "number": 8, "tg_id": "volyacore/1853" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ball_boy_tactics",
+    "title": "Тактика хлопця з м'ячем",
+    "enTitle": "Ball Boy Tactics / 볼보이 택틱스",
+    "description": "Хан Чівон – сором'язливий гімнаст, що завершив кар'єру через травму та вступив до університету на фотографа. Квон Чону – зірка баскетбольної команди з чарівною усмішкою, улюбленець усіх та джерело сердечних переживань. Чи зможуть ці двоє, маючи такі різні характери, знайти спільну мову й побудувати щось більше, ніж просто дружбу?",
+    "cover": "ball_boy_tactics.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["romance", "sport"],
+    "episodesCount": 8,
+    "imdbRating": "7.9",
+    "duration": "28",
+    "cast": ["Йом Мінхьок", "Чве Чжехьок"],
+    "director": "Кім Енхе",
+    "network": "Heavenly",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "ball_boy_tactics" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2039" },
+          { "number": 2, "tg_id": "volyacore/2048" },
+          { "number": 3, "tg_id": "volyacore/2062" },
+          { "number": 4, "tg_id": "volyacore/2066" },
+          { "number": 5, "tg_id": "volyacore/2082" },
+          { "number": 6, "tg_id": "volyacore/2089" },
+          { "number": 7, "tg_id": "volyacore/2110" },
+          { "number": 8, "tg_id": "volyacore/2112" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "where_your_eyes_linger",
+    "title": "Там де заціпеніє твій погляд",
+    "enTitle": "Where Your Eyes Linger / 너의시선이머무는곳에",
+    "description": "Хан Те Джу (Хан Гі Чан) вісімнадцятирічний школяр і єдиний спадкоємець ТВ Group - сімейного бізнес-конгломерату. Його найближчий друг та його неофіційний охоронець - ще один вісімнадцятирічний школяр на ім'я Хан Гук (Чан Ий Су). Але з часом, коли два парубка виростають, вони цікавляться, чи є, можливо, інша міра для їхніх стосунків.",
+    "cover": "where_your_eyes_linger.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2020,
+    "genres": ["drama", "comedy", "melodrama"],
+    "episodesCount": 8,
+    "imdbRating": "7.8",
+    "duration": "10 хв",
+    "cast": ["Хан Гі Чан", "Чан Ий Су"],
+    "director": "Хван Да Силь",
+    "network": "Viki",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "where_your_eyes_linger" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/85" },
+          { "number": 2, "tg_id": "volyacore/86" },
+          { "number": 3, "tg_id": "volyacore/95" },
+          { "number": 4, "tg_id": "volyacore/102" },
+          { "number": 5, "tg_id": "volyacore/103" },
+          { "number": 6, "tg_id": "volyacore/106" },
+          { "number": 7, "tg_id": "volyacore/115" },
+          { "number": 8, "tg_id": "volyacore/117" }
+        ]
+      }
+    ]
+  },
 
 
 
