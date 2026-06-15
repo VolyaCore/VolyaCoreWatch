@@ -4591,7 +4591,7 @@
     "enTitle": "More Than or Equal to 75 Degrees Celsius /  여성퀴어 웹드라마 '크거나같거나 75도씨",
     "description": "Чайна майстриня Хонг перемогла у конкурсі \"Winter Course\", що проходив у штаб-квартирі \"Altdif\". Керівниця відділу маркетингу Ча, яка прийшла по співпраці, не погоджується. Чи зможуть вони завершити ідеальний зимовий чай?",
     "cover": "more_than_or_equalto_75_degrees_Celsius.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "korea",
     "year": 2019,
     "genres": ["romance", "comedy", "food"],
@@ -6337,23 +6337,1187 @@
       }
     ]
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    "id": "shark_the_beginning",
+    "title": "Акула: Початок",
+    "enTitle": "Shark: The Beginning / 샤크: 더 비기닝",
+    "description": "Ча Ву Сол, жертва шкільного насильства, який був ув’язнений у в’язниці для хлопців через несподіваний інцидент, зустрічає чемпіона зі змішаних єдиноборств Чон До Хюна та долає його межі один за іншим.",
+    "cover": "shark_the_beginning.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["action", "drama", "martial arts"],
+    "episodesCount": 1,
+    "imdbRating": "8.3",
+    "duration": "1 год. 48 хв.",
+    "cast": ["Кім Мін Сок", "Ві Ха Джун", "Чон Вон Чан"],
+    "director": "Джонні Че",
+    "network": "Viki",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/850" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mantis",
+    "title": "Богомол",
+    "enTitle": "Mantis / 사마귀",
+    "description": "Елітний найманий убивця, на прізвисько Богомол, після повернення з відпустки дізнається, що Ча Мінкю – голова компанії MK Enterprise – мертвий. Богомол вирішує піти з компанії та шукати нових можливостей з іншими найманими вбивцями.",
+    "cover": "mantis.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2025,
+    "genres": ["action", "thriller", "mystery", "crime"],
+    "episodesCount": 1,
+    "imdbRating": "7.3",
+    "duration": "1 год. 51 хв.",
+    "cast": ["Йім Сіван", "Пак Гюйон", "Джо Уджин"],
+    "director": "Лі Пьон Хон",
+    "network": "Netflix",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/2459" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_beauty_inside",
+    "title": "Внутрішня краса",
+    "enTitle": "The Beauty Inside / 뷰티 인사이드",
+    "description": "Молода людина на ім'я Чжин, володіє дуже дивною особливістю: щоранку він прокидається в тілі іншої людини. І кожен день він проживає нове життя.",
+    "cover": "the_beauty_inside.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2015,
+    "genres": ["drama", "melodrama"],
+    "episodesCount": 1,
+    "imdbRating": "7.3",
+    "duration": "127 хв",
+    "cast": ["Пак Со Джун", "Лі Дон Сік", "Чан Ий Су"],
+    "director": "Чон Йол Пек",
+    "network": "JTBC",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/257" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a_distant_place",
+    "title": "Далека місцина",
+    "enTitle": "A Distant Place / 정말 먼 곳",
+    "description": "Джін У живе простим сільским життям, проводячи дні за працею на фермі та виховуючи доньку. Невдовзі до нього приїжджає друг Хьон Мін.",
+    "cover": "a_distant_place.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2020,
+    "genres": ["drama", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.3",
+    "duration": "1 год. 55 хв.",
+    "cast": ["Кан Гіль У", "Хон Гьон", "І Сан Хі"],
+    "director": "Пак Гин Йон",
+    "network": "Hevenly",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/1142" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_fever",
+    "title": "Жар лілії",
+    "enTitle": "Lily Fever / 대세는 백합",
+    "description": "Історія обертається навколо Кім Кюнджу та Чан Серанг, які випадково зустрічаються, коли Кюнджу не може знайти свій паспорт.",
+    "cover": "lily_fever.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2015,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 8,
+    "imdbRating": "6.4",
+    "duration": "5 хв",
+    "cast": ["Кім Хе Джун", "Чон Йо Джу"],
+    "director": "Юн Сон Хо",
+    "network": "YouTube",
+    "blocks": [
+      {
+        "blockTitle": "1 Частина",
+        "episodes": [
+          { "number": "1-8", "tg_id": "volyacore/685" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "boss_in_love",
+    "title": "Закохана шефиня",
+    "enTitle": "Boss in Love / 차장님은 연애중",
+    "description": "Се Йон залишилася сама попрацювати понаднормово, вона покликала свою дівчину Хе Мі на роботу.",
+    "cover": "boss_in_love.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2018,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.6",
+    "duration": "17 хв",
+    "cast": ["Кім Ю Ра", "Чой Ву Чон"],
+    "director": "Ян Кьон Хі",
+    "network": "Hevenly",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/392" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perfect_one_night_stand",
+    "title": "Ідеальна інтрижка на одну ніч",
+    "enTitle": "Perfect One Night Stand / 완벽한 원나잇",
+    "description": "Джі Хе намагається знайти партнера через додаток для знайомств, але це не так просто, як вона думала.",
+    "cover": "perfect_one_night_stand.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2020,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "21 хв",
+    "cast": ["Чон Ин Сон", "Ан Ин А"],
+    "director": "Ян Кьон Хі",
+    "network": "Hevenly",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/383" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summer_bus",
+    "title": "Літо, автобус",
+    "enTitle": "Summer, Bus / 여름, 버스",
+    "description": "У повсякденному житті автобуса, світ все ще сподівається знайти тепло.",
+    "cover": "summer_bus.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2017,
+    "genres": ["slice of life", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.2",
+    "duration": "19 хв",
+    "cast": ["Ю Хе Ін", "Кан Мін Джун"],
+    "director": "Чо Бом Сік",
+    "network": "Idea Space",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+            { "number": 1, "tg_id": "volyacore/402" }
+    ]
+      }
+    ]
+  },
+  {
+    "id": "chalna_enough_time_to_fall_in_love",
+    "title": "Миттєво",
+    "enTitle": "Chalna / 샤크: 더 비기닝",
+    "description": "Я зараз у кафе, і... переді мною сидить жінка, і наші погляди постійно зустрічаються.",
+    "cover": "chalna_enough_time_to_fall_in_love.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2019,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.4",
+    "duration": "15 хв",
+    "cast": ["Юнджін", "Чан Санхі"],
+    "director": "Чхе Йо Джун",
+    "network": "SLL - Studio LuluLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/850" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_idol",
+    "title": "Мій кумир",
+    "enTitle": "My Idol / 나의 우상",
+    "description": "Усан, спустошений смертю батька, згодом дізнається про розпуск шкільної легкоатлетичної команди.",
+    "cover": "my_idol.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "6.6",
+    "duration": "20 хв",
+    "cast": ["І Ісоп", "Кім Біт"],
+    "director": "І Джунхі",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2445" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "my_pistachio",
+    "title": "Моя фісташка",
+    "enTitle": "My Pistachio / 마이 피스타치오",
+    "description": "Му Ян, який закоханий у свого сонбе, надто нервує, щоб зізнатися у своїх почуттях.",
+    "cover": "my_pistachio.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2018,
+    "genres": ["drama", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.4",
+    "duration": "19 хв",
+    "cast": ["Пак Хьон Джун", "Кім Хьон Джун"],
+    "director": "Чхве Дже Йон",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/398" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "journey_to_the_shore",
+    "title": "Мрія Пітера Пена",
+    "enTitle": "Journey to the Shore / 피터팬의 꿈",
+    "description": "Мін Ха і Сан Бум — гей-пара, що навчається у старших класах. Вони вирушають у подорож до берега на свою 100-денну річницю.",
+    "cover": "journey_to_the_shore.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2020,
+    "genres": ["romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.2",
+    "duration": "30 хв",
+    "cast": ["Кім Дон Хві", "Кім Шин Бі"],
+    "director": "Ум Ха Нойл",
+    "network": "WOWOW Films",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/948" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "original_sin",
+    "title": "Первородний гріх",
+    "enTitle": "Original Sin / 원죄",
+    "description": "Йо Хан, побожний християнин, відчуває гріховне бажання проти християнського вчення до Джо Вона.",
+    "cover": "original_sin.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["drama", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "23 хв",
+    "cast": ["О Донг Джун", "Хан Хюн Джун"],
+    "director": "Чхве Су Мін",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/296" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lipstick",
+    "title": "Помада",
+    "enTitle": "Lipstick / 립스틱",
+    "description": "Приниження та відсутність соціального визнання можуть призвести до найтрагічніших рішень.",
+    "cover": "lipstick.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2019,
+    "genres": ["drama", "psychology"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "12 хв",
+    "cast": ["Ю Джун", "Чо Ха Юн"],
+    "director": "Джин Еон Чунг",
+    "network": "GMMTV",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/154" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "just_friends",
+    "title": "Просто друзі?",
+    "enTitle": "Just Friends? / 친구사이?",
+    "description": "Мін Су перебуває у відпустці з армії та відвідує свого хлопця Сок І.",
+    "cover": "just_friends.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2009,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.2",
+    "duration": "29 хв",
+    "cast": ["Йон Уджін", "Лі Джехун"],
+    "director": "Кім Джо Кван Су",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/923" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "please_tell_me_so",
+    "title": "Скажи, будь ласка",
+    "enTitle": "Please Tell Me So / 말해줘",
+    "description": "Це – мій пан Ідеал! Я закохався в нього з першого погляду, і хочу сказати йому.",
+    "cover": "please_tell_me_so.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["drama", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "6.7",
+    "duration": "9 хв",
+    "cast": ["Хан Хьон Джун", "Ан Чон Сон"],
+    "director": "Чан Йон Сон",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/302" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "secret_roommate",
+    "title": "Таємний співмешканець",
+    "enTitle": "Secret Roommate / 수상한 동거",
+    "description": "Молодший брат, Ян Мін, раптово приїздить в квартиру, де живуть Те Хо і Ян Хун.",
+    "cover": "secret_roommate.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2020,
+    "genres": ["romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "6.9",
+    "duration": "20 хв",
+    "cast": ["Хан Дже Хон", "Кім Хьон Джун"],
+    "director": "Кан У",
+    "network": "TVING",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/409" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hold_me",
+    "title": "Тримай мене за руку",
+    "enTitle": "Hold Me / 손잡아 줘",
+    "description": "День випускного в середній школі Йон Хо і Дже Міна. Йон Хо біжить, тримаючи Дже Міна за руку.",
+    "cover": "hold_me.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2021,
+    "genres": ["romance", "youth"],
+    "episodesCount": 1,
+    "imdbRating": "7.7",
+    "duration": "7 хв",
+    "cast": ["Чон Йон Ін", "Хон Мін Гі"],
+    "director": "Мун Джі Хьон",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/422" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heavy_snow",
+    "title": "Хурделиця",
+    "enTitle": "Heavy Snow / 폭설",
+    "description": "Зворушлива історія про дружбу та зародження кохання між двома дівчатами-підлітками.",
+    "cover": "heavy_snow.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2023,
+    "genres": ["romance", "youth", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "6.7",
+    "duration": "1 год. 27 хв.",
+    "cast": ["Хан Сохі", "Хан Хеін"],
+    "director": "Юн Су Ік",
+    "network": "LINT FILM",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2246" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "some_more",
+    "title": "Ще трохи",
+    "enTitle": "Some More / 썸모어",
+    "description": "Втомившись від багаторазового життя та роботи, Дон Су бере три дні відпустки.",
+    "cover": "some_more.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2018,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.5",
+    "duration": "27 хв",
+    "cast": ["Пак Чанун", "Кім Джунбом"],
+    "director": "Кан Ву",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/730" }
+      ]
+      }
+    ]
+  },
+  {
+    "id": "the_time_of_fever",
+    "title": "Я відчуваю твоє тепло кінчиками пальців",
+    "enTitle": "The Time of Fever / 내 손끝에 너의 온도가 닿을 때",
+    "description": "Хоте та Донхі з дитинства росли, як брати. Донхі, якого вигнали з дому, почав жити сам у порожньому будинку Хоте.",
+    "cover": "the_time_of_fever.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2024,
+    "genres": ["romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.5",
+    "duration": "1 год. 41 хв.",
+    "cast": ["Вон Темін", "Лім Хюнте"],
+    "director": "Ян Гюнхі",
+    "network": "IMX",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1354" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "man_suang",
+    "title": "Ман Суан",
+    "enTitle": "Man Suang / แมนสรวง",
+    "description": "Кхем і Ван, двоє молодих людей з Чачоенґсао, взялися розслідувати таємницю «Ман Суан», найрозкішнішого і найзагадковішого розважального клубу в Сіамі. За завісою люди збираються, щоб планувати та вести політичні переговори наприкінці правління короля Рама ІІІ.",
+    "cover": "man_suang.png",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2023,
+    "genres": ["thriller", "historical", "mystery", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "7.9",
+    "duration": "2 год. 4 хв.",
+    "cast": ["Апо Наттавін", "Майл Пхакпхум", "Бас Асавапатр"],
+    "director": "Понд Крісда",
+    "network": "Be On Cloud",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/943" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "half",
+    "title": "Пів життя",
+    "enTitle": "Half Life / ครึ่งชีวิต (ทั้งจิตใจ)",
+    "description": "Знати пів життя, та відчуй усім серцем, запам'ятай назавжди. Адаптація пісні Half Life – New Jiew.",
+    "cover": "half.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2021,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.6",
+    "duration": "13 хв.",
+    "cast": ["Ерт Пірапат Ваттанасецірі", "Мікс Сахапап Вонратч"],
+    "director": "Кім Кьон Хьон",
+    "network": "Studio Wabi Sabi",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/336" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "romantic_station",
+    "title": "Романтична станція",
+    "enTitle": "Romantic Station / สถานีโรแมนติก",
+    "description": "Історія залізничного вокзалу, яку описують більшість режисерів, є однією з любовних сцен фільму, над яким працює Джим. Він іде на станцію, щоб довести: «Тут нема романтики!», поки він не зустрічає Тоя і це змушує його передумати...",
+    "cover": "romantic_station.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2020,
+    "genres": ["romance", "routine"],
+    "episodesCount": 1,
+    "imdbRating": "7.2",
+    "duration": "7 хв.",
+    "cast": ["Ом Пасавіт Севтріттікун", "Джеймін Тірачет Яннават"],
+    "director": "Хон Хе Су",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/508" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "happy_to_have_you_here",
+    "title": "Щаслива бути з тобою",
+    "enTitle": "Happy to Have You Here / อยากนอนห้องเธอ",
+    "description": "В квартиру в яку тільки-но переїхала Нас, щовечора приходить її подруга переночувати. Попросивши один раз про допомогу під час переїзду, їхня дружба переростає в різні почуття.",
+    "cover": "happy_to_have_you_here.jpg",
+    "status": "completed",
+    "country": "thailand",
+    "year": 2021,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.3",
+    "duration": "9 хв.",
+    "cast": ["Лі Тхе Ву", "Мун Кан Хьок"],
+    "director": "Кім Ин Гьон",
+    "network": "STRONGBERRY",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/693" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blue",
+    "title": "Блакить",
+    "enTitle": "Blue / ブルー",
+    "description": "Тиха та заглиблена в себе Каяко регулярно обідає на даху з трьома своїми подругами. Одного разу вона запрошує новеньку в класі, Ендо Масамі, приєднатися. Їхні почуття переростають у щось більше ніж дружба, і вона розповідає про своє кохання Ендо на самотньому пляжі.",
+    "cover": "blue.png",
+    "status": "completed",
+    "country": "japan",
+    "year": 2003,
+    "genres": ["drama", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "6.5",
+    "duration": "1 год. 56 хв.",
+    "cast": ["Мікако Іщікава", "Манамі Коніші", "Асамі Імаджуку"],
+    "director": "Хіроші Андо",
+    "network": "Idol Factory",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/724" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cherry_magic_film",
+    "title": "Вишнева магія! Якщо в тридцять років ти будеш цнотливим, то станеш чарівником?!",
+    "enTitle": "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!: The Movie / チェリまほ THE MOVIE ～30歳まで童貞だと魔法使いになれるらしい～",
+    "description": "Адачі – нудний офісний працівник, якому виповнилося 30 незайманим і який вміє читати думки через дотик. Куросава – його популярний і успішний колега. Їхні стосунки на відстані через переведення Адачі до Нагасакі змушують їх переосмислити своє майбутнє.",
+    "cover": "cherry_magic_film.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["fantasy", "romance", "routine"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "1 год 44 хв",
+    "cast": ["Акасо Ейдзі", "Кейта Мачіда", "Ютаро", "Асака Кодай"],
+    "director": "Казама Хірокі",
+    "network": "TV Tokyo",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/407" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low",
+    "title": "Злети і падіння",
+    "enTitle": "HiGH&LOW The Movie / ハイアンドロー・ザ・ムービー",
+    "description": "Район СВОРД об’єднує в собі п’ять банд. Історія починається з повернення людини-легенди Кохаку, лідера команди Муґен. Об’єднавшись із Лі, він веде в атаку команди Майті Ворійос та Даут, руйнуючи повсякденність району.",
+    "cover": "high_low.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2016,
+    "genres": ["action", "crime"],
+    "episodesCount": 1,
+    "imdbRating": "8.3",
+    "duration": "2 год. 10 хв.",
+    "cast": ["Аояґі Шьо", "Судзукі Нобуюкі", "Такахіро", "Тосака Хіромі", "Курокі Кейджі", "Ямада Юкі"],
+    "director": "Кубо Шіґеакі",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1438" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low_the_red_rain",
+    "title": "Злети і падіння: Червоний дощ",
+    "enTitle": "HiGH&LOW The Red Rain / ハイアンドロー・ザ・レッドレイン",
+    "description": "Брати Амамія, Масакі та Хірото продовжують шукати свого старшого брата — Такеру, який зник рік тому. У річницю смерті батьків вони зустрічають дівчину, яка має підказку про його місцезнаходження.",
+    "cover": "high_low_the_red_rain.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2016,
+    "genres": ["action", "mystery"],
+    "episodesCount": 1,
+    "imdbRating": "8.1",
+    "duration": "1 год. 50 хв.",
+    "cast": ["Такахіро", "Тосака Хіромі", "Сайто Такумі", "Йошімото Мію", "Ішігуро Кен"],
+    "director": "Ямаґучі Юдай",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1524" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low_end_of_sky",
+    "title": "Злети і падіння: Кінець неба",
+    "enTitle": "HiGH&LOW The Movie 2: End of Sky / ハイアンドロー・ザ・ムービー・ツー / エンド・オブ・スカイ",
+    "description": "Учасники СВОРД перемагають Майті Ворійос, проте з'являються найжорстокіші нові банди: Даут на чолі з Ранмару та Тюремна банда на чолі з Джеccі, які намагаються домінувати на території.",
+    "cover": "high_low_end_of_sky.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2017,
+    "genres": ["action", "crime", "youth"],
+    "episodesCount": 1,
+    "imdbRating": "8.4",
+    "duration": "2 год. 4 хв.",
+    "cast": ["Івата Таканорі", "Курокі Кейджі", "Накамура Аой", "Наото", "Акіра", "Аояґі Шьо"],
+    "director": "Накакукі Цуйоші, Кубо Шіґеакі",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "3 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1675" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low_final_mission",
+    "title": "Злети і падіння 3: Фінальна місія",
+    "enTitle": "HiGH&LOW The Movie 3: Final Mission / ハイアンドロー・ザ・ムービー・スリー / ファイナルミッション",
+    "description": "Щоб приховати корупційні дії з боку уряду, Кур'ю Ґруп планує зруйнувати місто та побудувати казино. Щоб завадити їм, члени СВОРД приймають рішучі дії.",
+    "cover": "high_low_final_mission.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2017,
+    "genres": ["action", "crime", "youth"],
+    "episodesCount": 1,
+    "imdbRating": "8.4",
+    "duration": "1 год. 58 хв.",
+    "cast": ["Івата Таканорі", "Акіра", "Такахіро", "Тосака Хіромі", "Аояґі Шьо", "Курокі Кейджі", "Ямада Юкі", "Кубота Масатака", "Хаяші Кенто"],
+    "director": "Накакукі Цуйоші, Кубо Шіґеакі",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "4 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1837" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low_the_worst",
+    "title": "Злети і падіння: Найгірші",
+    "enTitle": "HiGH&LOW The Worst / ハイアンドロー・ザ・ワースト",
+    "description": "Поки СВОРД веде війну з якудзою, учні Старшої школи Онії розриваються між внутрішньошкільними сутичками, конфліктом з академією Хосен, а також намагаються знищити банду наркоторговців Кідру.",
+    "cover": "high_low_the_worst.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2019,
+    "genres": ["action", "comedy", "youth", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.4",
+    "duration": "2 год. 5 хв.",
+    "cast": ["Івата Таканорі", "Акіра", "Такахіро", "Тосака Хіромі", "Аояґі Шьо", "Курокі Кейджі", "Ямада Юкі", "Кубота Масатака", "Хаяші Кенто"],
+    "director": "Кубо Шіґеакі",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "5 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2176" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "high_low_the_worst_x",
+    "title": "Злети і падіння: Найгірші Х",
+    "enTitle": "HiGH&LOW The Worst X / ハイアンドロー・ザ・ワースト・クロス",
+    "description": "Історія розгортається навколо протистояння двох шкіл району СВОРД – Старшої школи Онія та Старшої технічної школи Сеномон, яка уклала тристоронній союз задля розширення своєї влади.",
+    "cover": "high_low_the_worst_x.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["action", "comedy", "youth", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.3",
+    "duration": "1 год. 59 хв.",
+    "cast": ["Кавамура Казума", "Накамото Юта", "Йошіно Хокуто", "Міяма Рьокі", "Маедо Ґокі"],
+    "director": "Хіранума Норіхіса",
+    "network": "LDH Japan",
+    "relatedSeasons": [
+      { "title": "1 Частина", "id": "high_low" },
+      { "title": "2 Частина", "id": "high_low_the_red_rain" },
+      { "title": "3 Частина", "id": "high_low_end_of_sky" },
+      { "title": "4 Частина", "id": "high_low_final_mission" },
+      { "title": "5 Частина", "id": "high_low_the_worst" },
+      { "title": "6 Частина", "id": "high_low_the_worst_x" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "6 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2798" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "all_about_lily_chou_chou",
+    "title": "Все про Лілі Чоу-Чоу",
+    "enTitle": "All About Lily Chou-Chou / リリイ・シュシュのすべて",
+    "description": "Життя для групи старшокласників, які ростуть у поглиненій японській поп/кіберкультурі – непросте. Вони шукають притулку, навіть порятунку, через рятівницю поп-зірки Лілі Чоу-Чоу, обіймаючи її сумні, мрійливі пісні. Їхні життя неминуче досягають кульмінації у фатальному зіткненні реальної та віртуальної ідентичностей.",
+    "cover": "all_about_lily_chou_chou.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2001,
+    "genres": ["music", "psychology", "youth"],
+    "episodesCount": 1,
+    "imdbRating": "7.5",
+    "duration": "2 год 26 хв.",
+    "cast": ["Ічіхара Хаято", "Ошінарі Шуго", "Інаморі Ідзумі"],
+    "director": "Шунджі Івай",
+    "network": "Rockwell Eyes",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/292" }
+      ]
+      }
+    ]
+  },
+  {
+    "id": "his",
+    "title": "Його: Я не думав, що закохаюся",
+    "enTitle": "His: I Didn't Think I Would Fall in Love",
+    "description": "Шун і Наґіса вперше зустрічаються і закохуються в перший рік навчання в середній школі. Поки Шун закінчує університет, Наґіса каже йому, що не бачить для них майбутнього. Незважаючи на сильні почуття Шуна, вони розходяться. Через роки Шун тепер є власником магазину, живе один у сільській місцевості. Неочікувано приходить Наґіса зі своєю шестирічною донькою Сорою. Проводячи час разом, Шун розуміє, що все ще відчуває почуття до Наґіси. Чи зможе Наґіса примиритися зі своїми почуттями до Шуна, які були там увесь час?",
+    "cover": "his.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2020,
+    "genres": ["life", "romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.0",
+    "duration": "2 год. 7 хв.",
+    "cast": ["Міядзава Хіо", "Фудзівара Кісецу", "Мацумото Вакана", "Мацумото Хонока"],
+    "director": "Імаідзумі Рікія",
+    "network": "Dragonfly Entertainment",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/783" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "restart_after_come_back_home",
+    "title": "Почати знову після повернення додому",
+    "enTitle": "Restart After Come Back Home / リスタートはただいまのあとで",
+    "description": "Міцуомі Козука звільняється з роботи в Токіо та вперше за 10 років повертається до рідного міста. Там хлопець зустрічає Ямато Кумаї, прийомного сина дідуся, який керує сусідньою фермою. Ямато вмовляє Міцуомі допомагати на фермі, і їхні стосунки починають змінювати їх обох.",
+    "cover": "restart_after_come_back_home.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2020,
+    "genres": ["romance", "slice of life", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "8.0",
+    "duration": "1 год. 39 хв.",
+    "cast": ["Фурукава Юкі", "Рюсе Рьо", "Сано Гаку", "Муракава Ері"],
+    "director": "Іноа Рюта",
+    "network": "Canter",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1040" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heavens_x_candy",
+    "title": "Небеса та цукерки",
+    "enTitle": "Heavens x Candy / ヘヴンズ×キャンディ",
+    "description": "Невинна історія кохання сором'язливого хлопця Хібікі Такато, скромного 2D-отаку, який закохується в відомого AV-актора Амемію Тову після того, як Това допомагає йому розплатитися в тематичному кафе.",
+    "cover": "heavens_x_candy.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2024,
+    "genres": ["romance", "drama", "adult"],
+    "episodesCount": 1,
+    "imdbRating": "6.5",
+    "duration": "1 год. 10 хв.",
+    "cast": ["Мукай Ріку", "Юки Шун", "Мацумото Такуя", "Такемото Таіші", "Шінра Манзо"],
+    "director": "Яманучі Дайсуке",
+    "network": "TV Tokyo",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1505" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sing_in_love",
+    "title": "Співай, поки не закохаєшся до нестями",
+    "enTitle": "Sing in Love / 恋い焦れ歌え",
+    "description": "Хітоші - тимчасовий вчитель початкової школи, травматична подія якого занурює в моторошну темряву. Три місяці потому таємничий чоловік на імʼя Кай провокує його спогади, читаючи реп. Конфлікти між чоловіками, які зазнали глибоких травм, надихають на зцілення.",
+    "cover": "sing_in_love.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2022,
+    "genres": ["music", "psychology", "romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "6.8",
+    "duration": "1 год. 57 хв.",
+    "cast": ["Інаба Ю", "Ендо Кеншін", "Сато Ханамі", "Такахаші Ріон"],
+    "director": "Масаюкі Окунісі",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/870" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "does_the_flower_bloom",
+    "title": "Чи розцвітає квітка?",
+    "enTitle": "Does the Flower Bloom? / 花は咲くか",
+    "description": "Сакураі Казуакі – 37-річний чоловік з рекламного агентства, який під час зйомок зустрічає 19-річного студента факультету мистецтв Йоічі Мінагаву. Поступово зацікавленість одне в одному переростає в почуття.",
+    "cover": "does_the_flower_bloom.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2018,
+    "genres": ["romance", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "1 год 28 хв.",
+    "cast": ["Ватанабе Цуругі", "Амано Хіронарі"],
+    "director": "Каорі Танімото",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/506" }
+      ]
+      }
+    ]
+  },
+  {
+    "id": "silhouette_of_your_voice",
+    "title": "Я чую сонячні спалахи: Коли твій голос сягає мене",
+    "enTitle": "I Hear the Sunspot / ひだまりが聴こえる",
+    "description": "Суґіхара Кохей — студент університету, якому важко вписатися в оточення через втрату слуху. Він зустрічає свого одногрупника Саґаву Таічі, який має яскраву особистість. Слова Таічі рятують Кохея, і між ними зароджуються глибокі почуття.",
+    "cover": "silhouette_of_your_voice.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2017,
+    "genres": ["slice of life", "youth", "drama"],
+    "episodesCount": 1,
+    "imdbRating": "7.7",
+    "duration": "1 год. 12 хв.",
+    "cast": ["Тавада Хідея", "Онодера Акіра", "Міцуя Рьо", "Ямазакі Амі"],
+    "director": "Камідже Дайсуке",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1576" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summerdaze",
+    "title": "Літнє заціпеніння",
+    "enTitle": "Summerdaze",
+    "description": "Любов може збивати з пантелику, але вона ніколи не помиляється. Перший фешн-фільм про подорож островом Чеджу в пошуках себе та, зрештою, кохання.",
+    "cover": "summerdaze.jpg",
+    "status": "completed",
+    "country": "singapore",
+    "year": 2020,
+    "genres": ["romance", "fashion film"],
+    "episodesCount": 1,
+    "imdbRating": "6.7",
+    "duration": "3 хв.",
+    "cast": ["Альфред Сан", "Давід Юн Хао"],
+    "director": "Мартін Хонг",
+    "network": "Telescope Studios",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "summerdaze" },
+      { "title": "2 Сезон", "id": "summerdaze_christmas_together" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/475" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summerdaze_christmas_together",
+    "title": "Літнє заціпеніння: Різдво разом",
+    "enTitle": "Summerdaze: Christmas Together",
+    "description": "Популярний кумир Еван змушений знятися у квір-фільмі, де знайомиться з актором-початківцем Каєм. Напередодні Різдва на острові Чеджу хлопці залишаються вдома самі й потрапляють у халепу через з'їдений торт, який тепер треба терміново замінити.",
+    "cover": "summerdaze_christmas_together.jpg",
+    "status": "completed",
+    "country": "singapore",
+    "year": 2022,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 1,
+    "imdbRating": "6.8",
+    "duration": "12 хв.",
+    "cast": ["Альфред Сан", "Давід Юн Хао"],
+    "director": "Джеремі Кіран, Мінхуа Чжан",
+    "network": "Telescope Studios",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "summerdaze" },
+      { "title": "2 Сезон", "id": "summerdaze_christmas_together" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Частина",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/702" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pure_vanilla",
+    "title": "Чиста ваніль",
+    "enTitle": "Pure Vanilla",
+    "description": "Чарлі таємно закоханий у Габріеля, але він не вміє володіти своїми емоціями. Іскри летять, коли ці двоє проводять ніч, створюючи ідеальний рецепт для спеціального телевізійного випуску до Дня святого Валентина.",
+    "cover": "pure_vanilla.jpg",
+    "status": "completed",
+    "country": "singapore",
+    "year": 2023,
+    "genres": ["romance"],
+    "episodesCount": 1,
+    "imdbRating": "7.0",
+    "duration": "9 хв.",
+    "cast": ["Со Ден Зан", "Брейвен Єо"],
+    "director": "Алекс Ноулз",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/462" }
+      ]
+      }
+    ]
+  },
+  {
+    "id": "summer_yuki",
+    "title": "Саммер і Юкі",
+    "enTitle": "Summer and Yuki / 夏天和雪",
+    "description": "Саммер і Юкі насолоджуються своїм коханням перший рік у старшій школі, поки Саммер не починає дорослішати і приділяти менше уваги Юкі. В день випускного Юкі прощається з Саммер та тікає…",
+    "cover": "summer_yuki.jpg",
+    "status": "completed",
+    "country": "taiwan",
+    "year": 2022,
+    "genres": ["romance", "life", "youth"],
+    "episodesCount": 1,
+    "imdbRating": "6.8",
+    "duration": "18 хв.",
+    "cast": ["Чень Інь", "Лю Пюнсюань"],
+    "director": "Фан Бошен",
+    "network": "GagaOOLala",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/669" }
+      ]
+      }
+    ]
+  },
+  {
+    "id": "rookie",
+    "title": "Новачок",
+    "enTitle": "Rookie",
+    "description": "У свій перший день у католицькій середній школі для дівчат Ейс Асуншон помічає тренер Джулс і запрошує її взяти участь у пробних змаганнях з волейболу. Все змінюється, коли Ейс приєднується до команди...",
+    "cover": "rookie.jpg",
+    "status": "completed",
+    "country": "philippines",
+    "year": 2023,
+    "genres": ["romance", "sports"],
+    "episodesCount": 1,
+    "imdbRating": "7.8",
+    "duration": "1 год. 34 хв.",
+    "cast": ["Пат Тінвуй", "Ая Фернандез", "Агот Ісідро"],
+    "director": "Саманта Лі",
+    "network": "Hulu",
+    "blocks": [
+      {
+        "blockTitle": "Фільм",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/1179" }
+      ]
+      }
+    ]
+  }, 
   {
     "id": "girl_rules",
     "title": "Дівочі правила",
@@ -6439,7 +7603,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2806" },
-          { "number": 2, "tg_id": "volyacore/2810" }
+          { "number": 2, "tg_id": "volyacore/2810" },
+          { "number": 3, "tg_id": "volyacore/2829"}
         ]
       }
     ]
@@ -6644,7 +7809,8 @@
           { "number": 6, "tg_id": "volyacore/2766" },
           { "number": 7, "tg_id": "volyacore/2777" },
           { "number": 8, "tg_id": "volyacore/2788" },
-          { "number": 9, "tg_id": "volyacore/2823" }
+          { "number": 9, "tg_id": "volyacore/2823" },
+          { "number": 10, "tg_id": "volyacore/2832"}
         ]
       }
     ]
@@ -6824,6 +7990,93 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2827" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "contrast",
+    "title": "Контраст",
+    "enTitle": "Contrast / コントラスト",
+    "description": "Аояма Каната – популярний учень, що зберігає емоційну дистанцію, а Сенкава Акіра – успішний у навчанні самітник. Вони випадково зустрічаються на сходах до даху школи. У прихованому куточку, де шкільний галас здається далеким, хлопці розділяють один навушник, а їхні серцебиття починають битися в унісон.",
+    "cover": "contrast.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2026,
+    "genres": ["romance", "youth"],
+    "episodesCount": 8,
+    "imdbRating": "",
+    "duration": "25 хв.",
+    "cast": ["Іучі Харухі", "Акуне Харусе", "Томісато Нао", "Хаято"],
+    "director": "Томіта Мікі",
+    "network": "GagaOOLala",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "contrast" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/2822" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "love_sea_the_home_for_lovers",
+    "title": "Море кохання: Там де живе любов",
+    "enTitle": "Love Sea: The Home for Lovers / ～愛の居場所～",
+    "description": "Популярний автор романтичних історій Ракумото Аі неохоче відвідує острів, аби набратися натхнення для своєї нової роботи. Ним починає опікуватися місцевий гід Муто Кайшін. Хоч чоловіки мають протилежні цінності та постійно сперечаються, вони все більше тягнуться один до одного.",
+    "cover": "love_sea_the_home_for_lovers.jpg",
+    "status": "completed",
+    "country": "japan",
+    "year": 2025,
+    "genres": ["romance"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "30 хв.",
+    "cast": ["Кунігамі Масато", "Нішіме Шун", "Хабу Мізухо", "Кавадзу Аска"],
+    "director": "Аябе Шінья",
+    "network": "GMM 25",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_sea_the_home_for_lovers" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/2405" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/2430" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "semantic_error",
+    "title": "Семантична помилка",
+    "enTitle": "Semantic Error / 시맨틱 에러",
+    "description": "Студент-програміст Чо Сану видаляє імена прогульщиків із групового проєкту. Через це зірковий дизайнер Чан Джейон втрачає можливість випуститися. Прагнучи помсти, Джейон знаходить Сану, але коли вони змушені працювати разом, між ними виникає несподіване тяжіння.",
+    "cover": "semantic_error.jpg",
+    "status": "completed",
+    "country": "korea",
+    "year": 2022,
+    "genres": ["comedy", "romance", "slice of life", "youth"],
+    "episodesCount": 8,
+    "imdbRating": "",
+    "duration": "25 хв.",
+    "cast": ["Пак Джечан", "Пак Сохам", "Сон Джіо", "Кім Ноджін"],
+    "director": "Кім Соджун",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "semantic_error" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "https://t.me/volyacore/2750" },
+          { "number": 2, "tg_id": "https://t.me/volyacore/2767" },
+          { "number": 3, "tg_id": "https://t.me/volyacore/2779" }
         ]
       }
     ]
