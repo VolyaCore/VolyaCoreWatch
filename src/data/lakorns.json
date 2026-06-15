@@ -6139,12 +6139,12 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/583" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/589" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/598" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/606" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/617" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/620" }
+          { "number": 1, "tg_id": "volyacore/583" },
+          { "number": 2, "tg_id": "volyacore/589" },
+          { "number": 3, "tg_id": "volyacore/598" },
+          { "number": 4, "tg_id": "volyacore/606" },
+          { "number": 5, "tg_id": "volyacore/617" },
+          { "number": 6, "tg_id": "volyacore/620" }
           
         ]
       }
@@ -6174,16 +6174,16 @@
       {
         "blockTitle": "2 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/627" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/638" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/653" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/659" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/681" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/694" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/717" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/727" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/784" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/796" }
+          { "number": 1, "tg_id": "volyacore/627" },
+          { "number": 2, "tg_id": "volyacore/638" },
+          { "number": 3, "tg_id": "volyacore/653" },
+          { "number": 4, "tg_id": "volyacore/659" },
+          { "number": 5, "tg_id": "volyacore/681" },
+          { "number": 6, "tg_id": "volyacore/694" },
+          { "number": 7, "tg_id": "volyacore/717" },
+          { "number": 8, "tg_id": "volyacore/727" },
+          { "number": 9, "tg_id": "volyacore/784" },
+          { "number": 10, "tg_id": "volyacore/796" }
         ]
       }
     ]
@@ -6211,12 +6211,12 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1888" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1905" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1916" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1941" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1959" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1970" }
+          { "number": 1, "tg_id": "volyacore/1888" },
+          { "number": 2, "tg_id": "volyacore/1905" },
+          { "number": 3, "tg_id": "volyacore/1916" },
+          { "number": 4, "tg_id": "volyacore/1941" },
+          { "number": 5, "tg_id": "volyacore/1959" },
+          { "number": 6, "tg_id": "volyacore/1970" }
         ]
       }
     ]
@@ -6244,16 +6244,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1875" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1883" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1893" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1902" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1911" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1919" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1923" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/1927" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/1938" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/1953" }
+          { "number": 1, "tg_id": "volyacore/1875" },
+          { "number": 2, "tg_id": "volyacore/1883" },
+          { "number": 3, "tg_id": "volyacore/1893" },
+          { "number": 4, "tg_id": "volyacore/1902" },
+          { "number": 5, "tg_id": "volyacore/1911" },
+          { "number": 6, "tg_id": "volyacore/1919" },
+          { "number": 7, "tg_id": "volyacore/1923" },
+          { "number": 8, "tg_id": "volyacore/1927" },
+          { "number": 9, "tg_id": "volyacore/1938" },
+          { "number": 10, "tg_id": "volyacore/1953" }
         ]
       }
     ]
@@ -6281,13 +6281,13 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/1400" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/1423" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/1442" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/1476" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/1499" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/1526" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/1574" }
+          { "number": 1, "tg_id": "volyacore/1400" },
+          { "number": 2, "tg_id": "volyacore/1423" },
+          { "number": 3, "tg_id": "volyacore/1442" },
+          { "number": 4, "tg_id": "volyacore/1476" },
+          { "number": 5, "tg_id": "volyacore/1499" },
+          { "number": 6, "tg_id": "volyacore/1526" },
+          { "number": 7, "tg_id": "volyacore/1574" }
         ]
       }
     ]
@@ -6315,17 +6315,17 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/749" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/770" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/788" },
-          { "number": 4, "tg_id": "https://t.me/volyacore/802" },
-          { "number": 5, "tg_id": "https://t.me/volyacore/808" },
-          { "number": 6, "tg_id": "https://t.me/volyacore/811" },
-          { "number": 7, "tg_id": "https://t.me/volyacore/824" },
-          { "number": 8, "tg_id": "https://t.me/volyacore/833" },
-          { "number": 9, "tg_id": "https://t.me/volyacore/843" },
-          { "number": 10, "tg_id": "https://t.me/volyacore/853" },
-          { "number": 11, "tg_id": "https://t.me/volyacore/866" }
+          { "number": 1, "tg_id": "volyacore/749" },
+          { "number": 2, "tg_id": "volyacore/770" },
+          { "number": 3, "tg_id": "volyacore/788" },
+          { "number": 4, "tg_id": "volyacore/802" },
+          { "number": 5, "tg_id": "volyacore/808" },
+          { "number": 6, "tg_id": "volyacore/811" },
+          { "number": 7, "tg_id": "volyacore/824" },
+          { "number": 8, "tg_id": "volyacore/833" },
+          { "number": 9, "tg_id": "volyacore/843" },
+          { "number": 10, "tg_id": "volyacore/853" },
+          { "number": 11, "tg_id": "volyacore/866" }
         ]
   
       },
