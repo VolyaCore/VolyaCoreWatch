@@ -7,7 +7,6 @@ const latestLakorns = lakornsData.slice(0, 24);
 ---
 
 <MainLayout title="VolyaCore">
-  
   <section class="hero-carousel-section">
     <div class="carousel-container">
       <div class="carousel-track" id="carousel-track">
@@ -15,7 +14,10 @@ const latestLakorns = lakornsData.slice(0, 24);
           lakornsData
             .filter((lakorn) => lakorn.status.toLowerCase() === "ongoing")
             .map((lakorn) => (
-              <div class="carousel-slide-wrapper carousel-active" data-id={lakorn.id}>
+              <div
+                class="carousel-slide-wrapper carousel-active"
+                data-id={lakorn.id}
+              >
                 <MovieCard
                   id={lakorn.id}
                   title={lakorn.title}
@@ -32,10 +34,18 @@ const latestLakorns = lakornsData.slice(0, 24);
             ))
         }
       </div>
-      
-      <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Попередній">❮</button>
-      <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Наступний">❯</button>
-      
+
+      <button
+        class="carousel-nav-btn prev-btn"
+        id="carousel-prev"
+        aria-label="Попередній">❮</button
+      >
+      <button
+        class="carousel-nav-btn next-btn"
+        id="carousel-next"
+        aria-label="Наступний">❯</button
+      >
+
       <div class="carousel-dots" id="carousel-dots"></div>
     </div>
   </section>
@@ -59,6 +69,7 @@ const latestLakorns = lakornsData.slice(0, 24);
       <label for="filter-genre">Жанр</label>
       <select id="filter-genre">
         <option value="all">Усі жанри</option>
+        <option value="film">Фільм</option>
         <option value="romance">Романтика</option>
         <option value="drama">Драма</option>
         <option value="comedy">Комедія</option>
@@ -88,7 +99,7 @@ const latestLakorns = lakornsData.slice(0, 24);
         <option value="sci-fi">Наукова Фантастика</option>
       </select>
     </div>
-    
+
     <div class="filter-group">
       <label for="filter-year">Рік</label>
       <select id="filter-year">
@@ -111,8 +122,6 @@ const latestLakorns = lakornsData.slice(0, 24);
       </select>
     </div>
 
-    
-
     <div class="filter-group">
       <label for="filter-sort">Сортування</label>
       <select id="filter-sort">
@@ -121,9 +130,16 @@ const latestLakorns = lakornsData.slice(0, 24);
         <option value="status-completed">Завершені спочатку</option>
         <option value="rating-desc">Рейтинг від найбільшого</option>
         <option value="rating-asc">Рейтинг від найменшого</option>
-    
-        <option value="network-az">Студія (A → Z)</option>
-        <option value="network-za">Студія (Z → A)</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-category">Категорія</label>
+      <select id="filter-category">
+        <option value="all">Усі категорії</option>
+        <option value="bl">BL</option>
+        <option value="gl">GL</option>
+        <option value="інше">інше</option>
       </select>
     </div>
   </section>
@@ -134,17 +150,17 @@ const latestLakorns = lakornsData.slice(0, 24);
     <div class="movies-grid catalog-fixed-grid" id="catalog-grid">
       {
         latestLakorns.map((lakorn) => (
-          <div 
-            class="catalog-card-wrapper" 
+          <div
+            class="catalog-card-wrapper"
             data-id={lakorn.id}
             data-title={lakorn.title.toLowerCase()}
             data-en-title={lakorn.enTitle ? lakorn.enTitle.toLowerCase() : ""}
             data-status={lakorn.status.toLowerCase()}
             data-country={lakorn.country}
+            data-category={lakorn.categories ? lakorn.categories : ""}
             data-year={lakorn.year}
             data-genres={lakorn.genres.join(",")}
             data-rating={lakorn.imdbRating ?? ""}
-            // data-network={lakorn.network ? lakorn.network.toLowerCase() : ""}
             data-network={(lakorn.network || "").toLowerCase()}
           >
             <MovieCard
@@ -169,17 +185,17 @@ const latestLakorns = lakornsData.slice(0, 24);
     <div id="hidden-full-database" style="display: none;">
       {
         lakornsData.map((lakorn) => (
-          <div 
-            class="database-card-source" 
+          <div
+            class="database-card-source"
             data-id={lakorn.id}
             data-title={lakorn.title.toLowerCase()}
             data-en-title={lakorn.enTitle ? lakorn.enTitle.toLowerCase() : ""}
             data-status={lakorn.status.toLowerCase()}
             data-country={lakorn.country}
+            data-category={lakorn.categories ? lakorn.categories : ""}
             data-year={lakorn.year}
             data-genres={lakorn.genres.join(",")}
             data-rating={lakorn.imdbRating ?? ""}
-            // data-network={lakorn.network ? lakorn.network.toLowerCase() : ""}
             data-network={(lakorn.network || "").toLowerCase()}
           >
             <MovieCard
@@ -203,491 +219,507 @@ const latestLakorns = lakornsData.slice(0, 24);
       <p>🔍 На жаль, нічого не знайдено за такими критеріями фільтрації.</p>
     </div>
   </section>
-</MainLayout>
 
-<script>
-  function initPageFeatures() {
-    const catalogGrid = document.getElementById("catalog-grid");
-    const dbSourceContainer = document.getElementById("hidden-full-database");
-    const paginationControls = document.getElementById("pagination-controls");
-    
-    if (!catalogGrid || !dbSourceContainer) return;
+  <script>
+    function initPageFeatures() {
+      const catalogGrid = document.getElementById("catalog-grid");
+      const dbSourceContainer = document.getElementById("hidden-full-database");
+      const paginationControls = document.getElementById("pagination-controls");
 
-    const ITEMS_PER_PAGE = 24;
-    let currentPage = 1;
-    let currentFilteredCards: Element[] = [];
+      if (!catalogGrid || !dbSourceContainer) return;
 
-    function applyImageFix(container: HTMLElement) {
-      const images = container.querySelectorAll('img');
-      images.forEach(img => {
-        img.style.setProperty('width', '100%', 'important');
-        img.style.setProperty('height', 'auto', 'important');
-        img.style.setProperty('aspect-ratio', '2 / 3', 'important');
-        img.style.setProperty('object-fit', 'cover', 'important');
-        img.style.setProperty('display', 'block', 'important');
-      });
-    }
+      const ITEMS_PER_PAGE = 24;
+      let currentPage = 1;
+      let currentFilteredCards: Element[] = [];
 
-    applyImageFix(catalogGrid);
-    applyImageFix(dbSourceContainer);
-
-    const allSourceCards = Array.from(dbSourceContainer.querySelectorAll(".database-card-source"));
-
-    const searchInput = document.querySelector('input[type="text"], #global-search') as HTMLInputElement;
-    const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
-    const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement;
-    const yearSelect = document.getElementById("filter-year") as HTMLSelectElement;
-    const sortSelect = document.getElementById("filter-sort") as HTMLSelectElement;
-    const noResults = document.getElementById("no-results");
-
-    function displayCurrentPage() {
-      if (!catalogGrid) return;
-      catalogGrid.innerHTML = "";
-
-      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-      const endIndex = startIndex + ITEMS_PER_PAGE;
-      const pageCards = currentFilteredCards.slice(startIndex, endIndex);
-
-      pageCards.forEach((sourceCard) => {
-        const clonedCard = sourceCard.cloneNode(true) as HTMLElement;
-        clonedCard.className = "catalog-card-wrapper";
-        catalogGrid.appendChild(clonedCard);
-      });
+      function applyImageFix(container: HTMLElement) {
+        const images = container.querySelectorAll("img");
+        images.forEach((img) => {
+          img.style.setProperty("width", "100%", "important");
+          img.style.setProperty("height", "auto", "important");
+          img.style.setProperty("aspect-ratio", "2 / 3", "important");
+          img.style.setProperty("object-fit", "cover", "important");
+          img.style.setProperty("display", "block", "important");
+        });
+      }
 
       applyImageFix(catalogGrid);
-    }
+      applyImageFix(dbSourceContainer);
 
-    function renderPagination() {
-      if (!paginationControls) return;
-      paginationControls.innerHTML = "";
+      const allSourceCards = Array.from(
+        dbSourceContainer.querySelectorAll(".database-card-source")
+      );
 
-      const totalPages = Math.ceil(currentFilteredCards.length / ITEMS_PER_PAGE);
-      if (totalPages <= 1) return;
+      const searchInput = document.querySelector(
+        'input[type="text"], #global-search'
+      ) as HTMLInputElement;
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement;
+      const genreSelect = document.getElementById(
+        "filter-genre"
+      ) as HTMLSelectElement;
+      const yearSelect = document.getElementById(
+        "filter-year"
+      ) as HTMLSelectElement;
+      const categorySelect = document.getElementById(
+        "filter-category"
+      ) as HTMLSelectElement;
+      const sortSelect = document.getElementById(
+        "filter-sort"
+      ) as HTMLSelectElement;
+      const noResults = document.getElementById("no-results");
 
-      for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement("button");
-        button.innerText = i.toString();
-        button.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
-        
-        button.addEventListener("click", () => {
-          currentPage = i;
-          displayCurrentPage();
-          renderPagination();
-          document.querySelector('.catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+      function displayCurrentPage() {
+        if (!catalogGrid) return;
+        catalogGrid.innerHTML = "";
+
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        const pageCards = currentFilteredCards.slice(startIndex, endIndex);
+
+        pageCards.forEach((sourceCard) => {
+          const clonedCard = sourceCard.cloneNode(true) as HTMLElement;
+          clonedCard.className = "catalog-card-wrapper";
+          catalogGrid.appendChild(clonedCard);
         });
 
-        paginationControls.appendChild(button);
+        applyImageFix(catalogGrid);
       }
-    }
 
-    function applySorting(cards: Element[], sortValue: string): Element[] {
-      const sorted = [...cards];
+      function renderPagination() {
+        if (!paginationControls) return;
+        paginationControls.innerHTML = "";
 
-      switch (sortValue) {
-        case "status-ongoing":
-          return sorted.sort((a, b) => {
-            const aVal = a.getAttribute("data-status") === "ongoing" ? 0 : 1;
-            const bVal = b.getAttribute("data-status") === "ongoing" ? 0 : 1;
-            return aVal - bVal;
+        const totalPages = Math.ceil(
+          currentFilteredCards.length / ITEMS_PER_PAGE
+        );
+        if (totalPages <= 1) return;
+
+        for (let i = 1; i <= totalPages; i++) {
+          const button = document.createElement("button");
+          button.innerText = i.toString();
+          button.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
+
+          button.addEventListener("click", () => {
+            currentPage = i;
+            displayCurrentPage();
+            renderPagination();
+            document
+              .querySelector(".catalog-section")
+              ?.scrollIntoView({ behavior: "smooth" });
           });
 
-        case "status-completed":
-          return sorted.sort((a, b) => {
-            const aVal = a.getAttribute("data-status") !== "ongoing" ? 0 : 1;
-            const bVal = b.getAttribute("data-status") !== "ongoing" ? 0 : 1;
-            return aVal - bVal;
-          });
-
-        // Тільки завершені, онгоінги приховуються
-        case "rating-desc":
-          return sorted
-            .filter(card => card.getAttribute("data-status") !== "ongoing")
-            .sort((a, b) => {
-              const aR = parseFloat(a.getAttribute("data-rating") || "0") || 0;
-              const bR = parseFloat(b.getAttribute("data-rating") || "0") || 0;
-              return bR - aR;
-            });
-
-        case "rating-asc":
-          return sorted
-            .filter(card => card.getAttribute("data-status") !== "ongoing")
-            .sort((a, b) => {
-              const aR = parseFloat(a.getAttribute("data-rating") || "0") || 0;
-              const bR = parseFloat(b.getAttribute("data-rating") || "0") || 0;
-              return aR - bR;
-            });
-
-        case "network-az":
-          return sorted.sort((a, b) => {
-            const aN = a.getAttribute("data-network") || "";
-            const bN = b.getAttribute("data-network") || "";
-            return aN.localeCompare(bN, "uk");
-          });
-
-        case "network-za":
-          return sorted.sort((a, b) => {
-            const aN = a.getAttribute("data-network") || "";
-            const bN = b.getAttribute("data-network") || "";
-            return bN.localeCompare(aN, "uk");
-          });
-
-        // default: в процесі спочатку, потім рандомні завершені
-        default: {
-          const ongoings = sorted.filter(c => c.getAttribute("data-status") === "ongoing");
-          const completed = sorted
-            .filter(c => c.getAttribute("data-status") !== "ongoing")
-            .sort(() => 0.5 - Math.random());
-          return [...ongoings, ...completed];
+          paginationControls.appendChild(button);
         }
       }
+
+      function applySorting(cards: Element[], sortValue: string): Element[] {
+        const sorted = [...cards];
+
+        switch (sortValue) {
+          case "status-ongoing":
+            return sorted.sort((a, b) => {
+              const aVal = a.getAttribute("data-status") === "ongoing" ? 0 : 1;
+              const bVal = b.getAttribute("data-status") === "ongoing" ? 0 : 1;
+              return aVal - bVal;
+            });
+
+          case "status-completed":
+            return sorted.sort((a, b) => {
+              const aVal = a.getAttribute("data-status") !== "ongoing" ? 0 : 1;
+              const bVal = b.getAttribute("data-status") !== "ongoing" ? 0 : 1;
+              return aVal - bVal;
+            });
+
+          case "rating-desc":
+            return sorted
+              .filter((card) => card.getAttribute("data-status") !== "ongoing")
+              .sort((a, b) => {
+                const aR =
+                  parseFloat(a.getAttribute("data-rating") || "0") || 0;
+                const bR =
+                  parseFloat(b.getAttribute("data-rating") || "0") || 0;
+                return bR - aR;
+              });
+
+          case "rating-asc":
+            return sorted
+              .filter((card) => card.getAttribute("data-status") !== "ongoing")
+              .sort((a, b) => {
+                const aR =
+                  parseFloat(a.getAttribute("data-rating") || "0") || 0;
+                const bR =
+                  parseFloat(b.getAttribute("data-rating") || "0") || 0;
+                return aR - bR;
+              });
+
+          case "network-az":
+            return sorted.sort((a, b) => {
+              const aN = a.getAttribute("data-network") || "";
+              const bN = b.getAttribute("data-network") || "";
+              return aN.localeCompare(bN, "uk");
+            });
+
+          case "network-za":
+            return sorted.sort((a, b) => {
+              const aN = a.getAttribute("data-network") || "";
+              const bN = b.getAttribute("data-network") || "";
+              return bN.localeCompare(aN, "uk");
+            });
+
+          default:
+            // Рандомне сортування для режиму за замовчуванням
+            return sorted.sort(() => 0.5 - Math.random());
+        }
+      }
+
+      function filterCatalog() {
+        const searchQuery = searchInput
+          ? searchInput.value.toLowerCase().trim()
+          : "";
+        const selectedCountry = countrySelect ? countrySelect.value : "all";
+        const selectedGenre = genreSelect ? genreSelect.value : "all";
+        const selectedYear = yearSelect ? yearSelect.value : "all";
+        const selectedSort = sortSelect ? sortSelect.value : "default";
+        const selectedCategory = categorySelect ? categorySelect.value : "all";
+
+        const filtered = allSourceCards.filter((sourceCard) => {
+          const titleUa = sourceCard.getAttribute("data-title") || "";
+          const titleEn = sourceCard.getAttribute("data-en-title") || "";
+          const country = sourceCard.getAttribute("data-country") || "";
+          const year = sourceCard.getAttribute("data-year") || "";
+          const category = sourceCard.getAttribute("data-category") || "";
+          const genres = (sourceCard.getAttribute("data-genres") || "").split(
+            ","
+          );
+
+          const matchesSearch =
+            searchQuery === "" ||
+            titleUa.includes(searchQuery) ||
+            titleEn.includes(searchQuery);
+          const matchesCountry =
+            selectedCountry === "all" || country === selectedCountry;
+          const matchesYear = selectedYear === "all" || year === selectedYear;
+          const matchesGenre =
+            selectedGenre === "all" || genres.includes(selectedGenre);
+
+          return (
+            matchesSearch &&
+            matchesCountry &&
+            matchesYear &&
+            matchesGenre &&
+            (selectedCategory === "all" || category === selectedCategory)
+          );
+        });
+
+        currentFilteredCards = applySorting(filtered, selectedSort);
+        currentPage = 1;
+        displayCurrentPage();
+        renderPagination();
+
+        if (noResults) {
+          noResults.style.display =
+            currentFilteredCards.length === 0 ? "block" : "none";
+        }
+      }
+
+      searchInput?.addEventListener("input", filterCatalog);
+      countrySelect?.addEventListener("change", filterCatalog);
+      genreSelect?.addEventListener("change", filterCatalog);
+      yearSelect?.addEventListener("change", filterCatalog);
+      sortSelect?.addEventListener("change", filterCatalog);
+      categorySelect?.addEventListener("change", filterCatalog);
+
+      filterCatalog();
     }
 
-    function filterCatalog() {
-      const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : "";
-      const selectedCountry = countrySelect ? countrySelect.value : "all";
-      const selectedGenre = genreSelect ? genreSelect.value : "all";
-      const selectedYear = yearSelect ? yearSelect.value : "all";
-      const selectedSort = sortSelect ? sortSelect.value : "default";
+    document.addEventListener("DOMContentLoaded", initPageFeatures);
+    document.addEventListener("astro:after-swap", initPageFeatures);
+  </script>
 
-      const filtered = allSourceCards.filter((sourceCard) => {
-        const titleUa = sourceCard.getAttribute("data-title") || "";
-        const titleEn = sourceCard.getAttribute("data-en-title") || "";
-        const country = sourceCard.getAttribute("data-country") || "";
-        const year = sourceCard.getAttribute("data-year") || "";
-        const genres = (sourceCard.getAttribute("data-genres") || "").split(",");
+  <style is:global>
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 40px auto 10px auto;
+      width: 100%;
+      max-width: 1200px;
+    }
 
-        const matchesSearch = searchQuery === "" || titleUa.includes(searchQuery) || titleEn.includes(searchQuery);
-        const matchesCountry = selectedCountry === "all" || country === selectedCountry;
-        const matchesYear = selectedYear === "all" || year === selectedYear;
-        const matchesGenre = selectedGenre === "all" || genres.includes(selectedGenre);
+    .pagination-btn {
+      background-color: #0f172a;
+      color: #94a3b8;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
 
-        return matchesSearch && matchesCountry && matchesYear && matchesGenre;
-      });
+    .pagination-btn:hover {
+      background-color: #1e1b4b;
+      border-color: #6366f1;
+      color: #fff;
+    }
 
-      currentFilteredCards = applySorting(filtered, selectedSort);
-      currentPage = 1;
-      displayCurrentPage();
-      renderPagination();
+    .pagination-btn.active {
+      background-color: #6366f1;
+      color: #fff;
+      border-color: #6366f1;
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+    }
 
-      if (noResults) {
-        noResults.style.display = currentFilteredCards.length === 0 ? "block" : "none";
+    :global([data-theme="light"]) .pagination-btn {
+      background-color: #e2e8f0;
+      color: #0f172a;
+      border-color: rgba(15, 23, 42, 0.15);
+    }
+    :global([data-theme="light"]) .pagination-btn:hover {
+      background-color: #cbd5e1;
+    }
+    :global([data-theme="light"]) .pagination-btn.active {
+      background-color: #0f172a;
+      color: #fff;
+      border-color: #0f172a;
+    }
+
+    .catalog-fixed-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 25px !important;
+    }
+
+    @media (max-width: 1024px) {
+      .catalog-fixed-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
       }
     }
 
-    searchInput?.addEventListener("input", filterCatalog);
-    countrySelect?.addEventListener("change", filterCatalog);
-    genreSelect?.addEventListener("change", filterCatalog);
-    yearSelect?.addEventListener("change", filterCatalog);
-    sortSelect?.addEventListener("change", filterCatalog);
-
-    filterCatalog();
-
-    // ── Карусель (тільки в процесі) ──
-    const track = document.getElementById('carousel-track');
-    const dotsContainer = document.getElementById('carousel-dots');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    
-    if (!track) return;
-
-    const allSlides = Array.from(document.querySelectorAll('.carousel-slide-wrapper'));
-    if (allSlides.length === 0) return;
-
-    applyImageFix(track);
-
-    function getSlidesPerPage() {
-      const width = window.innerWidth;
-      if (width >= 1200) return 4;
-      if (width >= 900) return 3;
-      if (width >= 480) return 2;
-      return 1;
-    }
-
-    let currentIndex = 0;
-    let autoSlideInterval: number;
-
-    function buildDots() {
-      if (!dotsContainer) return;
-      dotsContainer.innerHTML = '';
-      const slidesPerPage = getSlidesPerPage();
-      const maxIndex = Math.max(1, allSlides.length - slidesPerPage + 1);
-
-      for (let i = 0; i < maxIndex; i++) {
-        const dot = document.createElement('div');
-        dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
-        dot.dataset.index = i.toString();
-        dotsContainer.appendChild(dot);
+    @media (max-width: 600px) {
+      .catalog-fixed-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
       }
     }
 
-    function updateSlider(index: number) {
-      const slidesPerPage = getSlidesPerPage();
-      const maxIndex = Math.max(1, allSlides.length - slidesPerPage + 1);
-
-      if (index >= maxIndex) currentIndex = 0;
-      else if (index < 0) currentIndex = maxIndex - 1;
-      else currentIndex = index;
-
-      const slideWidthPercentage = 100 / slidesPerPage;
-      track!.style.transform = `translateX(-${currentIndex * slideWidthPercentage}%)`;
-
-      const dots = document.querySelectorAll('.carousel-dot');
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
+    .filters-section {
+      display: flex;
+      gap: 20px;
+      background-color: var(--bg-card) !important;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      margin-top: 30px;
+      flex-wrap: wrap;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+    }
+    [data-theme="light"] .filters-section {
+      display: flex;
+      gap: 20px;
+      background-color: #7c9bcc !important;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      min-width: 140px;
+    }
+    .filter-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .filter-group select {
+      background-color: var(--bg-select) !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--text-primary) !important;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      width: 100%;
+    }
+    .filter-group select:focus {
+      border-color: #6366f1 !important;
     }
 
-    function startAutoSlide() {
-      stopAutoSlide();
-      autoSlideInterval = window.setInterval(() => {
-        updateSlider(currentIndex + 1);
-      }, 5000);
+    .catalog-section {
+      margin-top: 40px;
+    }
+    .catalog-section h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      border-left: 4px solid #6366f1;
+      padding-left: 12px;
+      color: var(--text-primary) !important;
     }
 
-    function stopAutoSlide() {
-      if (autoSlideInterval) clearInterval(autoSlideInterval);
+    .catalog-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
 
-    nextBtn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      updateSlider(currentIndex + 1);
-      startAutoSlide();
-    });
+    .no-results-msg {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-muted);
+      font-size: 16px;
+      background-color: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
 
-    prevBtn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      updateSlider(currentIndex - 1);
-      startAutoSlide();
-    });
+    .hero-carousel-section {
+      width: 100%;
+      margin: 1.5rem auto;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
 
-    dotsContainer?.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      if (target && target.classList.contains('carousel-dot')) {
-        const idx = parseInt(target.getAttribute('data-index') || '0', 10);
-        updateSlider(idx);
-        startAutoSlide();
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .carousel-slide-wrapper {
+      box-sizing: border-box;
+      display: none;
+      flex: 0 0 calc(25% - 12px);
+    }
+
+    @media (max-width: 1200px) {
+      .carousel-slide-wrapper {
+        flex: 0 0 calc(33.333% - 11px);
       }
-    });
-
-    buildDots();
-    updateSlider(0);
-    startAutoSlide();
-
-    window.addEventListener('resize', () => {
-      buildDots();
-      updateSlider(currentIndex);
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", initPageFeatures);
-  document.addEventListener("astro:after-swap", initPageFeatures);
-</script>
-
-<style is:global>
-  .pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 40px auto 10px auto;
-    width: 100%;
-    max-width: 1200px;
-  }
-
-  .pagination-btn {
-    background-color: #0f172a;
-    color: #94a3b8;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.25s ease;
-  }
-
-  .pagination-btn:hover {
-    background-color: #1e1b4b;
-    border-color: #6366f1;
-    color: #fff;
-  }
-
-  .pagination-btn.active {
-    background-color: #6366f1;
-    color: #fff;
-    border-color: #6366f1;
-    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
-  }
-
-  :global([data-theme="light"]) .pagination-btn {
-    background-color: #e2e8f0;
-    color: #0f172a;
-    border-color: rgba(15, 23, 42, 0.15);
-  }
-  :global([data-theme="light"]) .pagination-btn:hover {
-    background-color: #cbd5e1;
-  }
-  :global([data-theme="light"]) .pagination-btn.active {
-    background-color: #0f172a;
-    color: #fff;
-    border-color: #0f172a;
-  }
-
-  .catalog-fixed-grid { 
-    display: grid !important; 
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 25px !important; 
-  }
-  
-  @media (max-width: 1024px) {
-    .catalog-fixed-grid { 
-      grid-template-columns: repeat(3, 1fr) !important; 
     }
-  }
-
-  @media (max-width: 600px) {
-    .catalog-fixed-grid { 
-      grid-template-columns: repeat(2, 1fr) !important; 
-      gap: 12px !important; 
+    @media (max-width: 900px) {
+      .carousel-slide-wrapper {
+        flex: 0 0 calc(50% - 8px);
+      }
     }
-  }
-
-  .filters-section {
-    display: flex; gap: 20px; background-color: var(--bg-card) !important;
-    padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);
-    margin-top: 30px; flex-wrap: wrap; transition: background-color 0.3s ease, border-color 0.3s ease;
-  }
-  [data-theme="light"] .filters-section { display: flex; gap: 20px; background-color: #7C9BCC !important; }
-  .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 140px; }
-  .filter-group label { font-size: 13px; font-weight: 700; color: var(--text-muted) !important; text-transform: uppercase; letter-spacing: 0.5px; }
-  .filter-group select { background-color: var(--bg-select) !important; border: 1px solid var(--border-color) !important; color: var(--text-primary) !important; padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; outline: none; width: 100%; }
-  .filter-group select:focus { border-color: #6366f1 !important; }
-
-  .catalog-section { margin-top: 40px; }
-  .catalog-section h2 { font-size: 22px; font-weight: 600; margin-bottom: 25px; border-left: 4px solid #6366f1; padding-left: 12px; color: var(--text-primary) !important; }
-  
-  .catalog-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .no-results-msg { text-align: center; padding: 40px; color: var(--text-muted); font-size: 16px; background-color: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); }
-  
-  .hero-carousel-section {
-    width: 100%;
-    margin: 1.5rem auto;
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
-
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 16px;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-  }
-
-  .carousel-slide-wrapper {
-    box-sizing: border-box;
-    display: none;
-    flex: 0 0 calc(25% - 12px); 
-  }
-
-  @media (max-width: 1200px) {
-    .carousel-slide-wrapper { flex: 0 0 calc(33.333% - 11px); }
-  }
-  @media (max-width: 900px) {
-    .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
-  }
-  @media (max-width: 480px) {
-    .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); }
-  }
-  
-  .carousel-slide-wrapper.carousel-active {
-    display: block;
-  }
-
-  .carousel-slide-wrapper .movie-card {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .carousel-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(6px);
-    z-index: 10;
-  }
-  @media (max-width: 600px) {
-    .carousel-nav-btn { width: 32px; height: 32px; font-size: 0.8rem; }
-  }
-  .carousel-nav-btn:hover { background-color: #6366f1; border-color: #6366f1; transform: translateY(-50%) scale(1.05); }
-  .prev-btn { left: 5px; }
-  .next-btn { right: 5px; }
-
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 15px;
-  }
-  
-  .carousel-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  [data-theme="light"] .carousel-dot { background: rgba(0, 0, 0, 0.15); }
-  
-  .carousel-dot.active {
-    background: #6366f1;
-    width: 20px;
-    border-radius: 4px;
-  }
-
-  #catalog-grid,
-  .movies-grid { 
-    display: grid !important; 
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 24px !important; 
-    width: 100% !important;
-  }
-  
-  @media (max-width: 1024px) {
-    #catalog-grid, .movies-grid { 
-      grid-template-columns: repeat(3, 1fr) !important; 
+    @media (max-width: 480px) {
+      .carousel-slide-wrapper {
+        flex: 0 0 calc(50% - 8px);
+      }
     }
-  }
 
-  @media (max-width: 600px) {
-    #catalog-grid, .movies-grid { 
-      grid-template-columns: repeat(2, 1fr) !important; 
-      gap: 12px !important; 
+    .carousel-slide-wrapper.carousel-active {
+      display: block;
     }
-  }
-</style>
+
+    .carousel-slide-wrapper .movie-card {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+    @media (max-width: 600px) {
+      .carousel-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+      }
+    }
+    .carousel-nav-btn:hover {
+      background-color: #6366f1;
+      border-color: #6366f1;
+      transform: translateY(-50%) scale(1.05);
+    }
+    .prev-btn {
+      left: 5px;
+    }
+    .next-btn {
+      right: 5px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    [data-theme="light"] .carousel-dot {
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .carousel-dot.active {
+      background: #6366f1;
+      width: 20px;
+      border-radius: 4px;
+    }
+
+    #catalog-grid,
+    .movies-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 24px !important;
+      width: 100% !important;
+    }
+
+    @media (max-width: 1024px) {
+      #catalog-grid,
+      .movies-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #catalog-grid,
+      .movies-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+    }
+  </style></MainLayout
+>

@@ -6,6 +6,7 @@
     "cover": ".jpg",
     "status": "",
     "country": "",
+    "categories": "",
     "year": 2,
     "genres": ["", ""],
     "episodesCount": 2,

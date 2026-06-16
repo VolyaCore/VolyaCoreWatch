@@ -88,12 +88,23 @@ export function getStaticPaths() {
                     return "Китай";
                   case "taiwan":
                     return "Тайвань";
+                    case "singapore":
+                    return "Сінгапур";
+                    case "philippines":
+                    return "Філіппіни";
                   default:
                     return lakorn.country;
                 }
               })()
             }
           </span>
+          {
+            lakorn.categories && (
+              <span class={`meta-tag category ${lakorn.categories}`}>
+                {lakorn.categories}
+              </span>
+            )
+          }
           {
             lakorn.imdbRating && (
               <span class="meta-tag imdb">⭐ MDL: {lakorn.imdbRating}</span>
@@ -956,4 +967,11 @@ export function getStaticPaths() {
       height: 350px; /* Трохи менша висота для телефонів */
     }
   }
+  .meta-tag.category {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
 </style>
