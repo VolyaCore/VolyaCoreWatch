@@ -12,6 +12,9 @@ import lakornsData from "../data/lakorns.json";
       <button class="w-tab-btn active" data-watchlist-filter="favorite">
         ❤️ Сподобалось
       </button>
+      <button class="w-tab-btn" data-watchlist-filter="watched">
+        ✅ Переглянуто
+      </button>
       <button class="w-tab-btn" data-watchlist-filter="later">
         📌 На потім
       </button>
@@ -261,5 +264,11 @@ import lakornsData from "../data/lakorns.json";
       text-align: center;
       min-width: 120px; /* Щоб вони акуратно розбили плитку 2х2 або встали в ряд */
     }
+  }
+  .w-tab-btn[data-watchlist-filter="watched"].active {
+    background-color: #8b5cf6; /* Фіолетовий колір для "Переглянуто" */
+    border-color: #8b5cf6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
   }
 </style>

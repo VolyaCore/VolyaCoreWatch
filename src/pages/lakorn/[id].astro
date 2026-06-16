@@ -137,6 +137,10 @@ export function getStaticPaths() {
             <span class="icon">🍿</span>
             <span class="lbl">Дивлюсь</span>
           </button>
+          <button class="status-btn btn-watched" data-status="watched">
+            <span class="icon">✅</span>
+            <span class="lbl">Переглянуто</span>
+          </button>
         </div>
 
         <p class="description-text">{lakorn.description}</p>
@@ -974,4 +978,14 @@ export function getStaticPaths() {
   border-radius: 8px;
   font-size: 13px;
 }
+[data-theme="light"] .meta-tag.category {
+  color: #082188;
+  background: #a5b4fc;
+}
+.w-tab-btn[data-watchlist-filter="watched"].active {
+    background-color: #8b5cf6; /* Фіолетовий колір для "Переглянуто" */
+    border-color: #8b5cf6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  }
 </style>
