@@ -296,13 +296,15 @@ const latestLakorns = lakornsData.slice(0, 24);
         );
         if (totalPages <= 1) return;
 
-        for (let i = 1; i <= totalPages; i++) {
+        const maxVisible = window.innerWidth < 600 ? 3 : 5;
+
+        const createBtn = (page: number, active = false) => {
           const button = document.createElement("button");
-          button.innerText = i.toString();
-          button.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
+          button.innerText = page.toString();
+          button.className = `pagination-btn ${active ? "active" : ""}`;
 
           button.addEventListener("click", () => {
-            currentPage = i;
+            currentPage = page;
             displayCurrentPage();
             renderPagination();
             document
@@ -310,7 +312,41 @@ const latestLakorns = lakornsData.slice(0, 24);
               ?.scrollIntoView({ behavior: "smooth" });
           });
 
-          paginationControls.appendChild(button);
+          return button;
+        };
+
+        const addDots = () => {
+          const dots = document.createElement("span");
+          dots.innerText = "...";
+          dots.className = "pagination-dots";
+          paginationControls.appendChild(dots);
+        };
+
+        let start = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+        let end = start + maxVisible - 1;
+
+        if (end > totalPages) {
+          end = totalPages;
+          start = Math.max(1, end - maxVisible + 1);
+        }
+
+        // first page
+        if (start > 1) {
+          paginationControls.appendChild(createBtn(1, currentPage === 1));
+          if (start > 2) addDots();
+        }
+
+        // middle pages
+        for (let i = start; i <= end; i++) {
+          paginationControls.appendChild(createBtn(i, i === currentPage));
+        }
+
+        // last page
+        if (end < totalPages) {
+          if (end < totalPages - 1) addDots();
+          paginationControls.appendChild(
+            createBtn(totalPages, currentPage === totalPages)
+          );
         }
       }
 
@@ -721,5 +757,43 @@ const latestLakorns = lakornsData.slice(0, 24);
         gap: 12px !important;
       }
     }
-  </style></MainLayout
->
+    .pagination-container {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .pagination-btn {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: #1f2937;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .pagination-btn.active {
+      background: #6366f1;
+    }
+
+    .pagination-btn:hover {
+      background: #374151;
+    }
+
+    .pagination-dots {
+      padding: 6px 8px;
+      color: #9ca3af;
+    }
+
+    /* 📱 mobile adaptation */
+    @media (max-width: 600px) {
+      .pagination-btn {
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</MainLayout>

@@ -8261,7 +8261,8 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2817" }
+          { "number": 1, "tg_id": "volyacore/2817" },
+          { "number": 2, "tg_id": "volyacore/2833"}
         ]
       }
     ]
@@ -8349,7 +8350,7 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/2822" }
+          { "number": 1, "tg_id": "volyacore/2822" }
         ]
       }
     ]
@@ -8378,8 +8379,8 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/2405" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/2430" }
+          { "number": 1, "tg_id": "volyacore/2405" },
+          { "number": 2, "tg_id": "volyacore/2430" }
         ]
       }
     ]
@@ -8408,9 +8409,9 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "https://t.me/volyacore/2750" },
-          { "number": 2, "tg_id": "https://t.me/volyacore/2767" },
-          { "number": 3, "tg_id": "https://t.me/volyacore/2779" }
+          { "number": 1, "tg_id": "volyacore/2750" },
+          { "number": 2, "tg_id": "volyacore/2767" },
+          { "number": 3, "tg_id": "volyacore/2779" }
         ]
       }
     ]
