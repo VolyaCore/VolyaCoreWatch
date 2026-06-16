@@ -221,6 +221,122 @@ const latestLakorns = lakornsData.slice(0, 24);
   </section>
 
   <script>
+    // 1. Глобальні змінні
+    let searchInput: HTMLInputElement | null = null;
+    let allSourceCards: Element[] = [];
+    let currentFilteredCards: Element[] = [];
+    let currentPage = 1;
+    const ITEMS_PER_PAGE = 24;
+  
+    // 2. Функції відображення
+    function applyImageFix(container: HTMLElement) {
+      container.querySelectorAll("img").forEach((img) => {
+        img.style.setProperty("width", "100%", "important");
+        img.style.setProperty("height", "auto", "important");
+        img.style.setProperty("aspect-ratio", "2 / 3", "important");
+        img.style.setProperty("object-fit", "cover", "important");
+        img.style.setProperty("display", "block", "important");
+      });
+    }
+  
+    function displayCurrentPage() {
+      const catalogGrid = document.getElementById("catalog-grid");
+      if (!catalogGrid) return;
+      catalogGrid.innerHTML = "";
+  
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const pageCards = currentFilteredCards.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  
+      pageCards.forEach((sourceCard) => {
+        const clonedCard = sourceCard.cloneNode(true) as HTMLElement;
+        clonedCard.className = "catalog-card-wrapper";
+        catalogGrid.appendChild(clonedCard);
+      });
+      applyImageFix(catalogGrid);
+    }
+  
+    // 3. Логіка сортування та фільтрації
+    function applySorting(cards: Element[], sortValue: string): Element[] {
+      const sorted = [...cards];
+      switch (sortValue) {
+        case "status-ongoing": return sorted.sort((a, b) => (a.getAttribute("data-status") === "ongoing" ? 0 : 1) - (b.getAttribute("data-status") === "ongoing" ? 0 : 1));
+        case "status-completed": return sorted.sort((a, b) => (a.getAttribute("data-status") !== "ongoing" ? 0 : 1) - (b.getAttribute("data-status") !== "ongoing" ? 0 : 1));
+        case "rating-desc": return sorted.filter(c => c.getAttribute("data-status") !== "ongoing").sort((a, b) => parseFloat(b.getAttribute("data-rating") || "0") - parseFloat(a.getAttribute("data-rating") || "0"));
+        default: return sorted.sort(() => 0.5 - Math.random());
+      }
+    }
+  
+    function filterCatalog() {
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      const country = (document.getElementById("filter-country") as HTMLSelectElement)?.value || "all";
+      const genre = (document.getElementById("filter-genre") as HTMLSelectElement)?.value || "all";
+      const year = (document.getElementById("filter-year") as HTMLSelectElement)?.value || "all";
+      const sort = (document.getElementById("filter-sort") as HTMLSelectElement)?.value || "default";
+      const category = (document.getElementById("filter-category") as HTMLSelectElement)?.value || "all";
+  
+      const filtered = allSourceCards.filter((card) => {
+        const titleUa = card.getAttribute("data-title") || "";
+        const titleEn = card.getAttribute("data-en-title") || "";
+        const genres = (card.getAttribute("data-genres") || "").split(",");
+        
+        return (
+          (query === "" || titleUa.includes(query) || titleEn.includes(query)) &&
+          (country === "all" || card.getAttribute("data-country") === country) &&
+          (year === "all" || card.getAttribute("data-year") === year) &&
+          (genre === "all" || genres.includes(genre)) &&
+          (category === "all" || card.getAttribute("data-category") === category)
+        );
+      });
+  
+      currentFilteredCards = applySorting(filtered, sort);
+      currentPage = 1;
+      displayCurrentPage();
+      // (тут ви можете додати виклик renderPagination, якщо він у вас є)
+      const noResults = document.getElementById("no-results");
+      if (noResults) noResults.style.display = currentFilteredCards.length === 0 ? "block" : "none";
+    }
+  
+    // 4. Ініціалізація
+    function initPageFeatures() {
+      const dbSourceContainer = document.getElementById("hidden-full-database");
+      if (!dbSourceContainer) return;
+  
+      searchInput = document.querySelector('input[type="text"], #global-search') as HTMLInputElement;
+      allSourceCards = Array.from(dbSourceContainer.querySelectorAll(".database-card-source"));
+  
+      // Події
+      searchInput?.addEventListener("input", filterCatalog);
+      document.getElementById("filter-country")?.addEventListener("change", filterCatalog);
+      document.getElementById("filter-genre")?.addEventListener("change", filterCatalog);
+      document.getElementById("filter-year")?.addEventListener("change", filterCatalog);
+      document.getElementById("filter-sort")?.addEventListener("change", filterCatalog);
+      document.getElementById("filter-category")?.addEventListener("change", filterCatalog);
+  
+      // Перевірка URL на наявність пошуку
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get("search");
+      if (q && searchInput) {
+        searchInput.value = q;
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+      
+      filterCatalog();
+    }
+  
+    // 5. Запуск
+    document.addEventListener("DOMContentLoaded", initPageFeatures);
+    document.addEventListener("astro:after-swap", initPageFeatures);
+    
+    // Слухач для оновлення пошуку з Хедеру (якщо ви вже на сторінці)
+    document.addEventListener("search-trigger", ((e: CustomEvent) => {
+      if (searchInput) {
+        searchInput.value = e.detail;
+        filterCatalog();
+      }
+    }) as EventListener);
+  </script>
+
+  <script>
     function initPageFeatures() {
       const catalogGrid = document.getElementById("catalog-grid");
       const dbSourceContainer = document.getElementById("hidden-full-database");

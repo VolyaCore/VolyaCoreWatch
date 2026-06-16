@@ -79,6 +79,26 @@
 
   setupHeaderLogic();
   document.addEventListener("astro:after-swap", setupHeaderLogic);
+
+  // Додайте це всередину функції setupHeaderLogic у Header.astro
+const searchInput = document.getElementById("global-search") as HTMLInputElement;
+
+if (searchInput) {
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const query = searchInput.value.trim();
+      // Якщо ми вже на головній - просто фільтруємо (якщо треба), 
+      // якщо ні - переходимо на головну з параметром
+      if (window.location.pathname === "/") {
+        // Викликаємо фільтрацію, якщо вона доступна на сторінці
+        const event = new CustomEvent("search-trigger", { detail: query });
+        document.dispatchEvent(event);
+      } else {
+        window.location.href = `/?search=${encodeURIComponent(query)}`;
+      }
+    }
+  });
+}
 </script>
 
 <style lang="scss">
