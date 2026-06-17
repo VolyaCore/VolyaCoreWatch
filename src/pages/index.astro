@@ -101,6 +101,15 @@ const latestLakorns = lakornsData.slice(0, 24);
     </div>
 
     <div class="filter-group">
+      <label for="filter-format">Формат</label>
+      <select id="filter-format" class="filter-group">
+        <option value="all">Усі</option>
+        <option value="film">Фільми</option>
+        <option value="series">Серіали</option>
+      </select>
+    </div>
+
+    <!-- <div class="filter-group">
       <label for="filter-year">Рік</label>
       <select id="filter-year" class="filter-group">
         <option value="all">Усі роки</option>
@@ -120,7 +129,7 @@ const latestLakorns = lakornsData.slice(0, 24);
         <option value="2003">2003</option>
         <option value="2001">2001</option>
       </select>
-    </div>
+    </div> -->
 
     <div class="filter-group">
       <label for="filter-sort">Сортування</label>
@@ -792,38 +801,46 @@ const latestLakorns = lakornsData.slice(0, 24);
     document.addEventListener("astro:after-swap", initPageFeatures);
   </script>
 
-  <script>
+  <!-- <script>
     function initPageFeatures() {
       const catalogGrid = document.getElementById("catalog-grid");
       const dbSourceContainer = document.getElementById("hidden-full-database");
       const paginationControls = document.getElementById("pagination-controls");
-      
+
       // Елементи для логіки студії
       const studioWrapper = document.getElementById("studio-filter-wrapper");
-      const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
-      const studioSelect = document.getElementById("filter-studio") as HTMLSelectElement;
-  
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement;
+      const studioSelect = document.getElementById(
+        "filter-studio"
+      ) as HTMLSelectElement;
+
       if (!catalogGrid || !dbSourceContainer) return;
-  
+
       const ITEMS_PER_PAGE = 24;
       let currentPage = 1;
       let currentFilteredCards: Element[] = [];
-  
-      const allSourceCards = Array.from(dbSourceContainer.querySelectorAll(".database-card-source"));
+
+      const allSourceCards = Array.from(
+        dbSourceContainer.querySelectorAll(".database-card-source")
+      );
       const inputs = {
         search: document.querySelector("#global-search") as HTMLInputElement,
         country: countrySelect,
         genre: document.getElementById("filter-genre") as HTMLSelectElement,
         year: document.getElementById("filter-year") as HTMLSelectElement,
-        category: document.getElementById("filter-category") as HTMLSelectElement,
+        category: document.getElementById(
+          "filter-category"
+        ) as HTMLSelectElement,
         sort: document.getElementById("filter-sort") as HTMLSelectElement,
         studio: studioSelect,
       };
-  
+
       // --- Логіка видимості студій ---
       function toggleStudioVisibility() {
         if (!studioWrapper || !countrySelect || !studioSelect) return;
-        
+
         if (countrySelect.value === "thailand") {
           studioWrapper.style.display = "flex";
         } else {
@@ -832,17 +849,19 @@ const latestLakorns = lakornsData.slice(0, 24);
           filterCatalog();
         }
       }
-  
+
       function renderPagination() {
         if (!paginationControls) return;
         paginationControls.innerHTML = "";
-        const totalPages = Math.ceil(currentFilteredCards.length / ITEMS_PER_PAGE);
-  
+        const totalPages = Math.ceil(
+          currentFilteredCards.length / ITEMS_PER_PAGE
+        );
+
         if (totalPages <= 1) {
           paginationControls.style.display = "none";
           return;
         }
-  
+
         paginationControls.style.display = "flex";
         for (let i = 1; i <= totalPages; i++) {
           const btn = document.createElement("button");
@@ -856,16 +875,18 @@ const latestLakorns = lakornsData.slice(0, 24);
           paginationControls.appendChild(btn);
         }
       }
-  
+
       function displayCards() {
         if (!catalogGrid) return;
         catalogGrid.innerHTML = "";
         const start = (currentPage - 1) * ITEMS_PER_PAGE;
-        currentFilteredCards.slice(start, start + ITEMS_PER_PAGE).forEach((card) => {
-          catalogGrid.appendChild(card.cloneNode(true));
-        });
+        currentFilteredCards
+          .slice(start, start + ITEMS_PER_PAGE)
+          .forEach((card) => {
+            catalogGrid.appendChild(card.cloneNode(true));
+          });
       }
-  
+
       function filterCatalog() {
         const q = inputs.search?.value.toLowerCase().trim() || "";
         const c = inputs.country?.value || "all";
@@ -874,46 +895,222 @@ const latestLakorns = lakornsData.slice(0, 24);
         const cat = inputs.category?.value || "all";
         const s = inputs.sort?.value || "default";
         const studio = inputs.studio?.value || "all";
-  
-        const thaiStudios = ["me mind y", "be on cloud", "change2561", "domundi tv", "gmmtv"];
-  
+
+        const thaiStudios = [
+          "me mind y",
+          "be on cloud",
+          "change2561",
+          "domundi tv",
+          "gmmtv",
+        ];
+
         currentFilteredCards = allSourceCards.filter((card) => {
-          const title = (card.getAttribute("data-title") || "") + (card.getAttribute("data-en-title") || "");
+          const title =
+            (card.getAttribute("data-title") || "") +
+            (card.getAttribute("data-en-title") || "");
           const country = card.getAttribute("data-country") || "";
           const genres = (card.getAttribute("data-genres") || "").split(",");
-          const network = (card.getAttribute("data-network") || "").toLowerCase().trim();
-  
-          const matchBase = (q === "" || title.includes(q)) &&
-                            (c === "all" || country === c) &&
-                            (y === "all" || card.getAttribute("data-year") === y) &&
-                            (g === "all" || genres.includes(g)) &&
-                            (cat === "all" || card.getAttribute("data-category") === cat);
-  
+          const network = (card.getAttribute("data-network") || "")
+            .toLowerCase()
+            .trim();
+
+          const matchBase =
+            (q === "" || title.includes(q)) &&
+            (c === "all" || country === c) &&
+            (y === "all" || card.getAttribute("data-year") === y) &&
+            (g === "all" || genres.includes(g)) &&
+            (cat === "all" || card.getAttribute("data-category") === cat);
+
           let matchStudio = true;
           if (c === "thailand" && studio !== "all") {
-            matchStudio = studio === "other" ? !thaiStudios.includes(network) : network === studio.toLowerCase();
+            matchStudio =
+              studio === "other"
+                ? !thaiStudios.includes(network)
+                : network === studio.toLowerCase();
           }
-  
+
           return matchBase && matchStudio;
         });
-  
+
         currentFilteredCards.sort(() => 0.5 - Math.random());
         currentPage = 1;
         displayCards();
         renderPagination();
       }
-  
+
       // Слухачі
-      Object.values(inputs).forEach((el) => el?.addEventListener("change", filterCatalog));
+      Object.values(inputs).forEach((el) =>
+        el?.addEventListener("change", filterCatalog)
+      );
       inputs.search?.addEventListener("input", filterCatalog);
-      
+
       // Підключення логіки видимості
       countrySelect.addEventListener("change", toggleStudioVisibility);
       toggleStudioVisibility(); // Початковий запуск
-  
+
       filterCatalog();
     }
-  
+
+    document.addEventListener("DOMContentLoaded", initPageFeatures);
+    document.addEventListener("astro:after-swap", initPageFeatures);
+  </script> -->
+
+  <script>
+    function initPageFeatures() {
+      const catalogGrid = document.getElementById("catalog-grid");
+      const dbSourceContainer = document.getElementById("hidden-full-database");
+      const paginationControls = document.getElementById("pagination-controls");
+
+      // Елементи для логіки студії
+      const studioWrapper = document.getElementById("studio-filter-wrapper");
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement;
+      const studioSelect = document.getElementById(
+        "filter-studio"
+      ) as HTMLSelectElement;
+
+      if (!catalogGrid || !dbSourceContainer) return;
+
+      const ITEMS_PER_PAGE = 24;
+      let currentPage = 1;
+      let currentFilteredCards: Element[] = [];
+
+      const allSourceCards = Array.from(
+        dbSourceContainer.querySelectorAll(".database-card-source")
+      );
+      const inputs = {
+        search: document.querySelector("#global-search") as HTMLInputElement,
+        country: countrySelect,
+        genre: document.getElementById("filter-genre") as HTMLSelectElement,
+        format: document.getElementById("filter-format") as HTMLSelectElement, // Заміна року на формат
+        category: document.getElementById(
+          "filter-category"
+        ) as HTMLSelectElement,
+        sort: document.getElementById("filter-sort") as HTMLSelectElement,
+        studio: studioSelect,
+      };
+
+      // --- Логіка видимості студій ---
+      function toggleStudioVisibility() {
+        if (!studioWrapper || !countrySelect || !studioSelect) return;
+        if (countrySelect.value === "thailand") {
+          studioWrapper.style.display = "flex";
+        } else {
+          studioWrapper.style.display = "none";
+          studioSelect.value = "all";
+          filterCatalog();
+        }
+      }
+
+      function renderPagination() {
+        if (!paginationControls) return;
+        paginationControls.innerHTML = "";
+        const totalPages = Math.ceil(
+          currentFilteredCards.length / ITEMS_PER_PAGE
+        );
+
+        if (totalPages <= 1) {
+          paginationControls.style.display = "none";
+          return;
+        }
+
+        paginationControls.style.display = "flex";
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.innerText = i.toString();
+          btn.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
+          btn.addEventListener("click", () => {
+            currentPage = i;
+            displayCards();
+            renderPagination();
+          });
+          paginationControls.appendChild(btn);
+        }
+      }
+
+      function displayCards() {
+        if (!catalogGrid) return;
+        catalogGrid.innerHTML = "";
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        currentFilteredCards
+          .slice(start, start + ITEMS_PER_PAGE)
+          .forEach((card) => {
+            catalogGrid.appendChild(card.cloneNode(true));
+          });
+      }
+
+      function filterCatalog() {
+        const q = inputs.search?.value.toLowerCase().trim() || "";
+        const c = inputs.country?.value || "all";
+        const g = inputs.genre?.value || "all";
+        const format = inputs.format?.value || "all"; // Новий фільтр
+        const cat = inputs.category?.value || "all";
+        const s = inputs.sort?.value || "default";
+        const studio = inputs.studio?.value || "all";
+
+        const thaiStudios = [
+          "me mind y",
+          "be on cloud",
+          "change2561",
+          "domundi tv",
+          "gmmtv",
+        ];
+
+        currentFilteredCards = allSourceCards.filter((card) => {
+          const title =
+            (card.getAttribute("data-title") || "") +
+            (card.getAttribute("data-en-title") || "");
+          const country = card.getAttribute("data-country") || "";
+          const genres = (card.getAttribute("data-genres") || "").split(",");
+          const network = (card.getAttribute("data-network") || "")
+            .toLowerCase()
+            .trim();
+
+          // Логіка формату
+          const isFilm = genres.includes("film");
+          let matchFormat = true;
+          if (format === "film") {
+            matchFormat = isFilm;
+          } else if (format === "series") {
+            matchFormat = !isFilm;
+          }
+
+          const matchBase =
+            (q === "" || title.includes(q)) &&
+            (c === "all" || country === c) &&
+            (g === "all" || genres.includes(g)) &&
+            (cat === "all" || card.getAttribute("data-category") === cat);
+
+          let matchStudio = true;
+          if (c === "thailand" && studio !== "all") {
+            matchStudio =
+              studio === "other"
+                ? !thaiStudios.includes(network)
+                : network === studio.toLowerCase();
+          }
+
+          return matchBase && matchStudio && matchFormat;
+        });
+
+        currentFilteredCards.sort(() => 0.5 - Math.random());
+        currentPage = 1;
+        displayCards();
+        renderPagination();
+      }
+
+      // Слухачі
+      Object.values(inputs).forEach((el) =>
+        el?.addEventListener("change", filterCatalog)
+      );
+      inputs.search?.addEventListener("input", filterCatalog);
+
+      countrySelect.addEventListener("change", toggleStudioVisibility);
+      toggleStudioVisibility();
+
+      filterCatalog();
+    }
+
     document.addEventListener("DOMContentLoaded", initPageFeatures);
     document.addEventListener("astro:after-swap", initPageFeatures);
   </script>
