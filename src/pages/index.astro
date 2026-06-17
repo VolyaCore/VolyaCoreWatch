@@ -53,7 +53,7 @@ const latestLakorns = lakornsData.slice(0, 24);
   <section class="filters-section">
     <div class="filter-group">
       <label for="filter-country">Країна</label>
-      <select id="filter-country">
+      <select id="filter-country" class="filter-group">
         <option value="all">Усі країни</option>
         <option value="thailand">Таїланд</option>
         <option value="korea">Південна Корея</option>
@@ -67,7 +67,7 @@ const latestLakorns = lakornsData.slice(0, 24);
 
     <div class="filter-group">
       <label for="filter-genre">Жанр</label>
-      <select id="filter-genre">
+      <select id="filter-genre" class="filter-group">
         <option value="all">Усі жанри</option>
         <option value="film">Фільм</option>
         <option value="romance">Романтика</option>
@@ -102,7 +102,7 @@ const latestLakorns = lakornsData.slice(0, 24);
 
     <div class="filter-group">
       <label for="filter-year">Рік</label>
-      <select id="filter-year">
+      <select id="filter-year" class="filter-group">
         <option value="all">Усі роки</option>
         <option value="2026">2026</option>
         <option value="2025">2025</option>
@@ -124,7 +124,7 @@ const latestLakorns = lakornsData.slice(0, 24);
 
     <div class="filter-group">
       <label for="filter-sort">Сортування</label>
-      <select id="filter-sort">
+      <select id="filter-sort" class="filter-group">
         <option value="default">За замовчуванням</option>
         <option value="status-ongoing">В процесі спочатку</option>
         <option value="status-completed">Завершені спочатку</option>
@@ -135,11 +135,24 @@ const latestLakorns = lakornsData.slice(0, 24);
 
     <div class="filter-group">
       <label for="filter-category">Категорія</label>
-      <select id="filter-category">
+      <select id="filter-category" class="filter-group">
         <option value="all">Усі категорії</option>
         <option value="bl">BL</option>
         <option value="gl">GL</option>
         <option value="інше">інше</option>
+      </select>
+    </div>
+
+    <div class="filter-group" id="studio-filter-wrapper" style="display: none;">
+      <label for="filter-studio">Тайські студії</label>
+      <select id="filter-studio" class="filter-group">
+        <option value="all">Усі студії</option>
+        <option value="Me Mind Y">Me Mind Y</option>
+        <option value="Be On Cloud">Be On Cloud</option>
+        <option value="CHANGE2561">CHANGE2561</option>
+        <option value="Domundi TV">Domundi TV</option>
+        <option value="GMMTV">GMMTV</option>
+        <option value="other">Інші</option>
       </select>
     </div>
   </section>
@@ -779,6 +792,132 @@ const latestLakorns = lakornsData.slice(0, 24);
     document.addEventListener("astro:after-swap", initPageFeatures);
   </script>
 
+  <script>
+    function initPageFeatures() {
+      const catalogGrid = document.getElementById("catalog-grid");
+      const dbSourceContainer = document.getElementById("hidden-full-database");
+      const paginationControls = document.getElementById("pagination-controls");
+      
+      // Елементи для логіки студії
+      const studioWrapper = document.getElementById("studio-filter-wrapper");
+      const countrySelect = document.getElementById("filter-country") as HTMLSelectElement;
+      const studioSelect = document.getElementById("filter-studio") as HTMLSelectElement;
+  
+      if (!catalogGrid || !dbSourceContainer) return;
+  
+      const ITEMS_PER_PAGE = 24;
+      let currentPage = 1;
+      let currentFilteredCards: Element[] = [];
+  
+      const allSourceCards = Array.from(dbSourceContainer.querySelectorAll(".database-card-source"));
+      const inputs = {
+        search: document.querySelector("#global-search") as HTMLInputElement,
+        country: countrySelect,
+        genre: document.getElementById("filter-genre") as HTMLSelectElement,
+        year: document.getElementById("filter-year") as HTMLSelectElement,
+        category: document.getElementById("filter-category") as HTMLSelectElement,
+        sort: document.getElementById("filter-sort") as HTMLSelectElement,
+        studio: studioSelect,
+      };
+  
+      // --- Логіка видимості студій ---
+      function toggleStudioVisibility() {
+        if (!studioWrapper || !countrySelect || !studioSelect) return;
+        
+        if (countrySelect.value === "thailand") {
+          studioWrapper.style.display = "flex";
+        } else {
+          studioWrapper.style.display = "none";
+          studioSelect.value = "all";
+          filterCatalog();
+        }
+      }
+  
+      function renderPagination() {
+        if (!paginationControls) return;
+        paginationControls.innerHTML = "";
+        const totalPages = Math.ceil(currentFilteredCards.length / ITEMS_PER_PAGE);
+  
+        if (totalPages <= 1) {
+          paginationControls.style.display = "none";
+          return;
+        }
+  
+        paginationControls.style.display = "flex";
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.innerText = i.toString();
+          btn.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
+          btn.addEventListener("click", () => {
+            currentPage = i;
+            displayCards();
+            renderPagination();
+          });
+          paginationControls.appendChild(btn);
+        }
+      }
+  
+      function displayCards() {
+        if (!catalogGrid) return;
+        catalogGrid.innerHTML = "";
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        currentFilteredCards.slice(start, start + ITEMS_PER_PAGE).forEach((card) => {
+          catalogGrid.appendChild(card.cloneNode(true));
+        });
+      }
+  
+      function filterCatalog() {
+        const q = inputs.search?.value.toLowerCase().trim() || "";
+        const c = inputs.country?.value || "all";
+        const g = inputs.genre?.value || "all";
+        const y = inputs.year?.value || "all";
+        const cat = inputs.category?.value || "all";
+        const s = inputs.sort?.value || "default";
+        const studio = inputs.studio?.value || "all";
+  
+        const thaiStudios = ["me mind y", "be on cloud", "change2561", "domundi tv", "gmmtv"];
+  
+        currentFilteredCards = allSourceCards.filter((card) => {
+          const title = (card.getAttribute("data-title") || "") + (card.getAttribute("data-en-title") || "");
+          const country = card.getAttribute("data-country") || "";
+          const genres = (card.getAttribute("data-genres") || "").split(",");
+          const network = (card.getAttribute("data-network") || "").toLowerCase().trim();
+  
+          const matchBase = (q === "" || title.includes(q)) &&
+                            (c === "all" || country === c) &&
+                            (y === "all" || card.getAttribute("data-year") === y) &&
+                            (g === "all" || genres.includes(g)) &&
+                            (cat === "all" || card.getAttribute("data-category") === cat);
+  
+          let matchStudio = true;
+          if (c === "thailand" && studio !== "all") {
+            matchStudio = studio === "other" ? !thaiStudios.includes(network) : network === studio.toLowerCase();
+          }
+  
+          return matchBase && matchStudio;
+        });
+  
+        currentFilteredCards.sort(() => 0.5 - Math.random());
+        currentPage = 1;
+        displayCards();
+        renderPagination();
+      }
+  
+      // Слухачі
+      Object.values(inputs).forEach((el) => el?.addEventListener("change", filterCatalog));
+      inputs.search?.addEventListener("input", filterCatalog);
+      
+      // Підключення логіки видимості
+      countrySelect.addEventListener("change", toggleStudioVisibility);
+      toggleStudioVisibility(); // Початковий запуск
+  
+      filterCatalog();
+    }
+  
+    document.addEventListener("DOMContentLoaded", initPageFeatures);
+    document.addEventListener("astro:after-swap", initPageFeatures);
+  </script>
+
   <style is:global>
     .pagination-container {
       display: flex;
@@ -1132,6 +1271,29 @@ const latestLakorns = lakornsData.slice(0, 24);
       .carousel-slide-wrapper {
         flex: 0 0 calc(50% - 10px);
       }
+    }
+
+    .filter-container {
+      display: flex; /* Активуємо флекс-контейнер */
+      flex-wrap: wrap; /* Дозволяє переноситися на новий рядок на мобільних */
+      gap: 15px; /* Рівномірний відступ між усіма селектами */
+      align-items: flex-end; /* Вирівнює по нижньому краю, щоб назви були на одному рівні */
+      width: 100%;
+    }
+
+    .filter-group {
+      flex: 1; /* Кожен селект розтягується рівномірно і займає однакову ширину */
+      min-width: 150px; /* Мінімальна ширина, щоб не ставали занадто вузькими на малих екранах */
+      display: flex;
+      flex-direction: column; /* Назва зверху, селект знизу */
+      gap: 8px; /* Відступ між назвою і селектом */
+    }
+
+    /* Якщо назви полів (label) мають різну довжину, можна зафіксувати їх вигляд */
+    .filter-group label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #94a3b8;
     }
   </style>
 </MainLayout>

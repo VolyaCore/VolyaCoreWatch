@@ -344,7 +344,7 @@
     "duration": "49 хв",
     "cast": ["ТіТі Ванпічіт", "Пор Суппакарн"],
     "director": "Кла Натават",
-    "network": "O2 Production",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "duang_with_you" }
     ],
@@ -384,7 +384,7 @@
     "duration": "47 хв",
     "cast": ["ДжейДжей Крісанапум", "Тор Танапоб", "Фреш Арісара", "Фуак Понсаторн"],
     "director": "Во Воравіт Хуттіяйотін",
-    "network": "oneD",
+    "network": "One 31",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "spare_me_your_mercy" }
     ],
@@ -452,7 +452,7 @@
     "duration": "55 хв",
     "cast": ["Філм Танапат", "Джем Рачата", "Сі Параттакорн", "Перл Сатжакорн"],
     "director": "Во Вораввіт Хуттіяйотін",
-    "network": "GMM One",
+    "network": "One 31",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "laws_of_attraction" }
     ],
@@ -873,7 +873,7 @@
     "duration": "1 год. 5 хв.",
     "cast": ["Кен Гаріт", "Нампін Напатсакорн", "Грін Аусадапорн", "Тле Матімун"],
     "director": "Рон Патарапон, Аофтіон Кіттіпат, Ден Пануват",
-    "network": "Mandee Channel",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "khemjira" }
     ],
@@ -1035,7 +1035,7 @@
     "duration": "45 хв.",
     "cast": ["Нат Натчапон", "Карн Касідей", "Куккай Паваді", "Судаят Патсіт", "Те Вірапат", "Пет Чатбурірак"],
     "director": "Фадей Онлахун",
-    "network": "Wabi Sabi",
+    "network": "GMMTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "dear_doctor_im_coming_for_soul" }
     ],
@@ -1230,7 +1230,7 @@
     "duration": "60 хв.",
     "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
     "director": "Аофтіон Кіттіпат",
-    "network": "Mandee Channel",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "cutie_pie" },
       { "title": "2 Сезон", "id": "cutie_pie2you" }
@@ -1271,7 +1271,7 @@
     "duration": "52 хв.",
     "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
     "director": "Аофтіон Кіттіпат",
-    "network": "Mandee Channel",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "cutie_pie" },
       { "title": "2 Сезон", "id": "cutie_pie2you" }
@@ -1304,9 +1304,9 @@
     "duration": "49 хв",
     "cast": ["Бун Ноппанут", "Прем Варут"],
     "director": "Нью Сівей Тхаватбуль",
-    "network": "Studio Wabi Sabi",
+    "network": "iQiyi",
     "relatedSeasons": [
-      { "title": "1 Сезон", "id": "between-us-s1" }
+      { "title": "1 Сезон", "id": "between-us" }
     ],
     "blocks": [
       {
@@ -1395,7 +1395,7 @@
     "duration": "49 хв.",
     "cast": ["Джеймс Прескотт", "Кад Плойсупа", "Нік Стайнер", "Фан Танупат", "Закс Наттапат", "Кім Енакін"],
     "director": "Девід Бігандер",
-    "network": "Rose Studio",
+    "network": "Channel 8",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "bad_guy_my_boss" }
     ],
@@ -1555,7 +1555,7 @@
     "duration": "50 хв.",
     "cast": ["Піт Васаторн Чайджінда", "Форт Тітіпон Сеннґай"],
     "director": "Неті Суванджинда, MAME",
-    "network": "iQIYI",
+    "network": "Me Mind Y",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "love_sea" }
     ],
@@ -2193,7 +2193,7 @@
     "duration": "45 хв.",
     "cast": ["Макс Наттапол", "Тул Пакорн", "Менмим Тенші", "Сі'Ґейм Супавіт", "Порш Апіват"],
     "director": "Доум Джейд Буньопракарн",
-    "network": "TV Thunder",
+    "network": "Line TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "together_with_me" }
     ],
@@ -2310,7 +2310,7 @@
     "duration": "46 хв.",
     "cast": ["Чве Санмін", "Печ Ратана", "Нон Ратчанон", "Джок Чалоемдет"],
     "director": "Тітіпан Раксасат",
-    "network": "",
+    "network": "Channel 9",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "sangmin_dinneaw" }
     ],
@@ -2346,7 +2346,7 @@
     "duration": "31 хв.",
     "cast": ["Макс Корнтас", "Нат Натасіт", "Печ Крітчанат", "Вейв Натапол", "Ерт Кацамонат"],
     "director": "Чивін Танамін Вонгскулфат",
-    "network": "GMMTV",
+    "network": "Copy A Bangkok",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "suntiny" }
     ],
@@ -2506,7 +2506,7 @@
     "duration": "59 хв.",
     "cast": ["Апо Наттавіт", "Майл Пхакпхум", "Оаб Оабніті", "Коб Пімолрат", "Євро Йотсават", "Сон Юк", "Нок Сінджай"],
     "director": "Жан Хамкван, Понд Крісда, Нін Бханбхасса",
-    "network": "GMMTV",
+    "network": "Be On Cloud",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "shine" }
     ],
@@ -2542,7 +2542,7 @@
     "duration": "45 хв.",
     "cast": ["Соня Саранпат", "Лукмі Пуньяпат", "Поп Патарафол", "Бонз Недол"],
     "director": "Пантіп Вібултем",
-    "network": "Change2561",
+    "network": "One 31",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "affair" }
     ],
@@ -2767,7 +2767,7 @@
     "duration": "45 хв.",
     "cast": ["Те Чаяпат", "Суа Крітсанапон"],
     "director": "Сенд Даммарон Сермріттірон",
-    "network": "World Y Entertainment",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "you_are_my_sky" }
     ],
@@ -2966,7 +2966,7 @@
     "duration": "42 хв.",
     "cast": ["Геймплей Ганпапхон Лаолекіат", "Фолк Джакрін Сангруан"],
     "director": "Фадей Охлахун",
-    "network": "DV8 Thailand",
+    "network": "WeTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "work_from_heart" }
     ],
@@ -3001,7 +3001,7 @@
     "duration": "45 хв.",
     "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Донат Супавіт", "Форт Кашане"],
     "director": "Ранпісіт Джірадечакул",
-    "network": "iQIYI",
+    "network": "Me Mind Y",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "the_boy_next_world" }
     ],
@@ -3075,7 +3075,7 @@
     "duration": "48 хв.",
     "cast": ["Паттер Пабейз", "Рю Інгкарат"],
     "director": "Ті Бундіт Синтанапараді",
-    "network": "Dee Hup House",
+    "network": "WeTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "i_saw_you_in_my_dream" }
     ],
@@ -3121,7 +3121,7 @@
     "duration": "65 хв.",
     "cast": ["Нонкул Чанон Сантінаторнкул", "Брайт Рафіфон Фапсуан"],
     "director": "Ті Бандіт Сінтанапараді",
-    "network": "Dee Hup House",
+    "network": "Line TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "I_feel_you_linger_in_the_air" }
     ],
@@ -3199,7 +3199,7 @@
     "duration": "60 хв.",
     "cast": ["Піджей Магідол", "Нью Чаяпак", "Леон Зек", "Пайд Монтапум", "Пейпер Пірада", "Фокус Джирапат"],
     "director": "Бос Куно, Джуніор Нарон",
-    "network": "GMMTV",
+    "network": "iQiyi",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "gelboys" }
     ],
@@ -3280,7 +3280,7 @@
     "duration": "46 хв.",
     "cast": ["Понд Понлавіт", "Найк Нітідон", "Мам Каталія", "Паґ Раяват", "Темс Санпакіт"],
     "director": "Ту Пунасак",
-    "network": "MTI HD",
+    "network": "One 31",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "180_degree_longitude_passes_through_us" }
     ],
@@ -3452,7 +3452,7 @@
     "duration": "25 хв.",
     "cast": ["Лін Ю", "Кім Юн", "Лін Чіан Йо", "Лін Ян Чен"],
     "director": "Чіан Пін Чен",
-    "network": "GMMTV",
+    "network": "WeTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "I_see_your_love" }
     ],
@@ -3493,7 +3493,7 @@
     "duration": "24 хв.",
     "cast": ["Кевін Чен", "Іден Чен", "Лоуренс Ло", "Хун Ян Сін"],
     "director": "Нью Сівадж Саватманікул",
-    "network": "GMMTV",
+    "network": "iQIYI",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "eternal_butler" }
     ],
@@ -3533,7 +3533,7 @@
     "duration": "49 хв.",
     "cast": ["Льов Дон Цінь", "Бенджамін Цан", "Піпі Яо", "Лу Тін Ю", "Семюель Ґу", "Янь Ю Лінь"],
     "director": "Лю Куан Хві",
-    "network": "GMMTV",
+    "network": "WeTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "the_on1y_one" }
     ],
@@ -4856,7 +4856,7 @@
     "duration": "30 хв.",
     "cast": ["Ім Джі Саб", "О Джун Тек"],
     "director": "Вернер дю Плессіс, Іну Бек",
-    "network": "LINE TV",
+    "network": "Playgram",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "the_eighth_sense" }
     ],
@@ -5511,7 +5511,7 @@
     "duration": "30 хв.",
     "cast": ["Пром Ратчапат", "Бонз Недол"],
     "director": "Танават Патхаратхонгъє",
-    "network": "Line TV",
+    "network": "iQiyi",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "always_meet_again" }
     ],
@@ -5714,7 +5714,7 @@
     "duration": "31 хв.",
     "cast": ["І Джаун", "Хван Джунсу", "О Джехьон", "Філа І"],
     "director": "Кан Ву Джін",
-    "network": "WeTV Original",
+    "network": "WeTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "never_forget_your_enemy" }
     ],
@@ -6862,7 +6862,7 @@
     "duration": "12 хв",
     "cast": ["Ю Джун", "Чо Ха Юн"],
     "director": "Джин Еон Чунг",
-    "network": "GMMTV",
+    "network": "AFA",
     "blocks": [
       {
         "blockTitle": "Фільм",
@@ -7096,7 +7096,7 @@
     "duration": "13 хв.",
     "cast": ["Ерт Пірапат Ваттанасецірі", "Мікс Сахапап Вонратч"],
     "director": "Кім Кьон Хьон",
-    "network": "Studio Wabi Sabi",
+    "network": "GMMTV",
     "blocks": [
       {
         "blockTitle": "Фільм",
@@ -7844,7 +7844,7 @@
     "duration": "58 хв.",
     "cast": ["Нет Сірафоп", "ДжейДжей Радчапон", "Кім Понсатон", "Латте Танутчон"],
     "director": "Ден Пануват",
-    "network": "Mandee Channel",
+    "network": "Domundi TV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "love_upon_a_time" }
     ],
@@ -8118,7 +8118,7 @@
     "duration": "45 хв.",
     "cast": ["Понд Понпавіт", "Ерт Кацамонат", "Макскі Ратчата", "Бас Хацанат", "Бевер Пацапон", "Тонпи Метафат", "Нгерн Анупарт", "Оат Таратон"],
     "director": "Нью Сівадж, Ко Нанталіт",
-    "network": "",
+    "network": "GMMTV",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "fourever_you" }
     ],
@@ -8217,7 +8217,7 @@
     "duration": "1 год. 9 хв.",
     "cast": ["Піт Васаторн", "Форт Тітіпон", "Френд Діна"],
     "director": "Піке Пасавут, Під Панчапон",
-    "network": "GMMTV",
+    "network": "Me Mind Y",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "yesterday" }
     ],
@@ -8253,7 +8253,7 @@
     "duration": "45 хв.",
     "cast": ["Тьютор Корапат", "Їм Праріньякорн", "Мак Фасакорн", "Фей Чінтуб"],
     "director": "Чівін Танамін",
-    "network": "Change2561",
+    "network": "Copy A Bangkok",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "chermchey" }
     ],
@@ -8283,7 +8283,7 @@
     "duration": "52 хв.",
     "cast": ["Нат Супанат", "Пін Орбніті", "Поп Патарафол", "Лі Асре"],
     "director": "О Крітсада",
-    "network": "CHANGE2561",
+    "network": "Change2561",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "im_the_most_beautiful_count" }
     ],
@@ -8313,7 +8313,7 @@
     "duration": "47 хв.",
     "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Но Пхулуан", "Турбо Чанокчон"],
     "director": "Філм Павіс, Сендвіч Парнупон",
-    "network": "",
+    "network": "Me Mind Y",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "crazy_love_moo_moo" }
     ],
