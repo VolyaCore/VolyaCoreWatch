@@ -5555,7 +5555,7 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2284" },
+          { "number": 1, "video_url": "https://player.vimeo.com/video/1202566971" },
           { "number": 2, "tg_id": "volyacore/2291" },
           { "number": 3, "tg_id": "volyacore/2296" },
           { "number": 4, "tg_id": "volyacore/2299" },
