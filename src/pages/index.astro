@@ -238,29 +238,92 @@ const latestLakorns = lakornsData.slice(0, 24);
       if (!track) return;
   
       let currentIndex = 0;
+      let autoPlayInterval: number | null = null;
+      const AUTOPLAY_DELAY = 5500; // 5.5 секунд (можете змінити на 5000 або 6000)
+  
+      // Функція для оновлення позиції каруселі
+      function updateCarousel() {
+        const slideWrapper = track.querySelector(".carousel-slide-wrapper");
+        if (!slideWrapper) return;
+        
+        const slideWidth = slideWrapper.clientWidth;
+        const gap = 20;
+        track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+      }
+  
+      // Функція для переходу на наступний елемент
+      function nextSlide() {
+        const slideWrapper = track.querySelector(".carousel-slide-wrapper");
+        if (!slideWrapper) return;
+        
+        const slideWidth = slideWrapper.clientWidth;
+        const gap = 20;
+        const trackWidth = track.parentElement ? track.parentElement.clientWidth : 0;
+        const visibleSlides = Math.floor(trackWidth / slideWidth);
+        const maxIndex = track.children.length - visibleSlides;
+  
+        currentIndex++;
+        
+        // Якщо дошли до кінця - починаємо з першого
+        if (currentIndex > maxIndex) {
+          currentIndex = 0;
+        }
+        
+        updateCarousel();
+      }
+  
+      // Автоматична прокрутка
+      function startAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+        }
+        autoPlayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
+      }
+  
+      // Стоп автоматичної прокрутки
+      function stopAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
+        }
+      }
   
       nextBtn?.addEventListener("click", () => {
-        const slideWidth = track.querySelector(".carousel-slide-wrapper")?.clientWidth || 0;
-        const gap = 20;
-        const parentElement = track.parentElement;
-        const parentWidth = parentElement ? parentElement.clientWidth : 0;
-        const maxIndex = track.children.length - Math.floor(parentWidth / slideWidth);
-  
-        if (currentIndex < maxIndex) {
-          currentIndex++;
-          track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
-        }
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
       });
   
       prevBtn?.addEventListener("click", () => {
-        const slideWidth = track.querySelector(".carousel-slide-wrapper")?.clientWidth || 0;
+        stopAutoPlay();
+        
+        const slideWrapper = track.querySelector(".carousel-slide-wrapper");
+        if (!slideWrapper) return;
+        
+        const slideWidth = slideWrapper.clientWidth;
         const gap = 20;
+        const trackWidth = track.parentElement ? track.parentElement.clientWidth : 0;
+        const visibleSlides = Math.floor(trackWidth / slideWidth);
+        const maxIndex = track.children.length - visibleSlides;
   
-        if (currentIndex > 0) {
-          currentIndex--;
-          track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+        currentIndex--;
+        
+        // Якщо дошли до початку - ідемо до кінця
+        if (currentIndex < 0) {
+          currentIndex = maxIndex;
         }
+        
+        updateCarousel();
+        
+        startAutoPlay();
       });
+  
+      // Стоп автоплею коли користувач ведріює карусель
+      track.addEventListener("mouseenter", stopAutoPlay);
+      track.addEventListener("focus", stopAutoPlay);
+  
+      // Запуск автоплею
+      startAutoPlay();
     }
   
     // --- ЛОГІКА КАТАЛОГУ ---
