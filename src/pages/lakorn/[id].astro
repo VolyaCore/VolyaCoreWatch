@@ -242,6 +242,161 @@ export function getStaticPaths() {
   </div>
 </MainLayout>
 
+<script>
+  function setupPageLogic() {
+    const container = document.querySelector(".lakorn-container");
+    const lakornId = container ? container.getAttribute("data-lakorn-id") : null;
+
+    if (lakornId) {
+      const statusButtons = document.querySelectorAll(".status-btn");
+      const storageKey = "lakorn_status_" + lakornId;
+      const savedStatus = localStorage.getItem(storageKey);
+
+      if (savedStatus) {
+        const activeBtn = document.querySelector(
+          ".status-btn[data-status=\"" + savedStatus + "\"]"
+        );
+        if (activeBtn) activeBtn.classList.add("active");
+      }
+
+      statusButtons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          const currentStatus = btn.getAttribute("data-status");
+
+          if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+            localStorage.removeItem(storageKey);
+          } else {
+            statusButtons.forEach(function(b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            if (currentStatus) {
+              localStorage.setItem(storageKey, currentStatus);
+            }
+          }
+        });
+      });
+    }
+
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const episodeWrappers = document.querySelectorAll(".episodes-wrapper");
+    const episodeButtons = document.querySelectorAll(".episode-btn");
+    const actionBox = document.getElementById("action-box");
+
+    const defaultPlaceholder = `
+      <p class="placeholder-text">
+        🍿 Оберіть сезон та натисніть на потрібну серію, щоб розпочати перегляд
+      </p>
+    `;
+
+    tabButtons.forEach(function(tab) {
+      tab.addEventListener("click", function() {
+        tabButtons.forEach(function(btn) {
+          btn.classList.remove("active");
+        });
+        episodeWrappers.forEach(function(wrapper) {
+          wrapper.classList.remove("active");
+        });
+
+        tab.classList.add("active");
+        const targetId = tab.getAttribute("data-tab-target") || "";
+        if (targetId) {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) targetElement.classList.add("active");
+        }
+
+        if (actionBox) actionBox.innerHTML = defaultPlaceholder;
+        episodeButtons.forEach(function(b) {
+          b.classList.remove("active");
+        });
+      });
+    });
+
+    episodeButtons.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        if (btn.classList.contains("active")) {
+          btn.classList.remove("active");
+          if (actionBox) actionBox.innerHTML = defaultPlaceholder;
+          return;
+        }
+
+        episodeButtons.forEach(function(b) {
+          b.classList.remove("active");
+        });
+        btn.classList.add("active");
+
+        const tgId = btn.getAttribute("data-tg-id");
+
+        if (actionBox && tgId) {
+          actionBox.innerHTML = `
+            <div class="link-ready-box">
+              <p>Серію знайдено!</p>
+              <a href="https://t.me/${tgId}" target="_blank" class="tg-go-btn pulse-btn">
+                <span>🚀</span> ПЕРЕЙТИ ДО ПЕРЕГЛЯДУ
+              </a>
+              <span class="hint">Відео миттєво відкриється у твоєму додатку Telegram</span>
+            </div>
+          `;
+        }
+      });
+    });
+
+    // 🌟 ПОШУК — БЕЗПЕЧНИЙ ДОСТУП ДО .value
+    const searchInputElement = document.querySelector("#global-search");
+    if (searchInputElement) {
+      // ВПРАВКА: перевіряємо що це input перед використанням .value
+      if (searchInputElement instanceof HTMLInputElement) {
+        searchInputElement.addEventListener("input", function() {
+          const query = searchInputElement.value;
+          if (query && query.trim() !== "") {
+            window.location.assign("/?search=" + encodeURIComponent(query.trim()));
+          }
+        });
+
+        searchInputElement.addEventListener("focus", function() {
+          window.location.assign("/");
+        });
+      }
+    }
+
+    const posterElement = document.getElementById("movie-poster");
+    const lightbox = document.getElementById("poster-lightbox");
+    const lightboxImgElement = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+
+    // 🌟 БЕЗПЕЧНИЙ ДОСТУП ДО .src і .alt
+    if (posterElement && lightbox && lightboxImgElement) {
+      // ВПРАВКА: перевіряємо що це img перед використанням .src і .alt
+      if (posterElement instanceof HTMLImageElement && lightboxImgElement instanceof HTMLImageElement) {
+        posterElement.addEventListener("click", function() {
+          lightbox.classList.add("active");
+          lightboxImgElement.src = posterElement.src;
+          if (lightboxCaption) {
+            lightboxCaption.textContent = posterElement.alt ? posterElement.alt : "Постер серіалу";
+          }
+          document.body.style.overflow = "hidden";
+        });
+
+        lightbox.addEventListener("click", function() {
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "";
+        });
+
+        document.addEventListener("keydown", function(e) {
+          if (e.key === "Escape" && lightbox.classList.contains("active")) {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+          }
+        });
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", setupPageLogic);
+  document.addEventListener("astro:after-swap", setupPageLogic);
+</script>
+
 <style>
   .project-en-title {
     display: block;
@@ -268,135 +423,6 @@ export function getStaticPaths() {
     border: 1px dashed rgba(99, 102, 241, 0.3);
   }
 </style>
-
-<script>
-  function setupPageLogic() {
-    const container = document.querySelector(".lakorn-container");
-    const lakornId = container?.getAttribute("data-lakorn-id");
-
-    if (lakornId) {
-      const statusButtons = document.querySelectorAll(".status-btn");
-      const storageKey = `lakorn_status_${lakornId}`;
-      const savedStatus = localStorage.getItem(storageKey);
-
-      if (savedStatus) {
-        const activeBtn = document.querySelector(
-          `.status-btn[data-status="${savedStatus}"]`
-        );
-        activeBtn?.classList.add("active");
-      }
-
-      statusButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const currentStatus = btn.getAttribute("data-status");
-
-          if (btn.classList.contains("active")) {
-            btn.classList.remove("active");
-            localStorage.removeItem(storageKey);
-          } else {
-            statusButtons.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-            if (currentStatus) {
-              localStorage.setItem(storageKey, currentStatus);
-            }
-          }
-        });
-      });
-    }
-
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const episodeWrappers = document.querySelectorAll(".episodes-wrapper");
-    const episodeButtons = document.querySelectorAll(".episode-btn");
-    const actionBox = document.getElementById("action-box");
-
-    const defaultPlaceholder = `
-      <p class="placeholder-text">
-        🍿 Оберіть сезон та натисніть на потрібну серію, щоб розпочати перегляд
-      </p>
-    `;
-
-    tabButtons.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        episodeWrappers.forEach((wrapper) =>
-          wrapper.classList.remove("active")
-        );
-
-        tab.classList.add("active");
-        const targetId = tab.getAttribute("data-tab-target") || "";
-        if (targetId) {
-          document.getElementById(targetId)?.classList.add("active");
-        }
-
-        if (actionBox) actionBox.innerHTML = defaultPlaceholder;
-        episodeButtons.forEach((b) => b.classList.remove("active"));
-      });
-    });
-
-    episodeButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        if (btn.classList.contains("active")) {
-          btn.classList.remove("active");
-          if (actionBox) actionBox.innerHTML = defaultPlaceholder;
-          return;
-        }
-
-        episodeButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const tgId = btn.getAttribute("data-tg-id");
-
-        if (actionBox && tgId) {
-          actionBox.innerHTML = `
-            <div class="link-ready-box">
-              <p>Серію знайдено!</p>
-              <a href="https://t.me/${tgId}" target="_blank" class="tg-go-btn pulse-btn">
-                <span>🚀</span> ПЕРЕЙТИ ДО ПЕРЕГЛЯДУ
-              </a>
-              <span class="hint">Відео миттєво відкриється у твоєму додатку Telegram</span>
-            </div>
-          `;
-        }
-      });
-    });
-
-    const poster = document.getElementById("movie-poster") as HTMLImageElement;
-    const lightbox = document.getElementById("poster-lightbox");
-    const lightboxImg = document.getElementById(
-      "lightbox-img"
-    ) as HTMLImageElement;
-    const lightboxCaption = document.getElementById("lightbox-caption");
-
-    if (poster && lightbox && lightboxImg) {
-      // Відкриття лайтбокса
-      poster.addEventListener("click", () => {
-        lightbox.classList.add("active");
-        lightboxImg.src = poster.src;
-        if (lightboxCaption) {
-          lightboxCaption.textContent = poster.alt || "Постер серіалу";
-        }
-        document.body.style.overflow = "hidden";
-      });
-
-      // 🔥 КЛІК У БУДЬ-ЯКЕ МІСЦЕ (на постер, фон чи текст) — закриває лайтбокс
-      lightbox.addEventListener("click", () => {
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "";
-      });
-
-      // Закриття на клавішу Escape
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lightbox.classList.contains("active")) {
-          lightbox.classList.remove("active");
-          document.body.style.overflow = "";
-        }
-      });
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", setupPageLogic);
-  document.addEventListener("astro:after-swap", setupPageLogic);
-</script>
 
 <style is:global>
   html body .info-section .cover-box {
