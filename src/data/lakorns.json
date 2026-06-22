@@ -13,12 +13,17 @@
     "episodesCount": 24,
     "imdbRating": "7.9",
     "duration": "45 хв",
-    "cast": ["Бук Касідет", "Форс Джіратчапон", "Перт Танапон", "Санта Понсапак", "Джуніор Паначай", "Марк Джерунтанін"],
+    "cast": [
+      "Бук Касідет",
+      "Форс Джіратчапон",
+      "Перт Танапон",
+      "Санта Понсапак",
+      "Джуніор Паначай",
+      "Марк Джерунтанін"
+    ],
     "director": "Н‘ю Сівай Саватманікул",
     "network": " GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "perfect10liners" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "perfect10liners" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -65,12 +70,15 @@
     "episodesCount": 12,
     "imdbRating": "7.4",
     "duration": "49 хв",
-    "cast": ["Тьютор Корапат", "Їм Пхаріньякорн", "Джемс Джасада", "Марк Сорнтаст"],
+    "cast": [
+      "Тьютор Корапат",
+      "Їм Пхаріньякорн",
+      "Джемс Джасада",
+      "Марк Сорнтаст"
+    ],
     "director": "Кла Натават",
     "network": "HydroIndie Enterprise",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "battle_of_the_writers" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "battle_of_the_writers" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -108,9 +116,7 @@
     "cast": ["Ом Пават", "Лен Танапон", "Ом ТІіпакон", "Папан Фромфірія"],
     "director": "Нум Аттапон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "kidnap" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "kidnap" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -148,9 +154,7 @@
     "cast": ["Брайт Вачіравіт Чіварі", "Він Метавін Опатємкатчон"],
     "director": "Ноппарнах Чайваймол",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "still_2gether" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "still_2gether" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -181,9 +185,7 @@
     "cast": ["Макс Корнтхас", "Нат Натасіт", "Ґан Тапанават"],
     "director": ["Кхетс Тунтхуп", "Петч Вараю Рукскул"],
     "network": "iQiyi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "two_worlds" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "two_worlds" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -219,9 +221,7 @@
     "cast": ["Вар Ванарат", "Їнь Анан", "Пром Ратачапат", "Бонз Надол"],
     "director": "Ті Бундіт Синтанапараді",
     "network": "iQiyi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "jack_and_joker" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "jack_and_joker" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -242,9 +242,7 @@
       },
       {
         "blockTitle": "Спешл",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1810" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1810" }]
       }
     ]
   },
@@ -265,9 +263,7 @@
     "cast": ["Тей Таван", "Н'ю Тітіпум", "Мук Вораніт", "Джен Плойчомпу"],
     "director": "Дом Джарупат Каннула",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "peaceful_property" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "peaceful_property" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -305,9 +301,7 @@
     "cast": ["Ґрейт Сапол", "Iнн Сарiн", "Под Суфакорн", "Тор Тіннафан"],
     "director": "Гольф Танварін Сукхапісіт",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "wandee_goodday" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "wandee_goodday" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -345,9 +339,7 @@
     "cast": ["ТіТі Ванпічіт", "Пор Суппакарн"],
     "director": "Кла Натават",
     "network": "Domundi TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "duang_with_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "duang_with_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -382,12 +374,15 @@
     "episodesCount": 8,
     "imdbRating": "7.9",
     "duration": "47 хв",
-    "cast": ["ДжейДжей Крісанапум", "Тор Танапоб", "Фреш Арісара", "Фуак Понсаторн"],
+    "cast": [
+      "ДжейДжей Крісанапум",
+      "Тор Танапоб",
+      "Фреш Арісара",
+      "Фуак Понсаторн"
+    ],
     "director": "Во Воравіт Хуттіяйотін",
     "network": "One 31",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "spare_me_your_mercy" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "spare_me_your_mercy" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -421,9 +416,7 @@
     "cast": ["Він Метавін Опатємкатчон", "Прім Чанікарн Тангкабоді"],
     "director": ["Пет Тачай Комолфет", "О Пата Тонгпан"],
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "enigma" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "enigma" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -453,9 +446,7 @@
     "cast": ["Філм Танапат", "Джем Рачата", "Сі Параттакорн", "Перл Сатжакорн"],
     "director": "Во Вораввіт Хуттіяйотін",
     "network": "One 31",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "laws_of_attraction" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "laws_of_attraction" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -486,12 +477,19 @@
     "episodesCount": 12,
     "imdbRating": "7.8",
     "duration": "46 хв",
-    "cast": ["Мік Метас", "Люк Пімсан", "Естон Ратіпат", "Чокун Патіпон", "Под Супакорн", "Папен Промпіріія", "Кен Канті", "Паул Танан"],
+    "cast": [
+      "Мік Метас",
+      "Люк Пімсан",
+      "Естон Ратіпат",
+      "Чокун Патіпон",
+      "Под Супакорн",
+      "Папен Промпіріія",
+      "Кен Канті",
+      "Паул Танан"
+    ],
     "director": "Ваа Ваасутеп Кетпетч",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "boys_in_love" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "boys_in_love" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -529,9 +527,7 @@
     "cast": ["Кхаотун Танават", "Фьорст Канафан"],
     "director": "Гольф Танварін Сукхапісіт",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_eclipse" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_eclipse" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -569,9 +565,7 @@
     "cast": [" Кін Сувітжак", "Сі Дечат", "Серф Патчара", "Джава Бходама"],
     "director": "Н‘ю Сівай",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "head_2_head" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "head_2_head" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -609,9 +603,7 @@
     "cast": ["Дженіс Джаністар", "Томмі Сіттічок", "Нунью Чаварін", "Зі Прук"],
     "director": "Кла Натават",
     "network": "Domundi TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "zomvivor" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "zomvivor" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -641,12 +633,17 @@
     "episodesCount": 10,
     "imdbRating": "8.7",
     "duration": "45 хв",
-    "cast": ["Мілк Панса", "Лав Паттраніт", "Джун Ванвімол", "Мевніч Нанафас", "ДжінДжін Праріят", "Піплой Кан'ярт"],
+    "cast": [
+      "Мілк Панса",
+      "Лав Паттраніт",
+      "Джун Ванвімол",
+      "Мевніч Нанафас",
+      "ДжінДжін Праріят",
+      "Піплой Кан'ярт"
+    ],
     "director": "Ґолф Сакон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "whale_store" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "whale_store" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -682,9 +679,7 @@
     "cast": ["Сірівалі Сірівібул", "Папхаварін Савасдівеч"],
     "director": "Джин Прач",
     "network": "Mine Media Production",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "clairebell" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "clairebell" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -715,12 +710,15 @@
     "episodesCount": 10,
     "imdbRating": "8.2",
     "duration": "50 хв.",
-    "cast": ["Фьорст Канафан", "Кхаотун Танават", "Сатан Кіттіпхон", "Ґрейт Сапол"],
+    "cast": [
+      "Фьорст Канафан",
+      "Кхаотун Танават",
+      "Сатан Кіттіпхон",
+      "Ґрейт Сапол"
+    ],
     "director": "У Корнпром",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "cat_for_cash" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "cat_for_cash" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -756,9 +754,7 @@
     "cast": ["Бой Наттапон", "Фіат Наттакон"],
     "director": "Тіттхі Пхантичачарт",
     "network": "Influduction",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_enemy" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_enemy" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -783,12 +779,16 @@
     "episodesCount": 12,
     "imdbRating": "8.0",
     "duration": "45 хв",
-    "cast": ["Ерт Пірапат", "Мікс Сахапхап", "Кріт Шакріт", "Рю Пхудтріпарт", "Капук Плойніра"],
+    "cast": [
+      "Ерт Пірапат",
+      "Мікс Сахапхап",
+      "Кріт Шакріт",
+      "Рю Пхудтріпарт",
+      "Капук Плойніра"
+    ],
     "director": "Ау Корнпром Ніомсіл",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "ossans_love" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "ossans_love" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -834,9 +834,7 @@
     "cast": ["Офф Джампол", "Ґан Аттапан"],
     "director": "Ґолф Сакон Вонґсінвісет",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "cooking_crush" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "cooking_crush" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -871,12 +869,15 @@
     "episodesCount": 12,
     "imdbRating": "7.9",
     "duration": "1 год. 5 хв.",
-    "cast": ["Кен Гаріт", "Нампін Напатсакорн", "Грін Аусадапорн", "Тле Матімун"],
+    "cast": [
+      "Кен Гаріт",
+      "Нампін Напатсакорн",
+      "Грін Аусадапорн",
+      "Тле Матімун"
+    ],
     "director": "Рон Патарапон, Аофтіон Кіттіпат, Ден Пануват",
     "network": "Domundi TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "khemjira" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "khemjira" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -952,7 +953,14 @@
     "episodesCount": 12,
     "imdbRating": "7.8",
     "duration": "51 хв.",
-    "cast": ["Ерт Пірапат", "Мікс Сахапхап", "Джос Вай-ар", "Ґавін Кескі", "У Танабон", "Бум Тарантон"],
+    "cast": [
+      "Ерт Пірапат",
+      "Мікс Сахапхап",
+      "Джос Вай-ар",
+      "Ґавін Кескі",
+      "У Танабон",
+      "Бум Тарантон"
+    ],
     "director": "Нінью Пінья",
     "network": "GMMTV",
     "relatedSeasons": [
@@ -993,12 +1001,15 @@
     "episodesCount": 12,
     "imdbRating": "8.1",
     "duration": "45 хв.",
-    "cast": ["Кін Сувітжак", "Сі Дечат", "Аун Напат Пачарачаваліт", "Аші Піракан Тевсуван"],
+    "cast": [
+      "Кін Сувітжак",
+      "Сі Дечат",
+      "Аун Напат Пачарачаваліт",
+      "Аші Піракан Тевсуван"
+    ],
     "director": "Ґолф Сакон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "only_boo" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "only_boo" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1033,7 +1044,14 @@
     "episodesCount": 12,
     "imdbRating": "7.9",
     "duration": "45 хв.",
-    "cast": ["Нат Натчапон", "Карн Касідей", "Куккай Паваді", "Судаят Патсіт", "Те Вірапат", "Пет Чатбурірак"],
+    "cast": [
+      "Нат Натчапон",
+      "Карн Касідей",
+      "Куккай Паваді",
+      "Судаят Патсіт",
+      "Те Вірапат",
+      "Пет Чатбурірак"
+    ],
     "director": "Фадей Онлахун",
     "network": "Wabi Sabi",
     "relatedSeasons": [
@@ -1073,12 +1091,15 @@
     "episodesCount": 3,
     "imdbRating": "7.3",
     "duration": "47 хв.",
-    "cast": ["Лав Паттраніт Лімпатіякорн", "Мілк Панса Восбайн", "Ерт Пірапат Ваттанасецірі", "Мікс Сахапхап Вонгратч"],
+    "cast": [
+      "Лав Паттраніт Лімпатіякорн",
+      "Мілк Панса Восбайн",
+      "Ерт Пірапат Ваттанасецірі",
+      "Мікс Сахапхап Вонгратч"
+    ],
     "director": "Ті Бундіт Сінтанапараді",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "magic_of_zero" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "magic_of_zero" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1107,9 +1128,7 @@
     "cast": ["Інн Сарін", "Ґрейт Сапол"],
     "director": "Кіа Сакчай Кітпання, Порніча Бонбунджонг",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "memoir_of_Rati" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "memoir_of_Rati" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1144,12 +1163,17 @@
     "episodesCount": 16,
     "imdbRating": "8.3",
     "duration": "45 хв.",
-    "cast": ["Понд Наравіт", "Пхувін Тансак’юен", "Вінні Танавін", "Сатан Кіттіпхоп", "Ау Танабон", "Бум Тарантон"],
+    "cast": [
+      "Понд Наравіт",
+      "Пхувін Тансак’юен",
+      "Вінні Танавін",
+      "Сатан Кіттіпхоп",
+      "Ау Танабон",
+      "Бум Тарантон"
+    ],
     "director": "Н‘ю Сівай Саватманікул",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "we_are" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "we_are" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1188,12 +1212,15 @@
     "episodesCount": 12,
     "imdbRating": "7.8",
     "duration": "59 хв.",
-    "cast": ["Джуніор Паначай", "Марк Джірунтанін", "Пун Мітпакді", "Ом Тітіпат"],
+    "cast": [
+      "Джуніор Паначай",
+      "Марк Джірунтанін",
+      "Пун Мітпакді",
+      "Ом Тітіпат"
+    ],
     "director": "Нью Сівай",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_romance_scammer" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_romance_scammer" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1228,7 +1255,14 @@
     "episodesCount": 12,
     "imdbRating": "7.9",
     "duration": "60 хв.",
-    "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
+    "cast": [
+      "Нунью Чаварін",
+      "Зі Прук",
+      "Макс Корнтас",
+      "Нат Натасіт",
+      "Тьютор Корапат",
+      "Їм Пхаріньякорн"
+    ],
     "director": "Аофтіон Кіттіпат",
     "network": "Domundi TV",
     "relatedSeasons": [
@@ -1269,7 +1303,14 @@
     "episodesCount": 4,
     "imdbRating": "7.8",
     "duration": "52 хв.",
-    "cast": ["Нунью Чаварін", "Зі Прук", "Макс Корнтас", "Нат Натасіт", "Тьютор Корапат", "Їм Пхаріньякорн"],
+    "cast": [
+      "Нунью Чаварін",
+      "Зі Прук",
+      "Макс Корнтас",
+      "Нат Натасіт",
+      "Тьютор Корапат",
+      "Їм Пхаріньякорн"
+    ],
     "director": "Аофтіон Кіттіпат",
     "network": "Domundi TV",
     "relatedSeasons": [
@@ -1305,9 +1346,7 @@
     "cast": ["Бун Ноппанут", "Прем Варут"],
     "director": "Нью Сівей Тхаватбуль",
     "network": "Wabi Sabi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "between-us" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "between-us" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1327,7 +1366,7 @@
         ]
       },
       {
-        "blockTitle": "Спецвипуск", 
+        "blockTitle": "Спецвипуск",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/323" },
           { "number": 2, "tg_id": "volyacore/330" },
@@ -1356,9 +1395,7 @@
     "cast": ["Пум Пхупіран", "Ап Пумпат", "Мек Джіракіт", "Порше Танаторн"],
     "director": "Пепзі Банкорн Ворасатарі",
     "network": "iQIYI",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_stand_in" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_stand_in" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1393,12 +1430,17 @@
     "episodesCount": 12,
     "imdbRating": "7.3",
     "duration": "49 хв.",
-    "cast": ["Джеймс Прескотт", "Кад Плойсупа", "Нік Стайнер", "Фан Танупат", "Закс Наттапат", "Кім Енакін"],
+    "cast": [
+      "Джеймс Прескотт",
+      "Кад Плойсупа",
+      "Нік Стайнер",
+      "Фан Танупат",
+      "Закс Наттапат",
+      "Кім Енакін"
+    ],
     "director": "Девід Бігандер",
     "network": "Channel 8",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "bad_guy_my_boss" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "bad_guy_my_boss" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1419,9 +1461,7 @@
       },
       {
         "blockTitle": "Спецвипуск",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1644" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1644" }]
       }
     ]
   },
@@ -1442,9 +1482,7 @@
     "cast": ["Ерт Пірапат Ваттанасецірі", "Мікс Сахапхап Вонгратч"],
     "director": "Ноппарнах Чайваймол",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "moonlight_chicken" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "moonlight_chicken" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1475,12 +1513,15 @@
     "episodesCount": 12,
     "imdbRating": "8.0",
     "duration": "45 хв.",
-    "cast": ["Форт Наттават", "Джемінай Норавіт", "Пан Патітта", "Чокун Паттіпон"],
+    "cast": [
+      "Форт Наттават",
+      "Джемінай Норавіт",
+      "Пан Патітта",
+      "Чокун Паттіпон"
+    ],
     "director": "Ау Корнпром Ньомсіл",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_love_mix_up" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_love_mix_up" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1515,12 +1556,17 @@
     "episodesCount": 10,
     "imdbRating": "8.2",
     "duration": "48 хв.",
-    "cast": ["Сі Тавінан", "Джиммі Джітарафол", "Сейс Сайсават", "Франк Нарут", "Фьорст Канафан", "Джуніор Паначай"],
+    "cast": [
+      "Сі Тавінан",
+      "Джиммі Джітарафол",
+      "Сейс Сайсават",
+      "Франк Нарут",
+      "Фьорст Канафан",
+      "Джуніор Паначай"
+    ],
     "director": "А Натафон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_magic_prophecy" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_magic_prophecy" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1556,9 +1602,7 @@
     "cast": ["Піт Васаторн Чайджінда", "Форт Тітіпон Сеннґай"],
     "director": "Неті Суванджинда, MAME",
     "network": "Me Mind Y",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_sea" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_sea" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1594,9 +1638,7 @@
     "cast": ["Джос Вай-ар", "Ґавін Кескі", "Ум Апасірі", "Монд Танутчай"],
     "director": "Арк Сародж",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_golden_blood" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_golden_blood" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1634,9 +1676,7 @@
     "cast": ["Сі Тавінан Анукулпрасерт", "Джиммі Джітарафол Потівіхок"],
     "director": "Ікс Нуттапонг Монгколсавас",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "vice_versa" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "vice_versa" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1674,9 +1714,7 @@
     "cast": ["Нунью Чаварін", "Зі Прук", "Саксіт Тантон", "Джиммі Карн"],
     "director": "Аофтіон Кіттіпат",
     "network": "Domundi TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_next_prince" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_next_prince" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1713,12 +1751,16 @@
     "episodesCount": 12,
     "imdbRating": "8.1",
     "duration": "45 хв.",
-    "cast": ["Мілк Панса", "Лав Паттраніт", "В‘ю Беньяпа", "Джун Ванвімол", "Форд Алан"],
+    "cast": [
+      "Мілк Панса",
+      "Лав Паттраніт",
+      "В‘ю Беньяпа",
+      "Джун Ванвімол",
+      "Форд Алан"
+    ],
     "director": "Фон Канітта Квуньо",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "23point5" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "23point5" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1756,9 +1798,7 @@
     "cast": ["Боні Патрафус", "Емі Тасорн", "Сін Гаріт", "В‘ю Беньяпа"],
     "director": "Фон Каніта",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "us" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "us" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1796,9 +1836,7 @@
     "cast": ["Ом Танакріт", "Тусейф Кріттават"],
     "director": "Бол Канаторн Табвілай",
     "network": "Rookie Thailand",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "night_dream" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "night_dream" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1827,12 +1865,17 @@
     "episodesCount": 12,
     "imdbRating": "8.0",
     "duration": "1 год. 4 хв.",
-    "cast": ["Ґан Натакан", "Найс Боріпат", "Ґід Кантапон", "Дет Нарондет", "Ерт Танакріт", "Ґап Джакарін"],
+    "cast": [
+      "Ґан Натакан",
+      "Найс Боріпат",
+      "Ґід Кантапон",
+      "Дет Нарондет",
+      "Ерт Танакріт",
+      "Ґап Джакарін"
+    ],
     "director": "Ті Бандіт",
     "network": "Deep H Studio",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "knock_out" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "knock_out" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1867,12 +1910,16 @@
     "episodesCount": 11,
     "imdbRating": "8.1",
     "duration": "45 хв.",
-    "cast": ["Смарт Чісанупон", "Бум Равівіт", "Той Понсакон", "Єро Вараттіп", "Намваан Каннапорн"],
+    "cast": [
+      "Смарт Чісанупон",
+      "Бум Равівіт",
+      "Той Понсакон",
+      "Єро Вараттіп",
+      "Намваан Каннапорн"
+    ],
     "director": "Бос Васакорн",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "top_form" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "top_form" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1906,12 +1953,17 @@
     "episodesCount": 13,
     "imdbRating": "8.6",
     "duration": "55 хв.",
-    "cast": ["Нанон Корапат", "Чімон Вачіравіт", "Лілі Нічапалак", "Джейн Раміда", "Ґан Аттапан", "Сін Гаріт"],
+    "cast": [
+      "Нанон Корапат",
+      "Чімон Вачіравіт",
+      "Лілі Нічапалак",
+      "Джейн Раміда",
+      "Ґан Аттапан",
+      "Сін Гаріт"
+    ],
     "director": "О Патта Tонпан, Сенд Ддаммарон Сермріттірон, Ваа Ваасутеп Кетчеп, Нонтакорн Педпо",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_gifted" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_gifted" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1950,9 +2002,7 @@
     "cast": ["Сі Тавінан Анукулпрасерт", "Джиммі Джітарафол Потівіхок"],
     "director": "Аоф Ноппхарнак Чайяхвімхон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "last_twilight" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "last_twilight" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -1990,9 +2040,7 @@
     "cast": ["Пітерпан Тадсапон", "Понд Понлавіт"],
     "director": "А Натафон",
     "network": "YT Indie Project",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "reset" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "reset" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2030,7 +2078,7 @@
     "network": "Change2561",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "pit_babe" },
-      {"title":"2 Сезон", "id": "pit_babe2"}
+      { "title": "2 Сезон", "id": "pit_babe2" }
     ],
     "blocks": [
       {
@@ -2067,12 +2115,19 @@
     "episodesCount": 13,
     "imdbRating": "8.0",
     "duration": "50 хв",
-    "cast": ["Павел Нарет", "Пух Кріттін", "Нат Супанут", "Сайлуб Геммавіч", "Пон Танапон", "Лі Асре"],
+    "cast": [
+      "Павел Нарет",
+      "Пух Кріттін",
+      "Нат Супанут",
+      "Сайлуб Геммавіч",
+      "Пон Танапон",
+      "Лі Асре"
+    ],
     "director": "Пітер Нопачай Джаянама",
     "network": "Change2561",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "pit_babe" },
-      {"title":"2 Сезон", "id": "pit_babe2"}
+      { "title": "2 Сезон", "id": "pit_babe2" }
     ],
     "blocks": [
       {
@@ -2112,9 +2167,7 @@
     "cast": ["Дет Нарондет", "Шел Тхакріт", "Кон Фалат"],
     "director": "Чивін Танамін Вонгскулфат",
     "network": "Copy A Bangkok",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "playboyy" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "playboyy" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2151,12 +2204,16 @@
     "episodesCount": 12,
     "imdbRating": "8.2",
     "duration": "45 хв.",
-    "cast": ["Намтан Тіпнарі", "Філм Рачанун", "Дуендео Яруджинда", "Сайзі Рутріча", "Капук Плойніра"],
+    "cast": [
+      "Намтан Тіпнарі",
+      "Філм Рачанун",
+      "Дуендео Яруджинда",
+      "Сайзі Рутріча",
+      "Капук Плойніра"
+    ],
     "director": "Snap25 Team",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "pluto" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "pluto" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2191,12 +2248,16 @@
     "episodesCount": 13,
     "imdbRating": "8.1",
     "duration": "45 хв.",
-    "cast": ["Макс Наттапол", "Тул Пакорн", "Менмим Тенші", "Сі'Ґейм Супавіт", "Порш Апіват"],
+    "cast": [
+      "Макс Наттапол",
+      "Тул Пакорн",
+      "Менмим Тенші",
+      "Сі'Ґейм Супавіт",
+      "Порш Апіват"
+    ],
     "director": "Доум Джейд Буньопракарн",
     "network": "Line TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "together_with_me" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "together_with_me" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2235,9 +2296,7 @@
     "cast": ["Кріст Пірават", "Сінгто Прачая"],
     "director": "Літ Падун",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_ex_morning" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_ex_morning" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2273,9 +2332,7 @@
     "cast": ["Бун Ноппанат", "Прем Варут"],
     "director": "Н‘ю Сівай Саватманікул, Наттанон Кідді",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "revamp_the_undead_story" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "revamp_the_undead_story" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2311,9 +2368,7 @@
     "cast": ["Чве Санмін", "Печ Ратана", "Нон Ратчанон", "Джок Чалоемдет"],
     "director": "Тітіпан Раксасат",
     "network": "Channel 9",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "sangmin_dinneaw" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "sangmin_dinneaw" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2344,12 +2399,16 @@
     "episodesCount": 10,
     "imdbRating": "7.5",
     "duration": "31 хв.",
-    "cast": ["Макс Корнтас", "Нат Натасіт", "Печ Крітчанат", "Вейв Натапол", "Ерт Кацамонат"],
+    "cast": [
+      "Макс Корнтас",
+      "Нат Натасіт",
+      "Печ Крітчанат",
+      "Вейв Натапол",
+      "Ерт Кацамонат"
+    ],
     "director": "Чивін Танамін Вонгскулфат",
     "network": "Copy A Bangkok",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "suntiny" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "suntiny" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2385,9 +2444,7 @@
     "cast": ["Офф Джампол", "Ґан Аттапан"],
     "director": "Нет Тачай Комолфет, Пран Сасінан Паттана",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_trainee" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_trainee" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2422,12 +2479,16 @@
     "episodesCount": 10,
     "imdbRating": "8.3",
     "duration": "47 хв.",
-    "cast": ["Офф Джампол", "Ґан Аттапан", "Дью Джірават", "Емі Тасорн", "Ейджей Чаяпон"],
+    "cast": [
+      "Офф Джампол",
+      "Ґан Аттапан",
+      "Дью Джірават",
+      "Емі Тасорн",
+      "Ейджей Чаяпон"
+    ],
     "director": "Нучі Ануча",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "burnout_syndrome" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "burnout_syndrome" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2460,12 +2521,17 @@
     "episodesCount": 16,
     "imdbRating": "8.1",
     "duration": "45 хв.",
-    "cast": ["Скай Вонреві", "Нані Хірункіт", "Марія Поунлертларп", "Фоей Патара", "Кей Lертсіттічай", "Марк Пакін"],
+    "cast": [
+      "Скай Вонреві",
+      "Нані Хірункіт",
+      "Марія Поунлертларп",
+      "Фоей Патара",
+      "Кей Lертсіттічай",
+      "Марк Пакін"
+    ],
     "director": "Фон Канітта Квунью",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "high_school" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "high_school" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2504,12 +2570,18 @@
     "episodesCount": 8,
     "imdbRating": "8.1",
     "duration": "59 хв.",
-    "cast": ["Апо Наттавіт", "Майл Пхакпхум", "Оаб Оабніті", "Коб Пімолрат", "Євро Йотсават", "Сон Юк", "Нок Сінджай"],
+    "cast": [
+      "Апо Наттавіт",
+      "Майл Пхакпхум",
+      "Оаб Оабніті",
+      "Коб Пімолрат",
+      "Євро Йотсават",
+      "Сон Юк",
+      "Нок Сінджай"
+    ],
     "director": "Жан Хамкван, Понд Крісда, Нін Бханбхасса",
     "network": "Be On Cloud",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "shine" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "shine" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2543,9 +2615,7 @@
     "cast": ["Соня Саранпат", "Лукмі Пуньяпат", "Поп Патарафол", "Бонз Недол"],
     "director": "Пантіп Вібултем",
     "network": "One 31",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "affair" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "affair" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2561,7 +2631,7 @@
         ]
       }
     ]
-  }, 
+  },
   {
     "id": "harmony_secret",
     "title": "Таємниця гармонії: Підступна угода",
@@ -2576,12 +2646,15 @@
     "episodesCount": 8,
     "imdbRating": "8.3",
     "duration": "47 хв.",
-    "cast": ["Локмахі Пуньяпат", "Соня Саранпхат", "Лілі Ладапа", "Бель Джиратчая"],
+    "cast": [
+      "Локмахі Пуньяпат",
+      "Соня Саранпхат",
+      "Лілі Ладапа",
+      "Бель Джиратчая"
+    ],
     "director": "О Крітсада",
     "network": "CHANGE2561",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "harmony_secret" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "harmony_secret" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2615,9 +2688,7 @@
     "cast": ["Мік Монтон", "Топ Піяват", "Джіа Теерафат", "Фіат Патчата"],
     "director": "Во Вораввіт Хуттіяйотін",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "every_you_every_me" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "every_you_every_me" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2648,12 +2719,17 @@
     "episodesCount": 13,
     "imdbRating": "8.4",
     "duration": "45 хв.",
-    "cast": ["Вільям Джакрапат", "Ест Супха", "Леґо Рапіпон", "Хон Пічетпон", "Нат Танат", "Туї Чаяторн"],
+    "cast": [
+      "Вільям Джакрапат",
+      "Ест Супха",
+      "Леґо Рапіпон",
+      "Хон Пічетпон",
+      "Нат Танат",
+      "Туї Чаяторн"
+    ],
     "director": "Муї Атіча Тантханавіграй",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "thame_po" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "thame_po" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2689,12 +2765,15 @@
     "episodesCount": 8,
     "imdbRating": "7.7",
     "duration": "46 хв.",
-    "cast": ["Джемінай Норавіт", "Прім Чанікарн", "Мьюнік Нанафас", "Аунпао Оніріс"],
+    "cast": [
+      "Джемінай Норавіт",
+      "Прім Чанікарн",
+      "Мьюнік Нанафас",
+      "Аунпао Оніріс"
+    ],
     "director": "Кіт Крітсада",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_dark_dice" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_dark_dice" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2725,12 +2804,16 @@
     "episodesCount": 12,
     "imdbRating": "7.9",
     "duration": "46 хв.",
-    "cast": ["Тей Таван", "Н'ю Тхітіпум", "Флюк Ґавін", "Под Суфакорн", "Ейджей Чаяпон"],
+    "cast": [
+      "Тей Таван",
+      "Н'ю Тхітіпум",
+      "Флюк Ґавін",
+      "Под Суфакорн",
+      "Ейджей Чаяпон"
+    ],
     "director": "Аоф Ноппхарнак Чайяхвімхон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "dark_blue_kiss" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "dark_blue_kiss" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2768,9 +2851,7 @@
     "cast": ["Те Чаяпат", "Суа Крітсанапон"],
     "director": "Сенд Даммарон Сермріттірон",
     "network": "One 31",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "you_are_my_sky" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "you_are_my_sky" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2808,9 +2889,7 @@
     "cast": ["Орм Корнпат", "Лінлін Квон"],
     "director": "Най Саратсваді",
     "network": "Channel 3",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "only_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "only_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2850,9 +2929,7 @@
     "cast": ["Брайт Вачіравіт Чіварі", "Він Метавін Опатємкатчон"],
     "director": "Чамп Вірачіт Тонгджіла",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "2gether" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "2gether" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2888,7 +2965,12 @@
     "episodesCount": 8,
     "imdbRating": "8.1",
     "duration": "55 хв.",
-    "cast": ["Сайлуб Геммавіч", "Пон Танапон", "Ґарфілд Пантач", "Бенз Аттанін"],
+    "cast": [
+      "Сайлуб Геммавіч",
+      "Пон Танапон",
+      "Ґарфілд Пантач",
+      "Бенз Аттанін"
+    ],
     "director": "Нуї Суттасіт",
     "network": "Change2561",
     "relatedSeasons": [
@@ -2924,12 +3006,18 @@
     "episodesCount": 12,
     "imdbRating": "8.3",
     "duration": "45 хв.",
-    "cast": ["Фьорст Канафан", "Кхаотун Танават", "Джун Арчен", "Данк Натачай", "Парн Танапорн", "Пеппер Фанурой", "Кен Канті"],
+    "cast": [
+      "Фьорст Канафан",
+      "Кхаотун Танават",
+      "Джун Арчен",
+      "Данк Натачай",
+      "Парн Танапорн",
+      "Пеппер Фанурой",
+      "Кен Канті"
+    ],
     "director": "Джоджо Тічакорн",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_heart_killers" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_heart_killers" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2967,9 +3055,7 @@
     "cast": ["Геймплей Ганпапхон Лаолекіат", "Фолк Джакрін Сангруан"],
     "director": "Фадей Охлахун",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "work_from_heart" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "work_from_heart" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -2980,7 +3066,7 @@
           { "number": 4, "tg_id": "volyacore/761" },
           { "number": 5, "tg_id": "volyacore/799" },
           { "number": 6, "tg_id": "volyacore/818" },
-          { "number": 7, "tg_id": "volyacore/854"}
+          { "number": 7, "tg_id": "volyacore/854" }
         ]
       }
     ]
@@ -3002,9 +3088,7 @@
     "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Донат Супавіт", "Форт Кашане"],
     "director": "Ранпісіт Джірадечакул",
     "network": "Me Mind Y",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_boy_next_world" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_boy_next_world" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3037,12 +3121,17 @@
     "episodesCount": 8,
     "imdbRating": "7.8",
     "duration": "55 хв.",
-    "cast": ["Епл Лапісара", "Мім Пантіта", "Енгфа Вараха", "Фрін Сароча", "Намнин Мілін", "Нодт Нуттасід"],
+    "cast": [
+      "Епл Лапісара",
+      "Мім Пантіта",
+      "Енгфа Вараха",
+      "Фрін Сароча",
+      "Намнин Мілін",
+      "Нодт Нуттасід"
+    ],
     "director": "Фьюз Кіттісак",
     "network": "Channel 7",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_earth" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_earth" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3076,9 +3165,7 @@
     "cast": ["Паттер Пабейз", "Рю Інгкарат"],
     "director": "Ті Бундіт Синтанапараді",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "i_saw_you_in_my_dream" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "i_saw_you_in_my_dream" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3099,9 +3186,7 @@
       },
       {
         "blockTitle": "Спецвипуск",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1640" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1640" }]
       }
     ]
   },
@@ -3162,9 +3247,7 @@
     "cast": ["Понд Наравіт", "Пхувін Тансак’юен", "Ест Супха", "Боні Патрафус"],
     "director": "Ікс Наттапон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "me_and_thee" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "me_and_thee" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3197,12 +3280,17 @@
     "episodesCount": 7,
     "imdbRating": "8.2",
     "duration": "60 хв.",
-    "cast": ["Піджей Магідол", "Нью Чаяпак", "Леон Зек", "Пайд Монтапум", "Пейпер Пірада", "Фокус Джирапат"],
+    "cast": [
+      "Піджей Магідол",
+      "Нью Чаяпак",
+      "Леон Зек",
+      "Пайд Монтапум",
+      "Пейпер Пірада",
+      "Фокус Джирапат"
+    ],
     "director": "Бос Куно, Джуніор Нарон",
     "network": "iQiyi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "gelboys" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "gelboys" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3232,12 +3320,16 @@
     "episodesCount": 18,
     "imdbRating": "8.2",
     "duration": "55 хв.",
-    "cast": ["Наппон Гомарачун", "Сінді Сірін'я Бішоп", "Ґан Аттапан", "Філм Рачанун", "Дью Джірават"],
+    "cast": [
+      "Наппон Гомарачун",
+      "Сінді Сірін'я Бішоп",
+      "Ґан Аттапан",
+      "Філм Рачанун",
+      "Дью Джірават"
+    ],
     "director": "Фон Канітта Квуньо",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "home_school" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "home_school" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3278,7 +3370,13 @@
     "episodesCount": 8,
     "imdbRating": "7.8",
     "duration": "46 хв.",
-    "cast": ["Понд Понлавіт", "Найк Нітідон", "Мам Каталія", "Паґ Раяват", "Темс Санпакіт"],
+    "cast": [
+      "Понд Понлавіт",
+      "Найк Нітідон",
+      "Мам Каталія",
+      "Паґ Раяват",
+      "Темс Санпакіт"
+    ],
     "director": "Ту Пунасак",
     "network": "One 31",
     "relatedSeasons": [
@@ -3317,9 +3415,7 @@
     "cast": ["Дью Джірават", "Понд Наравіт", "Ґан Аттапан", "Пан Патіта"],
     "director": "Чік Сакон",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "leap_day" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "leap_day" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3453,9 +3549,7 @@
     "cast": ["Лін Ю", "Кім Юн", "Лін Чіан Йо", "Лін Ян Чен"],
     "director": "Чіан Пін Чен",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "I_see_your_love" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "I_see_your_love" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3494,9 +3588,7 @@
     "cast": ["Кевін Чен", "Іден Чен", "Лоуренс Ло", "Хун Ян Сін"],
     "director": "Нью Сівадж Саватманікул",
     "network": "iQIYI",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "eternal_butler" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "eternal_butler" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3531,12 +3623,17 @@
     "episodesCount": 12,
     "imdbRating": "8.3",
     "duration": "49 хв.",
-    "cast": ["Льов Дон Цінь", "Бенджамін Цан", "Піпі Яо", "Лу Тін Ю", "Семюель Ґу", "Янь Ю Лінь"],
+    "cast": [
+      "Льов Дон Цінь",
+      "Бенджамін Цан",
+      "Піпі Яо",
+      "Лу Тін Ю",
+      "Семюель Ґу",
+      "Янь Ю Лінь"
+    ],
     "director": "Лю Куан Хві",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_on1y_one" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_on1y_one" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3571,12 +3668,17 @@
     "episodesCount": 10,
     "imdbRating": "7.4",
     "duration": "15 хв.",
-    "cast": ["Лі Ші Кан", "Хсу Му Джі", "Вілл Чан", "Ліо Ґуо", "Джером Хуан Алуф", "Веллс Су"],
+    "cast": [
+      "Лі Ші Кан",
+      "Хсу Му Джі",
+      "Вілл Чан",
+      "Ліо Ґуо",
+      "Джером Хуан Алуф",
+      "Веллс Су"
+    ],
     "director": "Зіроу Ху",
     "network": "Line TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "because_of_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "because_of_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3612,9 +3714,7 @@
     "cast": ["Джейк Хсу", "Кріс Ву", "Енді Біан", "Кенні Чен"],
     "director": "Лі Чін Джун",
     "network": "Line TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "history3_trapped" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "history3_trapped" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3726,9 +3826,7 @@
     "cast": ["Чарльз Ту", "Майкл Чан", "Джейм Касама"],
     "director": "Цзянь Сюебінь",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "first_note_of_love" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "first_note_of_love" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3766,9 +3864,7 @@
     "cast": ["Шень Цзюнь", "Лі Чжень Хао", "Хсу Шуо Тін", "Енді Хуан"],
     "director": "Цай Мі Цзе",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "about_youth" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "about_youth" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3874,9 +3970,7 @@
     "cast": ["Юсугі Шухей", "Нішімура Такуя"],
     "director": "Еда Юука",
     "network": "MBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "one_room_angel" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "one_room_angel" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -3908,9 +4002,7 @@
     "cast": ["Уса Такума", "Хірано Кошу"],
     "director": "Кавасакі Рьо",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "depth_of_field" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "depth_of_field" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4016,9 +4108,7 @@
     "cast": ["Сато Рюґа", "Сакай Шо", "Морі Хінамі", "Савамура Рей"],
     "director": "Като Аяка",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "living_with_him" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "living_with_him" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4052,9 +4142,7 @@
     "cast": ["Муто Джун", "Іто Асахі", "Кітамура Юі", "Акіта Шіорі"],
     "director": "Томіта Мікі, Такагаші Нацукі",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "when_it_rains_it_pours" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "when_it_rains_it_pours" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4087,9 +4175,7 @@
     "cast": ["Канеко Шинуйя", "Номура Кота", "Айрі Джінґі", " Такаші Ріо"],
     "director": "Гораі Тадаакі",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "perfect_propose" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "perfect_propose" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4145,18 +4231,22 @@
     "cover": "KeixYaku.jpg",
     "status": "completed",
     "country": "japan",
-    "categories": "Інше", 
+    "categories": "Інше",
     "year": 2022,
     "genres": ["action", "thriller", "mysticism", "drama"],
     "episodesCount": 10,
     "imdbRating": "7.5",
     "duration": "45 хв.",
-    "cast": ["Інукай Ацухіро", "Сузукі Нубуюкі", "Хірата Мітсуру", "Кіруяма Чікі", "Токі Йошімі"],
+    "cast": [
+      "Інукай Ацухіро",
+      "Сузукі Нубуюкі",
+      "Хірата Мітсуру",
+      "Кіруяма Чікі",
+      "Токі Йошімі"
+    ],
     "director": "Кураката Масатоші, Хатано Такафумі",
     "network": "Yomiuri TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "KeixYaku" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "KeixYaku" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4192,9 +4282,7 @@
     "cast": ["Кудо Міо", "Осакі Ічіка", "Накай Томо", "Міхара Уі"],
     "director": "Еда Уюка",
     "network": "MBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "call_me_by_no_name" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "call_me_by_no_name" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4225,7 +4313,14 @@
     "episodesCount": 10,
     "imdbRating": "8.1",
     "duration": "26 хв.",
-    "cast": ["Нагумо Шома", "Хамая Такуто", "Сузукі Асахі", "Нагацумо Рео", "Хігучі Хіна", "Мочіжукі Аюму"],
+    "cast": [
+      "Нагумо Шома",
+      "Хамая Такуто",
+      "Сузукі Асахі",
+      "Нагацумо Рео",
+      "Хігучі Хіна",
+      "Мочіжукі Аюму"
+    ],
     "director": "Томорі Ацукі",
     "network": "GagaOOLala",
     "relatedSeasons": [
@@ -4263,12 +4358,16 @@
     "episodesCount": 12,
     "imdbRating": "8.0",
     "duration": "20 хв.",
-    "cast": ["Хама Шого", "Хьодо Кацумі", "Кавай Аоба", "Накамура Ікудзі", "Ноус Рін"],
+    "cast": [
+      "Хама Шого",
+      "Хьодо Кацумі",
+      "Кавай Аоба",
+      "Накамура Ікудзі",
+      "Ноус Рін"
+    ],
     "director": ["Оцука Кьохеі", "Міямото Хідеміцу"],
     "network": "TBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_is_like_a_poison" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_is_like_a_poison" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4303,12 +4402,15 @@
     "episodesCount": 10,
     "imdbRating": "8.3",
     "duration": "30 хв.",
-    "cast": ["Мотоджіма Джюнсей", "Камімура Кеншін", "Імаї Юкі", "Маіяджі Ицукі"],
+    "cast": [
+      "Мотоджіма Джюнсей",
+      "Камімура Кеншін",
+      "Імаї Юкі",
+      "Маіяджі Ицукі"
+    ],
     "director": "Шібата Кейсуке, Макіно Масару",
     "network": "MBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "our_youth" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "our_youth" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4327,9 +4429,7 @@
       },
       {
         "blockTitle": "Спецвипуск",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1666" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1666" }]
       }
     ]
   },
@@ -4350,9 +4450,7 @@
     "cast": ["Інукай Ацухіро", "Хірокі Іідзіма", "Маеяма Кууга"],
     "director": "Ішібаші Юхо, Камімура Нахоб, Іідзука Кашоу",
     "network": "BS-TBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "our_dining_table" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "our_dining_table" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4371,9 +4469,7 @@
       },
       {
         "blockTitle": "Спецвипуск",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/530" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/530" }]
       }
     ]
   },
@@ -4394,9 +4490,7 @@
     "cast": ["Маедо Кентаро", "Кашівагі Хару"],
     "director": "Танадзава Такайоші, Ізумі Масахіде, Хаяші Масатака",
     "network": "TBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "i_cannot_reach_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "i_cannot_reach_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4430,9 +4524,7 @@
     "cast": ["Охіра Шузо", "Ямашіта Кокі", "Іноє Сора", "Тогаші Ейджі"],
     "director": "Окамото Куміко",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_8_2_second_rule" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_8_2_second_rule" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4445,7 +4537,7 @@
         ]
       }
     ]
-  },  
+  },
   {
     "id": "mr_sahara_and_toki_kun",
     "title": "Сахара-сенсей і Токі-кун",
@@ -4463,9 +4555,7 @@
     "cast": ["Кізу Такумі", "Хачімура Рінтаро"],
     "director": "Шібата Кейсуке, Комура Тошіюкі",
     "network": "MBS",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "mr_sahara_and_toki_kun" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "mr_sahara_and_toki_kun" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4537,9 +4627,7 @@
     "cast": ["Савамура Рей", "Беппу Юрай", "Кубота Юкі", "Яманака Со"],
     "director": "Комура Тошіюкі, Фурумая Томоюкі",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "happy_of_the_end" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "happy_of_the_end" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4573,9 +4661,7 @@
     "cast": ["Наказава Мотокі", "Кобаяші Тораносуке"],
     "director": "Яегаші Фууга, Макіно Масару, Харашіма Таканобу",
     "network": "TV Tokyo",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "i_hear_the_sunspot" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "i_hear_the_sunspot" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4613,9 +4699,7 @@
     "cast": ["Кура Юкі", "Мізусава Рінтаро", "Ішікава Рука", "Катаяма Юкі"],
     "director": "Каріяма Шунсуке",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "i_just_want_to_see_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "i_just_want_to_see_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4642,12 +4726,16 @@
     "episodesCount": 16,
     "imdbRating": "8.5",
     "duration": "60 хв.",
-    "cast": ["Ян Гьон Вон", "Лі Чон Сок", "Кім Чжу Хун", "Лім Юна", "Квак Дон Йон"],
+    "cast": [
+      "Ян Гьон Вон",
+      "Лі Чон Сок",
+      "Кім Чжу Хун",
+      "Лім Юна",
+      "Квак Дон Йон"
+    ],
     "director": "О Чун Хван, Пе Хьон Джин",
     "network": "MBC",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "big_mouth" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "big_mouth" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4689,9 +4777,7 @@
     "cast": ["Но Юну", "І Чжехьоп", "Кім Мінук", "Ан Канчжу"],
     "director": "Ю Хвансан",
     "network": "GND STUDIO",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_nameless_season" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_nameless_season" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4729,9 +4815,7 @@
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": "1-5", "tg_id": "volyacore/297" }
-        ]
+        "episodes": [{ "number": "1-5", "tg_id": "volyacore/297" }]
       }
     ]
   },
@@ -4752,9 +4836,7 @@
     "cast": ["Но Юну", "І Чжехьоп", "Кім Чонсок", "Кван Гонхі"],
     "director": "Чень Ї Юй",
     "network": "GND STUDIO",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "close_to_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "close_to_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4788,9 +4870,7 @@
     "cast": ["Шин Чон Ю", "У Джі Хан"],
     "director": "Сон До Джун",
     "network": "Watcha",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "a_breeze_of_love" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "a_breeze_of_love" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4857,9 +4937,7 @@
     "cast": ["Ім Джі Саб", "О Джун Тек"],
     "director": "Вернер дю Плессіс, Іну Бек",
     "network": "Playgram",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_eighth_sense" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_eighth_sense" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4895,9 +4973,7 @@
     "cast": ["Юн Джісун", "Чон Ріу"],
     "director": "Мін Чейон",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "thundercloud_rainstorm" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "thundercloud_rainstorm" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4931,9 +5007,7 @@
     "cast": ["Кі Хьон У", "Пак Хьон Сеоп", "Ян Джун Мо", "Чо Чан Хьон"],
     "director": "Кім Ин Хе",
     "network": "W-STORY",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "jun_and_jun" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "jun_and_jun" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4967,9 +5041,7 @@
     "cast": ["Чон Ю Бін", "Мін Ін Ґі", "Лі Чон Мін", "Ю Йон Мо"],
     "director": "Кім Ін Хе",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "blue_of_winter" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "blue_of_winter" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -4997,12 +5069,16 @@
     "episodesCount": 12,
     "imdbRating": "7.3",
     "duration": "15 хв.",
-    "cast": ["Юн Джунвон", "Сейв Сайсават", "І Гон'ю", "Ґо Бьонван", "Кім Теха"],
+    "cast": [
+      "Юн Джунвон",
+      "Сейв Сайсават",
+      "І Гон'ю",
+      "Ґо Бьонван",
+      "Кім Теха"
+    ],
     "director": "Джаґван Ґонґ",
     "network": "Moving Pictures Company",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "eccentric_romance" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "eccentric_romance" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5047,16 +5123,16 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-        { "number": 1, "tg_id": "volyacore/2466" },
-        { "number": 2, "tg_id": "volyacore/2478" },
-        { "number": 3, "tg_id": "volyacore/2486" },
-        { "number": 4, "tg_id": "volyacore/2489" },
-        { "number": 5, "tg_id": "volyacore/2498" },
-        { "number": 6, "tg_id": "volyacore/2499" },
-        { "number": 7, "tg_id": "volyacore/2502" },
-        { "number": 8, "tg_id": "volyacore/2506" },
-        { "number": 9, "tg_id": "volyacore/2510" },
-        { "number": 10, "tg_id": "volyacore/2511" }
+          { "number": 1, "tg_id": "volyacore/2466" },
+          { "number": 2, "tg_id": "volyacore/2478" },
+          { "number": 3, "tg_id": "volyacore/2486" },
+          { "number": 4, "tg_id": "volyacore/2489" },
+          { "number": 5, "tg_id": "volyacore/2498" },
+          { "number": 6, "tg_id": "volyacore/2499" },
+          { "number": 7, "tg_id": "volyacore/2502" },
+          { "number": 8, "tg_id": "volyacore/2506" },
+          { "number": 9, "tg_id": "volyacore/2510" },
+          { "number": 10, "tg_id": "volyacore/2511" }
         ]
       }
     ]
@@ -5156,9 +5232,7 @@
     "cast": ["Лі Хєрі", "Чон Субін", "Кан Хьовон", "О Урі"],
     "director": "Кім Техі",
     "network": "U+Mobiletv",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "friendly_rivalry" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "friendly_rivalry" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5197,12 +5271,16 @@
     "episodesCount": 8,
     "imdbRating": "6.8",
     "duration": "15 хв.",
-    "cast": ["Пак Бомджун", "Ом Севон", "Чу Сокйон", "Кім Воншик", "Мун Борьон"],
+    "cast": [
+      "Пак Бомджун",
+      "Ом Севон",
+      "Чу Сокйон",
+      "Кім Воншик",
+      "Мун Борьон"
+    ],
     "director": "Хан Уім",
     "network": "Emotion Studio",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "behind_cut" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "behind_cut" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5236,9 +5314,7 @@
     "cast": ["Кім Джі О", "Хамін", "Кан Яндже"],
     "director": "Наттапат Котчапаткан",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "heart_stain" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "heart_stain" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5272,9 +5348,7 @@
     "cast": ["Сон Сохьон", "Лім Джіан", "Чхве Джівон"],
     "director": "Студія Lululala / Незалежне виробництво",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "out_of_breath" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "out_of_breath" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5330,7 +5404,7 @@
     "cover": "the_story_of_bi_hyeong.jpg",
     "status": "completed",
     "country": "korea",
-    "categories": "Bl",    
+    "categories": "Bl",
     "year": 2025,
     "genres": ["comedy", "romance", "fantasy"],
     "episodesCount": 12,
@@ -5339,9 +5413,7 @@
     "cast": ["Хван Джеук", "І Чамін", "Кан Чану", "Нам Текджун"],
     "director": "Пак Сон Дже",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_story_of_bi_hyeong" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_story_of_bi_hyeong" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5376,7 +5448,14 @@
     "episodesCount": 10,
     "imdbRating": "8.3",
     "duration": "35 хв.",
-    "cast": ["Ча Севон", "Ґончан", "До У", "Вон Темін", "Лім Хюнте", "Лі Джунхьок"],
+    "cast": [
+      "Ча Севон",
+      "Ґончан",
+      "До У",
+      "Вон Темін",
+      "Лім Хюнте",
+      "Лі Джунхьок"
+    ],
     "director": "Чай Юйсоун",
     "network": "TVING",
     "relatedSeasons": [
@@ -5417,9 +5496,7 @@
     "cast": ["Кім Хьон Вон", "Чон Дже Ун"],
     "director": "Кім Ин Хє",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "a_first_love_story" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "a_first_love_story" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5447,15 +5524,11 @@
     "cast": ["Пак Сою", "Ян Ґаин"],
     "director": "Хан Кьон Хун",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "lonely_girls" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "lonely_girls" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": "1-4", "tg_id": "volyacore/1415" }
-        ]
+        "episodes": [{ "number": "1-4", "tg_id": "volyacore/1415" }]
       }
     ]
   },
@@ -5473,12 +5546,18 @@
     "episodesCount": 8,
     "imdbRating": "8.6",
     "duration": "50 хв.",
-    "cast": ["Нам Юнсу", "І Сукьон", "Джін Хоин", "О Хьонкйон", "Квон Хьок", "І Хьонсо", "І Сехі"],
+    "cast": [
+      "Нам Юнсу",
+      "І Сукьон",
+      "Джін Хоин",
+      "О Хьонкйон",
+      "Квон Хьок",
+      "І Хьонсо",
+      "І Сехі"
+    ],
     "director": "Хо Джінхо, Хон Джійон, Сон Теґьом, Кім Сеін",
     "network": "TVING",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_in_the_big_city" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_in_the_big_city" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5512,9 +5591,7 @@
     "cast": ["Пром Ратчапат", "Бонз Недол"],
     "director": "Танават Патхаратхонгъє",
     "network": "iQiyi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "always_meet_again" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "always_meet_again" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5548,14 +5625,15 @@
     "cast": ["Кім Канмін", "Пак Чіну", "Бьонхон", "Кім Хонджун"],
     "director": "Бек Мінхі",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_bias_is_showing" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_bias_is_showing" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "video_url": "https://player.vimeo.com/video/1202566971" },
+          {
+            "number": 1,
+            "video_url": "https://player.vimeo.com/video/1202566971"
+          },
           { "number": 2, "tg_id": "volyacore/2291" },
           { "number": 3, "tg_id": "volyacore/2296" },
           { "number": 4, "tg_id": "volyacore/2299" },
@@ -5586,9 +5664,7 @@
     "cast": ["Ю Шін", "Пак Донджу", "І Техьон", "І Донйоль", "І Чуйон"],
     "director": "Пак Хьон У",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_secret_vampire" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_secret_vampire" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5622,15 +5698,11 @@
     "cast": ["Пак Хьону", "Бін Хеджин"],
     "director": "Кім Кван Ин",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "girlfriend_from_today" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "girlfriend_from_today" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": "1-4", "tg_id": "volyacore/326" }
-        ]
+        "episodes": [{ "number": "1-4", "tg_id": "volyacore/326" }]
       }
     ]
   },
@@ -5683,9 +5755,7 @@
     "cast": ["Шін Джувон", "Ю Джінсок"],
     "director": "Хан Джи Ин",
     "network": "Sukfilm",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "never_fair" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "never_fair" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5715,9 +5785,7 @@
     "cast": ["І Джаун", "Хван Джунсу", "О Джехьон", "Філа І"],
     "director": "Кан Ву Джін",
     "network": "WeTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "never_forget_your_enemy" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "never_forget_your_enemy" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5751,9 +5819,7 @@
     "cast": ["І Джунха", "Кім Дуан"],
     "director": "І Сунте",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "one_high_school_heroes" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "one_high_school_heroes" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5787,9 +5853,7 @@
     "cast": ["Холланд", "Хан Ґі Чан", "Хан Со Вул"],
     "director": "Лі Си Джи",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "ocean_likes_me" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "ocean_likes_me" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5823,9 +5887,7 @@
     "cast": ["Шин Йон Сок", "Ім Сон Гюн"],
     "director": "Пак Ин Джу",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "oh_boarding_house" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "oh_boarding_house" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5859,9 +5921,7 @@
     "cast": ["Чон Субін", "Ча Седжін", "Ча Юхьон", "І Дохан"],
     "director": "Кім Айон",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "peach_trap" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "peach_trap" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5892,12 +5952,17 @@
     "episodesCount": 8,
     "imdbRating": "7.9",
     "duration": "15 хв",
-    "cast": ["Лі Йонсу", "Чон Укджін", "Шін Кюбін", "Лі Тейоб", "Лі Сонхо", "Кім Джунхьон"],
+    "cast": [
+      "Лі Йонсу",
+      "Чон Укджін",
+      "Шін Кюбін",
+      "Лі Тейоб",
+      "Лі Сонхо",
+      "Кім Джунхьон"
+    ],
     "director": "Лі Чан Хай",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "bump_up_business" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "bump_up_business" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5931,9 +5996,7 @@
     "cast": ["Ле Тебін", "Ча Джуван", "О Мінсу", "Ча Унґі"],
     "director": "Кім Ґюна",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_for_loves_sake" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_for_loves_sake" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -5967,9 +6030,7 @@
     "cast": ["Пак Джун Хі", "Ю Хьон Ву", "Кім Те Джун"],
     "director": "Ра Ха На",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "tinted_with_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "tinted_with_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6003,9 +6064,7 @@
     "cast": ["Чон Ріу", "Чхве Синджин", "Лі Суха"],
     "director": "Чхвє Мін У",
     "network": "YouTube",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "seoul_blues" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "seoul_blues" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6048,9 +6107,7 @@
     "cast": ["Лі Джебін", "Чан Уйон"],
     "director": "Лі Соним",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "gray_shelter" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "gray_shelter" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6115,7 +6172,14 @@
     "episodesCount": 8,
     "imdbRating": "8.8",
     "duration": "43 хв.",
-    "cast": ["Пак Джіхун", "Рьоун", "Чве Міньон", "Лі Міндже", "Бе Нера", "І Джуньон"],
+    "cast": [
+      "Пак Джіхун",
+      "Рьоун",
+      "Чве Міньон",
+      "Лі Міндже",
+      "Бе Нера",
+      "І Джуньон"
+    ],
     "director": "Пак Данхі",
     "network": "Viki",
     "relatedSeasons": [
@@ -6152,12 +6216,16 @@
     "episodesCount": 6,
     "imdbRating": "7.1",
     "duration": "25 хв.",
-    "cast": ["Сон Бьонхун", "Чой Донхо", "Кім Йонсол", "Чо Юсок", "Кім Джунбам"],
+    "cast": [
+      "Сон Бьонхун",
+      "Чой Донхо",
+      "Кім Йонсол",
+      "Чо Юсок",
+      "Кім Джунбам"
+    ],
     "director": "Кан Ву",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "blossom_campus" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "blossom_campus" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6189,9 +6257,7 @@
     "cast": ["Кім Джунсо", "Че Санхьон", "Кім Хоян", "Ча Чону"],
     "director": "Ян Гюнхі",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "secret_relationship" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "secret_relationship" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6225,9 +6291,7 @@
     "cast": ["Йом Мінхьок", "Чве Чжехьок"],
     "director": "Кім Енхе",
     "network": "Heavenly",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "ball_boy_tactics" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "ball_boy_tactics" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6261,9 +6325,7 @@
     "cast": ["Хан Гі Чан", "Чан Ий Су"],
     "director": "Хван Да Силь",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "where_your_eyes_linger" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "where_your_eyes_linger" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6311,7 +6373,6 @@
           { "number": 4, "tg_id": "volyacore/606" },
           { "number": 5, "tg_id": "volyacore/617" },
           { "number": 6, "tg_id": "volyacore/620" }
-          
         ]
       }
     ]
@@ -6330,7 +6391,14 @@
     "episodesCount": 10,
     "imdbRating": "7.8",
     "duration": "25 хв.",
-    "cast": ["Чон Мін У", "Кім Йон Сок", "У Хьо Вон", "Лі Кван Хі", "Чон У Дже", "Ан Чон Гюн"],
+    "cast": [
+      "Чон Мін У",
+      "Кім Йон Сок",
+      "У Хьо Вон",
+      "Лі Кван Хі",
+      "Чон У Дже",
+      "Ан Чон Гюн"
+    ],
     "director": "Кан Гюн Хван",
     "network": "Viki",
     "relatedSeasons": [
@@ -6372,9 +6440,7 @@
     "cast": ["Сон Синха", "Че Чонхьок", "Чон Домен", "І Уісоп", "І Санвон"],
     "director": "Мін Чейон",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "business_as_usual" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "business_as_usual" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6397,18 +6463,16 @@
     "cover": "heesu_in_class_2.jpg",
     "status": "completed",
     "country": "korea",
-    "categories": "Bl",  
+    "categories": "Bl",
     "year": 2025,
-    "genres": ["comedy","romance", "youth"],
+    "genres": ["comedy", "romance", "youth"],
     "episodesCount": 10,
     "imdbRating": "8.0",
     "duration": "45 хв.",
     "cast": ["Ан Джіхо", "І Санджун", "Чо Джунян", "Кім Дойон"],
     "director": "Пак Кьонмін",
     "network": "Viki",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "heesu_in_class_2" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "heesu_in_class_2" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6444,9 +6508,7 @@
     "cast": ["Чон Джебін", "Чон Юбін", "Хван Мінхван"],
     "director": "Ю Хвансан",
     "network": "GND STUDIO",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "my_damn_business" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "my_damn_business" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6479,9 +6541,7 @@
     "cast": ["Лі Джеджун", "Лі Джіхан", "Со Бокджун", "Ан Хьосан"],
     "director": "",
     "network": "CITYBOY_LOG",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "cityboy_log" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "cityboy_log" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -6498,13 +6558,10 @@
           { "number": 10, "tg_id": "volyacore/853" },
           { "number": 11, "tg_id": "volyacore/866" }
         ]
-  
       },
       {
         "blockTitle": "Спецвипуск",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2417" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2417" }]
       }
     ]
   },
@@ -6528,9 +6585,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/850" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/850" }]
       }
     ]
   },
@@ -6554,9 +6609,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/2459" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2459" }]
       }
     ]
   },
@@ -6580,9 +6633,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/257" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/257" }]
       }
     ]
   },
@@ -6606,9 +6657,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/1142" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1142" }]
       }
     ]
   },
@@ -6632,9 +6681,7 @@
     "blocks": [
       {
         "blockTitle": "1 Частина",
-        "episodes": [
-          { "number": "1-8", "tg_id": "volyacore/685" }
-        ]
+        "episodes": [{ "number": "1-8", "tg_id": "volyacore/685" }]
       }
     ]
   },
@@ -6658,9 +6705,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/392" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/392" }]
       }
     ]
   },
@@ -6684,9 +6729,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/383" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/383" }]
       }
     ]
   },
@@ -6710,9 +6753,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-            { "number": 1, "tg_id": "volyacore/402" }
-    ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/402" }]
       }
     ]
   },
@@ -6736,9 +6777,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/850" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/850" }]
       }
     ]
   },
@@ -6762,9 +6801,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2445" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2445" }]
       }
     ]
   },
@@ -6788,9 +6825,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/398" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/398" }]
       }
     ]
   },
@@ -6814,9 +6849,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/948" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/948" }]
       }
     ]
   },
@@ -6840,9 +6873,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/296" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/296" }]
       }
     ]
   },
@@ -6866,9 +6897,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/154" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/154" }]
       }
     ]
   },
@@ -6892,9 +6921,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/923" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/923" }]
       }
     ]
   },
@@ -6918,9 +6945,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/302" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/302" }]
       }
     ]
   },
@@ -6944,9 +6969,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/409" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/409" }]
       }
     ]
   },
@@ -6970,9 +6993,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/422" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/422" }]
       }
     ]
   },
@@ -6996,9 +7017,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2246" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2246" }]
       }
     ]
   },
@@ -7022,9 +7041,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/730" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/730" }]
       }
     ]
   },
@@ -7048,9 +7065,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1354" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1354" }]
       }
     ]
   },
@@ -7074,9 +7089,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/943" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/943" }]
       }
     ]
   },
@@ -7100,9 +7113,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/336" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/336" }]
       }
     ]
   },
@@ -7126,9 +7137,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/508" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/508" }]
       }
     ]
   },
@@ -7152,9 +7161,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/693" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/693" }]
       }
     ]
   },
@@ -7178,9 +7185,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/724" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/724" }]
       }
     ]
   },
@@ -7204,9 +7209,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/407" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/407" }]
       }
     ]
   },
@@ -7224,7 +7227,14 @@
     "episodesCount": 1,
     "imdbRating": "8.3",
     "duration": "2 год. 10 хв.",
-    "cast": ["Аояґі Шьо", "Судзукі Нобуюкі", "Такахіро", "Тосака Хіромі", "Курокі Кейджі", "Ямада Юкі"],
+    "cast": [
+      "Аояґі Шьо",
+      "Судзукі Нобуюкі",
+      "Такахіро",
+      "Тосака Хіромі",
+      "Курокі Кейджі",
+      "Ямада Юкі"
+    ],
     "director": "Кубо Шіґеакі",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7238,9 +7248,7 @@
     "blocks": [
       {
         "blockTitle": "1 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1438" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1438" }]
       }
     ]
   },
@@ -7258,7 +7266,13 @@
     "episodesCount": 1,
     "imdbRating": "8.1",
     "duration": "1 год. 50 хв.",
-    "cast": ["Такахіро", "Тосака Хіромі", "Сайто Такумі", "Йошімото Мію", "Ішігуро Кен"],
+    "cast": [
+      "Такахіро",
+      "Тосака Хіромі",
+      "Сайто Такумі",
+      "Йошімото Мію",
+      "Ішігуро Кен"
+    ],
     "director": "Ямаґучі Юдай",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7272,9 +7286,7 @@
     "blocks": [
       {
         "blockTitle": "2 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1524" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1524" }]
       }
     ]
   },
@@ -7292,7 +7304,14 @@
     "episodesCount": 1,
     "imdbRating": "8.4",
     "duration": "2 год. 4 хв.",
-    "cast": ["Івата Таканорі", "Курокі Кейджі", "Накамура Аой", "Наото", "Акіра", "Аояґі Шьо"],
+    "cast": [
+      "Івата Таканорі",
+      "Курокі Кейджі",
+      "Накамура Аой",
+      "Наото",
+      "Акіра",
+      "Аояґі Шьо"
+    ],
     "director": "Накакукі Цуйоші, Кубо Шіґеакі",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7306,9 +7325,7 @@
     "blocks": [
       {
         "blockTitle": "3 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1675" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1675" }]
       }
     ]
   },
@@ -7326,7 +7343,17 @@
     "episodesCount": 1,
     "imdbRating": "8.4",
     "duration": "1 год. 58 хв.",
-    "cast": ["Івата Таканорі", "Акіра", "Такахіро", "Тосака Хіромі", "Аояґі Шьо", "Курокі Кейджі", "Ямада Юкі", "Кубота Масатака", "Хаяші Кенто"],
+    "cast": [
+      "Івата Таканорі",
+      "Акіра",
+      "Такахіро",
+      "Тосака Хіромі",
+      "Аояґі Шьо",
+      "Курокі Кейджі",
+      "Ямада Юкі",
+      "Кубота Масатака",
+      "Хаяші Кенто"
+    ],
     "director": "Накакукі Цуйоші, Кубо Шіґеакі",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7340,9 +7367,7 @@
     "blocks": [
       {
         "blockTitle": "4 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1837" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1837" }]
       }
     ]
   },
@@ -7360,7 +7385,17 @@
     "episodesCount": 1,
     "imdbRating": "8.4",
     "duration": "2 год. 5 хв.",
-    "cast": ["Івата Таканорі", "Акіра", "Такахіро", "Тосака Хіромі", "Аояґі Шьо", "Курокі Кейджі", "Ямада Юкі", "Кубота Масатака", "Хаяші Кенто"],
+    "cast": [
+      "Івата Таканорі",
+      "Акіра",
+      "Такахіро",
+      "Тосака Хіромі",
+      "Аояґі Шьо",
+      "Курокі Кейджі",
+      "Ямада Юкі",
+      "Кубота Масатака",
+      "Хаяші Кенто"
+    ],
     "director": "Кубо Шіґеакі",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7374,9 +7409,7 @@
     "blocks": [
       {
         "blockTitle": "5 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2176" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2176" }]
       }
     ]
   },
@@ -7394,7 +7427,13 @@
     "episodesCount": 1,
     "imdbRating": "8.3",
     "duration": "1 год. 59 хв.",
-    "cast": ["Кавамура Казума", "Накамото Юта", "Йошіно Хокуто", "Міяма Рьокі", "Маедо Ґокі"],
+    "cast": [
+      "Кавамура Казума",
+      "Накамото Юта",
+      "Йошіно Хокуто",
+      "Міяма Рьокі",
+      "Маедо Ґокі"
+    ],
     "director": "Хіранума Норіхіса",
     "network": "LDH Japan",
     "relatedSeasons": [
@@ -7408,9 +7447,7 @@
     "blocks": [
       {
         "blockTitle": "6 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2798" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2798" }]
       }
     ]
   },
@@ -7434,9 +7471,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/292" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/292" }]
       }
     ]
   },
@@ -7450,19 +7485,22 @@
     "country": "japan",
     "categories": "Bl",
     "year": 2020,
-    "genres": ["life", "romance", "drama", "film"], 
+    "genres": ["life", "romance", "drama", "film"],
     "episodesCount": 1,
     "imdbRating": "8.0",
     "duration": "2 год. 7 хв.",
-    "cast": ["Міядзава Хіо", "Фудзівара Кісецу", "Мацумото Вакана", "Мацумото Хонока"],
+    "cast": [
+      "Міядзава Хіо",
+      "Фудзівара Кісецу",
+      "Мацумото Вакана",
+      "Мацумото Хонока"
+    ],
     "director": "Імаідзумі Рікія",
     "network": "Dragonfly Entertainment",
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/783" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/783" }]
       }
     ]
   },
@@ -7486,9 +7524,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1040" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1040" }]
       }
     ]
   },
@@ -7506,15 +7542,19 @@
     "episodesCount": 1,
     "imdbRating": "6.5",
     "duration": "1 год. 10 хв.",
-    "cast": ["Мукай Ріку", "Юки Шун", "Мацумото Такуя", "Такемото Таіші", "Шінра Манзо"],
+    "cast": [
+      "Мукай Ріку",
+      "Юки Шун",
+      "Мацумото Такуя",
+      "Такемото Таіші",
+      "Шінра Манзо"
+    ],
     "director": "Яманучі Дайсуке",
     "network": "TV Tokyo",
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1505" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1505" }]
       }
     ]
   },
@@ -7538,9 +7578,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/870" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/870" }]
       }
     ]
   },
@@ -7564,9 +7602,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/506" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/506" }]
       }
     ]
   },
@@ -7590,9 +7626,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1576" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1576" }]
       }
     ]
   },
@@ -7620,9 +7654,7 @@
     "blocks": [
       {
         "blockTitle": "1 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/475" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/475" }]
       }
     ]
   },
@@ -7650,9 +7682,7 @@
     "blocks": [
       {
         "blockTitle": "2 Частина",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/702" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/702" }]
       }
     ]
   },
@@ -7676,9 +7706,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/462" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/462" }]
       }
     ]
   },
@@ -7702,9 +7730,7 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/669" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/669" }]
       }
     ]
   },
@@ -7728,12 +7754,10 @@
     "blocks": [
       {
         "blockTitle": "Фільм",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/1179" }
-      ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/1179" }]
       }
     ]
-  }, 
+  },
   {
     "id": "girl_rules",
     "title": "Дівочі правила",
@@ -7748,12 +7772,17 @@
     "episodesCount": 12,
     "imdbRating": "",
     "duration": "51 хв.",
-    "cast": ["Намтан Тіпнарі", "Філм Рачанун", "Мілк Панса", "Лав Паттраніт", "В‘ю Беньяпа", "Мім Ріттанаваді"],
+    "cast": [
+      "Намтан Тіпнарі",
+      "Філм Рачанун",
+      "Мілк Панса",
+      "Лав Паттраніт",
+      "В‘ю Беньяпа",
+      "Мім Ріттанаваді"
+    ],
     "director": "Джоджо Тічакорн",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "girl_rules" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "girl_rules" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -7782,18 +7811,19 @@
     "episodesCount": 10,
     "imdbRating": "",
     "duration": "46 хв.",
-    "cast": ["Ян Плойшомпу", "Ай Сарунчана", "ДжінДжін Праріят", "Піплой Кан'ярт"],
+    "cast": [
+      "Ян Плойшомпу",
+      "Ай Сарунчана",
+      "ДжінДжін Праріят",
+      "Піплой Кан'ярт"
+    ],
     "director": "Тле Таван",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "hide_and_sis" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "hide_and_sis" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2116" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2116" }]
       }
     ]
   },
@@ -7811,19 +7841,22 @@
     "episodesCount": 6,
     "imdbRating": "",
     "duration": "55 хв.",
-    "cast": ["Форт Наттават", "Джемінай Норавіт", "Аші Піракан", "Ан Олівер Пупарт"],
+    "cast": [
+      "Форт Наттават",
+      "Джемінай Норавіт",
+      "Аші Піракан",
+      "Ан Олівер Пупарт"
+    ],
     "director": "Аоф Ноппхарнак",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "ticket_to_heaven" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "ticket_to_heaven" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2806" },
           { "number": 2, "tg_id": "volyacore/2810" },
-          { "number": 3, "tg_id": "volyacore/2829"}
+          { "number": 3, "tg_id": "volyacore/2829" }
         ]
       }
     ]
@@ -7842,12 +7875,15 @@
     "episodesCount": 12,
     "imdbRating": "",
     "duration": "58 хв.",
-    "cast": ["Нет Сірафоп", "ДжейДжей Радчапон", "Кім Понсатон", "Латте Танутчон"],
+    "cast": [
+      "Нет Сірафоп",
+      "ДжейДжей Радчапон",
+      "Кім Понсатон",
+      "Латте Танутчон"
+    ],
     "director": "Ден Пануват",
     "network": "Domundi TV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_upon_a_time" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_upon_a_time" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -7859,7 +7895,7 @@
           { "number": 5, "tg_id": "volyacore/2807" },
           { "number": 6, "tg_id": "volyacore/2819" },
           { "number": 7, "tg_id": "volyacore/2828" },
-          { "number": 8, "tg_id": "volyacore/2834"}
+          { "number": 8, "tg_id": "volyacore/2834" }
         ]
       }
     ]
@@ -7878,12 +7914,15 @@
     "episodesCount": 10,
     "imdbRating": "",
     "duration": "50 хв.",
-    "cast": ["Перт Танапон", "Санта Понсапак", "Саманта Мелані", "Кей Лерціттічай"],
+    "cast": [
+      "Перт Танапон",
+      "Санта Понсапак",
+      "Саманта Мелані",
+      "Кей Лерціттічай"
+    ],
     "director": "Дом Джарупат",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "love_you_teacher" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "love_you_teacher" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -7909,7 +7948,14 @@
     "episodesCount": 11,
     "imdbRating": "",
     "duration": "45 хв.",
-    "cast": ["Марк Пакін", "Ом Тіпакон", "Джиммі Джітарафол", "Пун Mitpakdee", "В'ю Беньяпа", "Мім Рітанаваді"],
+    "cast": [
+      "Марк Пакін",
+      "Ом Тіпакон",
+      "Джиммі Джітарафол",
+      "Пун Mitpakdee",
+      "В'ю Беньяпа",
+      "Мім Рітанаваді"
+    ],
     "director": "Пепзі Банкорн Ворасатарі",
     "network": "GMMTV",
     "relatedSeasons": [
@@ -7924,7 +7970,8 @@
           { "number": 3, "tg_id": "volyacore/1912" },
           { "number": 4, "tg_id": "volyacore/1926" },
           { "number": 5, "tg_id": "volyacore/1952" },
-          { "number": 6, "tg_id": "volyacore/1968" }
+          { "number": 6, "tg_id": "volyacore/1968" },
+          { "number": 7, "tg_id": "volyacore/2835" }
         ]
       }
     ]
@@ -7943,12 +7990,15 @@
     "episodesCount": 10,
     "imdbRating": "",
     "duration": "45 хв.",
-    "cast": ["Бук Касідет", "Форс Джіратчапон", "Джен Плойчомпу", "Бун Ноппанат"],
+    "cast": [
+      "Бук Касідет",
+      "Форс Джіратчапон",
+      "Джен Плойчомпу",
+      "Бун Ноппанат"
+    ],
     "director": "Тле Таван, Аріса Вавванджіт",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "melody_of_secrets" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "melody_of_secrets" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -8100,9 +8150,6 @@
     ]
   },
 
-
-
-
   {
     "id": "fourever_you",
     "title": "Назавжди ти",
@@ -8117,12 +8164,19 @@
     "episodesCount": 17,
     "imdbRating": "",
     "duration": "45 хв.",
-    "cast": ["Понд Понпавіт", "Ерт Кацамонат", "Макскі Ратчата", "Бас Хацанат", "Бевер Пацапон", "Тонпи Метафат", "Нгерн Анупарт", "Оат Таратон"],
+    "cast": [
+      "Понд Понпавіт",
+      "Ерт Кацамонат",
+      "Макскі Ратчата",
+      "Бас Хацанат",
+      "Бевер Пацапон",
+      "Тонпи Метафат",
+      "Нгерн Анупарт",
+      "Оат Таратон"
+    ],
     "director": "Нью Сівадж, Ко Нанталіт",
     "network": "Wabi Sabi",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "fourever_you" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "fourever_you" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -8136,7 +8190,7 @@
           { "number": 7, "tg_id": "volyacore/2777" },
           { "number": 8, "tg_id": "volyacore/2788" },
           { "number": 9, "tg_id": "volyacore/2823" },
-          { "number": 10, "tg_id": "volyacore/2832"}
+          { "number": 10, "tg_id": "volyacore/2832" }
         ]
       }
     ]
@@ -8151,11 +8205,25 @@
     "country": "thailand",
     "categories": "Bl",
     "year": 2025,
-    "genres": ["thriller", "mysticism", "horror", "romance", "drama", "fantasy"],
+    "genres": [
+      "thriller",
+      "mysticism",
+      "horror",
+      "romance",
+      "drama",
+      "fantasy"
+    ],
     "episodesCount": 13,
     "imdbRating": "",
     "duration": "58 хв.",
-    "cast": ["Павел Нарет", "Пух Кріттін", "Майкл Кіарітсак", "Топтеп Сапакорн", "Лі Асре", "Отто Фачара"],
+    "cast": [
+      "Павел Нарет",
+      "Пух Кріттін",
+      "Майкл Кіарітсак",
+      "Топтеп Сапакорн",
+      "Лі Асре",
+      "Отто Фачара"
+    ],
     "director": "Пітер Нопачай",
     "network": "CHANGE2561",
     "relatedSeasons": [
@@ -8185,12 +8253,17 @@
     "episodesCount": 10,
     "imdbRating": "",
     "duration": "50 хв.",
-    "cast": ["Вінні Танавін", "Сатан Кіттіпхоп", "Монд Танутчай", "Рю Пудтріпарт", "Нео Трай", "Мінт Тішар"],
+    "cast": [
+      "Вінні Танавін",
+      "Сатан Кіттіпхоп",
+      "Монд Танутчай",
+      "Рю Пудтріпарт",
+      "Нео Трай",
+      "Мінт Тішар"
+    ],
     "director": "Джоджо Тічакорн",
     "network": "GMMTV",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "that_summer" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "that_summer" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -8219,9 +8292,7 @@
     "cast": ["Піт Васаторн", "Форт Тітіпон", "Френд Діна"],
     "director": "Піке Пасавут, Під Панчапон",
     "network": "Me Mind Y",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "yesterday" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "yesterday" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -8255,15 +8326,13 @@
     "cast": ["Тьютор Корапат", "Їм Праріньякорн", "Мак Фасакорн", "Фей Чінтуб"],
     "director": "Чівін Танамін",
     "network": "Copy A Bangkok",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "chermchey" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "chermchey" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2817" },
-          { "number": 2, "tg_id": "volyacore/2833"}
+          { "number": 2, "tg_id": "volyacore/2833" }
         ]
       }
     ]
@@ -8315,14 +8384,13 @@
     "cast": ["Бос Чаікамон", "Ноиль Нуттарат", "Но Пхулуан", "Турбо Чанокчон"],
     "director": "Філм Павіс, Сендвіч Парнупон",
     "network": "Me Mind Y",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "crazy_love_moo_moo" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "crazy_love_moo_moo" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2827" }
+          { "number": 1, "tg_id": "volyacore/2827" },
+          { "number": 2, "tg_id": "volyacore/2840"}
         ]
       }
     ]
@@ -8344,14 +8412,13 @@
     "cast": ["Іучі Харухі", "Акуне Харусе", "Томісато Нао", "Хаято"],
     "director": "Томіта Мікі",
     "network": "GagaOOLala",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "contrast" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "contrast" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2822" }
+          { "number": 1, "tg_id": "volyacore/2822" },
+          { "number": 2, "tg_id": "volyacore/2836" }
         ]
       }
     ]
@@ -8403,24 +8470,46 @@
     "cast": ["Пак Джечан", "Пак Сохам", "Сон Джіо", "Кім Ноджін"],
     "director": "Кім Соджун",
     "network": "RaemongRaein",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "semantic_error" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "semantic_error" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2750" },
           { "number": 2, "tg_id": "volyacore/2767" },
-          { "number": 3, "tg_id": "volyacore/2779" }
+          { "number": 3, "tg_id": "volyacore/2779" }, 
+          { "number": 4, "tg_id": "volyacore/2837"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_8_show",
+    "title": "Шоу восьми",
+    "enTitle": "The 8 Show / 더 에이트 쇼",
+    "description": "Восьмеро людей із величезними боргами беруть участь у дивній грі, яка назавжди змінює їхні життя. Правила здаються простими: проводь час і виживай, щоб заробити купу грошей... Але насправді все виявляється набагато жорстокішим, ніж здавалося на перший погляд.",
+    "cover": "the_8_show.jpg",
+    "status": "ongoing",
+    "country": "korea",
+    "categories": "Інше",
+    "year": 2026,
+    "genres": ["thriller", "detective", "psychological", "drama"],
+    "episodesCount": 8,
+    "imdbRating": "",
+    "duration": "52 хв.",
+    "cast": ["Рю Джунйоль", "Чон Ухі", "Пак Чонмін", "І Йольин"],
+    "director": "Хан Йерім",
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "the_8_show" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2839" }
         ]
       }
     ]
   }
 ]
-
-
-
-
-
-

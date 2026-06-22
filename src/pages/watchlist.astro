@@ -4,7 +4,6 @@ import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 ---
 
-
 <MainLayout title="Мої списки — VolyaCore">
   <div class="watchlist-container">
     <h1>🍿 Мої списки перегляду</h1>
@@ -43,22 +42,22 @@ import lakornsData from "../data/lakorns.json";
   </div>
 </MainLayout>
 
-
-<script>
+<script :load>
   function renderWatchlist() {
-    const tabs = document.querySelectorAll(".w-tab-btn");
-    const grid = document.getElementById("watchlist-grid");
-    const emptyState = document.getElementById("empty-state");
-    const cardWrappers = document.querySelectorAll(".watchlist-item-wrapper");
+    var tabs = document.querySelectorAll(".w-tab-btn");
+    var grid = document.getElementById("watchlist-grid");
+    var emptyState = document.getElementById("empty-state");
+    var cardWrappers = document.querySelectorAll(".watchlist-item-wrapper");
 
     if (!grid || !emptyState || cardWrappers.length === 0) return;
 
-    function filterItems(statusType: string) {
-      let visibleCount = 0;
+    function filterItems(statusType) {
+      var visibleCount = 0;
 
-      cardWrappers.forEach((wrapper) => {
-        const lakornId = wrapper.getAttribute("data-lakorn-id");
-        const savedStatus = localStorage.getItem(`lakorn_status_${lakornId}`);
+      for (var i = 0; i < cardWrappers.length; i++) {
+        var wrapper = cardWrappers[i];
+        var lakornId = wrapper.getAttribute("data-lakorn-id");
+        var savedStatus = localStorage.getItem("lakorn_status_" + lakornId);
 
         if (savedStatus === statusType) {
           wrapper.classList.remove("hidden");
@@ -66,40 +65,58 @@ import lakornsData from "../data/lakorns.json";
         } else {
           wrapper.classList.add("hidden");
         }
-      });
+      }
 
       if (visibleCount === 0) {
-        grid?.classList.add("hidden");
-        emptyState?.classList.remove("hidden");
+        grid.classList.add("hidden");
+        emptyState.classList.remove("hidden");
       } else {
-        grid?.classList.remove("hidden");
-        emptyState?.classList.add("hidden");
+        grid.classList.remove("hidden");
+        emptyState.classList.add("hidden");
       }
     }
 
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        tabs.forEach((t) => t.classList.remove("active"));
+    for (var j = 0; j < tabs.length; j++) {
+      var tab = tabs[j];
+      tab.addEventListener("click", function() {
+        for (var k = 0; k < tabs.length; k++) {
+          tabs[k].classList.remove("active");
+        }
         tab.classList.add("active");
 
-        const filter = tab.getAttribute("data-watchlist-filter");
+        var filter = tab.getAttribute("data-watchlist-filter");
         if (filter) filterItems(filter);
       });
-    });
+    }
 
-    const activeTab = document.querySelector(".w-tab-btn.active");
-    const defaultFilter =
-      activeTab?.getAttribute("data-watchlist-filter") || "favorite";
-    filterItems(defaultFilter);
+    var activeTab = document.querySelector(".w-tab-btn.active");
+    var defaultFilter = activeTab ? activeTab.getAttribute("data-watchlist-filter") : "favorite";
+    filterItems(defaultFilter || "favorite");
+
+    var searchInputElement = document.querySelector("#global-search");
+    if (searchInputElement) {
+      if (searchInputElement instanceof HTMLInputElement) {
+        searchInputElement.addEventListener("input", function() {
+          var query = searchInputElement.value;
+          if (query && query.trim() !== "") {
+            window.location.assign("/?search=" + encodeURIComponent(query.trim()));
+          }
+        });
+
+        searchInputElement.addEventListener("focus", function() {
+          window.location.assign("/");
+        });
+      }
+    }
   }
 
   document.addEventListener("DOMContentLoaded", renderWatchlist);
   document.addEventListener("astro:after-swap", renderWatchlist);
 </script>
 
-
 <style>
   .watchlist-container {
+    padding-top: 0 !important;
     padding: 40px 20px;
     max-width: 1400px;
     margin: 0 auto;
@@ -166,66 +183,60 @@ import lakornsData from "../data/lakorns.json";
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
   }
 
-  /* 🌟 НОВА АДАПТИВНА СІТКА — БІЛЬШЕ КАРТ В РЯД + МЕНШІ КАРТКИ */
+  /* 4 КАРТКИ В РЯД — фіксований розмір 240px */
   .watchlist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 240px);
+    gap: 28px;
+    justify-content: center;
   }
 
-  /* 🖥️ ДЗЕРЕНА >= 1400px (великі ПК) — 7 карт в ряд */
   @media (min-width: 1400px) {
     .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(4, 280px);
+      gap: 32px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .watchlist-grid {
+      grid-template-columns: repeat(4, 260px);
+      gap: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .watchlist-grid {
+      grid-template-columns: repeat(4, 240px);
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .watchlist-grid {
+      grid-template-columns: repeat(3, 220px);
       gap: 24px;
     }
   }
 
-  /* 🖥️ ЕКРАНИ 1200px-1399px (ПК) — 6 карт в ряд */
-  @media (min-width: 1200px) {
+  @media (max-width: 767px) {
     .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 22px;
-    }
-  }
-
-  /* 🖥️ ЕКРАНИ 1024px-1199px (малі ПК/планшети) — 5 карт в ряд */
-  @media (min-width: 1024px) {
-    .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(2, 200px);
       gap: 20px;
     }
   }
 
-  /* 📱 ЕКРАНИ 768px-1023px (планшети) — 4 карт в ряд */
-  @media (min-width: 768px) {
+  @media (max-width: 549px) {
     .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      grid-template-columns: repeat(2, 170px);
       gap: 18px;
     }
   }
 
-  /* 📱 ЕКРАНИ 550px-767px (великі мобільні) — 3 карт в ряд */
-  @media (min-width: 550px) {
-    .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 16px;
-    }
-  }
-
-  /* 📱 ЕКРАНИ < 550px (мобільні) — 2 карт в ряд */
-  @media (max-width: 549px) {
-    .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 14px;
-    }
-  }
-
-  /* 📱 ДЗЕРЕНА < 380px (дуже малі мобільні) — 2 карт в ряд, ще менші */
   @media (max-width: 379px) {
     .watchlist-grid {
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(2, 150px);
+      gap: 16px;
     }
   }
 
@@ -235,7 +246,6 @@ import lakornsData from "../data/lakorns.json";
     display: none !important;
   }
 
-  /* 🌟 ХАК: ХОВАЄМО КІЛЬКІСТЬ СЕРІЙ ТІЛЬКО НА ЦІЙ СТОРІНЦІ */
   .watchlist-grid :global(.movie-card div:last-child p),
   .watchlist-grid :global(.episodes-count) {
     display: none !important;
@@ -276,14 +286,6 @@ import lakornsData from "../data/lakorns.json";
   .go-catalog-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
-  }
-
-  .watchlist-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
   }
 
   @media (max-width: 480px) {
