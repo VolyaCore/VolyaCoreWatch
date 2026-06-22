@@ -12,7 +12,7 @@ const {
 ---
 
 <html lang="uk">
-  <!-- <head>
+  <head>
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="aR320Pv9hTBuocYAnLxVexlMcsxkmim6OdbSdlNdVOY" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,21 +23,16 @@ const {
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/logo-bird.png" />
+    <meta name="description" content="Офіційний сайт VolyaCore. Переклад з субтитрами азійських BL, GL, гет к-драм/пісень та інше." />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Офіційний сайт VolyaCore." />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
 
     <script is:inline>
       const savedTheme = localStorage.getItem("theme") || "dark";
       document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
-  </head> -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title> 
-    <meta name="description" content="Офіційний сайт VolyaCore. Переклад з субтитрами азійських BL, GL, гет к-драм/пісень та інше." />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content="Офіційний сайт VolyaCore." />
-    <meta property="og:type" content="website" />
   </head>
   <body>
     <!-- Вставляємо шапку сайту -->
