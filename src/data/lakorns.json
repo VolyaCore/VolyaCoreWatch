@@ -5632,7 +5632,7 @@
         "episodes": [
           {
             "number": 1,
-            "video_url": "https://player.vimeo.com/video/1202566971"
+            "tg_id": "volyacore/2284"
           },
           { "number": 2, "tg_id": "volyacore/2291" },
           { "number": 3, "tg_id": "volyacore/2296" },
@@ -8390,7 +8390,7 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2827" },
-          { "number": 2, "tg_id": "volyacore/2840"}
+          { "number": 2, "tg_id": "volyacore/2840" }
         ]
       }
     ]
@@ -8477,8 +8477,8 @@
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2750" },
           { "number": 2, "tg_id": "volyacore/2767" },
-          { "number": 3, "tg_id": "volyacore/2779" }, 
-          { "number": 4, "tg_id": "volyacore/2837"}
+          { "number": 3, "tg_id": "volyacore/2779" },
+          { "number": 4, "tg_id": "volyacore/2837" }
         ]
       }
     ]
@@ -8500,15 +8500,11 @@
     "cast": ["Рю Джунйоль", "Чон Ухі", "Пак Чонмін", "І Йольин"],
     "director": "Хан Йерім",
     "network": "",
-    "relatedSeasons": [
-      { "title": "1 Сезон", "id": "the_8_show" }
-    ],
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_8_show" }],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": [
-          { "number": 1, "tg_id": "volyacore/2839" }
-        ]
+        "episodes": [{ "number": 1, "tg_id": "volyacore/2839" }]
       }
     ]
   }
