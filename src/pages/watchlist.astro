@@ -4,6 +4,7 @@ import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 ---
 
+
 <MainLayout title="Мої списки — VolyaCore">
   <div class="watchlist-container">
     <h1>🍿 Мої списки перегляду</h1>
@@ -34,30 +35,36 @@ import lakornsData from "../data/lakorns.json";
     </div>
 
     <div class="empty-state hidden" id="empty-state">
-      <p>
-        У цьому списку поки що немає лакорнів. Додай щось під час перегляду! ✨
-      </p>
-      <a href="/" class="go-catalog-btn">Перейти до каталогу</a>
+      <div class="empty-content">
+        <!-- <div class="empty-icon">🍿</div> -->
+        <p class="empty-text">
+          У цьому списку поки що немає лакорнів.<br>
+          Додай щось під час перегляду! 
+        </p>
+        <a href="/" class="go-catalog-btn">
+           Перейти до каталогу
+        </a>
+      </div>
     </div>
   </div>
 </MainLayout>
 
+
 <script :load>
   function renderWatchlist() {
-    var tabs = document.querySelectorAll(".w-tab-btn");
-    var grid = document.getElementById("watchlist-grid");
-    var emptyState = document.getElementById("empty-state");
-    var cardWrappers = document.querySelectorAll(".watchlist-item-wrapper");
+    const tabs = document.querySelectorAll(".w-tab-btn");
+    const grid = document.getElementById("watchlist-grid");
+    const emptyState = document.getElementById("empty-state");
+    const cardWrappers = document.querySelectorAll(".watchlist-item-wrapper");
 
-    if (!grid || !emptyState || cardWrappers.length === 0) return;
+    if (!grid || !emptyState) return;
 
     function filterItems(statusType) {
-      var visibleCount = 0;
+      let visibleCount = 0;
 
-      for (var i = 0; i < cardWrappers.length; i++) {
-        var wrapper = cardWrappers[i];
-        var lakornId = wrapper.getAttribute("data-lakorn-id");
-        var savedStatus = localStorage.getItem("lakorn_status_" + lakornId);
+      cardWrappers.forEach(wrapper => {
+        const lakornId = wrapper.getAttribute("data-lakorn-id");
+        const savedStatus = localStorage.getItem("lakorn_status_" + lakornId);
 
         if (savedStatus === statusType) {
           wrapper.classList.remove("hidden");
@@ -65,7 +72,7 @@ import lakornsData from "../data/lakorns.json";
         } else {
           wrapper.classList.add("hidden");
         }
-      }
+      });
 
       if (visibleCount === 0) {
         grid.classList.add("hidden");
@@ -76,28 +83,24 @@ import lakornsData from "../data/lakorns.json";
       }
     }
 
-    for (var j = 0; j < tabs.length; j++) {
-      var tab = tabs[j];
-      tab.addEventListener("click", function() {
-        for (var k = 0; k < tabs.length; k++) {
-          tabs[k].classList.remove("active");
-        }
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
         tab.classList.add("active");
-
-        var filter = tab.getAttribute("data-watchlist-filter");
+        const filter = tab.getAttribute("data-watchlist-filter");
         if (filter) filterItems(filter);
       });
-    }
+    });
 
-    var activeTab = document.querySelector(".w-tab-btn.active");
-    var defaultFilter = activeTab ? activeTab.getAttribute("data-watchlist-filter") : "favorite";
-    filterItems(defaultFilter || "favorite");
+    const activeTab = document.querySelector(".w-tab-btn.active");
+    const initialFilter = activeTab ? activeTab.getAttribute("data-watchlist-filter") : "favorite";
+    filterItems(initialFilter);
 
-    var searchInputElement = document.querySelector("#global-search");
+    const searchInputElement = document.querySelector("#global-search");
     if (searchInputElement) {
       if (searchInputElement instanceof HTMLInputElement) {
         searchInputElement.addEventListener("input", function() {
-          var query = searchInputElement.value;
+          const query = searchInputElement.value;
           if (query && query.trim() !== "") {
             window.location.assign("/?search=" + encodeURIComponent(query.trim()));
           }
@@ -110,9 +113,10 @@ import lakornsData from "../data/lakorns.json";
     }
   }
 
-  document.addEventListener("DOMContentLoaded", renderWatchlist);
+  renderWatchlist();
   document.addEventListener("astro:after-swap", renderWatchlist);
 </script>
+
 
 <style>
   .watchlist-container {
@@ -147,43 +151,99 @@ import lakornsData from "../data/lakorns.json";
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .w-tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+
+  .w-tab-btn:hover::before {
+    opacity: 1;
   }
 
   .w-tab-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .w-tab-btn:active {
+    transform: translateY(-1px);
+  }
+
+  .w-tab-btn span {
+    position: relative;
+    z-index: 1;
   }
 
   .w-tab-btn[data-watchlist-filter="favorite"].active {
     background-color: #ef4444;
     border-color: #ef4444;
     color: white;
-    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5), 0 0 0 3px rgba(239, 68, 68, 0.2);
+    transform: translateY(-3px);
+    animation: pulse-red 2s infinite;
   }
 
   .w-tab-btn[data-watchlist-filter="later"].active {
     background-color: #3b82f6;
     border-color: #3b82f6;
     color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5), 0 0 0 3px rgba(59, 130, 246, 0.2);
+    transform: translateY(-3px);
+    animation: pulse-blue 2s infinite;
   }
 
   .w-tab-btn[data-watchlist-filter="watching"].active {
     background-color: #10b981;
     border-color: #10b981;
     color: white;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5), 0 0 0 3px rgba(16, 185, 129, 0.2);
+    transform: translateY(-3px);
+    animation: pulse-green 2s infinite;
   }
 
   .w-tab-btn[data-watchlist-filter="watched"].active {
     background-color: #8b5cf6;
     border-color: #8b5cf6;
     color: white;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5), 0 0 0 3px rgba(139, 92, 246, 0.2);
+    transform: translateY(-3px);
+    animation: pulse-purple 2s infinite;
   }
 
-  /* 4 КАРТКИ В РЯД — фіксований розмір 240px */
+  @keyframes pulse-red {
+    0%, 100% { box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5), 0 0 0 3px rgba(239, 68, 68, 0.2); }
+    50% { box-shadow: 0 6px 25px rgba(239, 68, 68, 0.7), 0 0 0 4px rgba(239, 68, 68, 0.3); }
+  }
+
+  @keyframes pulse-blue {
+    0%, 100% { box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5), 0 0 0 3px rgba(59, 130, 246, 0.2); }
+    50% { box-shadow: 0 6px 25px rgba(59, 130, 246, 0.7), 0 0 0 4px rgba(59, 130, 246, 0.3); }
+  }
+
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5), 0 0 0 3px rgba(16, 185, 129, 0.2); }
+    50% { box-shadow: 0 6px 25px rgba(16, 185, 129, 0.7), 0 0 0 4px rgba(16, 185, 129, 0.3); }
+  }
+
+  @keyframes pulse-purple {
+    0%, 100% { box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5), 0 0 0 3px rgba(139, 92, 246, 0.2); }
+    50% { box-shadow: 0 6px 25px rgba(139, 92, 246, 0.7), 0 0 0 4px rgba(139, 92, 246, 0.3); }
+  }
+
   .watchlist-grid {
     display: grid;
     grid-template-columns: repeat(4, 240px);
@@ -251,41 +311,58 @@ import lakornsData from "../data/lakorns.json";
     display: none !important;
   }
 
+  /* 🌟 ПІДВІДНЕНА EMPTY STATE */
   .empty-state {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #0f172a;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    max-width: 500px;
+    border-radius: 20px;
+    max-width: 600px;
     margin: 40px auto 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   }
 
-  .empty-state p {
+  .empty-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .empty-icon {
+    font-size: 80px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+  }
+
+  .empty-text {
     color: #94a3b8;
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: 18px;
     line-height: 1.6;
-    display: block !important;
+    margin: 0;
+    max-width: 450px;
   }
 
   .go-catalog-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
     color: white;
     text-decoration: none;
-    padding: 12px 26px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    padding: 16px 36px;
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    margin-top: 20px;
   }
 
   .go-catalog-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
   }
 
   @media (max-width: 480px) {
@@ -295,6 +372,15 @@ import lakornsData from "../data/lakorns.json";
       flex: 1;
       text-align: center;
       min-width: 120px;
+    }
+
+    .empty-text {
+      font-size: 16px;
+    }
+
+    .go-catalog-btn {
+      padding: 14px 28px;
+      font-size: 15px;
     }
   }
 </style>
