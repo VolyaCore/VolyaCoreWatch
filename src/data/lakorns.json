@@ -220,7 +220,7 @@
     "duration": "50 хв",
     "cast": ["Вар Ванарат", "Їнь Анан", "Пром Ратачапат", "Бонз Надол"],
     "director": "Ті Бундіт Синтанапараді",
-    "network": "iQiyi",
+    "network": "Dee Hup House",
     "relatedSeasons": [{ "title": "1 Сезон", "id": "jack_and_joker" }],
     "blocks": [
       {
@@ -1874,7 +1874,7 @@
       "Ґап Джакарін"
     ],
     "director": "Ті Бандіт",
-    "network": "Deep H Studio",
+    "network": "Dee Hup House",
     "relatedSeasons": [{ "title": "1 Сезон", "id": "knock_out" }],
     "blocks": [
       {
@@ -3164,7 +3164,7 @@
     "duration": "48 хв.",
     "cast": ["Паттер Пабейз", "Рю Інгкарат"],
     "director": "Ті Бундіт Синтанапараді",
-    "network": "WeTV",
+    "network": "Dee Hup House",
     "relatedSeasons": [{ "title": "1 Сезон", "id": "i_saw_you_in_my_dream" }],
     "blocks": [
       {
@@ -3206,7 +3206,7 @@
     "duration": "65 хв.",
     "cast": ["Нонкул Чанон Сантінаторнкул", "Брайт Рафіфон Фапсуан"],
     "director": "Ті Бандіт Сінтанапараді",
-    "network": "Line TV",
+    "network": "Dee Hup House",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "I_feel_you_linger_in_the_air" }
     ],
@@ -8308,7 +8308,8 @@
           { "number": 5, "tg_id": "volyacore/2696" },
           { "number": 6, "tg_id": "volyacore/2720" },
           { "number": 7, "tg_id": "volyacore/2735" },
-          { "number": 8, "tg_id": "volyacore/2776" }
+          { "number": 8, "tg_id": "volyacore/2776" },
+          { "number": 9, "tg_id": "volyacore/2860"}
         ]
       }
     ]
