@@ -8545,5 +8545,32 @@
         ]
       }
     ]
+  },
+  {
+    "id": "the_edge_of_horizon",
+    "title": "Світанок край горизонту",
+    "enTitle": "The Edge of Horizon / อรุณรุ่ง",
+    "description": "Яким прекрасним не було б світанкове сонце, їхні серця сховані в тіні через соціальну нерівність. Вони кохають один одного попри різницю в статусі та походженні. В одного є лише гордість, а інший – ставить на кін своє шляхетне походження.",
+    "cover": "the_edge_of_horizon.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "Bl",
+    "year": 2026,
+    "genres": ["action", "historical", "romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "51 хв.",
+    "cast": ["Онса Тхітхат", "Ін Дзакрасін"],
+    "director": "О Катадеб",
+    "network": "One 31",
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_edge_of_horizon" }],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2865" }
+        ]
+      }
+    ]
   }
 ]
