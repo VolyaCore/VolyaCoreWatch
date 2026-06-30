@@ -7857,7 +7857,8 @@
           { "number": 1, "tg_id": "volyacore/2806" },
           { "number": 2, "tg_id": "volyacore/2810" },
           { "number": 3, "tg_id": "volyacore/2829" }, 
-          { "number": 4, "tg_id": "volyacore/2843"}
+          { "number": 4, "tg_id": "volyacore/2843"},
+          { "number": 5, "tg_id": "volyacore/2870" }
         ]
       }
     ]
@@ -8124,7 +8125,7 @@
     "enTitle": "MuTeLuv: Fist Foot Fusion / MuTeLuv ตอน แม่ไม้มวยรำ",
     "description": "Висхідна ТікТок зірка боксу Клайрун потрапив у халепу! Санрайз, блогер-викривач, збирається транслювати бій у прямому етері та розкрити правду: Клайрун — це просто фальшивий боксер, що не знає, як битися. Зі страху Клайрун вирішує дати обітницю перед предком, сподіваючись виграти майбутній матч. Йому вдається перемогти! Проте хлопець відмовляється виконувати дану обіцянку. Тож у результаті на його руки накладається прокляття, і вони більше не стискаються в кулаки.  Не маючи вибору, Клайрун змушений покластися на Малай – єдиній, хто здатна допомогти все виправити.",
     "cover": "muteluv_fourth.jpg",
-    "status": "completed",
+    "status": "ongoing",
     "country": "thailand",
     "categories": "Інше",
     "year": 2025,
@@ -8337,7 +8338,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2817" },
-          { "number": 2, "tg_id": "volyacore/2833" }
+          { "number": 2, "tg_id": "volyacore/2833" },
+          { "number": 3, "tg_id": "volyacore/2869" }
         ]
       }
     ]
@@ -8425,7 +8427,8 @@
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2822" },
           { "number": 2, "tg_id": "volyacore/2836" },
-          { "number": 3, "tg_id": "volyacore/2849"}
+          { "number": 3, "tg_id": "volyacore/2849"},
+          { "number": 4, "tg_id": "volyacore/2872"}
         ]
       }
     ]
@@ -8542,7 +8545,8 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2846" }
+          { "number": 1, "tg_id": "volyacore/2846" },
+          { "number": 2, "tg_id": "volyacore/2874" }
         ]
       }
     ]
@@ -8569,7 +8573,35 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2865" }
+          { "number": 1, "tg_id": "volyacore/2865" },
+          { "number": 2, "tg_id": "volyacore/2878" }
+        ]
+      }
+    ]
+  },
+   {
+    "id": "the_prosecutors_proposal",
+    "title": "Пропозиція прокурора",
+    "enTitle": "The Prosecutors Proposal / 검사실의 제안",
+    "description": "Вбивство президента великого казино 15 років тому перетворило життя двох хлопців на справжнє пекло. Син убивці та син жертви – доля знову зводить їх разом як прокурора та слідчого. Пліч-о-пліч вони розплутують масштабну павутину корупції, яка пронизує мегакорпорацію й саму прокуратуру. Та посеред навколишнього хаосу стають один для одного і найбільшою слабкістю, і єдиним порятунком.",
+    "cover": "the_prosecutors_proposal.jpg",
+    "status": "ongoing",
+    "country": "korea",
+    "categories": "Bl",
+    "year": 2026,
+    "genres": ["mysticism", "romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "25 хв.",
+    "cast": ["Кім Юншік", "Пак Шіун", "Со Ханґьоль", "Кім Джонте"],
+    "director": "Ян Кьонхі",
+    "network": "Studio Oak",
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "the_prosecutors_proposal" }],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2877" }
         ]
       }
     ]
