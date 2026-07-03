@@ -3734,6 +3734,33 @@
     ]
   },
   {
+    "id": "#history2_crossing_the_line",
+    "title": "Його історія 2: Перетнувши межу",
+    "enTitle": "HIStory2: Crossing the Line",
+    "description": "Мен Шао Фей – поліцейський, який розслідує загибель своєї наставниці. Він знаходить зв'язок між загибеллю поліцейської та новим ватажком банди, Тан І. Не зважаючи на свої цілі, під час розслідування, Мен стає жертвою хитрої пастки Тана. Обидва потрапляють в ситуацію виживання в горах, і це змушує їх співпрацювати. З часом їхні стосунки починають змінюватися. Мен розуміє, що Тан І – не тільки безжалісний мафіозі, але й людина зі своєю історією. Відчуття до Тан І починають перемагати бажання помсти.",
+    "cover": "history2_crossing_the_line.jpg",
+    "status": "ongoing",
+    "country": "taiwan",
+    "categories": "Bl",
+    "year": 2018,
+    "genres": ["youth", "sport", "romance"],
+    "episodesCount": 4,
+    "imdbRating": "8.0",
+    "duration": "25 хв.",
+    "cast": ["Зак Лу", "Фань Шаосюнь", "Ян Менлінь", "Ши Боюй"],
+    "director": "Цай Міцзе",
+    "network": "CHOCO TV",
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "history2_crossing_the_line" }],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2888" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragrance_of_the_first_flower",
     "title": "Пахощі першої квітки",
     "enTitle": "Fragrance of the First Flower / 第一次遇見花香的那刻",
@@ -6424,6 +6451,42 @@
     ]
   },
   {
+    "id": "love_class3",
+    "title": "Урок кохання 3",
+    "enTitle": "Love class 3 / 수업중입니다 시즌3",
+    "description": "Під час участі в шоу на виживання для айдолів Хьондже та Суан закохалися один в одного, але дебютувати зміг лише перший. Через роки вони знову зустрічаються, та їхні почуття залишаються під загрозою через кар’єру в індустрії. Тим часом айдоли Джемін і Кхун, які переживають складні періоди в житті, зближуються, але також змушені боротися з обмеженнями, що заважають їм бути разом.",
+    "cover": "love_class3.jpg",
+    "status": "ongoing",
+    "country": "korea",
+    "categories": "Bl",
+    "year": 2026,
+    "genres": ["romance", "youth"],
+    "episodesCount": 16,
+    "imdbRating": "",
+    "duration": "15 хв.",
+    "cast": [
+      "Себьоль",
+      "Со Іхан",
+      "І Уджін",
+      "Пханутак Селлі"
+    ],
+    "director": "Лі Сокйон",
+    "network": "Lian Contents",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "love_class" },
+      { "title": "2 Сезон", "id": "love_class2" },
+      { "title": "3 Сезон", "id": "love_class3" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "3 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2885" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "business_as_usual",
     "title": "Усе, як завжди",
     "enTitle": "Business as Usual / 을의 연애",
@@ -7898,7 +7961,8 @@
           { "number": 6, "tg_id": "volyacore/2819" },
           { "number": 7, "tg_id": "volyacore/2828" },
           { "number": 8, "tg_id": "volyacore/2834" },
-          { "number": 9, "tg_id": "volyacore/2861" }
+          { "number": 9, "tg_id": "volyacore/2861" },
+          { "number": 10, "tg_id": "volyacore/2881" }
         ]
       }
     ]
@@ -7974,7 +8038,8 @@
           { "number": 4, "tg_id": "volyacore/1926" },
           { "number": 5, "tg_id": "volyacore/1952" },
           { "number": 6, "tg_id": "volyacore/1968" },
-          { "number": 7, "tg_id": "volyacore/2835" }
+          { "number": 7, "tg_id": "volyacore/2835" },
+          { "number": 8, "tg_id": "volyacore/2893" }
         ]
       }
     ]
@@ -8339,7 +8404,8 @@
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2817" },
           { "number": 2, "tg_id": "volyacore/2833" },
-          { "number": 3, "tg_id": "volyacore/2869" }
+          { "number": 3, "tg_id": "volyacore/2869" },
+          { "number": 4, "tg_id": "volyacore/2889" }
         ]
       }
     ]
@@ -8489,7 +8555,8 @@
           { "number": 2, "tg_id": "volyacore/2767" },
           { "number": 3, "tg_id": "volyacore/2779" },
           { "number": 4, "tg_id": "volyacore/2837" },
-          { "number": 5, "tg_id": "volyacore/2862" }
+          { "number": 5, "tg_id": "volyacore/2862" },
+          { "number": 6, "tg_id": "volyacore/2882" }
         ]
       }
     ]
@@ -8602,6 +8669,33 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2877" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "enemies_with_benefits",
+    "title": "Ворогині з привілеями: Лан (не) подобається Вайн",
+    "enTitle": "Enemies with Benefits / ลัลล์ไม่ชอบไวน์",
+    "description": "Голова відділу продажів Лан сповнена рішучості здолати керівницю бухгалтерії Вайн. Вайн — її повна протилежність, відома своєю безжальністю. Після однієї бурхливої ночі суперниці стають подругами із привілеями та роблять усе, щоб зберегти свої стосунки в таємниці, прикидаючись ворогинями, щоб ніхто на роботі не викрив їх. Утім із часом новознайдена близькість мимоволі перетворюється на справжнє кохання.",
+    "cover": "enemies_with_benefits.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "Gl",
+    "year": 2026,
+    "genres": ["comedy", "romance"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "45 хв.",
+    "cast": ["Джен Плойчомпу", "ДжінДжін Праріят", "Капук Плойніра", "Сайзі Рутріча"],
+    "director": ["Тле Таван", "Аріса Вавванджіт"],
+    "network": "GMMTV",
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "enemies_with_benefits" }],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2892" }
         ]
       }
     ]
