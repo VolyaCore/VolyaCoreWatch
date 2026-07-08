@@ -19,7 +19,7 @@ const siteName = "VolyaCore";
 ---
 
 <html lang="uk">
-  <!-- <head>
+  <head>
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="aR320Pv9hTBuocYAnLxVexlMcsxkmim6OdbSdlNdVOY" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,62 +45,6 @@ const siteName = "VolyaCore";
     "url": "https://volyacore.com/"
   }
   </script>
-    <title>{title}</title>
-
-    <script is:inline>
-      const savedTheme = localStorage.getItem("theme") || "dark";
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    </script>
-  </head> -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="google-site-verification" content="aR320Pv9hTBuocYAnLxVexlMcsxkmim6OdbSdlNdVOY" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="icon" type="image/png" href="/logo-bird.png" />
-
-    <meta name="description" content={description} />
-    <meta name="application-name" content={siteName} />
-    <meta name="theme-color" content="#0f172a" />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={siteName} />
-    <meta property="og:url" content={siteUrl} />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-
-    <link rel="canonical" href={siteUrl} />
-
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        alternateName: "VolyaCore",
-        url: siteUrl,
-      })},
-      {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Головна",
-    "item": "https://volyacore.com/"
-  }]
-    </script>
-
     <title>{title}</title>
 
     <script is:inline>
