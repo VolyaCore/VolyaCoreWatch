@@ -6388,7 +6388,8 @@
     "network": "Viki",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "love_class" },
-      { "title": "2 Сезон", "id": "love_class2" }
+      { "title": "2 Сезон", "id": "love_class2" },
+      { "title": "3 Сезон", "id": "love_class3" }
     ],
     "blocks": [
       {
@@ -6430,7 +6431,8 @@
     "network": "Viki",
     "relatedSeasons": [
       { "title": "1 Сезон", "id": "love_class" },
-      { "title": "2 Сезон", "id": "love_class2" }
+      { "title": "2 Сезон", "id": "love_class2" },
+      { "title": "3 Сезон", "id": "love_class3" }
     ],
     "blocks": [
       {
