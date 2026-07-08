@@ -12,7 +12,15 @@
 //   base: '/VolyaCoreWatch', 
 // });
 
-import { defineConfig } from 'astro/config';
+// import { defineConfig } from 'astro/config';
 
-// Чистий конфіг для Vercel / Netlify
-export default defineConfig({});
+// // Чистий конфіг для Vercel / Netlify
+// export default defineConfig({});
+
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://volyacore.com', // Вкажіть ваш основний домен
+  integrations: [sitemap()],
+});

@@ -89,7 +89,16 @@ const siteName = "VolyaCore";
         name: siteName,
         alternateName: "VolyaCore",
         url: siteUrl,
-      })}
+      })},
+      {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Головна",
+    "item": "https://volyacore.com/"
+  }]
     </script>
 
     <title>{title}</title>
