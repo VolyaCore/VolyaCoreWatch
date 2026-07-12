@@ -7861,7 +7861,8 @@
           { "number": 4, "tg_id": "volyacore/2759" },
           { "number": 5, "tg_id": "volyacore/2771" },
           { "number": 6, "tg_id": "volyacore/2813" },
-          { "number": 7, "tg_id": "volyacore/2903"}
+          { "number": 7, "tg_id": "volyacore/2903"}, 
+          { "number": 8, "tg_id": "volyacore/2926"}
         ]
       }
     ]
@@ -7939,13 +7940,13 @@
     "enTitle": "Love Upon a Time / ภพเธอ",
     "description": "Накун — двадцятирічний студент, який не вірить у забобони. Одного разу доля грає з ним у злий жарт, і він опиняється на чотириста років назад — у минулому в королістві Аютххая. Його приймають за зниклого безвісти чоловіка, тож Накун грає роль Клао й намагається розгадати таємницю його зникнення, водночас шукаючи спосіб повернутися у свій час. Друг Клао, Поп, не вірить, що Накун — його нонг, якого він колись знав, і пильно стежить за ним.",
     "cover": "love_upon_a_time.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "thailand",
     "categories": "BL",
     "year": 2026,
     "genres": ["historical", "romance", "fantasy"],
     "episodesCount": 12,
-    "imdbRating": "",
+    "imdbRating": "8.5",
     "duration": "58 хв.",
     "cast": [
       "Нет Сірафоп",
@@ -7970,7 +7971,8 @@
           { "number": 8, "tg_id": "volyacore/2834" },
           { "number": 9, "tg_id": "volyacore/2861" },
           { "number": 10, "tg_id": "volyacore/2881" }, 
-          { "number": 11, "tg_id": "volyacore/2908"}
+          { "number": 11, "tg_id": "volyacore/2908"},
+          { "number": 12, "tg_id": "volyacore/2924"}
         ]
       }
     ]
@@ -8270,7 +8272,8 @@
           { "number": 9, "tg_id": "volyacore/2823" },
           { "number": 10, "tg_id": "volyacore/2832" },
           { "number": 11, "tg_id": "volyacore/2866" },
-          { "number": 12, "tg_id": "volyacore/2894"}
+          { "number": 12, "tg_id": "volyacore/2894"}, 
+          { "number": 13, "tg_id": "volyacore/2925"}
         ]
       }
     ]
@@ -8416,7 +8419,8 @@
           { "number": 1, "tg_id": "volyacore/2817" },
           { "number": 2, "tg_id": "volyacore/2833" },
           { "number": 3, "tg_id": "volyacore/2869" },
-          { "number": 4, "tg_id": "volyacore/2889" }
+          { "number": 4, "tg_id": "volyacore/2889" }, 
+          { "number": 4, "tg_id": "volyacore/2928"}
         ]
       }
     ]
@@ -8689,7 +8693,8 @@
           { "number": 1, "tg_id": "volyacore/2877" },
           { "number": 2, "tg_id": "volyacore/2895" }, 
           { "number": 3, "tg_id": "volyacore/2905" },
-          { "number": 4, "tg_id": "volyacore/2914" }
+          { "number": 4, "tg_id": "volyacore/2914" }, 
+          { "number": 5, "tg_id": "volyacore/2923"}
         ]
       }
     ]
@@ -8716,7 +8721,8 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2892" }
+          { "number": 1, "tg_id": "volyacore/2892" }, 
+          { "number": 2, "tg_id": "volyacore/2922"}
         ]
       }
     ]
@@ -8745,7 +8751,8 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2900" }
+          { "number": 1, "tg_id": "volyacore/2900" }, 
+          { "number": 2, "tg_id": "volyacore/2921"}
         ]
       }
     ]
@@ -8774,7 +8781,37 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2912" }
+          { "number": 1, "tg_id": "volyacore/2912" }, 
+          { "number": 2, "tg_id": "volyacore/2927"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mr_kill",
+    "title": "Пан Убивця: Сторінки смерті",
+    "enTitle": "Mr.Kill / มังงะสั่งตาย",
+    "description": "Кей — відомий мангака, який опиняється під пильним оком Пхата — головного інспектора у справі серійних убивств. Це стається після того, як профілі жертв, методи вбивств та місця злочину виявляються схожими на сцени зі старих робіт Кея. Пов'язані обставинами, вони повинні об'єднати зусилля, щоб розкрити справу й викрити злочинця. На шляху до правди двоє незнайомців стають поєднанні чимось схожим на довіру.  Але чим більше вони копають, тим більше минуле спливає на поверхню, і те, що випливає, починає сильно впливати на їхні стосунки.. У міру того, як підказки продовжують розкриватися, зв'язок, який вони створили, піддається випробуванню, змушуючи їх замислитися: чи зможуть вони рухатися далі разом, чи зрештою стануть наступними жертвами вбивці.",
+    "cover": "mr_kill.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "BL",
+    "year": 2026,
+    "genres": ["thriller", "detective", "psychologycal", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "50 хв",
+    "cast": ["Дью Джірават", "Ті Тірадет", "Нео Трай", "Сінга Луансунторнта"],
+    "director": "Чік Сакон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "mr_kill" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2931" }
         ]
       }
     ]

@@ -13,14 +13,11 @@ const {
   title = "VolyaCore — Переклад з субтитрами азійських BL, GL, гет к-драм/пісень та інше",
   description = "Офіційний сайт VolyaCore. Переклад з субтитрами азійських BL, GL, гет к-драм/пісень та інше.",
 } = Astro.props;
-
-const siteUrl = "https://volyacore.com";
-const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 ---
 
 <html lang="uk">
   <head>
-    <!-- <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="google-site-verification" content="aR320Pv9hTBuocYAnLxVexlMcsxkmim6OdbSdlNdVOY" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     <meta property="og:description" content="Офіційний сайт VolyaCore." />
     <meta property="og:site_name" content="VolyaCore" />
   <meta name="application-name" content="VolyaCore" />
-  <link rel="canonical" href={canonicalURL} />
+  <link rel="canonical" href={"https://volyacore.com/"} />
 
   <script type="application/ld+json">
   {
@@ -45,25 +42,7 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl);
     "alternateName": "VolyaCore",
     "url": "https://volyacore.com/"
   }
-  </script> -->
-    <meta name="description" content={description} />
-
-    <link rel="canonical" href={canonicalURL.toString()} />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "VolyaCore",
-        "url": "https://volyacore.com/"
-      }
-    </script>
-    <title>{title}</title>
-
-    <script is:inline>
-      const savedTheme = localStorage.getItem("theme") || "dark";
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    </script>
+  </script>
   </head>
   <body>
     <!-- Вставляємо шапку сайту -->

@@ -953,5 +953,71 @@ const latestLakorns = lakornsData.slice(0, 24);
       text-transform: uppercase;
       color: #94a3b8;
     }
+    /* --- Глобальна адаптація сітки (Catalog Grid) --- */
+#catalog-grid,
+.movies-grid {
+  display: grid !important;
+  gap: 24px !important;
+  width: 100% !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 1280px) {
+  #catalog-grid, .movies-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (max-width: 850px) {
+  #catalog-grid, .movies-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+}
+
+@media (max-width: 480px) {
+  #catalog-grid, .movies-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+}
+
+/* --- Адаптація каруселі --- */
+.carousel-slide-wrapper {
+  flex: 0 0 calc(20% - 16px);
+  min-width: calc(20% - 16px);
+}
+
+@media (max-width: 1200px) {
+  .carousel-slide-wrapper { flex: 0 0 calc(25% - 12px); min-width: calc(25% - 12px); }
+}
+
+@media (max-width: 900px) {
+  .carousel-slide-wrapper { flex: 0 0 calc(33.33% - 10px); min-width: calc(33.33% - 10px); }
+}
+
+@media (max-width: 600px) {
+  .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); min-width: calc(50% - 8px); }
+}
+
+/* --- Адаптація фільтрів --- */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .filter-group { flex: 1 1 100%; } /* На дуже малих екранах фільтри йдуть у стовпчик */
+}
+
+/* --- Пагінація --- */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .pagination-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
   </style>
 </MainLayout>
