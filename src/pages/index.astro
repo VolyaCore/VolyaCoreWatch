@@ -239,7 +239,7 @@ const latestLakorns = lakornsData.slice(0, 24);
       if (!track) return;
   
       let currentIndex = 0;
-      let autoPlayInterval: number | null = null;
+      let autoPlayInterval: ReturnType<typeof setInterval> | null = null;
       const AUTOPLAY_DELAY = 5000; 
   
       // Функція для оновлення позиції каруселі
