@@ -3267,6 +3267,42 @@
     ]
   },
   {
+    "id": "peach_and_me",
+    "title": "Піч і Я: Тримаю себе в руках, Лукпіче",
+    "enTitle": "Peach and Me / มีสติแล้วลูกพีช",
+    "description": "Подружнє життя Ті та Піча сповнене солодкого аромату медового місяця. Вони твердо вирішують бути уважнішими один до одного. Допоки Піч не згадує про свою роботу. Серце молодого боса ніби розірвали на шматки. Що буде з Ті, який налаштований бути розсудливим у своєму одержимому коханні до Лукпіча? І наскільки хаотичними стануть справи в особняку «Арсені»? ",
+    "cover": "peach_and_me.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "BL",
+    "year": 2026,
+    "genres": ["romance", "comedy"],
+    "episodesCount": 4,
+    "imdbRating": "",
+    "duration": "58 хв.",
+    "cast": [
+      "Понд Наравіт",
+      "Пхувін Тансак’юен",
+      "Ест Супха",
+      "Вільям Джакрапат",
+      "Боні Патрафус"
+    ],
+    "director": "Ікс Наттапон",
+    "network": "GMMTV",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "me_and_thee" },
+      { "title": "2 Сезон", "id": "peach_and_me" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "2 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2953" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "gelboys",
     "title": "Gelboys: У стані невизначеності",
     "enTitle": "GELBOYS / สถานะกั๊กใจ",
@@ -3756,7 +3792,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2888" }, 
-          { "number": 2, "tg_id": "volyacore/2917"}
+          { "number": 2, "tg_id": "volyacore/2917"},
+          { "number": 3, "tg_id": "volyacore/2945"}
 
         ]
       }
@@ -6486,7 +6523,10 @@
         "blockTitle": "3 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2885" },
-          { "number": 2, "tg_id": "volyacore/2918"}
+          { "number": 2, "tg_id": "volyacore/2918"},
+          { "number": 3, "tg_id": "volyacore/2938"},
+          { "number": 4, "tg_id": "volyacore/2943"}
+          
         ]
       }
     ]
@@ -8050,7 +8090,8 @@
           { "number": 6, "tg_id": "volyacore/1968" },
           { "number": 7, "tg_id": "volyacore/2835" },
           { "number": 8, "tg_id": "volyacore/2893" }, 
-          { "number": 9, "tg_id": "volyacore/2920" }
+          { "number": 9, "tg_id": "volyacore/2920" },
+          { "number": 10, "tg_id": "volyacore/2941" }
         ]
       }
     ]
@@ -8420,7 +8461,8 @@
           { "number": 2, "tg_id": "volyacore/2833" },
           { "number": 3, "tg_id": "volyacore/2869" },
           { "number": 4, "tg_id": "volyacore/2889" }, 
-          { "number": 4, "tg_id": "volyacore/2928"}
+          { "number": 5, "tg_id": "volyacore/2928"},
+          { "number": 6, "tg_id": "volyacore/2949" }
         ]
       }
     ]
@@ -8480,7 +8522,8 @@
           { "number": 1, "tg_id": "volyacore/2827" },
           { "number": 2, "tg_id": "volyacore/2840" },
           { "number": 3, "tg_id": "volyacore/2867" },
-          { "number": 4, "tg_id": "volyacore/2897"}
+          { "number": 4, "tg_id": "volyacore/2897"},
+          { "number": 5, "tg_id": "volyacore/2948" }
         ]
       }
     ]
@@ -8512,7 +8555,8 @@
           { "number": 3, "tg_id": "volyacore/2849"},
           { "number": 4, "tg_id": "volyacore/2872"},
           { "number": 5, "tg_id": "volyacore/2902"}, 
-          { "number": 6, "tg_id": "volyacore/2915" }
+          { "number": 6, "tg_id": "volyacore/2915" },
+          { "number": 7, "tg_id": "volyacore/2942"}
         ]
       }
     ]
@@ -8553,7 +8597,7 @@
     "enTitle": "Semantic Error / 시맨틱 에러",
     "description": "Студент-програміст Чо Сану видаляє імена прогульщиків із групового проєкту. Через це зірковий дизайнер Чан Джейон втрачає можливість випуститися. Прагнучи помсти, Джейон знаходить Сану, але коли вони змушені працювати разом, між ними виникає несподіване тяжіння.",
     "cover": "semantic_error.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "korea",
     "categories": "BL",
     "year": 2022,
@@ -8575,7 +8619,8 @@
           { "number": 4, "tg_id": "volyacore/2837" },
           { "number": 5, "tg_id": "volyacore/2862" },
           { "number": 6, "tg_id": "volyacore/2882" }, 
-          { "number": 7, "tg_id": "volyacore/2909"}
+          { "number": 7, "tg_id": "volyacore/2909"},
+          { "number": 8, "tg_id": "volyacore/2932"}
         ]
       }
     ]
@@ -8634,7 +8679,8 @@
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2846" },
           { "number": 2, "tg_id": "volyacore/2874" }, 
-          { "number": 3, "tg_id": "volyacore/2904"}
+          { "number": 3, "tg_id": "volyacore/2904"},
+          { "number": 4, "tg_id": "volyacore/2939"}
         ]
       }
     ]
@@ -8663,7 +8709,8 @@
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2865" },
           { "number": 2, "tg_id": "volyacore/2878" },
-          { "number": 3, "tg_id": "volyacore/2916"}
+          { "number": 3, "tg_id": "volyacore/2916"},
+          { "number": 4, "tg_id": "volyacore/2940"}
         ]
       }
     ]
@@ -8694,7 +8741,8 @@
           { "number": 2, "tg_id": "volyacore/2895" }, 
           { "number": 3, "tg_id": "volyacore/2905" },
           { "number": 4, "tg_id": "volyacore/2914" }, 
-          { "number": 5, "tg_id": "volyacore/2923"}
+          { "number": 5, "tg_id": "volyacore/2923"},
+          { "number": 6, "tg_id": "volyacore/2937"}
         ]
       }
     ]
@@ -8782,7 +8830,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2912" }, 
-          { "number": 2, "tg_id": "volyacore/2927"}
+          { "number": 2, "tg_id": "volyacore/2927"},
+          { "number": 3, "tg_id": "volyacore/2944"}
         ]
       }
     ]
@@ -8811,7 +8860,64 @@
       {
         "blockTitle": "1 Сезон",
         "episodes": [
-          { "number": 1, "tg_id": "volyacore/2931" }
+          { "number": 1, "tg_id": "volyacore/2931" },
+          { "number": 2, "tg_id": "volyacore/2950"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "are_the_sexy_buttocks_not_good",
+    "title": "Чи сексуальні популяри не добре?",
+    "enTitle": "Are the Sexy Buttocks Not Good? / えっちなお尻じゃダメですか？",
+    "description": "Аіноске — студент, який завжди цікавився коханням, одного дня став жертвою сексуального домагання. Його рятує старший за нього привабливий чоловік Окумі. Хоч Аіноске й відчуває збентеження через його легковажність і бажання зблизитися, він не може забути того — і не встигнув оговтатися, як провів із ним особливу ніч. ",
+    "cover": "are_the_sexy_buttocks_not_good.jpg",
+    "status": "ongoing",
+    "country": "japan",
+    "categories": "BL",
+    "year": 2026,
+    "genres": [ "romance", "drama"],
+    "episodesCount": 10,
+    "imdbRating": "",
+    "duration": "15 хв.",
+    "cast": ["Сакай Шо", "Камісава Юкі"],
+    "director": ["Міяко Ясошіма"],
+    "network": "",
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "are_the_sexy_buttocks_not_good" }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": 1, "tg_id": "volyacore/2936" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "semantic_error",
+    "title": "Семантична помилка",
+    "enTitle": "Semantic Error / 시맨틱 에러",
+    "description": "Студент факультету інформатики Чо Сану закохується у свого старшого – Чан Чжейона. Їхні стосунки розкриваються в цьому чотирисерійному спеціальному серіалі, знятому за мотивами графічної новели «Semantic Error».",
+    "cover": "semantic_error_anime.jpg",
+    "status": "completed",
+    "country": "korea",
+    "categories": "BL",
+    "year": 2021,
+    "genres": ["comedy", "romance", "anime" ],
+    "episodesCount": 4,
+    "imdbRating": "",
+    "duration": "4 хв.",
+    "cast": [""],
+    "director": "Кім Сучон",
+    "network": "Laftel",
+    "relatedSeasons": [{ "title": "1 Сезон", "id": "semantic_error" }],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          { "number": "1-4", "tg_id": "volyacore/2947" }
         ]
       }
     ]
