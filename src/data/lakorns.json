@@ -3247,7 +3247,10 @@
     "cast": ["Понд Наравіт", "Пхувін Тансак’юен", "Ест Супха", "Боні Патрафус"],
     "director": "Ікс Наттапон",
     "network": "GMMTV",
-    "relatedSeasons": [{ "title": "1 Сезон", "id": "me_and_thee" }],
+    "relatedSeasons": [
+      { "title": "1 Сезон", "id": "me_and_thee" },
+      { "title": "2 Сезон", "id": "peach_and_me" }
+    ],
     "blocks": [
       {
         "blockTitle": "1 Сезон",
@@ -8057,13 +8060,13 @@
     "enTitle": "Sweet Tooth, Good Dentist / แฟนที่ทันตแพทย์ส่วนใหญ่แนะนำ",
     "description": "Сон — студент, у якого є канал з ASMR-контентом, де він їсть різні солодощі та десерти. Усе йде добре, допоки в його житті не стається трагедія – у його зубі зʼявляється карієс. Через це він змушений піти до Джея – дивакуватого дантиста-інтерна. Їх стосунки починаються напружено — вони ніби вода та олія, що постійно відштовхують один одного. Але з часом Сону починає здаватися, що турботливість Джея поступово виходить за рамки взаємин лікаря та пацієнта.",
     "cover": "sweet_tooth_good_dentist.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "thailand",
     "categories": "BL",
     "year": 2025,
     "genres": ["comedy", "romance"],
     "episodesCount": 11,
-    "imdbRating": "",
+    "imdbRating": "7.5",
     "duration": "45 хв.",
     "cast": [
       "Марк Пакін",
@@ -8091,7 +8094,8 @@
           { "number": 7, "tg_id": "volyacore/2835" },
           { "number": 8, "tg_id": "volyacore/2893" }, 
           { "number": 9, "tg_id": "volyacore/2920" },
-          { "number": 10, "tg_id": "volyacore/2941" }
+          { "number": 10, "tg_id": "volyacore/2941" },
+          { "number": 11, "tg_id": "volyacore/2955"}
         ]
       }
     ]
@@ -8314,7 +8318,8 @@
           { "number": 10, "tg_id": "volyacore/2832" },
           { "number": 11, "tg_id": "volyacore/2866" },
           { "number": 12, "tg_id": "volyacore/2894"}, 
-          { "number": 13, "tg_id": "volyacore/2925"}
+          { "number": 13, "tg_id": "volyacore/2925"}, 
+          { "number": 14, "tg_id": "volyacore/2954"}
         ]
       }
     ]
@@ -8648,7 +8653,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2839" }, 
-          { "number": 2, "tg_id": "volyacore/2919"}
+          { "number": 2, "tg_id": "volyacore/2919"}, 
+          {"number": 3, "tg_id": "volyacore/2962"}
         ]
       }
     ]
@@ -8680,7 +8686,8 @@
           { "number": 1, "tg_id": "volyacore/2846" },
           { "number": 2, "tg_id": "volyacore/2874" }, 
           { "number": 3, "tg_id": "volyacore/2904"},
-          { "number": 4, "tg_id": "volyacore/2939"}
+          { "number": 4, "tg_id": "volyacore/2939"}, 
+          { "number": 5, "tg_id": "volyacore/2966"}
         ]
       }
     ]
@@ -8742,7 +8749,8 @@
           { "number": 3, "tg_id": "volyacore/2905" },
           { "number": 4, "tg_id": "volyacore/2914" }, 
           { "number": 5, "tg_id": "volyacore/2923"},
-          { "number": 6, "tg_id": "volyacore/2937"}
+          { "number": 6, "tg_id": "volyacore/2937"}, 
+          { "number": 7, "tg_id": "volyacore/2957"}
         ]
       }
     ]
@@ -8800,7 +8808,8 @@
         "blockTitle": "1 Сезон",
         "episodes": [
           { "number": 1, "tg_id": "volyacore/2900" }, 
-          { "number": 2, "tg_id": "volyacore/2921"}
+          { "number": 2, "tg_id": "volyacore/2921"}, 
+          { "number": 3, "tg_id": "volyacore/2963"}
         ]
       }
     ]
@@ -8868,7 +8877,7 @@
   },
   {
     "id": "are_the_sexy_buttocks_not_good",
-    "title": "Чи сексуальні популяри не добре?",
+    "title": "Хіба сексі сіднички – це погано?",
     "enTitle": "Are the Sexy Buttocks Not Good? / えっちなお尻じゃダメですか？",
     "description": "Аіноске — студент, який завжди цікавився коханням, одного дня став жертвою сексуального домагання. Його рятує старший за нього привабливий чоловік Окумі. Хоч Аіноске й відчуває збентеження через його легковажність і бажання зблизитися, він не може забути того — і не встигнув оговтатися, як провів із ним особливу ніч. ",
     "cover": "are_the_sexy_buttocks_not_good.jpg",
