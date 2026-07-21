@@ -2,8 +2,6 @@
 import lakorns from "../data/lakorns.json";
 ---
 
-
-
 <!DOCTYPE html>
 <html lang="uk">
   <head>
@@ -389,7 +387,7 @@ import lakorns from "../data/lakorns.json";
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        statusMsg.textContent = "Збереження на GitHub...";
+        statusMsg.textContent = "Збереження даних...";
         statusMsg.className = "";
 
         const lakornId = document.getElementById("id").value.trim();
@@ -399,7 +397,7 @@ import lakorns from "../data/lakorns.json";
           return;
         }
 
-        const formData = {
+        const formDataObj = {
           id: lakornId,
           title: document.getElementById("title").value.trim(),
           enTitle: document.getElementById("enTitle").value.trim(),
@@ -425,71 +423,32 @@ import lakorns from "../data/lakorns.json";
           ]
         };
 
-        // УВАГА: Токен потрібен тут, або ви можете запитувати його через поле вводу в адмінці
-        const GITHUB_TOKEN = "ТУТ_ВАШ_ТОКЕН"; // Можете вставити ваш GitHub Personal Access Token
-        const REPO_OWNER = "VolyaCore";
-        const REPO_NAME = "VolyaCoreWatch";
-        const FILE_PATH = "src/data/lakorns.json";
-
         try {
-          if (!GITHUB_TOKEN || GITHUB_TOKEN === "ТУТ_ВАШ_ТОКЕН") {
-            throw new Error("Не вказано GitHub токен у коді адмінки!");
-          }
-
-          const fileUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
-
-          // 1. Отримуємо поточний файл з GitHub, щоб дізнатися його SHA та зміст
-          const getRes = await fetch(fileUrl, {
-            headers: { Authorization: `token ${GITHUB_TOKEN}` }
+          // Передаємо дані через URLSearchParams замість JSON, щоб уникнути помилок синтаксису запиту
+          const response = await fetch("/api/update-json", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ payload: JSON.stringify(formDataObj) })
           });
 
-          if (!getRes.ok) throw new Error("Не вдалося завантажити lakorns.json з GitHub");
-
-          const fileJson = await getRes.json();
-          const sha = fileJson.sha;
+          const responseText = await response.text();
+          let result = {};
           
-          // Декодуємо поточний вміст JSON із base64
-          const decodedBytes = Uint8Array.from(atob(fileJson.content), c => c.charCodeAt(0));
-          const decodedString = new TextDecoder().decode(decodedBytes);
-          let lakornsList = JSON.parse(decodedString);
+          try {
+            if (responseText) {
+              result = JSON.parse(responseText);
+            }
+          } catch (parseErr) {
+            throw new Error(`Помилка сервера: ${responseText.substring(0, 100)}`);
+          }
 
-          if (!Array.isArray(lakornsList)) lakornsList = [];
-
-          // Додаємо або оновлюємо лакорн
-          const existingIndex = lakornsList.findIndex((item) => item.id === formData.id);
-          if (existingIndex >= 0) {
-            lakornsList[existingIndex] = formData;
+          if (response.ok && result.success) {
+            statusMsg.textContent = "Успішно! Зміни надіслано на GitHub.";
+            statusMsg.className = "success";
+            setTimeout(() => location.reload(), 2000);
           } else {
-            lakornsList.push(formData);
+            throw new Error(result.error || "Помилка запиту");
           }
-
-          // Кодуємо назад у base64
-          const updatedString = JSON.stringify(lakornsList, null, 2);
-          const base64Content = btoa(unescape(encodeURIComponent(updatedString)));
-
-          // 2. Зберігаємо оновлений файл назад на GitHub
-          const putRes = await fetch(fileUrl, {
-            method: "PUT",
-            headers: {
-              Authorization: `token ${GITHUB_TOKEN}`,
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              message: `Admin: update lakorn -> ${formData.title}`,
-              content: base64Content,
-              sha: sha
-            })
-          });
-
-          if (!putRes.ok) {
-            const errData = await putRes.json();
-            throw new Error(errData.message || "Помилка оновлення на GitHub");
-          }
-
-          statusMsg.textContent = "Успішно! Зміни збережено на GitHub.";
-          statusMsg.className = "success";
-          setTimeout(() => location.reload(), 2000);
-
         } catch (err) {
           statusMsg.textContent = "Помилка: " + err.message;
           statusMsg.className = "error";
