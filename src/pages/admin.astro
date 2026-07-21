@@ -1,0 +1,462 @@
+---
+import lakorns from "../data/lakorns.json";
+---
+
+
+
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Адмін-панель | Volyacore</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: #0f172a;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .hidden { display: none !important; }
+
+      #login-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-box {
+        width: 100%;
+        max-width: 400px;
+        background-color: #1e293b;
+        padding: 30px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      #admin-panel {
+        display: flex;
+        min-height: 100vh;
+      }
+      aside {
+        width: 280px;
+        background-color: #1e293b;
+        border-right: 1px solid #334155;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        max-height: 100vh;
+      }
+      main {
+        flex: 1;
+        padding: 30px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        max-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+      .form-container {
+        width: 100%;
+        max-width: 700px;
+        background-color: #1e293b;
+        padding: 30px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        height: fit-content;
+      }
+
+      h2, h3 { margin-top: 0; color: #f8fafc; }
+
+      .btn-new {
+        background-color: #10b981;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 600;
+        margin-bottom: 20px;
+        transition: background 0.2s;
+      }
+      .btn-new:hover { background-color: #059669; }
+
+      .lakorn-item {
+        padding: 10px 12px;
+        background: #0f172a;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px solid #334155;
+        transition: all 0.2s;
+        font-size: 14px;
+      }
+      .lakorn-item:hover, .lakorn-item.active {
+        border-color: #6366f1;
+        background: #172033;
+      }
+
+      label {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: #94a3b8;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+        margin-top: 12px;
+      }
+      input, textarea {
+        width: 100%;
+        padding: 10px 12px;
+        background-color: #0f172a;
+        border: 1px solid #334155;
+        color: #fff;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 14px;
+        outline: none;
+      }
+      textarea { resize: vertical; height: 80px; }
+      input:focus, textarea:focus { border-color: #6366f1; }
+
+      .episodes-box {
+        background: #0f172a;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #334155;
+        margin-top: 10px;
+      }
+      .episode-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 8px;
+        align-items: center;
+      }
+      .episode-row input { margin-bottom: 0; }
+      .btn-del-ep {
+        background: #ef4444;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .btn-add-ep {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      button[type="submit"] {
+        background-color: #6366f1;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: 20px;
+        transition: background 0.2s;
+      }
+      button[type="submit"]:hover { background-color: #4f46e5; }
+
+      .error { color: #f87171; font-size: 14px; margin-top: 10px; text-align: center; }
+      .success { color: #4ade80; font-size: 14px; margin-top: 10px; text-align: center; font-weight: 500; }
+    </style>
+  </head>
+  <body>
+    <!-- ЕКРАН АВТОРИЗАЦІЇ -->
+    <div id="login-screen">
+      <div class="login-box">
+        <h2>Вхід в адмінку</h2>
+        <input type="password" id="admin-pass" placeholder="Введіть пароль" />
+        <button id="login-btn" style="margin-top: 15px; background: #6366f1; color: white; border: none; padding: 10px; width: 100%; border-radius: 8px; cursor: pointer;">Увійти</button>
+        <p id="login-error" class="error hidden">Невірний пароль!</p>
+      </div>
+    </div>
+
+    <!-- ПАНЕЛЬ КЕРУВАННЯ -->
+    <div id="admin-panel" class="hidden">
+      <aside>
+        <h3>Проєкти</h3>
+        <button class="btn-new" id="btn-create-new">+ Новий лакорн</button>
+        <div id="lakorn-list-container">
+          {
+            lakorns.map((item: any) => (
+              <div class="lakorn-item" data-id={item.id}>
+                {item.title}
+              </div>
+            ))
+          }
+        </div>
+      </aside>
+
+      <main>
+        <div class="form-container">
+          <h2 id="form-title">Додати новий лакорн</h2>
+          <form id="lakorn-form">
+            <label>ID (англійською без пробілів):</label>
+            <input type="text" id="id" required placeholder="perfect10liners" />
+
+            <label>Назва українською:</label>
+            <input type="text" id="title" required placeholder="Бездоганна десятка" />
+
+            <label>Оригінальна / англійська назва:</label>
+            <input type="text" id="enTitle" placeholder="Perfect 10 Liners / สายรหัสเทวดา" />
+
+            <label>Опис:</label>
+            <textarea id="description" placeholder="Короткий опис сюжету..."></textarea>
+
+            <label>Завантажити файл обкладинки ( JPG / PNG ):</label>
+            <input type="file" id="coverFile" accept="image/*" />
+
+            <label>АБО пряме посилання на картинку:</label>
+            <input type="text" id="coverUrl" placeholder="https://.../image.jpg" />
+
+            <label>Статус (completed / ongoing):</label>
+            <input type="text" id="status" value="completed" />
+
+            <label>Країна (thailand / korea тощо):</label>
+            <input type="text" id="country" value="thailand" />
+
+            <label>Категорія (наприклад, BL):</label>
+            <input type="text" id="categories" value="BL" />
+
+            <label>Рік:</label>
+            <input type="number" id="year" value="2024" />
+
+            <label>Жанри (через кому):</label>
+            <input type="text" id="genres" value="romance, comedy" />
+
+            <label>Рейтинг IMDb:</label>
+            <input type="text" id="imdbRating" value="7.9" />
+
+            <label>Тривалість серії:</label>
+            <input type="text" id="duration" value="45 хв" />
+
+            <label>Актори (через кому):</label>
+            <input type="text" id="cast" value="Актор 1, Актор 2" />
+
+            <label>Режисер:</label>
+            <input type="text" id="director" value="" />
+
+            <label>Мережа (Network):</label>
+            <input type="text" id="network" value="GMMTV" />
+
+            <label>Серії (Telegram ID / Посилання):</label>
+            <div class="episodes-box" id="episodes-container">
+              <!-- Сюди динамічно додаватимуться серії -->
+            </div>
+            <button type="button" class="btn-add-ep" id="btn-add-episode">+ Додати серію</button>
+
+            <button type="submit" id="submit-btn">Зберегти на GitHub</button>
+            <p id="status-msg"></p>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script define:vars={{ existingLakorns: lakorns }}>
+      const ADMIN_PASSWORD = "776787901";
+
+      const loginScreen = document.getElementById("login-screen");
+      const adminPanel = document.getElementById("admin-panel");
+      const loginBtn = document.getElementById("login-btn");
+      const adminPass = document.getElementById("admin-pass");
+      const loginError = document.getElementById("login-error");
+
+      if (sessionStorage.getItem("isAuth") === "true") {
+        loginScreen.classList.add("hidden");
+        adminPanel.classList.remove("hidden");
+      }
+
+      loginBtn.addEventListener("click", () => {
+        if (adminPass.value === ADMIN_PASSWORD) {
+          sessionStorage.setItem("isAuth", "true");
+          loginScreen.classList.add("hidden");
+          adminPanel.classList.remove("hidden");
+        } else {
+          loginError.classList.remove("hidden");
+        }
+      });
+
+      const items = document.querySelectorAll(".lakorn-item");
+      const btnCreateNew = document.getElementById("btn-create-new");
+      const formTitle = document.getElementById("form-title");
+      const form = document.getElementById("lakorn-form");
+      const episodesContainer = document.getElementById("episodes-container");
+      const btnAddEpisode = document.getElementById("btn-add-episode");
+
+      let currentEpisodes = [];
+
+      function renderEpisodes() {
+        episodesContainer.innerHTML = "";
+        currentEpisodes.forEach((ep, index) => {
+          const row = document.createElement("div");
+          row.className = "episode-row";
+          row.innerHTML = `
+            <span style="width: 40px; font-size: 13px;">Сер. ${ep.number}</span>
+            <input type="text" value="${ep.tg_id}" placeholder="volyacore/1493" data-index="${index}" class="ep-input" />
+            <button type="button" class="btn-del-ep" data-index="${index}">✕</button>
+          `;
+          episodesContainer.appendChild(row);
+        });
+
+        document.querySelectorAll(".ep-input").forEach(input => {
+          input.addEventListener("input", (e) => {
+            const idx = e.target.getAttribute("data-index");
+            currentEpisodes[idx].tg_id = e.target.value.trim();
+          });
+        });
+
+        document.querySelectorAll(".btn-del-ep").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            const idx = e.target.getAttribute("data-index");
+            currentEpisodes.splice(idx, 1);
+            currentEpisodes.forEach((item, i) => item.number = i + 1);
+            renderEpisodes();
+          });
+        });
+      }
+
+      btnAddEpisode.addEventListener("click", () => {
+        const nextNum = currentEpisodes.length + 1;
+        currentEpisodes.push({ number: nextNum, tg_id: `volyacore/` });
+        renderEpisodes();
+      });
+
+      function fillForm(data) {
+        document.getElementById("id").value = data.id || "";
+        document.getElementById("title").value = data.title || "";
+        document.getElementById("enTitle").value = data.enTitle || "";
+        document.getElementById("description").value = data.description || "";
+        document.getElementById("coverFile").value = "";
+        document.getElementById("coverUrl").value = "";
+        document.getElementById("status").value = data.status || "completed";
+        document.getElementById("country").value = data.country || "thailand";
+        document.getElementById("categories").value = data.categories || "BL";
+        document.getElementById("year").value = data.year || 2024;
+        document.getElementById("genres").value = Array.isArray(data.genres) ? data.genres.join(", ") : (data.genres || "");
+        document.getElementById("imdbRating").value = data.imdbRating || "";
+        document.getElementById("duration").value = data.duration || "45 хв";
+        document.getElementById("cast").value = Array.isArray(data.cast) ? data.cast.join(", ") : (data.cast || "");
+        document.getElementById("director").value = data.director || "";
+        document.getElementById("network").value = data.network || "";
+
+        if (data.blocks && data.blocks[0] && Array.isArray(data.blocks[0].episodes)) {
+          currentEpisodes = JSON.parse(JSON.stringify(data.blocks[0].episodes));
+        } else {
+          currentEpisodes = [];
+        }
+        renderEpisodes();
+      }
+
+      btnCreateNew.addEventListener("click", () => {
+        items.forEach(i => i.classList.remove("active"));
+        formTitle.textContent = "Додати новий лакорн";
+        form.reset();
+        currentEpisodes = [];
+        renderEpisodes();
+      });
+
+      items.forEach(item => {
+        item.addEventListener("click", () => {
+          items.forEach(i => i.classList.remove("active"));
+          item.classList.add("active");
+          const targetId = item.getAttribute("data-id");
+          const found = existingLakorns.find(l => l.id === targetId);
+          if (found) {
+            formTitle.textContent = "Редагувати: " + found.title;
+            fillForm(found);
+          }
+        });
+      });
+
+      const statusMsg = document.getElementById("status-msg");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        statusMsg.textContent = "Збереження даних...";
+        statusMsg.className = "";
+
+        const lakornId = document.getElementById("id").value.trim();
+        if (!lakornId) {
+          statusMsg.textContent = "Помилка: Введіть ID лакорна!";
+          statusMsg.className = "error";
+          return;
+        }
+
+        const formDataObj = {
+          id: lakornId,
+          title: document.getElementById("title").value.trim(),
+          enTitle: document.getElementById("enTitle").value.trim(),
+          description: document.getElementById("description").value.trim(),
+          cover: `${lakornId}.jpg`,
+          status: document.getElementById("status").value.trim(),
+          country: document.getElementById("country").value.trim(),
+          categories: document.getElementById("categories").value.trim(),
+          year: Number(document.getElementById("year").value) || 2024,
+          genres: document.getElementById("genres").value.split(",").map(s => s.trim()).filter(Boolean),
+          episodesCount: currentEpisodes.length,
+          imdbRating: document.getElementById("imdbRating").value.trim(),
+          duration: document.getElementById("duration").value.trim(),
+          cast: document.getElementById("cast").value.split(",").map(s => s.trim()).filter(Boolean),
+          director: document.getElementById("director").value.trim(),
+          network: document.getElementById("network").value.trim(),
+          relatedSeasons: [{ title: "1 Сезон", id: lakornId }],
+          blocks: [
+            {
+              blockTitle: "1 Сезон",
+              episodes: currentEpisodes
+            }
+          ]
+        };
+
+        try {
+          // Передаємо дані через URLSearchParams замість JSON, щоб уникнути помилок синтаксису запиту
+          const response = await fetch("/api/update-json", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ payload: JSON.stringify(formDataObj) })
+          });
+
+          const responseText = await response.text();
+          let result = {};
+          
+          try {
+            if (responseText) {
+              result = JSON.parse(responseText);
+            }
+          } catch (parseErr) {
+            throw new Error(`Помилка сервера: ${responseText.substring(0, 100)}`);
+          }
+
+          if (response.ok && result.success) {
+            statusMsg.textContent = "Успішно! Зміни надіслано на GitHub.";
+            statusMsg.className = "success";
+            setTimeout(() => location.reload(), 2000);
+          } else {
+            throw new Error(result.error || "Помилка запиту");
+          }
+        } catch (err) {
+          statusMsg.textContent = "Помилка: " + err.message;
+          statusMsg.className = "error";
+        }
+      });
+      
+    </script>
+  </body>
+</html>
