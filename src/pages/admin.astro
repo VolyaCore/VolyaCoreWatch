@@ -10,15 +10,13 @@ import lakorns from "../data/lakorns.json";
     <title>Адмін-панель | Volyacore</title>
     <style>
       body {
-        font-family:
-          system-ui,
-          -apple-system,
-          sans-serif;
+        font-family: system-ui, -apple-system, sans-serif;
         background-color: #0f172a;
         color: #fff;
         margin: 0;
         padding: 0;
-        min-height: 100vh;
+        height: 100vh;
+        overflow: hidden;
       }
       .hidden {
         display: none !important;
@@ -42,26 +40,28 @@ import lakorns from "../data/lakorns.json";
 
       #admin-panel {
         display: flex;
-        min-height: 100vh;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
       }
       aside {
-        width: 280px;
+        width: 320px;
         background-color: #1e293b;
         border-right: 1px solid #334155;
         padding: 20px;
         box-sizing: border-box;
-        overflow-y: auto;
-        max-height: 100vh;
         display: flex;
         flex-direction: column;
         gap: 15px;
+        height: 100vh;
+        overflow: hidden;
       }
       main {
         flex: 1;
         padding: 30px;
         box-sizing: border-box;
+        height: 100vh;
         overflow-y: auto;
-        max-height: 100vh;
         display: flex;
         justify-content: center;
       }
@@ -74,10 +74,10 @@ import lakorns from "../data/lakorns.json";
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         height: fit-content;
+        margin-bottom: 50px;
       }
 
-      h2,
-      h3 {
+      h2, h3 {
         margin-top: 0;
         color: #f8fafc;
       }
@@ -92,6 +92,7 @@ import lakorns from "../data/lakorns.json";
         width: 100%;
         font-weight: 600;
         transition: background 0.2s;
+        flex-shrink: 0;
       }
       .btn-new:hover {
         background-color: #059669;
@@ -101,6 +102,7 @@ import lakorns from "../data/lakorns.json";
         display: flex;
         flex-direction: column;
         gap: 10px;
+        flex-shrink: 0;
       }
 
       .search-input {
@@ -123,6 +125,8 @@ import lakorns from "../data/lakorns.json";
         flex-direction: column;
         gap: 8px;
         overflow-y: auto;
+        flex: 1;
+        padding-right: 4px;
       }
 
       .lakorn-item {
@@ -387,20 +391,14 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" value="GMMTV" />
 
-            <!-- ДОДАНА СЕКЦІЯ: Пов'язані сезони / частини -->
+            <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
             <label>Пов'язані сезони (Сезони / Частини):</label>
-            <div class="seasons-box" id="seasons-container">
-              <!-- Сюди динамічно додаватимуться сезони -->
-            </div>
+            <div class="seasons-box" id="seasons-container"></div>
             <button type="button" class="btn-add-season" id="btn-add-season">+ Додати сезон</button>
 
             <label>Серії (Telegram ID / Посилання):</label>
-            <div class="episodes-box" id="episodes-container">
-              <!-- Сюди динамічно додаватимуться серії -->
-            </div>
-            <button type="button" class="btn-add-ep" id="btn-add-episode"
-              >+ Додати серію</button
-            >
+            <div class="episodes-box" id="episodes-container"></div>
+            <button type="button" class="btn-add-ep" id="btn-add-episode">+ Додати серію</button>
 
             <button type="submit" id="submit-btn">Зберегти на GitHub</button>
             <p id="status-msg"></p>
@@ -444,15 +442,12 @@ import lakorns from "../data/lakorns.json";
       const btnAddSeason = document.getElementById("btn-add-season");
       
       const searchInput = document.getElementById("project-search-input");
-      const genreTags = document.querySelectorAll(".genre-tag");
-      const countryTags = document.querySelectorAll(".country-tag");
       const genresSelect = document.getElementById("genres-select");
       const genresInput = document.getElementById("genres");
 
       let selectedGenres = new Set();
       let selectedCountries = new Set();
 
-      // Фільтрація списку в сайдбарі
       function filterSidebarItems() {
         const query = searchInput.value.toLowerCase().trim();
         items.forEach(item => {
@@ -474,35 +469,6 @@ import lakorns from "../data/lakorns.json";
 
       searchInput.addEventListener("input", filterSidebarItems);
 
-      genreTags.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const genre = btn.getAttribute("data-genre");
-          if (selectedGenres.has(genre)) {
-            selectedGenres.delete(genre);
-            btn.classList.remove("active");
-          } else {
-            selectedGenres.add(genre);
-            btn.classList.add("active");
-          }
-          filterSidebarItems();
-        });
-      });
-
-      countryTags.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const country = btn.getAttribute("data-country");
-          if (selectedCountries.has(country)) {
-            selectedCountries.delete(country);
-            btn.classList.remove("active");
-          } else {
-            selectedCountries.add(country);
-            btn.classList.add("active");
-          }
-          filterSidebarItems();
-        });
-      });
-
-      // Інтерактивний селект жанрів для форми редагування/створення
       genresSelect.addEventListener("change", () => {
         const val = genresSelect.value;
         if (!val) return;
@@ -514,7 +480,6 @@ import lakorns from "../data/lakorns.json";
         genresSelect.value = "";
       });
 
-      // Логіка для пов'язаних сезонів
       let currentSeasons = [];
 
       function renderSeasons() {
@@ -617,7 +582,6 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
 
-        // Завантаження пов'язаних сезонів
         currentSeasons = data.relatedSeasons ? JSON.parse(JSON.stringify(data.relatedSeasons)) : [{ title: "1 Сезон", id: data.id || "" }];
         renderSeasons();
 
