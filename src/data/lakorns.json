@@ -16180,8 +16180,7 @@
       "romance",
       "supernatural"
     ],
-    "episodesCount": 4,
-    "imdbRating": "7.6",
+    "imdbRating": "",
     "duration": "46 хв.",
     "cast": [
       "Скай Вонреві",
@@ -16191,6 +16190,7 @@
     ],
     "director": "Доум Джарупат",
     "network": "GMMTV",
+    "episodesCount": 4,
     "relatedSeasons": [
       {
         "title": "1 Історія",
@@ -16211,7 +16211,7 @@
     ],
     "blocks": [
       {
-        "blockTitle": "4 Історія",
+        "blockTitle": "1 Сезон",
         "episodes": [
           {
             "number": 1,
