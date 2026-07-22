@@ -391,12 +391,14 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" value="GMMTV" />
 
-            <!-- КІЛЬКІСТЬ СЕРІЙ ТА ДИНАМІЧНІ ПОЛЯ -->
+            <!-- КІЛЬКІСТЬ СЕРІЙ (episodesCount) -->
             <label>Кількість серій (episodesCount):</label>
-            <input type="number" id="episodesCount" value="4" min="1" />
+            <input type="number" id="episodesCount" value="12" />
 
-            <label>Серії (Telegram ID / Посилання):</label>
+            <!-- ПОСИЛАННЯ НА СЕРІЇ (Динамічні рядки з кнопкою) -->
+            <label>Посилання на серії (Telegram ID / Посилання):</label>
             <div class="seasons-box" id="episodes-container"></div>
+            <button type="button" class="btn-add-season" id="btn-add-episode" style="background: #10b981;">+ Додати серію</button>
 
             <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
             <label>Пов'язані сезони (Сезони / Частини):</label>
@@ -443,7 +445,7 @@ import lakorns from "../data/lakorns.json";
       const btnAddSeason = document.getElementById("btn-add-season");
       
       const episodesContainer = document.getElementById("episodes-container");
-      const episodesCountInput = document.getElementById("episodesCount");
+      const btnAddEpisode = document.getElementById("btn-add-episode");
       
       const searchInput = document.getElementById("project-search-input");
       const genresSelect = document.getElementById("genres-select");
@@ -488,24 +490,14 @@ import lakorns from "../data/lakorns.json";
       let currentEpisodes = [];
 
       function renderEpisodes() {
-        const count = parseInt(episodesCountInput.value) || 0;
-        
-        // Коригуємо масив серій під нову кількість
-        if (currentEpisodes.length < count) {
-          for (let i = currentEpisodes.length; i < count; i++) {
-            currentEpisodes.push({ number: i + 1, tg_id: "volyacore/" });
-          }
-        } else if (currentEpisodes.length > count) {
-          currentEpisodes = currentEpisodes.slice(0, count);
-        }
-
         episodesContainer.innerHTML = "";
         currentEpisodes.forEach((ep, index) => {
           const row = document.createElement("div");
           row.className = "season-row";
           row.innerHTML = `
-            <span style="font-size: 13px; color: #94a3b8; width: 35px; text-align: center; font-weight: bold;">#${index + 1}</span>
+            <span style="color: #94a3b8; font-size: 13px; font-weight: bold; width: 30px; text-align: center;">#${index + 1}</span>
             <input type="text" value="${ep.tg_id}" placeholder="volyacore/..." data-index="${index}" class="episode-input" style="flex: 1;" />
+            <button type="button" class="btn-del-episode" data-index="${index}">✕</button>
           `;
           episodesContainer.appendChild(row);
         });
@@ -515,9 +507,19 @@ import lakorns from "../data/lakorns.json";
             currentEpisodes[e.target.dataset.index].tg_id = e.target.value.trim();
           });
         });
+
+        document.querySelectorAll(".btn-del-episode").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const idx = e.target.getAttribute("data-index");
+            currentEpisodes.splice(idx, 1);
+            renderEpisodes();
+          });
+        });
       }
 
-      episodesCountInput.addEventListener("input", () => {
+      btnAddEpisode.addEventListener("click", () => {
+        const nextNum = currentEpisodes.length + 1;
+        currentEpisodes.push({ number: nextNum, tg_id: "" });
         renderEpisodes();
       });
 
@@ -575,6 +577,7 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("genres").value = Array.isArray(data.genres)
           ? data.genres.join(", ")
           : data.genres || "";
+        document.getElementById("episodesCount").value = data.episodesCount || 0;
         document.getElementById("imdbRating").value = data.imdbRating || "";
         document.getElementById("duration").value = data.duration || "45 хв";
         document.getElementById("cast").value = Array.isArray(data.cast)
@@ -583,12 +586,11 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
 
-        // Серії
+        // Завантаження посилань серій з блоків
         currentEpisodes = [];
         if (data.blocks && data.blocks[0] && Array.isArray(data.blocks[0].episodes)) {
           currentEpisodes = JSON.parse(JSON.stringify(data.blocks[0].episodes));
         }
-        document.getElementById("episodesCount").value = currentEpisodes.length > 0 ? currentEpisodes.length : (data.episodesCount || 4);
         renderEpisodes();
 
         currentSeasons = data.relatedSeasons ? JSON.parse(JSON.stringify(data.relatedSeasons)) : [{ title: "1 Сезон", id: data.id || "" }];
@@ -599,13 +601,8 @@ import lakorns from "../data/lakorns.json";
         items.forEach((i) => i.classList.remove("active"));
         formTitle.textContent = "Додати новий лакорн";
         form.reset();
-        document.getElementById("episodesCount").value = "4";
-        currentEpisodes = [
-          { number: 1, tg_id: "volyacore/" },
-          { number: 2, tg_id: "volyacore/" },
-          { number: 3, tg_id: "volyacore/" },
-          { number: 4, tg_id: "volyacore/" }
-        ];
+        document.getElementById("episodesCount").value = "12";
+        currentEpisodes = [];
         renderEpisodes();
         currentSeasons = [];
         renderSeasons();
@@ -638,11 +635,9 @@ import lakorns from "../data/lakorns.json";
           return;
         }
 
-        const count = parseInt(document.getElementById("episodesCount").value) || currentEpisodes.length;
-
-        // Перевіряємо та оновлюємо номери серій перед збереженням
-        currentEpisodes.forEach((ep, idx) => {
-          ep.number = idx + 1;
+        // Автоматично оновлюємо номери серій (номер по порядку в масиві)
+        currentEpisodes.forEach((ep, index) => {
+          ep.number = index + 1;
         });
 
         const formDataObj = {
@@ -660,7 +655,7 @@ import lakorns from "../data/lakorns.json";
             .value.split(",")
             .map((s) => s.trim())
             .filter(Boolean),
-          episodesCount: count,
+          episodesCount: Number(document.getElementById("episodesCount").value) || 0,
           imdbRating: document.getElementById("imdbRating").value.trim(),
           duration: document.getElementById("duration").value.trim(),
           cast: document
