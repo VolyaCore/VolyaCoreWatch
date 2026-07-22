@@ -16692,7 +16692,7 @@
     "enTitle": "Contrast / コントラスト",
     "description": "Аояма Каната – популярний учень, що зберігає емоційну дистанцію, а Сенкава Акіра – успішний у навчанні самітник. Вони випадково зустрічаються на сходах до даху школи. У прихованому куточку, де шкільний галас здається далеким, хлопці розділяють один навушник, а їхні серцебиття починають битися в унісон.",
     "cover": "contrast.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "japan",
     "categories": "BL",
     "year": 2026,
@@ -16700,7 +16700,6 @@
       "romance",
       "youth"
     ],
-    "episodesCount": 8,
     "imdbRating": "",
     "duration": "25 хв.",
     "cast": [
@@ -16711,6 +16710,7 @@
     ],
     "director": "Томіта Мікі",
     "network": "GagaOOLala",
+    "episodesCount": 8,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16748,6 +16748,10 @@
           {
             "number": 7,
             "tg_id": "volyacore/2942"
+          },
+          {
+            "number": 8,
+            "tg_id": "volyacore/2970"
           }
         ]
       }
