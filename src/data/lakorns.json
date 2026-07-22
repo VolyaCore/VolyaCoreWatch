@@ -17008,7 +17008,6 @@
       "romance",
       "drama"
     ],
-    "episodesCount": 10,
     "imdbRating": "",
     "duration": "51 хв.",
     "cast": [
@@ -17017,6 +17016,7 @@
     ],
     "director": "О Катадеб",
     "network": "One 31",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -17042,6 +17042,10 @@
           {
             "number": 4,
             "tg_id": "volyacore/2940"
+          },
+          {
+            "number": 5,
+            "tg_id": "volyacore/2968"
           }
         ]
       }
