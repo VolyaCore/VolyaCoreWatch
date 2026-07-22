@@ -391,9 +391,9 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" value="GMMTV" />
 
-            <!-- КІЛЬКІСТЬ СЕРІЙ -->
-            <label>Кількість серій (episodesCount):</label>
-            <input type="number" id="episodesCount" value="12" min="1" />
+            <!-- ПОСИЛАННЯ НА СЕРІЇ -->
+            <label>Серії (Telegram ID / Посилання через кому або з нового рядка):</label>
+            <textarea id="episodesInput" placeholder="volyacore/1493, volyacore/1494&#10;або кожне з нового рядка..." style="height: 120px;"></textarea>
 
             <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
             <label>Пов'язані сезони (Сезони / Частини):</label>
@@ -541,7 +541,13 @@ import lakorns from "../data/lakorns.json";
           : data.cast || "";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
-        document.getElementById("episodesCount").value = data.episodesCount || (data.blocks && data.blocks[0] && data.blocks[0].episodes ? data.blocks[0].episodes.length : 12);
+
+        // Збираємо посилання із блоків у textarea через кому
+        let epsText = "";
+        if (data.blocks && data.blocks[0] && Array.isArray(data.blocks[0].episodes)) {
+          epsText = data.blocks[0].episodes.map(ep => ep.tg_id).join(", ");
+        }
+        document.getElementById("episodesInput").value = epsText;
 
         currentSeasons = data.relatedSeasons ? JSON.parse(JSON.stringify(data.relatedSeasons)) : [{ title: "1 Сезон", id: data.id || "" }];
         renderSeasons();
@@ -551,7 +557,7 @@ import lakorns from "../data/lakorns.json";
         items.forEach((i) => i.classList.remove("active"));
         formTitle.textContent = "Додати новий лакорн";
         form.reset();
-        document.getElementById("episodesCount").value = "12";
+        document.getElementById("episodesInput").value = "";
         currentSeasons = [];
         renderSeasons();
       });
@@ -583,16 +589,17 @@ import lakorns from "../data/lakorns.json";
           return;
         }
 
-        const count = Number(document.getElementById("episodesCount").value) || 0;
+        // Парсимо посилання з textarea (розбиваємо по кому або перенесенню рядка)
+        const rawText = document.getElementById("episodesInput").value;
+        const linksArray = rawText
+          .split(/[\n,]+/)
+          .map(s => s.trim())
+          .filter(Boolean);
 
-        // Автоматично формуємо масив серій для block від 1 до введеної кількості
-        const generatedEpisodes = [];
-        for (let i = 1; i <= count; i++) {
-          generatedEpisodes.push({
-            number: i,
-            tg_id: `volyacore/`
-          });
-        }
+        const generatedEpisodes = linksArray.map((link, index) => ({
+          number: index + 1,
+          tg_id: link
+        }));
 
         const formDataObj = {
           id: lakornId,
@@ -609,7 +616,7 @@ import lakorns from "../data/lakorns.json";
             .value.split(",")
             .map((s) => s.trim())
             .filter(Boolean),
-          episodesCount: count,
+          episodesCount: generatedEpisodes.length,
           imdbRating: document.getElementById("imdbRating").value.trim(),
           duration: document.getElementById("duration").value.trim(),
           cast: document
