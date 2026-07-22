@@ -13285,7 +13285,7 @@
       "romance",
       "youth"
     ],
-    "episodesCount": 16,
+    "episodesCount": 5,
     "imdbRating": "",
     "duration": "15 хв.",
     "cast": [
@@ -13312,7 +13312,7 @@
     ],
     "blocks": [
       {
-        "blockTitle": "3 Сезон",
+        "blockTitle": "1 Сезон",
         "episodes": [
           {
             "number": 1,
@@ -13329,6 +13329,10 @@
           {
             "number": 4,
             "tg_id": "volyacore/2943"
+          },
+          {
+            "number": 5,
+            "tg_id": "volyacore/2967"
           }
         ]
       }
