@@ -13285,7 +13285,6 @@
       "romance",
       "youth"
     ],
-    "episodesCount": 5,
     "imdbRating": "",
     "duration": "15 хв.",
     "cast": [
@@ -13296,6 +13295,7 @@
     ],
     "director": "Лі Сокйон",
     "network": "Lian Contents",
+    "episodesCount": 5,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -13333,6 +13333,10 @@
           {
             "number": 5,
             "tg_id": "volyacore/2967"
+          },
+          {
+            "number": 6,
+            "tg_id": "volyacore/2969"
           }
         ]
       }
