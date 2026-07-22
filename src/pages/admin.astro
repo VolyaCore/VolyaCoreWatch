@@ -289,7 +289,7 @@ import lakorns from "../data/lakorns.json";
         <div class="form-container">
           <h2 id="form-title">Додати новий лакорн</h2>
           <form id="lakorn-form">
-            <label>ID (хештег з тгк але без #):</label>
+            <label>ID (хештег з тгк без #):</label>
             <input type="text" id="id" required placeholder="perfect10liners" />
 
             <label>Назва українською:</label>
@@ -335,7 +335,7 @@ import lakorns from "../data/lakorns.json";
               <option value="philippines">Філіппіни</option>
             </select>
 
-            <label>Категорія (наприклад, BL):</label>
+            <label>Категорія (BL, Gl):</label>
             <input type="text" id="categories" value="BL" />
 
             <label>Рік:</label>
@@ -376,7 +376,7 @@ import lakorns from "../data/lakorns.json";
             </select>
             <input type="text" id="genres" value="romance, comedy" placeholder="romance, comedy" />
 
-            <label>Рейтинг IMDb:</label>
+            <label>Рейтинг:</label>
             <input type="text" id="imdbRating" value="7.9" />
 
             <label>Тривалість серії:</label>
@@ -391,13 +391,16 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" value="GMMTV" />
 
+            <!-- КІЛЬКІСТЬ СЕРІЙ (episodesCount) -->
             <label>Кількість серій:</label>
             <input type="number" id="episodesCount" value="12" />
 
-            <label>Посилання на серії (Telegram ID / Посилання):</label>
+            <!-- ПОСИЛАННЯ НА СЕРІЇ (Динамічні рядки з кнопкою) -->
+            <label>Посилання на серії (Telegram ID):</label>
             <div class="seasons-box" id="episodes-container"></div>
             <button type="button" class="btn-add-season" id="btn-add-episode" style="background: #10b981;">+ Додати серію</button>
 
+            <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
             <label>Пов'язані сезони (Сезони / Частини):</label>
             <div class="seasons-box" id="seasons-container"></div>
             <button type="button" class="btn-add-season" id="btn-add-season">+ Додати сезон</button>
@@ -493,7 +496,7 @@ import lakorns from "../data/lakorns.json";
           row.className = "season-row";
           row.innerHTML = `
             <span style="color: #94a3b8; font-size: 13px; font-weight: bold; width: 30px; text-align: center;">#${index + 1}</span>
-            <input type="text" value="${ep.tg_id}" placeholder="volyacore/..." data-index="${index}" class="episode-input" style="flex: 1;" />
+            <input type="text" value="${ep.tg_id || ''}" placeholder="volyacore/..." data-index="${index}" class="episode-input" style="flex: 1;" />
             <button type="button" class="btn-del-episode" data-index="${index}">✕</button>
           `;
           episodesContainer.appendChild(row);
@@ -574,7 +577,10 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("genres").value = Array.isArray(data.genres)
           ? data.genres.join(", ")
           : data.genres || "";
-        document.getElementById("episodesCount").value = data.episodesCount || 0;
+        
+        // Підтягуємо episodesCount з джисону
+        document.getElementById("episodesCount").value = data.episodesCount !== undefined ? data.episodesCount : 0;
+        
         document.getElementById("imdbRating").value = data.imdbRating || "";
         document.getElementById("duration").value = data.duration || "45 хв";
         document.getElementById("cast").value = Array.isArray(data.cast)
@@ -583,7 +589,7 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
 
-        // Завантаження посилань серій з блоків
+        // Підтягуємо масив серій з джисону (з blocks[0].episodes)
         currentEpisodes = [];
         if (data.blocks && data.blocks[0] && Array.isArray(data.blocks[0].episodes)) {
           currentEpisodes = JSON.parse(JSON.stringify(data.blocks[0].episodes));
@@ -632,7 +638,7 @@ import lakorns from "../data/lakorns.json";
           return;
         }
 
-        // Автоматично оновлюємо номери серій (номер по порядку в масиві)
+        // Автоматично оновлюємо номери серій перед збереженням
         currentEpisodes.forEach((ep, index) => {
           ep.number = index + 1;
         });
@@ -674,7 +680,7 @@ import lakorns from "../data/lakorns.json";
         try {
           const GITHUB_TOKEN =
             localStorage.getItem("github_token") ||
-            prompt("Введіть ваш GitHub Personal Access Token:");
+            prompt("Введіть ваш GitHub Token:");
           if (GITHUB_TOKEN) {
             localStorage.setItem("github_token", GITHUB_TOKEN);
           }
