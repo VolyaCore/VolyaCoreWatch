@@ -16,7 +16,6 @@
     "astro": "^6.4.4"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^14.1.4",
     "sass-embedded": "^1.100.0"
   }
 }
