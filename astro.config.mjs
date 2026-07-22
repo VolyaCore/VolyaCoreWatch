@@ -25,13 +25,21 @@
 //   integrations: [sitemap()],
 // });
 
+// import { defineConfig } from 'astro/config';
+// import sitemap from '@astrojs/sitemap';
+// import cloudflare from '@astrojs/cloudflare';
+
+// export default defineConfig({
+//   site: 'https://volyacore.com',
+//   output: 'server', // Умикає підтримку серверних API-файлів
+//   adapter: cloudflare(), // Підключає адаптер для Cloudflare
+//   integrations: [sitemap()],
+// });
+
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://volyacore.com',
-  output: 'server', // Умикає підтримку серверних API-файлів
-  adapter: cloudflare(), // Підключає адаптер для Cloudflare
   integrations: [sitemap()],
 });

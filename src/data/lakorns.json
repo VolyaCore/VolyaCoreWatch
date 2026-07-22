@@ -13,7 +13,7 @@
       "romance",
       "comedy"
     ],
-    "episodesCount": 24,
+    "episodesCount": 25,
     "imdbRating": "7.9",
     "duration": "45 хв",
     "cast": [
@@ -131,6 +131,10 @@
           {
             "number": 24,
             "tg_id": "volyacore/1897"
+          },
+          {
+            "number": 25,
+            "tg_id": "volyacore/"
           }
         ]
       }
