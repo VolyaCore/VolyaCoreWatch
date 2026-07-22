@@ -177,23 +177,23 @@ import lakorns from "../data/lakorns.json";
         border-color: #6366f1;
       }
 
-      .episodes-box, .seasons-box {
+      .seasons-box {
         background: #0f172a;
         padding: 15px;
         border-radius: 8px;
         border: 1px solid #334155;
         margin-top: 10px;
       }
-      .episode-row, .season-row {
+      .season-row {
         display: flex;
         gap: 10px;
         margin-bottom: 8px;
         align-items: center;
       }
-      .episode-row input, .season-row input {
+      .season-row input {
         margin-bottom: 0;
       }
-      .btn-del-ep, .btn-del-season {
+      .btn-del-season {
         background: #ef4444;
         color: white;
         border: none;
@@ -201,7 +201,7 @@ import lakorns from "../data/lakorns.json";
         border-radius: 6px;
         cursor: pointer;
       }
-      .btn-add-ep, .btn-add-season {
+      .btn-add-season {
         background: #3b82f6;
         color: white;
         border: none;
@@ -391,14 +391,14 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" value="GMMTV" />
 
+            <!-- КІЛЬКІСТЬ СЕРІЙ -->
+            <label>Кількість серій (episodesCount):</label>
+            <input type="number" id="episodesCount" value="12" min="1" />
+
             <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
             <label>Пов'язані сезони (Сезони / Частини):</label>
             <div class="seasons-box" id="seasons-container"></div>
             <button type="button" class="btn-add-season" id="btn-add-season">+ Додати сезон</button>
-
-            <label>Серії (Telegram ID / Посилання):</label>
-            <div class="episodes-box" id="episodes-container"></div>
-            <button type="button" class="btn-add-ep" id="btn-add-episode">+ Додати серію</button>
 
             <button type="submit" id="submit-btn">Зберегти на GitHub</button>
             <p id="status-msg"></p>
@@ -435,8 +435,6 @@ import lakorns from "../data/lakorns.json";
       const btnCreateNew = document.getElementById("btn-create-new");
       const formTitle = document.getElementById("form-title");
       const form = document.getElementById("lakorn-form");
-      const episodesContainer = document.getElementById("episodes-container");
-      const btnAddEpisode = document.getElementById("btn-add-episode");
 
       const seasonsContainer = document.getElementById("seasons-container");
       const btnAddSeason = document.getElementById("btn-add-season");
@@ -522,44 +520,6 @@ import lakorns from "../data/lakorns.json";
         renderSeasons();
       });
 
-      let currentEpisodes = [];
-
-      function renderEpisodes() {
-        episodesContainer.innerHTML = "";
-        currentEpisodes.forEach((ep, index) => {
-          const row = document.createElement("div");
-          row.className = "episode-row";
-          row.innerHTML = `
-            <span style="width: 40px; font-size: 13px;">Сер. ${ep.number}</span>
-            <input type="text" value="${ep.tg_id}" placeholder="volyacore/1493" data-index="${index}" class="ep-input" />
-            <button type="button" class="btn-del-ep" data-index="${index}">✕</button>
-          `;
-          episodesContainer.appendChild(row);
-        });
-
-        document.querySelectorAll(".ep-input").forEach((input) => {
-          input.addEventListener("input", (e) => {
-            const idx = e.target.getAttribute("data-index");
-            currentEpisodes[idx].tg_id = e.target.value.trim();
-          });
-        });
-
-        document.querySelectorAll(".btn-del-ep").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const idx = e.target.getAttribute("data-index");
-            currentEpisodes.splice(idx, 1);
-            currentEpisodes.forEach((item, i) => (item.number = i + 1));
-            renderEpisodes();
-          });
-        });
-      }
-
-      btnAddEpisode.addEventListener("click", () => {
-        const nextNum = currentEpisodes.length + 1;
-        currentEpisodes.push({ number: nextNum, tg_id: `volyacore/` });
-        renderEpisodes();
-      });
-
       function fillForm(data) {
         document.getElementById("id").value = data.id || "";
         document.getElementById("title").value = data.title || "";
@@ -581,30 +541,19 @@ import lakorns from "../data/lakorns.json";
           : data.cast || "";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
+        document.getElementById("episodesCount").value = data.episodesCount || (data.blocks && data.blocks[0] && data.blocks[0].episodes ? data.blocks[0].episodes.length : 12);
 
         currentSeasons = data.relatedSeasons ? JSON.parse(JSON.stringify(data.relatedSeasons)) : [{ title: "1 Сезон", id: data.id || "" }];
         renderSeasons();
-
-        if (
-          data.blocks &&
-          data.blocks[0] &&
-          Array.isArray(data.blocks[0].episodes)
-        ) {
-          currentEpisodes = JSON.parse(JSON.stringify(data.blocks[0].episodes));
-        } else {
-          currentEpisodes = [];
-        }
-        renderEpisodes();
       }
 
       btnCreateNew.addEventListener("click", () => {
         items.forEach((i) => i.classList.remove("active"));
         formTitle.textContent = "Додати новий лакорн";
         form.reset();
+        document.getElementById("episodesCount").value = "12";
         currentSeasons = [];
-        currentEpisodes = [];
         renderSeasons();
-        renderEpisodes();
       });
 
       items.forEach((item) => {
@@ -634,6 +583,17 @@ import lakorns from "../data/lakorns.json";
           return;
         }
 
+        const count = Number(document.getElementById("episodesCount").value) || 0;
+
+        // Автоматично формуємо масив серій для block від 1 до введеної кількості
+        const generatedEpisodes = [];
+        for (let i = 1; i <= count; i++) {
+          generatedEpisodes.push({
+            number: i,
+            tg_id: `volyacore/`
+          });
+        }
+
         const formDataObj = {
           id: lakornId,
           title: document.getElementById("title").value.trim(),
@@ -649,7 +609,7 @@ import lakorns from "../data/lakorns.json";
             .value.split(",")
             .map((s) => s.trim())
             .filter(Boolean),
-          episodesCount: currentEpisodes.length,
+          episodesCount: count,
           imdbRating: document.getElementById("imdbRating").value.trim(),
           duration: document.getElementById("duration").value.trim(),
           cast: document
@@ -663,7 +623,7 @@ import lakorns from "../data/lakorns.json";
           blocks: [
             {
               blockTitle: "1 Сезон",
-              episodes: currentEpisodes,
+              episodes: generatedEpisodes,
             },
           ],
         };
