@@ -52,6 +52,9 @@ import lakorns from "../data/lakorns.json";
         box-sizing: border-box;
         overflow-y: auto;
         max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
       }
       main {
         flex: 1;
@@ -88,17 +91,79 @@ import lakorns from "../data/lakorns.json";
         cursor: pointer;
         width: 100%;
         font-weight: 600;
-        margin-bottom: 20px;
         transition: background 0.2s;
       }
       .btn-new:hover {
         background-color: #059669;
       }
 
+      .sidebar-search-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 8px 12px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 13px;
+        box-sizing: border-box;
+        outline: none;
+      }
+      .search-input:focus {
+        border-color: #6366f1;
+      }
+
+      .filter-section {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .filter-label {
+        color: #94a3b8;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        max-height: 120px;
+        overflow-y: auto;
+        padding-right: 4px;
+      }
+      .genre-tag, .country-tag {
+        background: #0f172a;
+        border: 1px solid #334155;
+        color: #94a3b8;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .genre-tag.active, .country-tag.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #fff;
+      }
+
+      #lakorn-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        overflow-y: auto;
+      }
+
       .lakorn-item {
         padding: 10px 12px;
         background: #0f172a;
-        margin-bottom: 8px;
         border-radius: 8px;
         cursor: pointer;
         border: 1px solid #334155;
@@ -122,7 +187,8 @@ import lakorns from "../data/lakorns.json";
         margin-top: 12px;
       }
       input,
-      textarea {
+      textarea,
+      select {
         width: 100%;
         padding: 10px 12px;
         background-color: #0f172a;
@@ -138,7 +204,8 @@ import lakorns from "../data/lakorns.json";
         height: 80px;
       }
       input:focus,
-      textarea:focus {
+      textarea:focus,
+      select:focus {
         border-color: #6366f1;
       }
 
@@ -229,10 +296,68 @@ import lakorns from "../data/lakorns.json";
       <aside>
         <h3>Проєкти</h3>
         <button class="btn-new" id="btn-create-new">+ Новий лакорн</button>
+        
+        <div class="sidebar-search-container">
+          <input 
+            type="text" 
+            id="project-search-input" 
+            placeholder="Пошук за назвою..." 
+            class="search-input"
+          />
+          
+          <div class="filter-section">
+            <span class="filter-label">Фільтр за жанрами:</span>
+            <div id="genres-tags" class="tags-grid">
+              <button type="button" class="genre-tag" data-genre="romance">Романтика</button>
+              <button type="button" class="genre-tag" data-genre="drama">Драма</button>
+              <button type="button" class="genre-tag" data-genre="detective">Детектив</button>
+              <button type="button" class="genre-tag" data-genre="comedy">Комедія</button>
+              <button type="button" class="genre-tag" data-genre="crime">Кримінал</button>
+              <button type="button" class="genre-tag" data-genre="sports">Спорт</button>
+              <button type="button" class="genre-tag" data-genre="music">Музика</button>
+              <button type="button" class="genre-tag" data-genre="routine">Буденність</button>
+              <button type="button" class="genre-tag" data-genre="fantasy">Фентезі</button>
+              <button type="button" class="genre-tag" data-genre="fantastic">Фантастика</button>
+              <button type="button" class="genre-tag" data-genre="action">Бойовик</button>
+              <button type="button" class="genre-tag" data-genre="horrors">Жахи</button>
+              <button type="button" class="genre-tag" data-genre="supernatural">Надприродне</button>
+              <button type="button" class="genre-tag" data-genre="thriller">Триллер</button>
+              <button type="button" class="genre-tag" data-genre="mysticism">Містика</button>
+              <button type="button" class="genre-tag" data-genre="youth">Юність</button>
+              <button type="button" class="genre-tag" data-genre="law">Закон</button>
+              <button type="button" class="genre-tag" data-genre="melodrama">Мелодрама</button>
+              <button type="button" class="genre-tag" data-genre="business">Бізнес</button>
+              <button type="button" class="genre-tag" data-genre="food">Страви</button>
+              <button type="button" class="genre-tag" data-genre="medical">Медицина</button>
+              <button type="button" class="genre-tag" data-genre="historical">Історичне</button>
+              <button type="button" class="genre-tag" data-genre="psychological">Психологія</button>
+              <button type="button" class="genre-tag" data-genre="life">Життя</button>
+              <button type="button" class="genre-tag" data-genre="slice of life">Повседневність</button>
+              <button type="button" class="genre-tag" data-genre="fashion film">Фешн-фільм</button>
+              <button type="button" class="genre-tag" data-genre="adult">Для дорослих</button>
+              <button type="button" class="genre-tag" data-genre="sci-fi">Наукова Фантастика</button>
+              <button type="button" class="genre-tag" data-genre="anime">Аніме</button>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <span class="filter-label">Фільтр за країною:</span>
+            <div id="countries-tags" class="tags-grid">
+              <button type="button" class="country-tag" data-country="thailand">Таїланд</button>
+              <button type="button" class="country-tag" data-country="korea">Південна Корея</button>
+              <button type="button" class="country-tag" data-country="japan">Японія</button>
+              <button type="button" class="country-tag" data-country="china">Китай</button>
+              <button type="button" class="country-tag" data-country="taiwan">Тайвань</button>
+              <button type="button" class="country-tag" data-country="singapore">Сінгапур</button>
+              <button type="button" class="country-tag" data-country="philippines">Філіппіни</button>
+            </div>
+          </div>
+        </div>
+
         <div id="lakorn-list-container">
           {
             lakorns.map((item: any) => (
-              <div class="lakorn-item" data-id={item.id}>
+              <div class="lakorn-item" data-id={item.id} data-title={item.title.toLowerCase()} data-genres={Array.isArray(item.genres) ? item.genres.join(",") : (item.genres || "")} data-country={item.country || ""}>
                 {item.title}
               </div>
             ))
@@ -279,8 +404,16 @@ import lakorns from "../data/lakorns.json";
             <label>Статус (completed / ongoing):</label>
             <input type="text" id="status" value="completed" />
 
-            <label>Країна (thailand / korea тощо):</label>
-            <input type="text" id="country" value="thailand" />
+            <label>Країна:</label>
+            <select id="country">
+              <option value="thailand">Таїланд</option>
+              <option value="korea">Південна Корея</option>
+              <option value="japan">Японія</option>
+              <option value="china">Китай</option>
+              <option value="taiwan">Тайвань</option>
+              <option value="singapore">Сінгапур</option>
+              <option value="philippines">Філіппіни</option>
+            </select>
 
             <label>Категорія (наприклад, BL):</label>
             <input type="text" id="categories" value="BL" />
@@ -288,8 +421,40 @@ import lakorns from "../data/lakorns.json";
             <label>Рік:</label>
             <input type="number" id="year" value="2024" />
 
-            <label>Жанри (через кому):</label>
-            <input type="text" id="genres" value="romance, comedy" />
+            <label>Жанри:</label>
+            <select id="genres-select" style="margin-bottom: 8px;">
+              <option value="">-- Додати жанр зі списку --</option>
+              <option value="romance">Романтика</option>
+              <option value="drama">Драма</option>
+              <option value="detective">Детектив</option>
+              <option value="comedy">Комедія</option>
+              <option value="crime">Кримінал</option>
+              <option value="sports">Спорт</option>
+              <option value="music">Музика</option>
+              <option value="routine">Буденність</option>
+              <option value="fantasy">Фентезі</option>
+              <option value="fantastic">Фантастика</option>
+              <option value="action">Бойовик</option>
+              <option value="horrors">Жахи</option>
+              <option value="supernatural">Надприродне</option>
+              <option value="thriller">Триллер</option>
+              <option value="mysticism">Містика</option>
+              <option value="youth">Юність</option>
+              <option value="law">Закон</option>
+              <option value="melodrama">Мелодрама</option>
+              <option value="business">Бізнес</option>
+              <option value="food">Страви</option>
+              <option value="medical">Медицина</option>
+              <option value="historical">Історичне</option>
+              <option value="psychological">Психологія</option>
+              <option value="life">Життя</option>
+              <option value="slice of life">Повседневність</option>
+              <option value="fashion film">Фешн-фільм</option>
+              <option value="adult">Для дорослих</option>
+              <option value="sci-fi">Наукова Фантастика</option>
+              <option value="anime">Аніме</option>
+            </select>
+            <input type="text" id="genres" value="romance, comedy" placeholder="romance, comedy" />
 
             <label>Рейтинг IMDb:</label>
             <input type="text" id="imdbRating" value="7.9" />
@@ -351,6 +516,77 @@ import lakorns from "../data/lakorns.json";
       const form = document.getElementById("lakorn-form");
       const episodesContainer = document.getElementById("episodes-container");
       const btnAddEpisode = document.getElementById("btn-add-episode");
+      
+      const searchInput = document.getElementById("project-search-input");
+      const genreTags = document.querySelectorAll(".genre-tag");
+      const countryTags = document.querySelectorAll(".country-tag");
+      const genresSelect = document.getElementById("genres-select");
+      const genresInput = document.getElementById("genres");
+
+      let selectedGenres = new Set();
+      let selectedCountries = new Set();
+
+      // Фільтрація списку в сайдбарі
+      function filterSidebarItems() {
+        const query = searchInput.value.toLowerCase().trim();
+        items.forEach(item => {
+          const title = item.getAttribute("data-title");
+          const itemGenres = item.getAttribute("data-genres").split(",").map(g => g.trim());
+          const itemCountry = item.getAttribute("data-country");
+
+          const matchesQuery = !query || title.includes(query);
+          const matchesGenres = selectedGenres.size === 0 || [...selectedGenres].every(g => itemGenres.includes(g));
+          const matchesCountry = selectedCountries.size === 0 || selectedCountries.has(itemCountry);
+
+          if (matchesQuery && matchesGenres && matchesCountry) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      searchInput.addEventListener("input", filterSidebarItems);
+
+      genreTags.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const genre = btn.getAttribute("data-genre");
+          if (selectedGenres.has(genre)) {
+            selectedGenres.delete(genre);
+            btn.classList.remove("active");
+          } else {
+            selectedGenres.add(genre);
+            btn.classList.add("active");
+          }
+          filterSidebarItems();
+        });
+      });
+
+      countryTags.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const country = btn.getAttribute("data-country");
+          if (selectedCountries.has(country)) {
+            selectedCountries.delete(country);
+            btn.classList.remove("active");
+          } else {
+            selectedCountries.add(country);
+            btn.classList.add("active");
+          }
+          filterSidebarItems();
+        });
+      });
+
+      // Інтерактивний селект жанрів для форми редагування/створення
+      genresSelect.addEventListener("change", () => {
+        const val = genresSelect.value;
+        if (!val) return;
+        let currentArr = genresInput.value.split(",").map(s => s.trim()).filter(Boolean);
+        if (!currentArr.includes(val)) {
+          currentArr.push(val);
+          genresInput.value = currentArr.join(", ");
+        }
+        genresSelect.value = "";
+      });
 
       let currentEpisodes = [];
 
@@ -505,7 +741,6 @@ import lakorns from "../data/lakorns.json";
           const FILE_PATH = "src/data/lakorns.json";
           const fileUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
 
-          
           const getRes = await fetch(fileUrl, {
             headers: { Authorization: `token ${GITHUB_TOKEN}` },
           });
@@ -515,7 +750,6 @@ import lakorns from "../data/lakorns.json";
           const fileJson = await getRes.json();
           const sha = fileJson.sha;
 
-          // 2. Декодуємо поточний JSON із Base64
           const decodedBytes = Uint8Array.from(atob(fileJson.content), (c) =>
             c.charCodeAt(0)
           );
@@ -523,7 +757,6 @@ import lakorns from "../data/lakorns.json";
 
           if (!Array.isArray(lakornsList)) lakornsList = [];
 
-          // 3. Додаємо або оновлюємо лакорн
           const index = lakornsList.findIndex((item) => item.id === lakornId);
           if (index >= 0) {
             lakornsList[index] = formDataObj;
@@ -531,7 +764,6 @@ import lakorns from "../data/lakorns.json";
             lakornsList.push(formDataObj);
           }
 
-          // 4. Закодовуємо назад і відправляємо PUT запит
           const encodedContent = btoa(
             unescape(encodeURIComponent(JSON.stringify(lakornsList, null, 2)))
           );
