@@ -3,10 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MovieCard from "../components/MovieCard.astro";
 import lakornsData from "../data/lakorns.json";
 
-
 const latestLakorns = lakornsData.slice(0, 24);
 ---
-
 
 <MainLayout title="VolyaCore - Переклад азійських дорам та серіалів">
   <section class="hero-carousel-section">
@@ -127,8 +125,8 @@ const latestLakorns = lakornsData.slice(0, 24);
       <label for="filter-category">Категорія</label>
       <select id="filter-category" class="filter-group">
         <option value="all">Усі категорії</option>
-        <option value="Bl">BL</option>
-        <option value="Gl">GL</option>
+        <option value="BL">BL</option>
+        <option value="GL">GL</option>
         <option value="Інше">Інше</option>
       </select>
     </div>
@@ -230,50 +228,52 @@ const latestLakorns = lakornsData.slice(0, 24);
     let currentFilteredCards: Element[] = [];
     let currentPage = 1;
     const ITEMS_PER_PAGE = 24;
-  
+
     // --- ЛОГІКА КАРУСЕЛІ ---
     function initCarousel() {
       const track = document.getElementById("carousel-track") as HTMLElement;
       const nextBtn = document.getElementById("carousel-next");
       const prevBtn = document.getElementById("carousel-prev");
-  
+
       if (!track) return;
-  
+
       let currentIndex = 0;
       let autoPlayInterval: ReturnType<typeof setInterval> | null = null;
-      const AUTOPLAY_DELAY = 5000; 
-  
+      const AUTOPLAY_DELAY = 5000;
+
       // Функція для оновлення позиції каруселі
       function updateCarousel() {
         const slideWrapper = track.querySelector(".carousel-slide-wrapper");
         if (!slideWrapper) return;
-        
+
         const slideWidth = slideWrapper.clientWidth;
         const gap = 20;
         track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
       }
-  
+
       // Функція для переходу на наступний елемент
       function nextSlide() {
         const slideWrapper = track.querySelector(".carousel-slide-wrapper");
         if (!slideWrapper) return;
-        
+
         const slideWidth = slideWrapper.clientWidth;
         const gap = 20;
-        const trackWidth = track.parentElement ? track.parentElement.clientWidth : 0;
+        const trackWidth = track.parentElement
+          ? track.parentElement.clientWidth
+          : 0;
         const visibleSlides = Math.floor(trackWidth / slideWidth);
         const maxIndex = track.children.length - visibleSlides;
-  
+
         currentIndex++;
-        
+
         // Якщо дошли до кінця - починаємо з першого
         if (currentIndex > maxIndex) {
           currentIndex = 0;
         }
-        
+
         updateCarousel();
       }
-  
+
       // Автоматична прокрутка
       function startAutoPlay() {
         if (autoPlayInterval) {
@@ -281,7 +281,7 @@ const latestLakorns = lakornsData.slice(0, 24);
         }
         autoPlayInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
       }
-  
+
       // Стоп автоматичної прокрутки
       function stopAutoPlay() {
         if (autoPlayInterval) {
@@ -289,45 +289,47 @@ const latestLakorns = lakornsData.slice(0, 24);
           autoPlayInterval = null;
         }
       }
-  
+
       nextBtn?.addEventListener("click", () => {
         stopAutoPlay();
         nextSlide();
         startAutoPlay();
       });
-  
+
       prevBtn?.addEventListener("click", () => {
         stopAutoPlay();
-        
+
         const slideWrapper = track.querySelector(".carousel-slide-wrapper");
         if (!slideWrapper) return;
-        
+
         const slideWidth = slideWrapper.clientWidth;
         const gap = 20;
-        const trackWidth = track.parentElement ? track.parentElement.clientWidth : 0;
+        const trackWidth = track.parentElement
+          ? track.parentElement.clientWidth
+          : 0;
         const visibleSlides = Math.floor(trackWidth / slideWidth);
         const maxIndex = track.children.length - visibleSlides;
-  
+
         currentIndex--;
-        
+
         // Якщо дошли до початку - ідемо до кінця
         if (currentIndex < 0) {
           currentIndex = maxIndex;
         }
-        
+
         updateCarousel();
-        
+
         startAutoPlay();
       });
-  
+
       // Стоп автоплею коли користувач ведріює карусель
       track.addEventListener("mouseenter", stopAutoPlay);
       track.addEventListener("focus", stopAutoPlay);
-  
+
       // Запуск автоплею
       startAutoPlay();
     }
-  
+
     // --- ЛОГІКА КАТАЛОГУ ---
     function applyImageFix(container: HTMLElement) {
       container.querySelectorAll("img").forEach((img) => {
@@ -338,28 +340,28 @@ const latestLakorns = lakornsData.slice(0, 24);
         img.style.setProperty("display", "block", "important");
       });
     }
-  
+
     function displayCurrentPage() {
       const catalogGrid = document.getElementById("catalog-grid");
       if (!catalogGrid) return;
       catalogGrid.innerHTML = "";
-  
+
       const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
       const endIndex = startIndex + ITEMS_PER_PAGE;
       const pageCards = currentFilteredCards.slice(startIndex, endIndex);
-  
+
       pageCards.forEach((sourceCard) => {
         const clonedCard = sourceCard.cloneNode(true) as HTMLElement;
         clonedCard.className = "catalog-card-wrapper";
         catalogGrid.appendChild(clonedCard);
       });
-  
+
       applyImageFix(catalogGrid);
     }
-  
+
     function applySorting(cards: Element[], sortValue: string): Element[] {
       const sorted = [...cards];
-  
+
       switch (sortValue) {
         case "status-ongoing":
           return sorted.sort((a, b) => {
@@ -367,14 +369,14 @@ const latestLakorns = lakornsData.slice(0, 24);
             const bVal = b.getAttribute("data-status") === "ongoing" ? 0 : 1;
             return aVal - bVal;
           });
-  
+
         case "status-completed":
           return sorted.sort((a, b) => {
             const aVal = a.getAttribute("data-status") !== "ongoing" ? 0 : 1;
             const bVal = b.getAttribute("data-status") !== "ongoing" ? 0 : 1;
             return aVal - bVal;
           });
-  
+
         case "rating-desc":
           return sorted
             .filter((card) => card.getAttribute("data-status") !== "ongoing")
@@ -383,7 +385,7 @@ const latestLakorns = lakornsData.slice(0, 24);
               const bR = parseFloat(b.getAttribute("data-rating") || "0") || 0;
               return bR - aR;
             });
-  
+
         case "rating-asc":
           return sorted
             .filter((card) => card.getAttribute("data-status") !== "ongoing")
@@ -392,43 +394,58 @@ const latestLakorns = lakornsData.slice(0, 24);
               const bR = parseFloat(b.getAttribute("data-rating") || "0") || 0;
               return aR - bR;
             });
-  
+
         case "network-az":
           return sorted.sort((a, b) => {
             const aN = a.getAttribute("data-network") || "";
             const bN = b.getAttribute("data-network") || "";
             return aN.localeCompare(bN, "uk");
           });
-  
+
         case "network-za":
           return sorted.sort((a, b) => {
             const aN = a.getAttribute("data-network") || "";
             const bN = b.getAttribute("data-network") || "";
             return bN.localeCompare(aN, "uk");
           });
-  
+
         default:
           return sorted.sort(() => 0.5 - Math.random());
       }
     }
-  
+
     function filterCatalog() {
-      const q = searchInput && searchInput.value ? searchInput.value.toLowerCase().trim() : "";
-      
-      const countrySelect = document.getElementById("filter-country") as HTMLSelectElement | null;
-      const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement | null;
-      const formatSelect = document.getElementById("filter-format") as HTMLSelectElement | null;
-      const categorySelect = document.getElementById("filter-category") as HTMLSelectElement | null;
-      const sortSelect = document.getElementById("filter-sort") as HTMLSelectElement | null;
-      const studioSelect = document.getElementById("filter-studio") as HTMLSelectElement | null;
-  
+      const q =
+        searchInput && searchInput.value
+          ? searchInput.value.toLowerCase().trim()
+          : "";
+
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement | null;
+      const genreSelect = document.getElementById(
+        "filter-genre"
+      ) as HTMLSelectElement | null;
+      const formatSelect = document.getElementById(
+        "filter-format"
+      ) as HTMLSelectElement | null;
+      const categorySelect = document.getElementById(
+        "filter-category"
+      ) as HTMLSelectElement | null;
+      const sortSelect = document.getElementById(
+        "filter-sort"
+      ) as HTMLSelectElement | null;
+      const studioSelect = document.getElementById(
+        "filter-studio"
+      ) as HTMLSelectElement | null;
+
       const c = countrySelect ? countrySelect.value : "all";
       const g = genreSelect ? genreSelect.value : "all";
       const format = formatSelect ? formatSelect.value : "all";
       const cat = categorySelect ? categorySelect.value : "all";
       const s = sortSelect ? sortSelect.value : "default";
       const studio = studioSelect ? studioSelect.value : "all";
-  
+
       const thaiStudios = [
         "me mind y",
         "be on cloud",
@@ -436,15 +453,17 @@ const latestLakorns = lakornsData.slice(0, 24);
         "domundi tv",
         "gmmtv",
       ];
-  
+
       const filtered = allSourceCards.filter((card) => {
         const titleUa = card.getAttribute("data-title") || "";
         const titleEn = card.getAttribute("data-en-title") || "";
         const title = titleUa + titleEn;
         const country = card.getAttribute("data-country") || "";
         const genres = (card.getAttribute("data-genres") || "").split(",");
-        const network = (card.getAttribute("data-network") || "").toLowerCase().trim();
-  
+        const network = (card.getAttribute("data-network") || "")
+          .toLowerCase()
+          .trim();
+
         const isFilm = genres.includes("film");
         let matchFormat = true;
         if (format === "film") {
@@ -452,13 +471,27 @@ const latestLakorns = lakornsData.slice(0, 24);
         } else if (format === "series") {
           matchFormat = !isFilm;
         }
-  
+
+        const category = (card.getAttribute("data-category") || "")
+          .trim()
+          .toUpperCase();
+
+        let matchCategory = true;
+
+        if (cat === "BL") {
+          matchCategory = category === "BL";
+        } else if (cat === "GL") {
+          matchCategory = category === "GL";
+        } else if (cat === "Інше") {
+          matchCategory = category !== "BL" && category !== "GL";
+        }
+
         const matchBase =
           (q === "" || title.includes(q)) &&
           (c === "all" || country === c) &&
           (g === "all" || genres.includes(g)) &&
-          (cat === "all" || card.getAttribute("data-category") === cat);
-  
+          matchCategory;
+
         let matchStudio = true;
         if (c === "thailand" && studio !== "all") {
           matchStudio =
@@ -466,61 +499,70 @@ const latestLakorns = lakornsData.slice(0, 24);
               ? !thaiStudios.includes(network)
               : network === studio.toLowerCase();
         }
-  
+
         return matchBase && matchStudio && matchFormat;
       });
-  
+
       currentFilteredCards = applySorting(filtered, s);
       currentPage = 1;
       displayCurrentPage();
       renderPagination();
-  
+
       const noResults = document.getElementById("no-results");
       if (noResults) {
-        noResults.style.display = currentFilteredCards.length === 0 ? "block" : "none";
+        noResults.style.display =
+          currentFilteredCards.length === 0 ? "block" : "none";
       }
     }
-  
+
     function renderPagination() {
       const paginationControls = document.getElementById("pagination-controls");
       if (!paginationControls) return;
-  
+
       paginationControls.innerHTML = "";
-  
-      const totalPages = Math.ceil(currentFilteredCards.length / ITEMS_PER_PAGE);
-  
+
+      const totalPages = Math.ceil(
+        currentFilteredCards.length / ITEMS_PER_PAGE
+      );
+
       if (totalPages <= 1) {
         paginationControls.style.display = "none";
         return;
       }
-  
+
       paginationControls.style.display = "flex";
-  
+
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
         btn.innerText = i.toString();
         btn.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
-  
+
         btn.addEventListener("click", () => {
           currentPage = i;
           displayCurrentPage();
           renderPagination();
-          document.querySelector(".catalog-section")?.scrollIntoView({ behavior: "smooth" });
+          document
+            .querySelector(".catalog-section")
+            ?.scrollIntoView({ behavior: "smooth" });
         });
-  
+
         paginationControls.appendChild(btn);
       }
     }
-  
+
     function toggleStudioVisibility() {
       const studioWrapper = document.getElementById("studio-filter-wrapper");
-      const countrySelect = document.getElementById("filter-country") as HTMLSelectElement | null;
-      const studioSelect = document.getElementById("filter-studio") as HTMLSelectElement | null;
-  
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement | null;
+      const studioSelect = document.getElementById(
+        "filter-studio"
+      ) as HTMLSelectElement | null;
+
       if (!studioWrapper || !countrySelect || !studioSelect) return;
-  
+
       const countryValue = countrySelect.value || "all";
-  
+
       if (countryValue === "thailand") {
         studioWrapper.style.display = "flex";
       } else {
@@ -529,27 +571,41 @@ const latestLakorns = lakornsData.slice(0, 24);
         filterCatalog();
       }
     }
-  
+
     function initPageFeatures() {
       const dbSourceContainer = document.getElementById("hidden-full-database");
       if (!dbSourceContainer) return;
-  
-      searchInput = document.querySelector("#global-search") as HTMLInputElement | null;
+
+      searchInput = document.querySelector(
+        "#global-search"
+      ) as HTMLInputElement | null;
       allSourceCards = Array.from(
         dbSourceContainer.querySelectorAll(".database-card-source")
       );
-  
+
       if (searchInput) {
         searchInput.addEventListener("input", filterCatalog);
       }
-  
-      const countrySelect = document.getElementById("filter-country") as HTMLSelectElement | null;
-      const genreSelect = document.getElementById("filter-genre") as HTMLSelectElement | null;
-      const formatSelect = document.getElementById("filter-format") as HTMLSelectElement | null;
-      const categorySelect = document.getElementById("filter-category") as HTMLSelectElement | null;
-      const sortSelect = document.getElementById("filter-sort") as HTMLSelectElement | null;
-      const studioSelect = document.getElementById("filter-studio") as HTMLSelectElement | null;
-  
+
+      const countrySelect = document.getElementById(
+        "filter-country"
+      ) as HTMLSelectElement | null;
+      const genreSelect = document.getElementById(
+        "filter-genre"
+      ) as HTMLSelectElement | null;
+      const formatSelect = document.getElementById(
+        "filter-format"
+      ) as HTMLSelectElement | null;
+      const categorySelect = document.getElementById(
+        "filter-category"
+      ) as HTMLSelectElement | null;
+      const sortSelect = document.getElementById(
+        "filter-sort"
+      ) as HTMLSelectElement | null;
+      const studioSelect = document.getElementById(
+        "filter-studio"
+      ) as HTMLSelectElement | null;
+
       if (countrySelect) {
         countrySelect.addEventListener("change", filterCatalog);
         countrySelect.addEventListener("change", toggleStudioVisibility);
@@ -557,17 +613,18 @@ const latestLakorns = lakornsData.slice(0, 24);
       }
       if (genreSelect) genreSelect.addEventListener("change", filterCatalog);
       if (formatSelect) formatSelect.addEventListener("change", filterCatalog);
-      if (categorySelect) categorySelect.addEventListener("change", filterCatalog);
+      if (categorySelect)
+        categorySelect.addEventListener("change", filterCatalog);
       if (sortSelect) sortSelect.addEventListener("change", filterCatalog);
       if (studioSelect) studioSelect.addEventListener("change", filterCatalog);
-  
+
       initCarousel();
       filterCatalog();
     }
-  
+
     document.addEventListener("DOMContentLoaded", initPageFeatures);
     document.addEventListener("astro:after-swap", initPageFeatures);
-  
+
     document.addEventListener("search-trigger", ((e: CustomEvent) => {
       if (searchInput) {
         searchInput.value = e.detail;
@@ -577,448 +634,469 @@ const latestLakorns = lakornsData.slice(0, 24);
   </script>
 </MainLayout>
 
-  <style is:global>
-    .pagination-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      margin: 40px auto 10px auto;
-      width: 100%;
-      max-width: 1200px;
-    }
+<style is:global>
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 40px auto 10px auto;
+    width: 100%;
+    max-width: 1200px;
+  }
 
-    .pagination-btn {
-      background-color: #0f172a;
-      color: #94a3b8;
-      border: 1px solid rgba(99, 102, 241, 0.2);
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.25s ease;
-    }
+  .pagination-btn {
+    background-color: #0f172a;
+    color: #94a3b8;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s ease;
+  }
 
-    .pagination-btn:hover {
-      background-color: #1e1b4b;
-      border-color: #6366f1;
-      color: #fff;
-    }
+  .pagination-btn:hover {
+    background-color: #1e1b4b;
+    border-color: #6366f1;
+    color: #fff;
+  }
 
-    .pagination-btn.active {
-      background-color: #6366f1;
-      color: #fff;
-      border-color: #6366f1;
-      box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
-    }
+  .pagination-btn.active {
+    background-color: #6366f1;
+    color: #fff;
+    border-color: #6366f1;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+  }
 
-    :global([data-theme="light"]) .pagination-btn {
-      background-color: #e2e8f0;
-      color: #0f172a;
-      border-color: rgba(15, 23, 42, 0.15);
-    }
-    :global([data-theme="light"]) .pagination-btn:hover {
-      background-color: #cbd5e1;
-    }
-    :global([data-theme="light"]) .pagination-btn.active {
-      background-color: #0f172a;
-      color: #fff;
-      border-color: #0f172a;
-    }
+  :global([data-theme="light"]) .pagination-btn {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border-color: rgba(15, 23, 42, 0.15);
+  }
+  :global([data-theme="light"]) .pagination-btn:hover {
+    background-color: #cbd5e1;
+  }
+  :global([data-theme="light"]) .pagination-btn.active {
+    background-color: #0f172a;
+    color: #fff;
+    border-color: #0f172a;
+  }
 
+  .catalog-fixed-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 25px !important;
+  }
+
+  @media (max-width: 1024px) {
     .catalog-fixed-grid {
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 25px !important;
+      grid-template-columns: repeat(3, 1fr) !important;
     }
+  }
 
-    @media (max-width: 1024px) {
-      .catalog-fixed-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
+  @media (max-width: 600px) {
+    .catalog-fixed-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
     }
+  }
 
-    @media (max-width: 600px) {
-      .catalog-fixed-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-      }
-    }
+  .filters-section {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg-card) !important;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 30px;
+    flex-wrap: wrap;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+  [data-theme="light"] .filters-section {
+    display: flex;
+    gap: 20px;
+    background-color: #7c9bcc !important;
+  }
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 140px;
+  }
+  .filter-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .filter-group select {
+    background-color: var(--bg-select) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+  }
+  .filter-group select:focus {
+    border-color: #6366f1 !important;
+  }
 
-    .filters-section {
-      display: flex;
-      gap: 20px;
-      background-color: var(--bg-card) !important;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      margin-top: 30px;
-      flex-wrap: wrap;
-      transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease;
-    }
-    [data-theme="light"] .filters-section {
-      display: flex;
-      gap: 20px;
-      background-color: #7c9bcc !important;
-    }
-    .filter-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-      min-width: 140px;
-    }
-    .filter-group label {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-muted) !important;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .filter-group select {
-      background-color: var(--bg-select) !important;
-      border: 1px solid var(--border-color) !important;
-      color: var(--text-primary) !important;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      outline: none;
-      width: 100%;
-    }
-    .filter-group select:focus {
-      border-color: #6366f1 !important;
-    }
+  .catalog-section {
+    margin-top: 40px;
+  }
+  .catalog-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border-left: 4px solid #6366f1;
+    padding-left: 12px;
+    color: var(--text-primary) !important;
+  }
 
-    .catalog-section {
-      margin-top: 40px;
-    }
-    .catalog-section h2 {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 25px;
-      border-left: 4px solid #6366f1;
-      padding-left: 12px;
-      color: var(--text-primary) !important;
-    }
+  .catalog-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .catalog-card-wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+  .no-results-msg {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 16px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
 
-    .no-results-msg {
-      text-align: center;
-      padding: 40px;
-      color: var(--text-muted);
-      font-size: 16px;
-      background-color: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
+  .hero-carousel-section {
+    width: 100%;
+    margin: 1.5rem auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
 
-    .hero-carousel-section {
-      width: 100%;
-      margin: 1.5rem auto;
-      box-sizing: border-box;
-      padding: 0 10px;
-    }
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
 
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: 16px;
-      overflow: hidden;
-    }
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
 
-    .carousel-track {
-      display: flex;
-      gap: 16px;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      will-change: transform;
-    }
+  .carousel-slide-wrapper {
+    box-sizing: border-box;
+    display: none;
+    flex: 0 0 calc(25% - 12px);
+  }
 
+  @media (max-width: 1200px) {
     .carousel-slide-wrapper {
-      box-sizing: border-box;
-      display: none;
-      flex: 0 0 calc(25% - 12px);
+      flex: 0 0 calc(33.333% - 11px);
     }
+  }
+  @media (max-width: 900px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(50% - 8px);
+    }
+  }
+  @media (max-width: 480px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(50% - 8px);
+    }
+  }
 
-    @media (max-width: 1200px) {
-      .carousel-slide-wrapper {
-        flex: 0 0 calc(33.333% - 11px);
-      }
-    }
-    @media (max-width: 900px) {
-      .carousel-slide-wrapper {
-        flex: 0 0 calc(50% - 8px);
-      }
-    }
-    @media (max-width: 480px) {
-      .carousel-slide-wrapper {
-        flex: 0 0 calc(50% - 8px);
-      }
-    }
+  .carousel-slide-wrapper.carousel-active {
+    display: block;
+  }
 
-    .carousel-slide-wrapper.carousel-active {
-      display: block;
-    }
+  .carousel-slide-wrapper .movie-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 
-    .carousel-slide-wrapper .movie-card {
-      width: 100% !important;
-      margin: 0 !important;
-    }
-
+  .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+  @media (max-width: 600px) {
     .carousel-nav-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #fff;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      backdrop-filter: blur(6px);
-      z-index: 10;
+      width: 32px;
+      height: 32px;
+      font-size: 0.8rem;
     }
-    @media (max-width: 600px) {
-      .carousel-nav-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
-      }
-    }
-    .carousel-nav-btn:hover {
-      background-color: #6366f1;
-      border-color: #6366f1;
-      transform: translateY(-50%) scale(1.05);
-    }
-    .prev-btn {
-      left: 5px;
-    }
-    .next-btn {
-      right: 5px;
-    }
+  }
+  .carousel-nav-btn:hover {
+    background-color: #6366f1;
+    border-color: #6366f1;
+    transform: translateY(-50%) scale(1.05);
+  }
+  .prev-btn {
+    left: 5px;
+  }
+  .next-btn {
+    right: 5px;
+  }
 
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 15px;
-    }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
 
-    .carousel-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.25);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    [data-theme="light"] .carousel-dot {
-      background: rgba(0, 0, 0, 0.15);
-    }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  [data-theme="light"] .carousel-dot {
+    background: rgba(0, 0, 0, 0.15);
+  }
 
-    .carousel-dot.active {
-      background: #6366f1;
-      width: 20px;
-      border-radius: 4px;
-    }
+  .carousel-dot.active {
+    background: #6366f1;
+    width: 20px;
+    border-radius: 4px;
+  }
 
+  #catalog-grid,
+  .movies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 1024px) {
     #catalog-grid,
     .movies-grid {
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 24px !important;
-      width: 100% !important;
+      grid-template-columns: repeat(3, 1fr) !important;
     }
-
-    @media (max-width: 1024px) {
-      #catalog-grid,
-      .movies-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
-
-    @media (max-width: 600px) {
-      #catalog-grid,
-      .movies-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-      }
-    }
-    .pagination-container {
-      display: flex;
-      gap: 6px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .pagination-btn {
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      background: #1f2937;
-      color: white;
-      transition: 0.2s;
-    }
-
-    .pagination-btn.active {
-      background: #6366f1;
-    }
-
-    .pagination-btn:hover {
-      background: #374151;
-    }
-
-    .pagination-dots {
-      padding: 6px 8px;
-      color: #9ca3af;
-    }
-
-    /* 📱 mobile adaptation */
-    @media (max-width: 600px) {
-      .pagination-btn {
-        padding: 5px 8px;
-        font-size: 12px;
-      }
-    }
-
-    .carousel-container {
-      position: relative;
-      overflow: hidden; /* Ховає все, що виходить за межі */
-      width: 100%;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      gap: 20px; /* Відступ між картками */
-    }
-
-    .carousel-slide-wrapper {
-      flex: 0 0 calc(20% - 16px); /* Показує рівно 5 карток в ряд. Якщо треба іншу кількість — змінюйте 20% */
-      min-width: calc(20% - 16px);
-    }
-
-    /* Приховуємо точки, як ви й просили */
-    .carousel-dots {
-      display: none !important;
-    }
-
-    @media (max-width: 1024px) {
-      .carousel-slide-wrapper {
-        flex: 0 0 calc(33.33% - 14px);
-      }
-    }
-    @media (max-width: 600px) {
-      .carousel-slide-wrapper {
-        flex: 0 0 calc(50% - 10px);
-      }
-    }
-
-    .filter-container {
-      display: flex; /* Активуємо флекс-контейнер */
-      flex-wrap: wrap; /* Дозволяє переноситися на новий рядок на мобільних */
-      gap: 15px; /* Рівномірний відступ між усіма селектами */
-      align-items: flex-end; /* Вирівнює по нижньому краю, щоб назви були на одному рівні */
-      width: 100%;
-    }
-
-    .filter-group {
-      flex: 1; /* Кожен селект розтягується рівномірно і займає однакову ширину */
-      min-width: 150px; /* Мінімальна ширина, щоб не ставали занадто вузькими на малих екранах */
-      display: flex;
-      flex-direction: column; /* Назва зверху, селект знизу */
-      gap: 8px; /* Відступ між назвою і селектом */
-    }
-
-    /* Якщо назви полів (label) мають різну довжину, можна зафіксувати їх вигляд */
-    .filter-group label {
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #94a3b8;
-    }
-    /* --- Глобальна адаптація сітки (Catalog Grid) --- */
-#catalog-grid,
-.movies-grid {
-  display: grid !important;
-  gap: 24px !important;
-  width: 100% !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-}
-
-@media (max-width: 1280px) {
-  #catalog-grid, .movies-grid { grid-template-columns: repeat(3, 1fr) !important; }
-}
-
-@media (max-width: 850px) {
-  #catalog-grid, .movies-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
-}
-
-@media (max-width: 480px) {
-  #catalog-grid, .movies-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
-}
-
-/* --- Адаптація каруселі --- */
-.carousel-slide-wrapper {
-  flex: 0 0 calc(20% - 16px);
-  min-width: calc(20% - 16px);
-}
-
-@media (max-width: 1200px) {
-  .carousel-slide-wrapper { flex: 0 0 calc(25% - 12px); min-width: calc(25% - 12px); }
-}
-
-@media (max-width: 900px) {
-  .carousel-slide-wrapper { flex: 0 0 calc(33.33% - 10px); min-width: calc(33.33% - 10px); }
-}
-
-@media (max-width: 600px) {
-  .carousel-slide-wrapper { flex: 0 0 calc(50% - 8px); min-width: calc(50% - 8px); }
-}
-
-/* --- Адаптація фільтрів --- */
-.filter-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  width: 100%;
-}
-
-@media (max-width: 480px) {
-  .filter-group { flex: 1 1 100%; } /* На дуже малих екранах фільтри йдуть у стовпчик */
-}
-
-/* --- Пагінація --- */
-.pagination-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 30px;
-}
-
-@media (max-width: 600px) {
-  .pagination-btn {
-    padding: 6px 8px;
-    font-size: 12px;
   }
-}
-  </style>
-</MainLayout>
+
+  @media (max-width: 600px) {
+    #catalog-grid,
+    .movies-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+    }
+  }
+  .pagination-container {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .pagination-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #1f2937;
+    color: white;
+    transition: 0.2s;
+  }
+
+  .pagination-btn.active {
+    background: #6366f1;
+  }
+
+  .pagination-btn:hover {
+    background: #374151;
+  }
+
+  .pagination-dots {
+    padding: 6px 8px;
+    color: #9ca3af;
+  }
+
+  /* 📱 mobile adaptation */
+  @media (max-width: 600px) {
+    .pagination-btn {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  }
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden; /* Ховає все, що виходить за межі */
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    gap: 20px; /* Відступ між картками */
+  }
+
+  .carousel-slide-wrapper {
+    flex: 0 0 calc(20% - 16px); /* Показує рівно 5 карток в ряд. Якщо треба іншу кількість — змінюйте 20% */
+    min-width: calc(20% - 16px);
+  }
+
+  /* Приховуємо точки, як ви й просили */
+  .carousel-dots {
+    display: none !important;
+  }
+
+  @media (max-width: 1024px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(33.33% - 14px);
+    }
+  }
+  @media (max-width: 600px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+
+  .filter-container {
+    display: flex; /* Активуємо флекс-контейнер */
+    flex-wrap: wrap; /* Дозволяє переноситися на новий рядок на мобільних */
+    gap: 15px; /* Рівномірний відступ між усіма селектами */
+    align-items: flex-end; /* Вирівнює по нижньому краю, щоб назви були на одному рівні */
+    width: 100%;
+  }
+
+  .filter-group {
+    flex: 1; /* Кожен селект розтягується рівномірно і займає однакову ширину */
+    min-width: 150px; /* Мінімальна ширина, щоб не ставали занадто вузькими на малих екранах */
+    display: flex;
+    flex-direction: column; /* Назва зверху, селект знизу */
+    gap: 8px; /* Відступ між назвою і селектом */
+  }
+
+  /* Якщо назви полів (label) мають різну довжину, можна зафіксувати їх вигляд */
+  .filter-group label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #94a3b8;
+  }
+  /* --- Глобальна адаптація сітки (Catalog Grid) --- */
+  #catalog-grid,
+  .movies-grid {
+    display: grid !important;
+    gap: 24px !important;
+    width: 100% !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  @media (max-width: 1280px) {
+    #catalog-grid,
+    .movies-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 850px) {
+    #catalog-grid,
+    .movies-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #catalog-grid,
+    .movies-grid {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+  }
+
+  /* --- Адаптація каруселі --- */
+  .carousel-slide-wrapper {
+    flex: 0 0 calc(20% - 16px);
+    min-width: calc(20% - 16px);
+  }
+
+  @media (max-width: 1200px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(25% - 12px);
+      min-width: calc(25% - 12px);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(33.33% - 10px);
+      min-width: calc(33.33% - 10px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .carousel-slide-wrapper {
+      flex: 0 0 calc(50% - 8px);
+      min-width: calc(50% - 8px);
+    }
+  }
+
+  /* --- Адаптація фільтрів --- */
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .filter-group {
+      flex: 1 1 100%;
+    } /* На дуже малих екранах фільтри йдуть у стовпчик */
+  }
+
+  /* --- Пагінація --- */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .pagination-btn {
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+  }
+</style>
