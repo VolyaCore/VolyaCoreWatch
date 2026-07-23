@@ -13,7 +13,6 @@
       "romance",
       "comedy"
     ],
-    "episodesCount": 24,
     "imdbRating": "7.9",
     "duration": "45 хв",
     "cast": [
@@ -26,6 +25,7 @@
     ],
     "director": "Н‘ю Сівай Саватманікул",
     "network": "GMMTV",
+    "episodesCount": 24,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
