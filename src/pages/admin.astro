@@ -641,40 +641,6 @@ import lakorns from "../data/lakorns.json";
           ep.number = index + 1;
         });
 
-        const formDataObj = {
-          id: lakornId,
-          title: document.getElementById("title").value.trim(),
-          enTitle: document.getElementById("enTitle").value.trim(),
-          description: document.getElementById("description").value.trim(),
-          cover: `${lakornId}.jpg`,
-          status: document.getElementById("status").value.trim(),
-          country: document.getElementById("country").value.trim(),
-          categories: document.getElementById("categories").value.trim(),
-          year: Number(document.getElementById("year").value) || 2024,
-          genres: document
-            .getElementById("genres")
-            .value.split(",")
-            .map((s) => s.trim())
-            .filter(Boolean),
-          imdbRating: document.getElementById("imdbRating").value.trim(),
-          duration: document.getElementById("duration").value.trim(),
-          cast: document
-            .getElementById("cast")
-            .value.split(",")
-            .map((s) => s.trim())
-            .filter(Boolean),
-          director: document.getElementById("director").value.trim(),
-          network: document.getElementById("network").value.trim(),
-          episodesCount: Number(document.getElementById("episodesCount").value) || 0,
-          relatedSeasons: currentSeasons.length > 0 ? currentSeasons : [{ title: "1 Сезон", id: lakornId }],
-          blocks: [
-            {
-              blockTitle: "1 Сезон",
-              episodes: currentEpisodes,
-            },
-          ],
-        };
-
         try {
           const GITHUB_TOKEN =
             localStorage.getItem("github_token") ||
@@ -684,6 +650,94 @@ import lakorns from "../data/lakorns.json";
           }
           const REPO_OWNER = "VolyaCore";
           const REPO_NAME = "VolyaCoreWatch";
+
+          // 1. Обробка обкладинки (файл або посилання)
+          const coverFileinput = document.getElementById("coverFile");
+          const coverUrlInput = document.getElementById("coverUrl").value.trim();
+          let coverFileName = `${lakornId}.jpg`;
+
+          if (coverFileinput.files && coverFileinput.files[0]) {
+            const file = coverFileinput.files[0];
+            const fileExt = file.name.split('.').pop();
+            coverFileName = `${lakornId}.${fileExt}`;
+            
+            // Читаємо файл у Base64 для GitHub API
+            const base64Content = await new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result.split(',')[1]);
+              reader.onerror = error => reject(error);
+              reader.readAsDataURL(file);
+            });
+
+            const coverPath = `src/assets/covers/${coverFileName}`;
+            const coverApiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${coverPath}`;
+
+            // Перевіряємо чи існує вже файл обкладинки (щоб взяти його SHA для перезаписування)
+            let coverSha = undefined;
+            const existingCoverRes = await fetch(coverApiUrl, {
+              headers: { Authorization: `token ${GITHUB_TOKEN}` },
+            });
+            if (existingCoverRes.ok) {
+              const coverDataJson = await existingCoverRes.json();
+              coverSha = coverDataJson.sha;
+            }
+
+            // Завантажуємо файл обкладинки в папку src/assets/covers/
+            const coverPutRes = await fetch(coverApiUrl, {
+              method: "PUT",
+              headers: {
+                Authorization: `token ${GITHUB_TOKEN}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                message: `Admin: upload cover for ${lakornId}`,
+                content: base64Content,
+                sha: coverSha,
+              }),
+            });
+
+            if (!coverPutRes.ok) {
+              throw new Error("Не вдалося завантажити файл обкладинки на GitHub");
+            }
+          } else if (coverUrlInput) {
+            coverFileName = coverUrlInput; // Якщо вказано пряме посилання
+          }
+
+          const formDataObj = {
+            id: lakornId,
+            title: document.getElementById("title").value.trim(),
+            enTitle: document.getElementById("enTitle").value.trim(),
+            description: document.getElementById("description").value.trim(),
+            cover: coverFileName,
+            status: document.getElementById("status").value.trim(),
+            country: document.getElementById("country").value.trim(),
+            categories: document.getElementById("categories").value.trim(),
+            year: Number(document.getElementById("year").value) || 2024,
+            genres: document
+              .getElementById("genres")
+              .value.split(",")
+              .map((s) => s.trim())
+              .filter(Boolean),
+            imdbRating: document.getElementById("imdbRating").value.trim(),
+            duration: document.getElementById("duration").value.trim(),
+            cast: document
+              .getElementById("cast")
+              .value.split(",")
+              .map((s) => s.trim())
+              .filter(Boolean),
+            director: document.getElementById("director").value.trim(),
+            network: document.getElementById("network").value.trim(),
+            episodesCount: Number(document.getElementById("episodesCount").value) || 0,
+            relatedSeasons: currentSeasons.length > 0 ? currentSeasons : [{ title: "1 Сезон", id: lakornId }],
+            blocks: [
+              {
+                blockTitle: "1 Сезон",
+                episodes: currentEpisodes,
+              },
+            ],
+          };
+
+          // 2. Оновлення файлу lakorns.json
           const FILE_PATH = "src/data/lakorns.json";
           const fileUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
 
@@ -692,7 +746,7 @@ import lakorns from "../data/lakorns.json";
           });
 
           if (!getRes.ok)
-            throw new Error("Не вдалося підключитися до GitHub API");
+            throw new Error("Не вдалося підключитися до GitHub API для JSON");
           const fileJson = await getRes.json();
           const sha = fileJson.sha;
 
@@ -729,10 +783,10 @@ import lakorns from "../data/lakorns.json";
 
           if (!putRes.ok) {
             const errJson = await putRes.json().catch(() => ({}));
-            throw new Error(errJson.message || "Помилка збереження на GitHub");
+            throw new Error(errJson.message || "Помилка збереження JSON на GitHub");
           }
 
-          statusMsg.textContent = "✅ Успішно! Зміни збережено на GitHub.";
+          statusMsg.textContent = "✅ Успішно! Зміни та обкладинку збережено на GitHub.";
           statusMsg.className = "success";
           setTimeout(() => location.reload(), 2000);
         } catch (err) {
