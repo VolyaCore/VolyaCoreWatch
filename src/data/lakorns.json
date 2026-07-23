@@ -17070,7 +17070,6 @@
       "romance",
       "drama"
     ],
-    "episodesCount": 10,
     "imdbRating": "",
     "duration": "25 хв.",
     "cast": [
@@ -17081,6 +17080,7 @@
     ],
     "director": "Ян Кьонхі",
     "network": "Studio Oak",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -17118,6 +17118,10 @@
           {
             "number": 7,
             "tg_id": "volyacore/2957"
+          },
+          {
+            "number": 8,
+            "tg_id": "volyacore/2971"
           }
         ]
       }
