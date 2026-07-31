@@ -16530,7 +16530,6 @@
     "genres": [
       "romance"
     ],
-    "episodesCount": 10,
     "imdbRating": "",
     "duration": "45 хв.",
     "cast": [
@@ -16541,6 +16540,7 @@
     ],
     "director": "Чівін Танамін",
     "network": "Copy A Bangkok",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16574,6 +16574,10 @@
           {
             "number": 6,
             "tg_id": "volyacore/2949"
+          },
+          {
+            "number": 7,
+            "tg_id": "volyacore/2975"
           }
         ]
       }
