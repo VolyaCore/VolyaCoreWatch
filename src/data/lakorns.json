@@ -17305,7 +17305,6 @@
       "psychologycal",
       "drama"
     ],
-    "episodesCount": 10,
     "imdbRating": "",
     "duration": "50 хв",
     "cast": [
@@ -17316,6 +17315,7 @@
     ],
     "director": "Чік Сакон",
     "network": "GMMTV",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -17333,6 +17333,10 @@
           {
             "number": 2,
             "tg_id": "volyacore/2950"
+          },
+          {
+            "number": 3,
+            "tg_id": "volyacore/2976"
           }
         ]
       }
