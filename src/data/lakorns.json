@@ -17427,5 +17427,50 @@
         ]
       }
     ]
+  },
+  {
+    "id": "be_my_player_two",
+    "title": "Будь моїм другим гравцем",
+    "enTitle": "Be My Player Two /  ซอโซ่ล่ามธีร์",
+    "description": "Гострий на язик стример і геймер-початківець! Ті, топовий стример, полює на Зо – загадкового геймера, який постійно перемагає його. Те, що почалося як полювання на суперника, несподівано перетворюється на кохання.",
+    "cover": "be_my_player_two.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "BL",
+    "year": 2026,
+    "genres": [
+      "romance",
+      "comedy",
+      "drama",
+      "sports"
+    ],
+    "imdbRating": "",
+    "duration": "43 хв",
+    "cast": [
+      "Макі Ратчата",
+      "Бас Хацанат",
+      "Джен Чотіпат",
+      "Мін Вічаяпорн"
+    ],
+    "director": "Наттанон Кхідді",
+    "network": "Studio Wabi Sabi",
+    "episodesCount": 10,
+    "relatedSeasons": [
+      {
+        "title": "1 Сезон",
+        "id": "be_my_player_two"
+      }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "volyacore/2979"
+          }
+        ]
+      }
+    ]
   }
 ]
