@@ -16653,7 +16653,6 @@
       "youth",
       "drama"
     ],
-    "episodesCount": 10,
     "imdbRating": "",
     "duration": "47 хв.",
     "cast": [
@@ -16664,6 +16663,7 @@
     ],
     "director": "Філм Павіс, Сендвіч Парнупон",
     "network": "Me Mind Y",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16693,6 +16693,14 @@
           {
             "number": 5,
             "tg_id": "volyacore/2948"
+          },
+          {
+            "number": 6,
+            "tg_id": "volyacore/2981"
+          },
+          {
+            "number": 7,
+            "tg_id": "volyacore/2995"
           }
         ]
       }
