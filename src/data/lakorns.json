@@ -17380,7 +17380,7 @@
     ]
   },
   {
-    "id": "semantic_error",
+    "id": "semantic_error_anime",
     "title": "Семантична помилка",
     "enTitle": "Semantic Error / 시맨틱 에러",
     "description": "Студент факультету інформатики Чо Сану закохується у свого старшого – Чан Чжейона. Їхні стосунки розкриваються в цьому чотирисерійному спеціальному серіалі, знятому за мотивами графічної новели «Semantic Error».",
@@ -17405,7 +17405,7 @@
     "relatedSeasons": [
       {
         "title": "1 Сезон",
-        "id": "semantic_error"
+        "id": "semantic_error_anime"
       }
     ],
     "blocks": [
