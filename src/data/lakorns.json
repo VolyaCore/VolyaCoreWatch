@@ -16248,7 +16248,6 @@
       "romance",
       "youth"
     ],
-    "episodesCount": 17,
     "imdbRating": "",
     "duration": "45 хв.",
     "cast": [
@@ -16263,6 +16262,7 @@
     ],
     "director": "Нью Сівадж, Ко Нанталіт",
     "network": "Wabi Sabi",
+    "episodesCount": 17,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16328,6 +16328,10 @@
           {
             "number": 14,
             "tg_id": "volyacore/2954"
+          },
+          {
+            "number": 15,
+            "tg_id": "volyacore/2980"
           }
         ]
       }
