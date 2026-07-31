@@ -289,6 +289,7 @@ import lakorns from "../data/lakorns.json";
         <div class="form-container">
           <h2 id="form-title">Додати новий лакорн</h2>
           <form id="lakorn-form">
+            <input type="hidden" id="currentCover" value="" />
             <label>ID (англійською без пробілів):</label>
             <input type="text" id="id" required placeholder="perfect10liners" />
 
@@ -569,6 +570,7 @@ import lakorns from "../data/lakorns.json";
         document.getElementById("title").value = data.title || "";
         document.getElementById("enTitle").value = data.enTitle || "";
         document.getElementById("description").value = data.description || "";
+        document.getElementById("currentCover").value = data.cover || "";
         document.getElementById("coverFile").value = "";
         document.getElementById("coverUrl").value = "";
         document.getElementById("status").value = data.status || "completed";
