@@ -16935,7 +16935,6 @@
       "psychological",
       "drama"
     ],
-    "episodesCount": 8,
     "imdbRating": "",
     "duration": "52 хв.",
     "cast": [
@@ -16946,6 +16945,7 @@
     ],
     "director": "Хан Йерім",
     "network": "Studio N",
+    "episodesCount": 8,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16967,6 +16967,10 @@
           {
             "number": 3,
             "tg_id": "volyacore/2962"
+          },
+          {
+            "number": 4,
+            "tg_id": "volyacore/3004"
           }
         ]
       }
