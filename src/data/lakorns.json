@@ -17746,5 +17746,48 @@
         ]
       }
     ]
+  },
+  {
+    "id": "weirdo101",
+    "title": "Вірдо-101: Гравітація між нами",
+    "enTitle": "Weirdo-101 / แรงโน้มถ่วงระหว่างเรา",
+    "description": "Сам того не розуміючи, Ніран починає зближатися з Чіва —занудою й інтровертом. А коли намагається віддалитися, то розуміє, що їхні шляхи вже тісно переплелися.",
+    "cover": "weirdo101.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "BL",
+    "year": 2026,
+    "genres": [
+      "romance",
+      "comedy",
+      "drama"
+    ],
+    "imdbRating": "",
+    "duration": "41 хв.",
+    "cast": [
+      "Кін Сувіджак",
+      "Сі Дечат",
+      "Естон Ратіпат"
+    ],
+    "director": "Чамп Вірачіт",
+    "network": "GMMTV",
+    "episodesCount": 10,
+    "relatedSeasons": [
+      {
+        "title": "1 Сезон",
+        "id": "weirdo101"
+      }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "volyacore/3045"
+          }
+        ]
+      }
+    ]
   }
 ]
