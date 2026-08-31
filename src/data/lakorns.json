@@ -6879,7 +6879,6 @@
       "youth",
       "drama"
     ],
-    "episodesCount": 7,
     "imdbRating": "8.2",
     "duration": "60 хв.",
     "cast": [
@@ -6892,10 +6891,15 @@
     ],
     "director": "Бос Куно, Джуніор Нарон",
     "network": "iQiyi",
+    "episodesCount": 7,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
         "id": "gelboys"
+      },
+      {
+        "title": "2 Сезон",
+        "id": "gelboys_2"
       }
     ],
     "blocks": [
