@@ -15556,7 +15556,6 @@
       "romance",
       "drama"
     ],
-    "episodesCount": 12,
     "imdbRating": "",
     "duration": "51 хв.",
     "cast": [
@@ -15569,6 +15568,7 @@
     ],
     "director": "Джоджо Тічакорн",
     "network": "GMMTV",
+    "episodesCount": 12,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -15610,6 +15610,14 @@
           {
             "number": 8,
             "tg_id": "volyacore/2926"
+          },
+          {
+            "number": 9,
+            "tg_id": "volyacore/3084"
+          },
+          {
+            "number": 10,
+            "tg_id": "volyacore/3085"
           }
         ]
       }
