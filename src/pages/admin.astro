@@ -10,7 +10,10 @@ import lakorns from "../data/lakorns.json";
     <title>Адмін-панель | Volyacore</title>
     <style>
       body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
         background-color: #0f172a;
         color: #fff;
         margin: 0;
@@ -77,7 +80,8 @@ import lakorns from "../data/lakorns.json";
         margin-bottom: 50px;
       }
 
-      h2, h3 {
+      h2,
+      h3 {
         margin-top: 0;
         color: #f8fafc;
       }
@@ -259,17 +263,16 @@ import lakorns from "../data/lakorns.json";
       </div>
     </div>
 
-    <!-- ПАНЕЛЬ КЕРУВАННЯ -->
     <div id="admin-panel" class="hidden">
       <aside>
         <h3>Проєкти</h3>
         <button class="btn-new" id="btn-create-new">+ Новий лакорн</button>
-        
+
         <div class="sidebar-search-container">
-          <input 
-            type="text" 
-            id="project-search-input" 
-            placeholder="Пошук за назвою..." 
+          <input
+            type="text"
+            id="project-search-input"
+            placeholder="Пошук за назвою..."
             class="search-input"
           />
         </div>
@@ -277,7 +280,17 @@ import lakorns from "../data/lakorns.json";
         <div id="lakorn-list-container">
           {
             lakorns.map((item: any) => (
-              <div class="lakorn-item" data-id={item.id} data-title={item.title.toLowerCase()} data-genres={Array.isArray(item.genres) ? item.genres.join(",") : (item.genres || "")} data-country={item.country || ""}>
+              <div
+                class="lakorn-item"
+                data-id={item.id}
+                data-title={item.title.toLowerCase()}
+                data-genres={
+                  Array.isArray(item.genres)
+                    ? item.genres.join(",")
+                    : item.genres || ""
+                }
+                data-country={item.country || ""}
+              >
                 {item.title}
               </div>
             ))
@@ -375,7 +388,12 @@ import lakorns from "../data/lakorns.json";
               <option value="sci-fi">Наукова Фантастика</option>
               <option value="anime">Аніме</option>
             </select>
-            <input type="text" id="genres" value="romance, comedy" placeholder="romance, comedy" />
+            <input
+              type="text"
+              id="genres"
+              value="romance, comedy"
+              placeholder="romance, comedy"
+            />
 
             <label>Рейтинг:</label>
             <input type="text" id="imdbRating" placeholder="7.9" />
@@ -392,19 +410,34 @@ import lakorns from "../data/lakorns.json";
             <label>Мережа (Network):</label>
             <input type="text" id="network" placeholder="GMMTV" />
 
-            <!-- КІЛЬКІСТЬ СЕРІЙ (episodesCount) -->
             <label>Кількість серій:</label>
             <input type="number" id="episodesCount" placeholder="12" />
 
-            <!-- ПОСИЛАННЯ НА СЕРІЇ (Динамічні рядки з кнопкою) -->
             <label>Посилання на серії (Telegram ID):</label>
             <div class="seasons-box" id="episodes-container"></div>
-            <button type="button" class="btn-add-season" id="btn-add-episode" style="background: #10b981;">+ Додати серію</button>
+            <button
+              type="button"
+              class="btn-add-season"
+              id="btn-add-episode"
+              style="background: #10b981;">+ Додати серію</button
+            >
 
-            <!-- СЕКЦІЯ: Пов'язані сезони / частини -->
+            <label>Спецвипуски:</label>
+            <div class="seasons-box" id="special-episodes-container"></div>
+            <button
+              type="button"
+              class="btn-add-season"
+              id="btn-add-special-episode"
+              style="background: #8b5cf6;"
+            >
+              + Додати спецвипуск
+            </button>
+
             <label>Пов'язані сезони (Сезони / Частини):</label>
             <div class="seasons-box" id="seasons-container"></div>
-            <button type="button" class="btn-add-season" id="btn-add-season">+ Додати сезон</button>
+            <button type="button" class="btn-add-season" id="btn-add-season"
+              >+ Додати сезон</button
+            >
 
             <button type="submit" id="submit-btn">Зберегти на GitHub</button>
             <p id="status-msg"></p>
@@ -413,7 +446,6 @@ import lakorns from "../data/lakorns.json";
       </main>
     </div>
 
-    
     <script define:vars={{ existingLakorns: lakorns }}>
       const ADMIN_PASSWORD = "administrationOfVolyaCore8491";
 
@@ -445,10 +477,17 @@ import lakorns from "../data/lakorns.json";
 
       const seasonsContainer = document.getElementById("seasons-container");
       const btnAddSeason = document.getElementById("btn-add-season");
-      
+
       const episodesContainer = document.getElementById("episodes-container");
       const btnAddEpisode = document.getElementById("btn-add-episode");
-      
+
+      const specialEpisodesContainer = document.getElementById(
+        "special-episodes-container"
+      );
+      const btnAddSpecialEpisode = document.getElementById(
+        "btn-add-special-episode"
+      );
+
       const searchInput = document.getElementById("project-search-input");
       const genresSelect = document.getElementById("genres-select");
       const genresInput = document.getElementById("genres");
@@ -458,14 +497,20 @@ import lakorns from "../data/lakorns.json";
 
       function filterSidebarItems() {
         const query = searchInput.value.toLowerCase().trim();
-        items.forEach(item => {
+        items.forEach((item) => {
           const title = item.getAttribute("data-title");
-          const itemGenres = item.getAttribute("data-genres").split(",").map(g => g.trim());
+          const itemGenres = item
+            .getAttribute("data-genres")
+            .split(",")
+            .map((g) => g.trim());
           const itemCountry = item.getAttribute("data-country");
 
           const matchesQuery = !query || title.includes(query);
-          const matchesGenres = selectedGenres.size === 0 || [...selectedGenres].every(g => itemGenres.includes(g));
-          const matchesCountry = selectedCountries.size === 0 || selectedCountries.has(itemCountry);
+          const matchesGenres =
+            selectedGenres.size === 0 ||
+            [...selectedGenres].every((g) => itemGenres.includes(g));
+          const matchesCountry =
+            selectedCountries.size === 0 || selectedCountries.has(itemCountry);
 
           if (matchesQuery && matchesGenres && matchesCountry) {
             item.style.display = "block";
@@ -480,7 +525,10 @@ import lakorns from "../data/lakorns.json";
       genresSelect.addEventListener("change", () => {
         const val = genresSelect.value;
         if (!val) return;
-        let currentArr = genresInput.value.split(",").map(s => s.trim()).filter(Boolean);
+        let currentArr = genresInput.value
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean);
         if (!currentArr.includes(val)) {
           currentArr.push(val);
           genresInput.value = currentArr.join(", ");
@@ -490,6 +538,7 @@ import lakorns from "../data/lakorns.json";
 
       let currentSeasons = [];
       let currentEpisodes = [];
+      let currentSpecialEpisodes = [];
 
       function renderEpisodes() {
         episodesContainer.innerHTML = "";
@@ -498,7 +547,7 @@ import lakorns from "../data/lakorns.json";
           row.className = "season-row";
           row.innerHTML = `
             <span style="color: #94a3b8; font-size: 13px; font-weight: bold; width: 30px; text-align: center;">#${index + 1}</span>
-            <input type="text" value="${ep.tg_id || ''}" placeholder="volyacore/..." data-index="${index}" class="episode-input" style="flex: 1;" />
+            <input type="text" value="${ep.tg_id || ""}" placeholder="volyacore/..." data-index="${index}" class="episode-input" style="flex: 1;" />
             <button type="button" class="btn-del-episode" data-index="${index}">✕</button>
           `;
           episodesContainer.appendChild(row);
@@ -506,7 +555,8 @@ import lakorns from "../data/lakorns.json";
 
         document.querySelectorAll(".episode-input").forEach((input) => {
           input.addEventListener("input", (e) => {
-            currentEpisodes[e.target.dataset.index].tg_id = e.target.value.trim();
+            currentEpisodes[e.target.dataset.index].tg_id =
+              e.target.value.trim();
           });
         });
 
@@ -518,6 +568,81 @@ import lakorns from "../data/lakorns.json";
           });
         });
       }
+
+      function renderSpecialEpisodes() {
+        specialEpisodesContainer.innerHTML = "";
+
+        currentSpecialEpisodes.forEach((ep, index) => {
+          const row = document.createElement("div");
+          row.className = "season-row";
+
+          row.innerHTML = `
+      <span style="
+        color: #94a3b8;
+        font-size: 13px;
+        font-weight: bold;
+        width: 30px;
+        text-align: center;
+      ">
+        #${index + 1}
+      </span>
+
+      <input
+        type="text"
+        value="${ep.tg_id || ""}"
+        placeholder="volyacore/..."
+        data-index="${index}"
+        class="special-episode-input"
+        style="flex: 1;"
+      />
+
+      <button
+        type="button"
+        class="btn-del-season btn-delete-special-episode"
+        data-index="${index}"
+      >
+        ✕
+      </button>
+    `;
+
+          specialEpisodesContainer.appendChild(row);
+        });
+
+        document.querySelectorAll(".special-episode-input").forEach((input) => {
+          input.addEventListener("input", (e) => {
+            const index = Number(e.target.dataset.index);
+
+            currentSpecialEpisodes[index].tg_id = e.target.value.trim();
+          });
+        });
+
+        document
+          .querySelectorAll(".btn-delete-special-episode")
+          .forEach((button) => {
+            button.addEventListener("click", (e) => {
+              const index = Number(e.target.dataset.index);
+
+              currentSpecialEpisodes.splice(index, 1);
+
+              currentSpecialEpisodes.forEach((ep, i) => {
+                ep.number = i + 1;
+              });
+
+              renderSpecialEpisodes();
+            });
+          });
+      }
+
+      btnAddSpecialEpisode.addEventListener("click", () => {
+        const nextNum = currentSpecialEpisodes.length + 1;
+
+        currentSpecialEpisodes.push({
+          number: nextNum,
+          tg_id: "",
+        });
+
+        renderSpecialEpisodes();
+      });
 
       btnAddEpisode.addEventListener("click", () => {
         const nextNum = currentEpisodes.length + 1;
@@ -540,7 +665,8 @@ import lakorns from "../data/lakorns.json";
 
         document.querySelectorAll(".season-title-input").forEach((input) => {
           input.addEventListener("input", (e) => {
-            currentSeasons[e.target.dataset.index].title = e.target.value.trim();
+            currentSeasons[e.target.dataset.index].title =
+              e.target.value.trim();
           });
         });
 
@@ -589,25 +715,54 @@ import lakorns from "../data/lakorns.json";
           : data.cast || "";
         document.getElementById("director").value = data.director || "";
         document.getElementById("network").value = data.network || "";
-        document.getElementById("episodesCount").value = data.episodesCount !== undefined ? data.episodesCount : "";
+        document.getElementById("episodesCount").value =
+          data.episodesCount !== undefined ? data.episodesCount : "";
 
         // Підтягування масиву серій з блоків
         currentEpisodes = [];
-        if (data.blocks && data.blocks[0] && Array.isArray(data.blocks[0].episodes)) {
+        if (
+          data.blocks &&
+          data.blocks[0] &&
+          Array.isArray(data.blocks[0].episodes)
+        ) {
           currentEpisodes = JSON.parse(JSON.stringify(data.blocks[0].episodes));
         }
         renderEpisodes();
 
-        currentSeasons = data.relatedSeasons ? JSON.parse(JSON.stringify(data.relatedSeasons)) : [{ title: "1 Сезон", id: data.id || "" }];
+        currentSeasons = data.relatedSeasons
+          ? JSON.parse(JSON.stringify(data.relatedSeasons))
+          : [{ title: "1 Сезон", id: data.id || "" }];
         renderSeasons();
       }
 
+      currentSpecialEpisodes = [];
+
+      if (
+        data.blocks &&
+        data.blocks[1] &&
+        data.blocks[1].blockTitle === "Спецвипуск" &&
+        Array.isArray(data.blocks[1].episodes)
+      ) {
+        currentSpecialEpisodes = JSON.parse(
+          JSON.stringify(data.blocks[1].episodes)
+        );
+      }
+
+      renderSpecialEpisodes();
+
       btnCreateNew.addEventListener("click", () => {
         items.forEach((i) => i.classList.remove("active"));
+
         formTitle.textContent = "Додати новий лакорн";
+
         form.reset();
+
         currentEpisodes = [];
         renderEpisodes();
+
+        currentSpecialEpisodes = [];
+        renderSpecialEpisodes();
+
         currentSeasons = [];
         renderSeasons();
       });
@@ -644,6 +799,10 @@ import lakorns from "../data/lakorns.json";
           ep.number = index + 1;
         });
 
+        currentSpecialEpisodes.forEach((ep, index) => {
+          ep.number = index + 1;
+        });
+
         try {
           const GITHUB_TOKEN =
             localStorage.getItem("github_token") ||
@@ -656,19 +815,21 @@ import lakorns from "../data/lakorns.json";
 
           // 1. Обробка обкладинки (файл або посилання)
           const coverFileinput = document.getElementById("coverFile");
-          const coverUrlInput = document.getElementById("coverUrl").value.trim();
+          const coverUrlInput = document
+            .getElementById("coverUrl")
+            .value.trim();
           let coverFileName = `${lakornId}.jpg`;
 
           if (coverFileinput.files && coverFileinput.files[0]) {
             const file = coverFileinput.files[0];
-            const fileExt = file.name.split('.').pop();
+            const fileExt = file.name.split(".").pop();
             coverFileName = `${lakornId}.${fileExt}`;
-            
+
             // Читаємо файл у Base64 для GitHub API
             const base64Content = await new Promise((resolve, reject) => {
               const reader = new FileReader();
-              reader.onload = () => resolve(reader.result.split(',')[1]);
-              reader.onerror = error => reject(error);
+              reader.onload = () => resolve(reader.result.split(",")[1]);
+              reader.onerror = (error) => reject(error);
               reader.readAsDataURL(file);
             });
 
@@ -700,7 +861,9 @@ import lakorns from "../data/lakorns.json";
             });
 
             if (!coverPutRes.ok) {
-              throw new Error("Не вдалося завантажити файл обкладинки на GitHub");
+              throw new Error(
+                "Не вдалося завантажити файл обкладинки на GitHub"
+              );
             }
           } else if (coverUrlInput) {
             coverFileName = coverUrlInput; // Якщо вказано пряме посилання
@@ -730,13 +893,26 @@ import lakorns from "../data/lakorns.json";
               .filter(Boolean),
             director: document.getElementById("director").value.trim(),
             network: document.getElementById("network").value.trim(),
-            episodesCount: Number(document.getElementById("episodesCount").value) || 0,
-            relatedSeasons: currentSeasons.length > 0 ? currentSeasons : [{ title: "1 Сезон", id: lakornId }],
+            episodesCount:
+              Number(document.getElementById("episodesCount").value) || 0,
+            relatedSeasons:
+              currentSeasons.length > 0
+                ? currentSeasons
+                : [{ title: "1 Сезон", id: lakornId }],
             blocks: [
               {
                 blockTitle: "1 Сезон",
                 episodes: currentEpisodes,
               },
+
+              ...(currentSpecialEpisodes.length > 0
+                ? [
+                    {
+                      blockTitle: "Спецвипуск",
+                      episodes: currentSpecialEpisodes,
+                    },
+                  ]
+                : []),
             ],
           };
 
@@ -786,10 +962,13 @@ import lakorns from "../data/lakorns.json";
 
           if (!putRes.ok) {
             const errJson = await putRes.json().catch(() => ({}));
-            throw new Error(errJson.message || "Помилка збереження JSON на GitHub");
+            throw new Error(
+              errJson.message || "Помилка збереження JSON на GitHub"
+            );
           }
 
-          statusMsg.textContent = "✅ Успішно! Зміни та обкладинку збережено на GitHub.";
+          statusMsg.textContent =
+            "✅ Успішно! Зміни та обкладинку збережено на GitHub.";
           statusMsg.className = "success";
           setTimeout(() => location.reload(), 2000);
         } catch (err) {
