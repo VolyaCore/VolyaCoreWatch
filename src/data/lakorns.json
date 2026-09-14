@@ -16513,7 +16513,6 @@
       "romance",
       "drama"
     ],
-    "episodesCount": 10,
     "imdbRating": "8.0",
     "duration": "1 год. 9 хв.",
     "cast": [
@@ -16523,6 +16522,7 @@
     ],
     "director": "Піке Пасавут, Під Панчапон",
     "network": "Me Mind Y",
+    "episodesCount": 10,
     "relatedSeasons": [
       {
         "title": "1 Сезон",
@@ -16572,6 +16572,15 @@
           {
             "number": 10,
             "tg_id": "volyacore/2896"
+          }
+        ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "volyacore/3092"
           }
         ]
       }
