@@ -16390,6 +16390,15 @@
             "tg_id": "volyacore/3024"
           }
         ]
+      },
+      {
+        "blockTitle": "Спецвипуск",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "volyacore/3104"
+          }
+        ]
       }
     ]
   },
