@@ -17144,7 +17144,7 @@
     "enTitle": "The Edge of Horizon / อรุณรุ่ง",
     "description": "Яким прекрасним не було б світанкове сонце, їхні серця сховані в тіні через соціальну нерівність. Вони кохають один одного попри різницю в статусі та походженні. В одного є лише гордість, а інший – ставить на кін своє шляхетне походження.",
     "cover": "the_edge_of_horizon.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "thailand",
     "categories": "BL",
     "year": 2026,
@@ -17212,6 +17212,10 @@
           {
             "number": 10,
             "tg_id": "volyacore/3094"
+          },
+          {
+            "number": 11,
+            "tg_id": "volyacore/3098"
           }
         ]
       }
