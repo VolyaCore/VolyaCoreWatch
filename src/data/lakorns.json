@@ -18160,5 +18160,59 @@
         ]
       }
     ]
+  },
+  {
+    "id": "FakeFactLips",
+    "title": "Губи, які брешуть",
+    "enTitle": "Fake Fact Lips / フェイクファクトリップス",
+    "description": "Того дня... розпочалося найбезглуздіше змагання в нашому житті.\n\nЩе з часів середньої школи Рьо та Дзен — закляті суперники. Подорослішавши, вони зустрілися на одному робочому місті, проте й досі не бажають поступатися один одному. Дещо трапилося — і вони вирішили влаштувати нове змагання, від якого не можна відмовитися. Головне правило — хто перший закохається, той програв.",
+    "cover": "FakeFactLips.jpg",
+    "status": "ongoing",
+    "country": "japan",
+    "categories": "BL",
+    "year": 2026,
+    "genres": [
+      "romance"
+    ],
+    "imdbRating": "8.2",
+    "duration": "25 хв.",
+    "cast": [
+      "Сато Юсуке",
+      "Хорі Кайто",
+      "Хорігучі Ібукі",
+      "Фуджі Рен"
+    ],
+    "director": "Мацуура Такеші",
+    "network": "Durandal",
+    "episodesCount": 10,
+    "relatedSeasons": [
+      {
+        "title": "1 Сезон",
+        "id": "FakeFactLips"
+      }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "https://t.me/volyacore/3115"
+          },
+          {
+            "number": 2,
+            "tg_id": "https://t.me/volyacore/3141"
+          },
+          {
+            "number": 3,
+            "tg_id": "https://t.me/volyacore/3163"
+          },
+          {
+            "number": 4,
+            "tg_id": "https://t.me/volyacore/3182"
+          }
+        ]
+      }
+    ]
   }
 ]
