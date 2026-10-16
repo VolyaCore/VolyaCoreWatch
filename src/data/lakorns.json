@@ -17614,7 +17614,7 @@
     "enTitle": "Are the Sexy Buttocks Not Good? / えっちなお尻じゃダメですか？",
     "description": "Аіноске — студент, який завжди цікавився коханням, одного дня став жертвою сексуального домагання. Його рятує старший за нього привабливий чоловік Окумі. Хоч Аіноске й відчуває збентеження через його легковажність і бажання зблизитися, він не може забути того — і не встигнув оговтатися, як провів із ним особливу ніч.",
     "cover": "are_the_sexy_buttocks_not_good.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "japan",
     "categories": "BL",
     "year": 2026,
@@ -17622,7 +17622,7 @@
       "romance",
       "drama"
     ],
-    "imdbRating": "",
+    "imdbRating": "7.1",
     "duration": "15 хв.",
     "cast": [
       "Сакай Шо",
@@ -17676,6 +17676,10 @@
           {
             "number": 9,
             "tg_id": "volyacore/3112"
+          },
+          {
+            "number": 10,
+            "tg_id": "https://t.me/volyacore/3130"
           }
         ]
       }
