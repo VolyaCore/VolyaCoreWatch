@@ -18817,7 +18817,12 @@
     "blocks": [
       {
         "blockTitle": "1 Сезон",
-        "episodes": []
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "https://t.me/volyacore/3207"
+          }
+        ]
       }
     ]
   }
