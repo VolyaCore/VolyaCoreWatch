@@ -18234,5 +18234,53 @@
         ]
       }
     ]
+  },
+  {
+    "id": "julietandjuliet",
+    "title": "Джульєтта та Джульєтта",
+    "enTitle": "Juliet & Juliet / จูเลียตแอนด์จูเลียต",
+    "description": "Блу, єдина дочка родини Мончайтакун, переїжджає до провінційної школи-інтернату, де знайомиться з Токіо — наймолодшою дочкою сіа По, надзвичайно впливового чоловіка із сім'ї Кхонбурім. Між дівчатами розквітає кохання, але воно — заборонене, адже їхні родини давно ворогують і ведуть запеклу боротьбу за владу.\n\nЧи будуть вони щасливі чи їхнє кохання обернеться трагедією?",
+    "cover": "julietandjuliet.jpg",
+    "status": "ongoing",
+    "country": "thailand",
+    "categories": "GL",
+    "year": 2026,
+    "genres": [
+      "romance",
+      "youth",
+      "drama"
+    ],
+    "imdbRating": "",
+    "duration": "50 хв.",
+    "cast": [
+      "МінМін Каньякон",
+      "Непджун Нуткітта",
+      "Коб Сонсіт",
+      "Нок Чатчай"
+    ],
+    "director": "Тук Чантана",
+    "network": "GINGERx",
+    "episodesCount": 8,
+    "relatedSeasons": [
+      {
+        "title": "1 Сезон",
+        "id": "julietandjuliet"
+      }
+    ],
+    "blocks": [
+      {
+        "blockTitle": "1 Сезон",
+        "episodes": [
+          {
+            "number": 1,
+            "tg_id": "https://t.me/volyacore/3124"
+          },
+          {
+            "number": 2,
+            "tg_id": "https://t.me/volyacore/3150"
+          }
+        ]
+      }
+    ]
   }
 ]
