@@ -17728,7 +17728,7 @@
     "enTitle": "Be My Player Two /  ซอโซ่ล่ามธีร์",
     "description": "Гострий на язик стример і геймер-початківець! Ті, топовий стример, полює на Зо – загадкового геймера, який постійно перемагає його. Те, що почалося як полювання на суперника, несподівано перетворюється на кохання.",
     "cover": "be_my_player_two.jpg",
-    "status": "ongoing",
+    "status": "completed",
     "country": "thailand",
     "categories": "BL",
     "year": 2026,
@@ -17790,6 +17790,14 @@
           {
             "number": 8,
             "tg_id": "volyacore/3120"
+          },
+          {
+            "number": 9,
+            "tg_id": "https://t.me/volyacore/3144"
+          },
+          {
+            "number": 10,
+            "tg_id": "https://t.me/volyacore/3148"
           }
         ]
       }
