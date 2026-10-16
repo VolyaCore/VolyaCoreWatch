@@ -13305,7 +13305,7 @@
       "romance",
       "youth"
     ],
-    "imdbRating": "",
+    "imdbRating": "7.4",
     "duration": "15 хв.",
     "cast": [
       "Себьоль",
@@ -13377,6 +13377,22 @@
           {
             "number": 11,
             "tg_id": "volyacore/3048"
+          },
+          {
+            "number": 12,
+            "tg_id": "https://t.me/volyacore/3180"
+          },
+          {
+            "number": 13,
+            "tg_id": "https://t.me/volyacore/3191"
+          },
+          {
+            "number": 14,
+            "tg_id": "https://t.me/volyacore/3200"
+          },
+          {
+            "number": 15,
+            "tg_id": "https://t.me/volyacore/3204"
           }
         ]
       }
